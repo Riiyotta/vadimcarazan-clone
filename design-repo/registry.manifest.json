@@ -68,7 +68,7 @@
   "generatedExamples": 2,
   "adversarialMutations": 122,
   "adversarialControls": 5,
-  "driftCases": 50
+  "driftCases": 46
  },
  "category": "portfolio",
  "designPolicy": {
@@ -90,9 +90,6 @@
    "ref": "policy/design-policy.json",
    "policyId": "portfolio-site-web",
    "policyVersion": "1.0.0"
-  },
-  "notBoundTo": {
-   "n0-saas-design-constraints-common": "Not a SaaS product: the portfolio of a named creative director with no pricing tiers, feature matrices, integrations, dashboards or demo booking (evidence: policy/design-policy.json classification)."
   },
   "decision": {
    "policyDecision": "defined-pending-architecture-review",

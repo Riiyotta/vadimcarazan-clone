@@ -58,10 +58,9 @@ CHROME_PATH=... PLAYWRIGHT_MODULE=... BASE_URL=http://localhost:5192 MODE=sectio
 
 ## Category and design policy
 
-This is a **portfolio** (`category: "portfolio"`), not a SaaS product. `registry.manifest.json -> designPolicy` binds
-the generic common policy `n0-design-constraints-common` 0.1.0 (Common IR 0.5, `hard-and-soft`) and records
-`notBoundTo: n0-saas-design-constraints-common` (no pricing tiers, feature matrices, integrations, dashboards or
-demo booking). `policy/design-policy.json` adds the portfolio rules (`portfolio-site-web` 1.0.0).
+This is a **portfolio** (`category: "portfolio"`). `registry.manifest.json -> designPolicy` binds
+the common policy `n0-design-constraints-common` 0.1.0 (Common IR 0.5, `hard-and-soft`, domain `portfolio`).
+`policy/design-policy.json` adds the portfolio rules (`portfolio-site-web` 1.0.0).
 `designPolicy.contentHash` covers the enforcing files (`tokens/llm/token-policy.json`, `compatibility/graph.json`,
 `schema/pagespec.schema.json`, `schema/semantic_validate.py`); after a deliberate edit to one of them run
 `python3 extraction/policy_hash.py --write`. `verify_all.py` (check `DESIGN_POLICY`) recomputes it.
@@ -99,5 +98,5 @@ element-geometry audit (see `extraction/measured-values.json -> cloneVsOriginalE
 | generatedExamples | 2 |
 | adversarialMutations | 122 |
 | adversarialControls | 5 |
-| driftCases | 50 |
+| driftCases | 46 |
 <!-- counts:end -->

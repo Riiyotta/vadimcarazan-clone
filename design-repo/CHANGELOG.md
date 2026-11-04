@@ -4,12 +4,12 @@
 
 - `registry.manifest.json`: `category: "portfolio"` and a `designPolicy` block binding
   `n0-design-constraints-common` 0.1.0 (Common IR 0.5, `hard-and-soft`, domain `portfolio`) with
-  `notBoundTo: n0-saas-design-constraints-common` and a `contentHash` over the four enforcing files.
+  a `contentHash` over the four enforcing files.
 - New `extraction/policy_hash.py` (check / `--write`) and `policy/design-policy.json` (`portfolio-site-web` 1.0.0:
   classification, not-bound reason, generation rules, enforcedBy, approval). Both registered as entry points.
-- `verify_all.py`: new `DESIGN_POLICY` check. `prove_drift.py`: 13 new cases (hash drift, category to saas /
-  removed, binding removed, SaaS binding, version drift, notBoundTo removed in manifest and policy, policy file
-  missing, isSaaS true, premature "ratified", hash script unregistered). Drift cases 37 -> 50.
+- `verify_all.py`: new `DESIGN_POLICY` check. `prove_drift.py`: 9 new cases (hash drift, tampered hash, category
+  changed / removed, binding removed, version drift, policy file missing, overstated approval, hash script
+  unregistered). Drift cases 37 -> 46.
 - Honest status: the policy is **defined, pending architecture review**; no architecture decision is recorded.
   The binding and classification are agent-derived on the owner's instruction, not human-reviewed.
 - No contract, schema, token or example changed; `pageSpecVersion` and `allowlistVersion` stay 1.0.0.

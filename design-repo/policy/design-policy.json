@@ -7,13 +7,12 @@
     "policyId": "n0-design-constraints-common",
     "policyVersion": "0.1.0",
     "commonIrVersion": "0.5",
-    "note": "This file is a LOCAL EXTENSION layered on top of the generic (non-SaaS) common policy n0-design-constraints-common 0.1.0. It adds the portfolio rules below; it does not replace the common policy. The binding itself lives in registry.manifest.json designPolicy."
+    "note": "This file is a LOCAL EXTENSION layered on top of the common policy n0-design-constraints-common 0.1.0. It adds the portfolio rules below; it does not replace the common policy. The binding itself lives in registry.manifest.json designPolicy."
   },
   "title": "Creative-direction portfolio web generation policy",
   "classification": {
     "productCategory": "portfolio",
     "productDomain": "creative-direction-portfolio",
-    "isSaaS": false,
     "surfaces": [
       "portfolio-home",
       "case-study-pages",
@@ -25,9 +24,6 @@
       "peers-and-recruiters"
     ],
     "derivation": "Agent-derived from the clone's templates (cosmos-home, case-study), its 26 section contracts (work cosmos, selected list, case pages, about, brief form) and the source notice in registry.manifest.json. It has not been reviewed by a human."
-  },
-  "notBoundTo": {
-    "n0-saas-design-constraints-common": "Explicitly NOT applied. That policy assumes a SaaS product (pricing tiers, feature matrices, integrations, dashboards, demo booking). This repo is the portfolio of a named person (a creative director): none of those constructs exist here and a generator must not introduce them."
   },
   "generationRules": [
     "Pages are drawn only from the 2 templates and 26 section contracts; no pricing-table, feature-matrix, integrations, dashboard or demo-booking sections, because the clone has none.",
@@ -49,7 +45,7 @@
   "approval": {
     "policyDecision": "defined-pending-architecture-review",
     "architectureDecisionRecorded": false,
-    "decision": "The common-policy binding (n0-design-constraints-common 0.1.0, not the SaaS policy) and the portfolio classification were set by the repository owner's instruction and derived by an agent from the clone's evidence. No architecture review has ratified them and no decision is recorded.",
+    "decision": "The common-policy binding (n0-design-constraints-common 0.1.0) and the portfolio classification were set by the repository owner's instruction and derived by an agent from the clone's evidence. No architecture review has ratified them and no decision is recorded.",
     "scope": "Policy binding only. Production approval, asset licensing and sensitivity review are separate and remain open (registry.manifest.json productionApproved false)."
   }
 }

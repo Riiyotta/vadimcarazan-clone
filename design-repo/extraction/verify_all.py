@@ -33,7 +33,7 @@ Checks (each named in the output):
                   per template family
   WRAPPER_GATE    R9: extraction/wrapper_gate.py
   DESIGN_POLICY   category == portfolio; designPolicy bound to n0-design-constraints-common 0.1.0 (Common IR 0.5,
-                  hard-and-soft), never the SaaS policy; notBoundTo kept; policy file present and consistent;
+                  hard-and-soft); policy file and enforcedBy files present and consistent;
                   contentHash recomputed over the enforcing files (extraction/policy_hash.py) matches; approval
                   honestly pending
   HYGIENE         no absolute machine paths, no __pycache__/.DS_Store/__MACOSX/Thumbs.db
@@ -159,7 +159,6 @@ def slugify(s):
 BOUND_POLICY = {"policyId": "n0-design-constraints-common", "policyVersion": "0.1.0", "commonIrVersion": "0.5",
                 "enforcementMode": "hard-and-soft", "category": "portfolio", "domain": "portfolio"}
 LOCAL_EXTENSION = {"ref": "policy/design-policy.json", "policyId": "portfolio-site-web", "policyVersion": "1.0.0"}
-SAAS_POLICY = "n0-saas-design-constraints-common"
 
 
 def check_design_policy(man):
@@ -171,10 +170,6 @@ def check_design_policy(man):
     for k, v in BOUND_POLICY.items():
         if dp.get(k) != v:
             errs.append(f"designPolicy.{k} is {dp.get(k)!r}, expected {v!r}")
-    if "saas" in str(dp.get("policyId", "")).lower() or "saas" in str(man.get("category", "")).lower():
-        errs.append("manifest is bound to / categorised as SaaS")
-    if SAAS_POLICY not in (dp.get("notBoundTo") or {}) or not str((dp.get("notBoundTo") or {}).get(SAAS_POLICY, "")).strip():
-        errs.append(f"designPolicy.notBoundTo must keep {SAAS_POLICY} with a reason")
     ext = dp.get("localExtension") or {}
     for k, v in LOCAL_EXTENSION.items():
         if ext.get(k) != v:
@@ -190,10 +185,8 @@ def check_design_policy(man):
         if ex.get("policyId") != BOUND_POLICY["policyId"] or ex.get("policyVersion") != BOUND_POLICY["policyVersion"] or pol.get("commonIrVersion") != "0.5":
             errs.append("policy/design-policy.json must extend n0-design-constraints-common 0.1.0 on Common IR 0.5")
         cls = pol.get("classification") or {}
-        if cls.get("productCategory") != "portfolio" or cls.get("isSaaS") is not False:
-            errs.append("policy classification must be productCategory 'portfolio', isSaaS false")
-        if SAAS_POLICY not in (pol.get("notBoundTo") or {}):
-            errs.append(f"policy/design-policy.json must record notBoundTo {SAAS_POLICY}")
+        if cls.get("productCategory") != "portfolio":
+            errs.append("policy classification productCategory must be 'portfolio'")
         ap = pol.get("approval") or {}
         if ap.get("policyDecision") != "defined-pending-architecture-review" or ap.get("architectureDecisionRecorded") is not False:
             errs.append("policy approval must stay defined-pending-architecture-review / architectureDecisionRecorded false until a real decision is recorded")
