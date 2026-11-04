@@ -1,0 +1,566 @@
+{
+ "pageSpecVersion": "1.0.0",
+ "mode": "generated",
+ "template": "cosmos-home",
+ "route": "/",
+ "locale": "en",
+ "theme": "dark",
+ "meta": {
+  "title": "Wren Halloway, packaging designer",
+  "description": "Labels, jars and small shop websites, arranged as a field you drift through."
+ },
+ "brand": {
+  "ownerName": "Wren Halloway",
+  "studioName": "Lattice Room",
+  "domain": "latticeroom.example"
+ },
+ "nodes": [
+  {
+   "section": "shell.loader",
+   "content": {
+    "mark": {
+     "assetRole": "generated.brand-mark",
+     "ref": "generated://mark/lattice-room-knot",
+     "alt": ""
+    },
+    "label": "Warming up"
+   },
+   "motion": {
+    "pattern": "loader-draw",
+    "reducedMotionFallback": "unchanged"
+   }
+  },
+  {
+   "section": "chrome.topbar",
+   "content": {
+    "homeMark": {
+     "assetRole": "generated.brand-mark",
+     "ref": "generated://mark/lattice-room-knot",
+     "alt": ""
+    },
+    "homeLabel": "Wren Halloway, start",
+    "factKeys": [
+     "Now:",
+     "Studio in:",
+     "Go to:"
+    ],
+    "role": "Packaging designer",
+    "studio": {
+     "label": "Lattice Room",
+     "href": "https://latticeroom.example"
+    },
+    "city": "Port Avelin, Norvale",
+    "timeZone": "Etc/UTC",
+    "navItems": [
+     {
+      "label": "Highlights",
+      "action": "selected"
+     },
+     {
+      "label": "Archive",
+      "action": "work"
+     },
+     {
+      "label": "Studio",
+      "action": "about"
+     },
+     {
+      "label": "Write",
+      "action": "contact"
+     }
+    ],
+    "menuLabel": "Index",
+    "closeLabel": "Hide"
+   },
+   "motion": {
+    "pattern": "underline-grow",
+    "reducedMotionFallback": "unchanged"
+   },
+   "tokens": {
+    "surface": "surface.page",
+    "text": "text.primary"
+   }
+  },
+  {
+   "section": "shell.phone-menu",
+   "content": {
+    "links": [
+     {
+      "label": "Highlights",
+      "action": "selected"
+     },
+     {
+      "label": "Archive",
+      "action": "work"
+     },
+     {
+      "label": "Studio",
+      "action": "about"
+     },
+     {
+      "label": "Write",
+      "action": "contact"
+     }
+    ],
+    "leadText": "Packaging, type and small websites for independent food and craft makers on the northern coast. Run from",
+    "leadLink": {
+     "label": "Lattice Room",
+     "href": "https://latticeroom.example"
+    },
+    "leadTail": ", a two-person print shop.",
+    "facts": [
+     {
+      "label": "Now:",
+      "value": "Packaging designer, Lattice Room"
+     },
+     {
+      "label": "Studio in:",
+      "value": "Port Avelin, Norvale"
+     }
+    ]
+   },
+   "motion": {
+    "pattern": "menu-panel",
+    "reducedMotionFallback": "unchanged"
+   },
+   "tokens": {
+    "surface": "surface.glass-menu",
+    "text": "text.primary"
+   }
+  },
+  {
+   "section": "hero.portrait-intro",
+   "content": {
+    "leadText": "Packaging, type and small websites for independent food and craft makers on the northern coast. Run from",
+    "leadLink": {
+     "label": "Lattice Room",
+     "href": "https://latticeroom.example"
+    },
+    "leadTail": ", a two-person print shop.",
+    "startLabel": "Drift through the shelf",
+    "name": "Wren Halloway",
+    "nameLines": [
+     "Wren",
+     "Halloway"
+    ],
+    "lettering": {
+     "assetRole": "generated.name-lettering",
+     "ref": "generated://lettering/wren-halloway",
+     "alt": ""
+    }
+   },
+   "motion": {
+    "pattern": "hero-fade",
+    "reducedMotionFallback": "instant"
+   },
+   "tokens": {
+    "surface": "surface.page",
+    "text": "text.lead",
+    "font": "font.family.serif"
+   }
+  },
+  {
+   "section": "media.signature",
+   "content": {
+    "trace": {
+     "assetRole": "generated.signature",
+     "ref": "generated://signature/seed-4471",
+     "alt": ""
+    }
+   },
+   "motion": {
+    "pattern": "signature-draw",
+    "reducedMotionFallback": "unchanged"
+   }
+  },
+  {
+   "section": "showcase.work-cosmos",
+   "content": {
+    "portrait": {
+     "assetRole": "generated.portrait-silhouette",
+     "ref": "generated://portrait/neutral-silhouette",
+     "alt": ""
+    },
+    "works": [
+     {
+      "title": "Copperfin Smokehouse",
+      "kind": "Packaging system",
+      "description": "Drawn for a small maker on the coast: packaging system in two inks, printed by hand in short runs.",
+      "isCaseStudy": true,
+      "media": [
+       {
+        "assetRole": "generated.work-visual",
+        "ref": "generated://work/0/0",
+        "alt": ""
+       },
+       {
+        "assetRole": "generated.work-visual",
+        "ref": "generated://work/0/1",
+        "alt": ""
+       },
+       {
+        "assetRole": "generated.work-visual",
+        "ref": "generated://work/0/2",
+        "alt": ""
+       }
+      ],
+      "slug": "copperfin"
+     },
+     {
+      "title": "Mossgate Honey",
+      "kind": "Label and jar",
+      "description": "Drawn for a small maker on the coast: label and jar in two inks, printed by hand in short runs.",
+      "isCaseStudy": true,
+      "media": [
+       {
+        "assetRole": "generated.work-visual",
+        "ref": "generated://work/1/0",
+        "alt": ""
+       },
+       {
+        "assetRole": "generated.work-visual",
+        "ref": "generated://work/1/1",
+        "alt": ""
+       },
+       {
+        "assetRole": "generated.work-visual",
+        "ref": "generated://work/1/2",
+        "alt": ""
+       }
+      ],
+      "slug": "mossgate"
+     },
+     {
+      "title": "Thimble & Oar",
+      "kind": "Shop identity",
+      "description": "Drawn for a small maker on the coast: shop identity in two inks, printed by hand in short runs.",
+      "isCaseStudy": true,
+      "media": [
+       {
+        "assetRole": "generated.work-visual",
+        "ref": "generated://work/2/0",
+        "alt": ""
+       },
+       {
+        "assetRole": "generated.work-visual",
+        "ref": "generated://work/2/1",
+        "alt": ""
+       },
+       {
+        "assetRole": "generated.work-visual",
+        "ref": "generated://work/2/2",
+        "alt": ""
+       }
+      ],
+      "slug": "thimble-and-oar"
+     },
+     {
+      "title": "Harrowby Cider",
+      "kind": "Can series",
+      "description": "Drawn for a small maker on the coast: can series in two inks, printed by hand in short runs.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "generated.work-visual",
+        "ref": "generated://work/3/0",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Quillon Paper",
+      "kind": "Stationery",
+      "description": "Drawn for a small maker on the coast: stationery in two inks, printed by hand in short runs.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "generated.work-visual",
+        "ref": "generated://work/4/0",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Ember Row Bakery",
+      "kind": "Signage",
+      "description": "Drawn for a small maker on the coast: signage in two inks, printed by hand in short runs.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "generated.work-visual",
+        "ref": "generated://work/5/0",
+        "alt": ""
+       }
+      ]
+     }
+    ]
+   },
+   "motion": {
+    "pattern": "portrait-arrival",
+    "reducedMotionFallback": "unchanged"
+   }
+  },
+  {
+   "section": "utility.fly-fades",
+   "content": {
+    "visibleWhen": "far"
+   },
+   "motion": {
+    "pattern": "fade-layers",
+    "reducedMotionFallback": "unchanged"
+   }
+  },
+  {
+   "section": "utility.flybar",
+   "content": {
+    "backLabel": "Return to portrait",
+    "backShortLabel": "Return",
+    "seenTemplate": "{seen} / {total} looked at",
+    "allSeenTemplate": "Every piece looked at"
+   },
+   "motion": {
+    "pattern": "flybar-reveal",
+    "reducedMotionFallback": "instant"
+   }
+  },
+  {
+   "section": "chrome.social",
+   "content": {
+    "label": "Also:",
+    "links": [
+     {
+      "label": "Journal",
+      "href": "https://journal.latticeroom.example"
+     },
+     {
+      "label": "Newsletter",
+      "href": "https://latticeroom.example/letters"
+     }
+    ]
+   },
+   "motion": {
+    "pattern": "side-reveal",
+    "reducedMotionFallback": "unchanged"
+   }
+  },
+  {
+   "section": "overlay.glass-box",
+   "content": {
+    "views": [
+     "project",
+     "selected",
+     "about",
+     "contact"
+    ],
+    "closeLabel": "Hide"
+   },
+   "motion": {
+    "pattern": "box-slide",
+    "reducedMotionFallback": "instant"
+   },
+   "tokens": {
+    "surface": "surface.glass"
+   }
+  },
+  {
+   "section": "detail.project-view",
+   "content": {
+    "copyLinkLabel": "Share",
+    "copiedLabel": "Shared",
+    "caseStudyLabel": "Open the full story",
+    "piecesLabel": "boards",
+    "cta": {
+     "kicker": "A label to fix?",
+     "title": "Bring the jar, we bring the ink.",
+     "button": {
+      "label": "Begin a brief",
+      "href": "?open=contact"
+     },
+     "alt": {
+      "label": "Visit the print shop",
+      "href": "https://latticeroom.example/shop"
+     }
+    }
+   },
+   "motion": {
+    "pattern": "view-crossfade",
+    "reducedMotionFallback": "instant"
+   },
+   "tokens": {
+    "surface": "surface.glass",
+    "text": "text.body"
+   }
+  },
+  {
+   "section": "index.selected-list",
+   "content": {
+    "label": "Highlights",
+    "title": "Three jars worth opening.",
+    "body": "Longer write-ups of the packaging jobs, from the first sketch on brown paper to the printed run.",
+    "items": [
+     {
+      "title": "Copperfin Smokehouse",
+      "kind": "Packaging system",
+      "workSlug": "copperfin",
+      "thumb": {
+       "assetRole": "generated.work-visual",
+       "ref": "generated://work/0/0",
+       "alt": ""
+      }
+     },
+     {
+      "title": "Mossgate Honey",
+      "kind": "Label and jar",
+      "workSlug": "mossgate",
+      "thumb": {
+       "assetRole": "generated.work-visual",
+       "ref": "generated://work/1/0",
+       "alt": ""
+      }
+     },
+     {
+      "title": "Thimble & Oar",
+      "kind": "Shop identity",
+      "workSlug": "thimble-and-oar",
+      "thumb": {
+       "assetRole": "generated.work-visual",
+       "ref": "generated://work/2/0",
+       "alt": ""
+      }
+     }
+    ],
+    "footPrefix": "Or",
+    "footLink": "wander the whole shelf",
+    "footSuffix": ", {total} pieces from newest to oldest."
+   },
+   "motion": {
+    "pattern": "view-crossfade",
+    "reducedMotionFallback": "instant"
+   },
+   "tokens": {
+    "surface": "surface.glass",
+    "text": "text.body"
+   }
+  },
+  {
+   "section": "about.studio-bio",
+   "content": {
+    "label": "Studio",
+    "title": "Labels that survive a fridge door and a farmers' market.",
+    "paragraphs": [
+     "Wren trained as a letterpress printer before drawing her first jam label for a neighbour. The press still sits in the back room.",
+     "Most jobs come from makers who sell at weekend markets and need a label, a box and one honest web page."
+    ],
+    "clientsLabel": "Recent makers",
+    "clients": [
+     "Copperfin Smokehouse",
+     "Mossgate Honey",
+     "Harrowby Cider",
+     "Quillon Paper"
+    ],
+    "clientsTail": "Ember Row Bakery",
+    "statsLabel": "In the field",
+    "statsTemplate": "{images} boards from {projects} jobs",
+    "elsewhereLabel": "Also",
+    "elsewhereLinks": [
+     {
+      "label": "Journal",
+      "href": "https://journal.latticeroom.example"
+     },
+     {
+      "label": "Newsletter",
+      "href": "https://latticeroom.example/letters"
+     }
+    ],
+    "contactLabel": "Post",
+    "contactAction": "Drop us a note",
+    "cta": {
+     "kicker": "A label to fix?",
+     "title": "Bring the jar, we bring the ink.",
+     "button": {
+      "label": "Begin a brief",
+      "href": "?open=contact"
+     },
+     "alt": {
+      "label": "Visit the print shop",
+      "href": "https://latticeroom.example/shop"
+     }
+    }
+   },
+   "motion": {
+    "pattern": "view-crossfade",
+    "reducedMotionFallback": "instant"
+   },
+   "tokens": {
+    "surface": "surface.glass",
+    "text": "text.body"
+   }
+  },
+  {
+   "section": "conversion.brief-form",
+   "content": {
+    "label": "New brief",
+    "title": "What are you bottling?",
+    "sub": "Tell us the product, the shelf it sits on and the date the first batch ships.",
+    "nameLabel": "Your name",
+    "emailLabel": "Email",
+    "companyLabel": "Shop or market stall",
+    "needsLegend": "Which pieces?",
+    "needs": [
+     "Label",
+     "Box",
+     "Shop page",
+     "Market sign"
+    ],
+    "budgetLegend": "Print run",
+    "budgets": [
+     "Under 500",
+     "500 to 2,000",
+     "Over 2,000",
+     "Undecided"
+    ],
+    "messageLabel": "The product",
+    "messagePlaceholder": "What it is, where it sells and when it launches.",
+    "submitLabel": "Post the brief",
+    "notePrefix": "Or email",
+    "email": {
+     "label": "studio@latticeroom.example",
+     "href": "mailto:studio@latticeroom.example"
+    },
+    "errorText": "We need a name, a working email and a line about the product.",
+    "doneTitle": "Got it",
+    "doneText": "We answer briefs on Tuesdays and Fridays.",
+    "doneBack": "Back to the shelf",
+    "delivery": "post-endpoint"
+   },
+   "motion": {
+    "pattern": "view-crossfade",
+    "reducedMotionFallback": "instant"
+   },
+   "tokens": {
+    "surface": "surface.glass",
+    "text": "text.sub"
+   }
+  },
+  {
+   "section": "utility.hover-hud",
+   "content": {
+    "labelSource": "work-title"
+   },
+   "motion": {
+    "pattern": "hud-follow",
+    "reducedMotionFallback": "unchanged"
+   }
+  },
+  {
+   "section": "utility.copy-toast",
+   "content": {
+    "label": "Shared"
+   },
+   "motion": {
+    "pattern": "toast-rise",
+    "reducedMotionFallback": "unchanged"
+   }
+  }
+ ]
+}

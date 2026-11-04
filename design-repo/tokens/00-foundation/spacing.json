@@ -1,0 +1,186 @@
+{
+ "category": "spacing",
+ "note": "space.pad measured 28.8px at 1440, 25.6px at 1280, 16px at 390 (CLONE_SPEC.md 2.3; extraction/measured-values.json).",
+ "tokens": {
+  "space.pad": {
+   "$type": "dimension",
+   "$value": "clamp(16px, 2vw, 32px)",
+   "category": "spacing",
+   "evidence": [
+    {
+     "cite": "src/index.css:11",
+     "needle": "--pad: clamp(16px, 2vw, 32px)"
+    },
+    {
+     "cite": "CLONE_SPEC.md:83",
+     "needle": "- `--pad: clamp(16px, 2vw, 32px)`"
+    }
+   ]
+  },
+  "space.panel": {
+   "$type": "dimension",
+   "$value": "28px",
+   "category": "spacing",
+   "evidence": [
+    {
+     "cite": "src/index.css:14",
+     "needle": "--bp: 28px"
+    }
+   ]
+  },
+  "space.panel-phone": {
+   "$type": "dimension",
+   "$value": "14px",
+   "category": "spacing",
+   "evidence": [
+    {
+     "cite": "src/index.css:426",
+     "needle": "--bp: 14px"
+    }
+   ]
+  },
+  "space.gap-6": {
+   "$type": "dimension",
+   "$value": "6px",
+   "category": "spacing",
+   "evidence": [
+    {
+     "cite": "src/index.css:218",
+     "needle": "gap: 6px;"
+    }
+   ]
+  },
+  "space.gap-8": {
+   "$type": "dimension",
+   "$value": "8px",
+   "category": "spacing",
+   "evidence": [
+    {
+     "cite": "src/index.css:152",
+     "needle": "gap: 8px"
+    }
+   ]
+  },
+  "space.gap-10": {
+   "$type": "dimension",
+   "$value": "10px",
+   "category": "spacing",
+   "evidence": [
+    {
+     "cite": "src/index.css:248",
+     "needle": ".gallery { display: flex; flex-direction: column; gap: 10px"
+    }
+   ]
+  },
+  "space.gap-12": {
+   "$type": "dimension",
+   "$value": "12px",
+   "category": "spacing",
+   "evidence": [
+    {
+     "cite": "src/case.css:33",
+     "needle": "gap: 12px"
+    }
+   ]
+  },
+  "space.gap-14": {
+   "$type": "dimension",
+   "$value": "14px",
+   "category": "spacing",
+   "evidence": [
+    {
+     "cite": "src/index.css:144",
+     "needle": "gap: 14px"
+    }
+   ]
+  },
+  "space.gap-16": {
+   "$type": "dimension",
+   "$value": "16px",
+   "category": "spacing",
+   "evidence": [
+    {
+     "cite": "src/index.css:286",
+     "needle": "gap: 16px"
+    }
+   ]
+  },
+  "space.gap-20": {
+   "$type": "dimension",
+   "$value": "20px",
+   "category": "spacing",
+   "evidence": [
+    {
+     "cite": "src/index.css:138",
+     "needle": "gap: 20px"
+    }
+   ]
+  },
+  "space.gap-22": {
+   "$type": "dimension",
+   "$value": "22px",
+   "category": "spacing",
+   "evidence": [
+    {
+     "cite": "src/case.css:11",
+     "needle": "gap: 22px"
+    }
+   ]
+  },
+  "space.gap-24": {
+   "$type": "dimension",
+   "$value": "24px",
+   "category": "spacing",
+   "evidence": [
+    {
+     "cite": "src/index.css:96",
+     "needle": "gap: 24px"
+    }
+   ]
+  },
+  "space.section-block": {
+   "$type": "dimension",
+   "$value": "clamp(48px, 10vh, 120px)",
+   "category": "spacing",
+   "evidence": [
+    {
+     "cite": "src/case.css:38",
+     "needle": "padding: clamp(48px, 10vh, 120px) 0"
+    }
+   ]
+  },
+  "space.next-gap": {
+   "$type": "dimension",
+   "$value": "clamp(64px, 12vh, 140px)",
+   "category": "spacing",
+   "evidence": [
+    {
+     "cite": "src/case.css:47",
+     "needle": "margin-top: clamp(64px, 12vh, 140px)"
+    }
+   ]
+  },
+  "space.head-gap": {
+   "$type": "dimension",
+   "$value": "clamp(32px, 6vh, 64px)",
+   "category": "spacing",
+   "evidence": [
+    {
+     "cite": "src/case.css:11",
+     "needle": "margin-bottom: clamp(32px, 6vh, 64px)"
+    }
+   ]
+  },
+  "space.hero-row": {
+   "$type": "dimension",
+   "$value": "clamp(24px, 3.4vh, 40px)",
+   "category": "spacing",
+   "evidence": [
+    {
+     "cite": "src/index.css:97",
+     "needle": "margin-bottom: clamp(24px, 3.4vh, 40px)"
+    }
+   ]
+  }
+ }
+}

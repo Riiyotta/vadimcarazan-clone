@@ -1,0 +1,280 @@
+{
+ "note": "Every route the clone serves, mapped exactly once: '/' plus one /work/<slug> per case project (src/engine/data.js SELECTED + EXTRA_CASES through slugify). verify_all re-derives the slug list from data.js and cross-checks ia/ia.json when the source tree is present. Query params are states of '/', not routes.",
+ "source": "src/main.jsx + src/engine/data.js",
+ "routes": [
+  {
+   "path": "/",
+   "template": "cosmos-home",
+   "locale": "en",
+   "evidence": "src/main.jsx",
+   "queryStates": [
+    "?work=<id>",
+    "?open=about",
+    "?open=contact",
+    "?open=selected",
+    "?fly=1"
+   ]
+  },
+  {
+   "path": "/work/northwind",
+   "template": "case-study",
+   "locale": "en",
+   "evidence": "src/engine/data.js",
+   "slug": "northwind",
+   "caseTitle": "Northwind",
+   "bodyBlocks": [
+    "text",
+    "image",
+    "pair",
+    "text",
+    "image",
+    "image",
+    "text"
+   ]
+  },
+  {
+   "path": "/work/halcyon",
+   "template": "case-study",
+   "locale": "en",
+   "evidence": "src/engine/data.js",
+   "slug": "halcyon",
+   "caseTitle": "Halcyon",
+   "bodyBlocks": [
+    "text",
+    "image",
+    "pair",
+    "text",
+    "image",
+    "image",
+    "image",
+    "text"
+   ]
+  },
+  {
+   "path": "/work/meridian",
+   "template": "case-study",
+   "locale": "en",
+   "evidence": "src/engine/data.js",
+   "slug": "meridian",
+   "caseTitle": "Meridian",
+   "bodyBlocks": [
+    "text",
+    "image",
+    "pair",
+    "text",
+    "image",
+    "image",
+    "image",
+    "image",
+    "text"
+   ]
+  },
+  {
+   "path": "/work/fieldnote",
+   "template": "case-study",
+   "locale": "en",
+   "evidence": "src/engine/data.js",
+   "slug": "fieldnote",
+   "caseTitle": "Fieldnote",
+   "bodyBlocks": [
+    "text",
+    "image",
+    "pair",
+    "text",
+    "image",
+    "image",
+    "image",
+    "image",
+    "image",
+    "text"
+   ]
+  },
+  {
+   "path": "/work/quarry-law",
+   "template": "case-study",
+   "locale": "en",
+   "evidence": "src/engine/data.js",
+   "slug": "quarry-law",
+   "caseTitle": "Quarry Law",
+   "bodyBlocks": [
+    "text",
+    "image",
+    "pair",
+    "text",
+    "image",
+    "image",
+    "text"
+   ]
+  },
+  {
+   "path": "/work/lumen-labs",
+   "template": "case-study",
+   "locale": "en",
+   "evidence": "src/engine/data.js",
+   "slug": "lumen-labs",
+   "caseTitle": "Lumen Labs",
+   "bodyBlocks": [
+    "text",
+    "image",
+    "pair",
+    "text",
+    "image",
+    "image",
+    "image",
+    "text"
+   ]
+  },
+  {
+   "path": "/work/parallel",
+   "template": "case-study",
+   "locale": "en",
+   "evidence": "src/engine/data.js",
+   "slug": "parallel",
+   "caseTitle": "Parallel",
+   "bodyBlocks": [
+    "text",
+    "image",
+    "pair",
+    "text",
+    "image",
+    "image",
+    "image",
+    "image",
+    "text"
+   ]
+  },
+  {
+   "path": "/work/atlasai",
+   "template": "case-study",
+   "locale": "en",
+   "evidence": "src/engine/data.js",
+   "slug": "atlasai",
+   "caseTitle": "Atlas.ai",
+   "bodyBlocks": [
+    "text",
+    "image",
+    "pair",
+    "text",
+    "image",
+    "image",
+    "image",
+    "image",
+    "image",
+    "text"
+   ]
+  },
+  {
+   "path": "/work/kestrel",
+   "template": "case-study",
+   "locale": "en",
+   "evidence": "src/engine/data.js",
+   "slug": "kestrel",
+   "caseTitle": "Kestrel",
+   "bodyBlocks": [
+    "text",
+    "image",
+    "pair",
+    "text",
+    "image",
+    "image",
+    "text"
+   ]
+  },
+  {
+   "path": "/work/omnifield",
+   "template": "case-study",
+   "locale": "en",
+   "evidence": "src/engine/data.js",
+   "slug": "omnifield",
+   "caseTitle": "Omnifield",
+   "bodyBlocks": [
+    "text",
+    "image",
+    "pair",
+    "text",
+    "text"
+   ]
+  },
+  {
+   "path": "/work/brightline",
+   "template": "case-study",
+   "locale": "en",
+   "evidence": "src/engine/data.js",
+   "slug": "brightline",
+   "caseTitle": "Brightline",
+   "bodyBlocks": [
+    "text",
+    "image",
+    "pair",
+    "text",
+    "image",
+    "text"
+   ]
+  },
+  {
+   "path": "/work/solace",
+   "template": "case-study",
+   "locale": "en",
+   "evidence": "src/engine/data.js",
+   "slug": "solace",
+   "caseTitle": "Solace",
+   "bodyBlocks": [
+    "text",
+    "image",
+    "pair",
+    "text",
+    "image",
+    "image",
+    "text"
+   ]
+  },
+  {
+   "path": "/work/vantage",
+   "template": "case-study",
+   "locale": "en",
+   "evidence": "src/engine/data.js",
+   "slug": "vantage",
+   "caseTitle": "Vantage",
+   "bodyBlocks": [
+    "text",
+    "image",
+    "pair",
+    "text",
+    "text"
+   ]
+  },
+  {
+   "path": "/work/corvid",
+   "template": "case-study",
+   "locale": "en",
+   "evidence": "src/engine/data.js",
+   "slug": "corvid",
+   "caseTitle": "Corvid",
+   "bodyBlocks": [
+    "text",
+    "image",
+    "pair",
+    "text",
+    "image",
+    "text"
+   ]
+  },
+  {
+   "path": "/work/tessera",
+   "template": "case-study",
+   "locale": "en",
+   "evidence": "src/engine/data.js",
+   "slug": "tessera",
+   "caseTitle": "Tessera",
+   "bodyBlocks": [
+    "text",
+    "image",
+    "pair",
+    "text",
+    "image",
+    "image",
+    "text"
+   ]
+  }
+ ]
+}

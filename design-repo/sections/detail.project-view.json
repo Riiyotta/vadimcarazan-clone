@@ -1,0 +1,154 @@
+{
+ "id": "detail.project-view",
+ "title": "Project view",
+ "version": "1.0.0",
+ "purpose": "One work opened in the glass box: kind line (+ piece count), serif title, description, the pieces stacked, a closing CTA card; actions to copy a link and read the case study.",
+ "semantic": {
+  "id": "detail.project-view",
+  "category": "DETAIL"
+ },
+ "source": {
+  "id": "dom:section.view.v-project",
+  "file": "src/components/Box.jsx",
+  "tag": "section",
+  "lines": "244",
+  "needle": "<section className={`view v-project"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Box.jsx:48",
+   "needle": "function ProjectView("
+  },
+  {
+   "cite": "src/index.css:237",
+   "needle": ".p-fit { gap: 10px; }"
+  }
+ ],
+ "iaSectionId": "panel.project",
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "requires": [
+   "overlay.glass-box",
+   "showcase.work-cosmos"
+  ],
+  "templates": [
+   "cosmos-home"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "copyLinkLabel": {
+   "kind": "text",
+   "maxWords": 2,
+   "required": true
+  },
+  "copiedLabel": {
+   "kind": "text",
+   "maxWords": 2,
+   "required": true
+  },
+  "caseStudyLabel": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": true
+  },
+  "piecesLabel": {
+   "kind": "text",
+   "maxWords": 1,
+   "required": true
+  },
+  "cta": {
+   "kind": "group",
+   "fields": {
+    "kicker": {
+     "kind": "text",
+     "maxWords": 4,
+     "required": true
+    },
+    "title": {
+     "kind": "text",
+     "maxWords": 8,
+     "required": true
+    },
+    "button": {
+     "kind": "link",
+     "maxWords": 3,
+     "required": true
+    },
+    "alt": {
+     "kind": "link",
+     "maxWords": 5,
+     "required": true
+    }
+   },
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "view-crossfade",
+   "focus-drift"
+  ],
+  "default": "view-crossfade"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.glass"
+  ],
+  "text": [
+   "text.primary",
+   "text.muted",
+   "text.body"
+  ]
+ },
+ "responsive": {
+  "phoneMaxWidth": 860,
+  "changes": [
+   "Close and Copy become 38px round icon buttons",
+   "h2 27px, desc 13.5px",
+   "single piece: sheet shrinks to fit"
+  ],
+  "cite": {
+   "cite": "src/index.css:434",
+   "needle": ".v-project .back-link { width: 38px; height: 38px;"
+  }
+ },
+ "layer": {
+  "position": "fixed",
+  "parent": "overlay.glass-box"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy",
+  "placeholder.url"
+ ],
+ "measured": {
+  "inFlowAt1440": false,
+  "positionAt1440": "fixed",
+  "source": "extraction/measured-values.json#sectionHeights",
+  "rectAt1440": [
+   -10.2,
+   100.6,
+   602.8,
+   769.6
+  ],
+  "rectAt390": [
+   17,
+   117,
+   356,
+   750
+  ],
+  "note": "position:fixed layer (or inside one); takes no page height."
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:447",
+   "needle": "- **Project view** (`.p-fit`, gap 10px):"
+  },
+  {
+   "cite": "CLONE_SPEC.md:320",
+   "needle": "### 3.9 Open / close of a project (overlay)"
+  }
+ ]
+}

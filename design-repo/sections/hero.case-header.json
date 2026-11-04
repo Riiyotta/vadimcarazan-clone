@@ -1,0 +1,135 @@
+{
+ "id": "hero.case-header",
+ "title": "Case-study header",
+ "version": "1.0.0",
+ "purpose": "Page-opening composition of a case study: breadcrumb kicker, display-size serif title, intro (+ optional live-site pill) and a four-column facts row.",
+ "semantic": {
+  "id": "hero.case-header",
+  "category": "HERO"
+ },
+ "source": {
+  "id": "dom:header.cs-head",
+  "file": "src/pages/CaseStudy.jsx",
+  "tag": "header",
+  "lines": "95",
+  "needle": "<header className=\"cs-head\">"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/pages/CaseStudy.jsx:50",
+   "needle": "export default function CaseStudy"
+  },
+  {
+   "cite": "src/case.css:11",
+   "needle": ".cs-head {"
+  }
+ ],
+ "iaSectionId": "hero.case-header",
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "case-study"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "crumb": {
+   "kind": "link",
+   "maxWords": 1,
+   "required": true
+  },
+  "kickerText": {
+   "kind": "text",
+   "maxWords": 8,
+   "required": true
+  },
+  "title": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": true
+  },
+  "intro": {
+   "kind": "text",
+   "maxWords": 30,
+   "required": true
+  },
+  "liveLink": {
+   "kind": "link",
+   "maxWords": 4,
+   "required": false
+  },
+  "facts": {
+   "kind": "items",
+   "fields": {
+    "label": {
+     "kind": "text",
+     "maxWords": 1,
+     "required": true
+    },
+    "value": {
+     "kind": "text",
+     "maxWords": 8,
+     "required": true
+    }
+   },
+   "minItems": 1,
+   "maxItems": 4,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "case-reveal",
+   "none"
+  ],
+  "default": "case-reveal"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.muted",
+   "text.lead"
+  ]
+ },
+ "responsive": {
+  "phoneMaxWidth": 860,
+  "changes": [
+   "top padding pad + 52px + 6vh",
+   "facts 2 columns"
+  ],
+  "cite": {
+   "cite": "src/case.css:71",
+   "needle": ".cs-facts { grid-template-columns: 1fr 1fr; }"
+  }
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy",
+  "placeholder.url"
+ ],
+ "measured": {
+  "inFlowAt1440": true,
+  "positionAt1440": "static",
+  "source": "extraction/measured-values.json#sectionHeights",
+  "heightPx1440": {
+   "min": 327.2,
+   "max": 352,
+   "instances": 15,
+   "routes": 15
+  },
+  "heightPx390": {
+   "min": 328.1,
+   "max": 328.1
+  }
+ },
+ "evidence": [
+  {
+   "cite": "src/pages/CaseStudy.jsx:100",
+   "needle": "<h1 className=\"cs-title rv\">"
+  }
+ ]
+}

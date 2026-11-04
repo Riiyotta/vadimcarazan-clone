@@ -1,0 +1,14 @@
+{
+ "id": "icon",
+ "kind": "primitive",
+ "description": "14px stroke icon set.",
+ "tokens": [
+  "text.primary"
+ ],
+ "evidence": [
+  {
+   "cite": "src/components/Icons.jsx:6",
+   "needle": "export const Chevron"
+  }
+ ]
+}

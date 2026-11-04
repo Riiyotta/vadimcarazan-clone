@@ -1,0 +1,120 @@
+{
+ "category": "semantic",
+ "note": "Roles resolve to one foundation colour ($ref); $value is the resolved value so the catalog can be re-derived.",
+ "tokens": {
+  "surface.page": {
+   "$type": "color",
+   "$value": "#0a0a0b",
+   "$ref": "color.bg",
+   "category": "surface"
+  },
+  "surface.glass": {
+   "$type": "color",
+   "$value": "rgba(22, 22, 24, 0.6)",
+   "$ref": "color.glass",
+   "category": "surface"
+  },
+  "surface.glass-menu": {
+   "$type": "color",
+   "$value": "rgba(22, 22, 24, 0.62)",
+   "$ref": "color.glass-menu",
+   "category": "surface"
+  },
+  "surface.card": {
+   "$type": "color",
+   "$value": "rgba(255, 255, 255, 0.03)",
+   "$ref": "color.white-03",
+   "category": "surface"
+  },
+  "surface.hud": {
+   "$type": "color",
+   "$value": "rgba(0, 0, 0, 0.62)",
+   "$ref": "color.hud",
+   "category": "surface"
+  },
+  "surface.solid": {
+   "$type": "color",
+   "$value": "#ffffff",
+   "$ref": "color.white",
+   "category": "surface"
+  },
+  "text.primary": {
+   "$type": "color",
+   "$value": "#f2f2f2",
+   "$ref": "color.ink",
+   "category": "text"
+  },
+  "text.muted": {
+   "$type": "color",
+   "$value": "rgba(242, 242, 242, 0.55)",
+   "$ref": "color.mute",
+   "category": "text"
+  },
+  "text.lead": {
+   "$type": "color",
+   "$value": "rgba(242, 242, 242, 0.86)",
+   "$ref": "color.ink-86",
+   "category": "text"
+  },
+  "text.body": {
+   "$type": "color",
+   "$value": "rgba(242, 242, 242, 0.78)",
+   "$ref": "color.ink-78",
+   "category": "text"
+  },
+  "text.sub": {
+   "$type": "color",
+   "$value": "rgba(242, 242, 242, 0.72)",
+   "$ref": "color.ink-72",
+   "category": "text"
+  },
+  "text.on-solid": {
+   "$type": "color",
+   "$value": "#000000",
+   "$ref": "color.black",
+   "category": "text"
+  },
+  "text.error": {
+   "$type": "color",
+   "$value": "#ff9b92",
+   "$ref": "color.error",
+   "category": "text"
+  },
+  "border.hairline": {
+   "$type": "color",
+   "$value": "rgba(255, 255, 255, 0.12)",
+   "$ref": "color.line",
+   "category": "border"
+  },
+  "border.glass": {
+   "$type": "color",
+   "$value": "rgba(255, 255, 255, 0.09)",
+   "$ref": "color.white-09",
+   "category": "border"
+  },
+  "border.strong": {
+   "$type": "color",
+   "$value": "rgba(255, 255, 255, 0.35)",
+   "$ref": "color.white-35",
+   "category": "border"
+  },
+  "border.focus": {
+   "$type": "color",
+   "$value": "rgba(255, 255, 255, 0.45)",
+   "$ref": "color.white-45",
+   "category": "border"
+  },
+  "border.invalid": {
+   "$type": "color",
+   "$value": "rgba(255, 120, 110, 0.7)",
+   "$ref": "color.invalid",
+   "category": "border"
+  },
+  "border.underline": {
+   "$type": "color",
+   "$value": "rgba(255, 255, 255, 0.3)",
+   "$ref": "color.white-30",
+   "category": "border"
+  }
+ }
+}

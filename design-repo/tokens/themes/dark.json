@@ -1,0 +1,25 @@
+{
+ "theme": "dark",
+ "note": "The only theme: the source is dark-only (theme-color #0a0a0b). Every semantic token resolves to a foundation token.",
+ "resolves": {
+  "surface.page": "color.bg",
+  "surface.glass": "color.glass",
+  "surface.glass-menu": "color.glass-menu",
+  "surface.card": "color.white-03",
+  "surface.hud": "color.hud",
+  "surface.solid": "color.white",
+  "text.primary": "color.ink",
+  "text.muted": "color.mute",
+  "text.lead": "color.ink-86",
+  "text.body": "color.ink-78",
+  "text.sub": "color.ink-72",
+  "text.on-solid": "color.black",
+  "text.error": "color.error",
+  "border.hairline": "color.line",
+  "border.glass": "color.white-09",
+  "border.strong": "color.white-35",
+  "border.focus": "color.white-45",
+  "border.invalid": "color.invalid",
+  "border.underline": "color.white-30"
+ }
+}

@@ -1,0 +1,130 @@
+{
+ "version": "1.0.0",
+ "note": "Rhythm/structure rules JSON Schema cannot express. Ids and severities are machine-checked against schema/semantic_validate.py RULES by verify_all.py.",
+ "rules": [
+  {
+   "id": "ONE_HERO",
+   "severity": "error",
+   "rule": "Exactly one HERO node per page (both templates open with one)."
+  },
+  {
+   "id": "HERO_FIRST_CONTENT",
+   "severity": "error",
+   "rule": "The first node that is not SHELL/UTILITY is the HERO. cosmos-home nodes are in reading order (z-order lives in contract.layer), so the loader, top bar and phone menu may precede it."
+  },
+  {
+   "id": "MUST_BE_FIRST",
+   "severity": "error",
+   "rule": "Sections with constraints.mustBeFirst (shell.loader) are node 0."
+  },
+  {
+   "id": "MUST_BE_LAST",
+   "severity": "error",
+   "rule": "Sections with constraints.mustBeLast (chrome.case-footer) are the last node."
+  },
+  {
+   "id": "ONE_PER_PAGE",
+   "severity": "error",
+   "rule": "onePerPage sections appear at most once."
+  },
+  {
+   "id": "REQUIRES_SECTION",
+   "severity": "error",
+   "rule": "constraints.requires: the flybar and hover label need the cosmos; box views need the glass box; the toast needs the project view."
+  },
+  {
+   "id": "TEMPLATE_ONLY",
+   "severity": "error",
+   "rule": "constraints.templates restricts a section to its template family."
+  },
+  {
+   "id": "ROUTE_PATTERN",
+   "severity": "error",
+   "rule": "route matches the template's routePattern (^/$ or ^/work/[a-z0-9-]+$), in both modes."
+  },
+  {
+   "id": "HOME_ROUTE_ONLY",
+   "severity": "error",
+   "rule": "A reference cosmos-home spec must be bound to a route mapped to cosmos-home in routes.json."
+  },
+  {
+   "id": "BOX_VIEWS_MATCH",
+   "severity": "error",
+   "rule": "overlay.glass-box content.views equals the set of view sections present (project, selected, about, contact)."
+  },
+  {
+   "id": "NAV_TARGET_EXISTS",
+   "severity": "error",
+   "rule": "On cosmos-home every navigation action (top bar, phone menu) other than 'work' has its view section on the page."
+  },
+  {
+   "id": "NEXT_CASE_NOT_SELF",
+   "severity": "error",
+   "rule": "index.next-case href is a /work/<slug> route other than the page's own route."
+  },
+  {
+   "id": "RETRIEVAL_INELIGIBLE_SHELL_ONLY",
+   "severity": "error",
+   "rule": "Only SHELL/UTILITY sections may be retrievalEligible:false; nodes cannot override the contract."
+  },
+  {
+   "id": "NO_ADJACENT_SAME_CATEGORY",
+   "severity": "warn",
+   "rule": "Two adjacent nodes of the same category, except the named exceptions.",
+   "exceptions": [
+    {
+     "categories": [
+      "SHELL",
+      "SHELL"
+     ],
+     "why": "top bar + phone menu are both chrome"
+    },
+    {
+     "categories": [
+      "UTILITY",
+      "UTILITY"
+     ],
+     "why": "runtime layers stack"
+    },
+    {
+     "categories": [
+      "MEDIA",
+      "MEDIA"
+     ],
+     "why": "case bodies run several boards in a row (placeholderSections: images i>=4)"
+    },
+    {
+     "categories": [
+      "HERO",
+      "MEDIA"
+     ],
+     "why": "different categories; listed for clarity"
+    }
+   ]
+  },
+  {
+   "id": "NO_CONSECUTIVE_DUPLICATE",
+   "severity": "warn",
+   "rule": "The same section twice in a row (media.case-image exempt: real runs of boards; editorial.case-text twice in a row is real on /work/omnifield and /work/vantage but still warns).",
+   "exemptSections": [
+    "media.case-image"
+   ]
+  },
+  {
+   "id": "CASE_BODY_HAS_TEXT",
+   "severity": "warn",
+   "rule": "A case-study body should contain at least one editorial.case-text (every served case has three)."
+  },
+  {
+   "id": "MOTION_BUDGET",
+   "severity": "warn",
+   "rule": "At most 3 nodes using an ambient-loop pattern.",
+   "ambient": [
+    "arrow-bob",
+    "halo-drift",
+    "pointer-parallax"
+   ],
+   "max": 3
+  }
+ ]
+}

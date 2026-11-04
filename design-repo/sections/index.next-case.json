@@ -1,0 +1,124 @@
+{
+ "id": "index.next-case",
+ "title": "Next case link",
+ "version": "1.0.0",
+ "purpose": "Link to the next case study: label, display-size serif title, a 4:3 thumbnail and the kind line.",
+ "semantic": {
+  "id": "index.next-case",
+  "category": "INDEX"
+ },
+ "source": {
+  "id": "dom:a.cs-next",
+  "file": "src/pages/CaseStudy.jsx",
+  "tag": "a",
+  "lines": "145",
+  "needle": "<a className=\"cs-next rv\" href={`/work/${next.slug}`}>"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/case.css:45",
+   "needle": ".cs-next {"
+  }
+ ],
+ "iaSectionId": "nav.next-case",
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "case-study"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "label": {
+   "kind": "text",
+   "maxWords": 3,
+   "required": true
+  },
+  "title": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": true
+  },
+  "kind": {
+   "kind": "text",
+   "maxWords": 5,
+   "required": true
+  },
+  "href": {
+   "kind": "text",
+   "maxWords": 1,
+   "required": true
+  },
+  "thumb": {
+   "kind": "media",
+   "assetRoles": [
+    "work.piece-image",
+    "work.piece-video"
+   ],
+   "generatedAssetRoles": [
+    "generated.work-visual",
+    "user.work-media",
+    "placeholder.work-video"
+   ],
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "case-reveal",
+   "next-case-hover"
+  ],
+  "default": "case-reveal"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.muted"
+  ]
+ },
+ "responsive": {
+  "phoneMaxWidth": 860,
+  "changes": [
+   "thumbnail hidden"
+  ],
+  "cite": {
+   "cite": "src/case.css:75",
+   "needle": ".cs-next-img { display: none; }"
+  }
+ },
+ "referenceAssetRoles": [
+  "work.piece-image",
+  "work.piece-video"
+ ],
+ "generatedAssetRoles": [
+  "generated.work-visual",
+  "original.copy",
+  "placeholder.work-video",
+  "user.work-media"
+ ],
+ "measured": {
+  "inFlowAt1440": true,
+  "positionAt1440": "static",
+  "source": "extraction/measured-values.json#sectionHeights",
+  "heightPx1440": {
+   "min": 279.4,
+   "max": 279.4,
+   "instances": 15,
+   "routes": 15
+  },
+  "heightPx390": {
+   "min": 138.2,
+   "max": 138.2
+  }
+ },
+ "evidence": [
+  {
+   "cite": "src/pages/CaseStudy.jsx:54",
+   "needle": "const next = cases[(idx + 1) % cases.length]"
+  }
+ ]
+}

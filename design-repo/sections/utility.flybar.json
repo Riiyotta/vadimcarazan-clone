@@ -1,0 +1,121 @@
+{
+ "id": "utility.flybar",
+ "title": "Flybar",
+ "version": "1.0.0",
+ "purpose": "While flying: the lane piece now passing (3-digit index, title, kind), a seen counter and a Back pill to the portrait.",
+ "semantic": {
+  "id": "utility.flybar",
+  "category": "UTILITY"
+ },
+ "source": {
+  "id": "dom:div.flybar",
+  "file": "src/components/Flybar.jsx",
+  "tag": "div",
+  "lines": "7",
+  "needle": "<div className=\"flybar\">"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Flybar.jsx:5",
+   "needle": "export default function Flybar"
+  },
+  {
+   "cite": "src/index.css:135",
+   "needle": ".flybar {"
+  }
+ ],
+ "iaSectionId": "nav.flybar",
+ "retrievalEligible": false,
+ "retrievalReason": "Runtime travel HUD: its caption is generated each frame from the engine's lane position; only the button labels are authored. Not a retrievable content section.",
+ "constraints": {
+  "onePerPage": true,
+  "requires": [
+   "showcase.work-cosmos"
+  ],
+  "templates": [
+   "cosmos-home"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "backLabel": {
+   "kind": "text",
+   "maxWords": 3,
+   "required": true
+  },
+  "backShortLabel": {
+   "kind": "text",
+   "maxWords": 1,
+   "required": true
+  },
+  "seenTemplate": {
+   "kind": "text",
+   "maxWords": 5,
+   "required": true
+  },
+  "allSeenTemplate": {
+   "kind": "text",
+   "maxWords": 5,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "flybar-reveal"
+  ],
+  "default": "flybar-reveal"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.muted"
+  ]
+ },
+ "responsive": {
+  "phoneMaxWidth": 860,
+  "changes": [
+   "counter hidden",
+   "Back pill shows only 'Back'",
+   "index 40px, title 19px"
+  ],
+  "cite": {
+   "cite": "src/index.css:420",
+   "needle": ".seen { display: none; }"
+  }
+ },
+ "layer": {
+  "position": "fixed",
+  "zIndex": "z.flybar"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy"
+ ],
+ "measured": {
+  "inFlowAt1440": false,
+  "positionAt1440": "fixed",
+  "source": "extraction/measured-values.json#sectionHeights",
+  "rectAt1440": [
+   28.8,
+   843.4,
+   1382.4,
+   41.8
+  ],
+  "rectAt390": [
+   16,
+   804.5,
+   358,
+   37.5
+  ],
+  "note": "position:fixed layer (or inside one); takes no page height."
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:411",
+   "needle": "### 4.3 Flybar (`.flybar`"
+  }
+ ]
+}

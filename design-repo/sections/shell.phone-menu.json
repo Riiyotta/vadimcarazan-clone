@@ -1,0 +1,155 @@
+{
+ "id": "shell.phone-menu",
+ "title": "Phone menu panel",
+ "version": "1.0.0",
+ "purpose": "Glass panel under the top bar on phones: four serif navigation links, the lead text and the two facts.",
+ "semantic": {
+  "id": "shell.phone-menu",
+  "category": "SHELL"
+ },
+ "source": {
+  "id": "dom:div.mnav#mnav",
+  "file": "src/components/MobileNav.jsx",
+  "tag": "div",
+  "lines": "5",
+  "needle": "id=\"mnav\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/MobileNav.jsx:3",
+   "needle": "export default function MobileNav"
+  },
+  {
+   "cite": "src/index.css:372",
+   "needle": ".mnav {"
+  }
+ ],
+ "iaSectionId": "shell.mobile-menu",
+ "retrievalEligible": false,
+ "retrievalReason": "Overlay navigation panel, visibility hidden until the phone Menu word opens it; runtime navigation UI, not a content section.",
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "cosmos-home"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "links": {
+   "kind": "items",
+   "fields": {
+    "label": {
+     "kind": "text",
+     "maxWords": 2,
+     "required": true
+    },
+    "action": {
+     "kind": "enum",
+     "values": [
+      "selected",
+      "work",
+      "about",
+      "contact"
+     ],
+     "required": true
+    }
+   },
+   "minItems": 1,
+   "maxItems": 4,
+   "required": true
+  },
+  "leadText": {
+   "kind": "text",
+   "maxWords": 26,
+   "required": true
+  },
+  "leadLink": {
+   "kind": "link",
+   "maxWords": 3,
+   "required": true
+  },
+  "leadTail": {
+   "kind": "text",
+   "maxWords": 8,
+   "required": true
+  },
+  "facts": {
+   "kind": "items",
+   "fields": {
+    "label": {
+     "kind": "text",
+     "maxWords": 2,
+     "required": true
+    },
+    "value": {
+     "kind": "text",
+     "maxWords": 6,
+     "required": true
+    }
+   },
+   "minItems": 1,
+   "maxItems": 2,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "menu-panel"
+  ],
+  "default": "menu-panel"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.glass-menu"
+  ],
+  "text": [
+   "text.primary",
+   "text.muted",
+   "text.body"
+  ]
+ },
+ "responsive": {
+  "phoneMaxWidth": 860,
+  "changes": [
+   "only rendered (display:flex) at <= 860px",
+   "top = pad + 52px"
+  ],
+  "cite": {
+   "cite": "src/index.css:400",
+   "needle": ".mnav { display: flex; }"
+  }
+ },
+ "layer": {
+  "position": "fixed",
+  "zIndex": "z.hud"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy",
+  "placeholder.url"
+ ],
+ "measured": {
+  "inFlowAt1440": false,
+  "positionAt1440": "fixed",
+  "source": "extraction/measured-values.json#sectionHeights",
+  "rectAt1440": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "rectAt390": [
+   16,
+   58,
+   358,
+   429.5
+  ],
+  "note": "position:fixed layer (or inside one); takes no page height."
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:576",
+   "needle": "- `.mnav` panel (z 6):"
+  }
+ ]
+}

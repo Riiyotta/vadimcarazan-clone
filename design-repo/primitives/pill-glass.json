@@ -1,0 +1,14 @@
+{
+ "id": "pill-glass",
+ "kind": "primitive",
+ "description": "Translucent outline pill with blur (Explore the work).",
+ "tokens": [
+  "border.strong"
+ ],
+ "evidence": [
+  {
+   "cite": "src/index.css:108",
+   "needle": ".start {"
+  }
+ ]
+}

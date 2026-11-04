@@ -1,0 +1,1001 @@
+{
+ "version": "1.0.0",
+ "derivedFrom": [
+  "tokens/00-foundation/breakpoint.json",
+  "tokens/00-foundation/color.json",
+  "tokens/00-foundation/elevation.json",
+  "tokens/00-foundation/motion.json",
+  "tokens/00-foundation/radius.json",
+  "tokens/00-foundation/spacing.json",
+  "tokens/00-foundation/typography.json",
+  "tokens/10-semantic/semantic.json",
+  "tokens/20-component/component.json",
+  "tokens/30-layout/layout.json",
+  "tokens/llm/token-policy.json (pageSpecReferenceable)"
+ ],
+ "note": "DERIVED by extraction/build_derived.py; verify_all.py re-derives it and fails on any drift (missing, extra or changed token). Values trace to src/index.css / src/case.css via each token's evidence.",
+ "counts": {
+  "total": 163,
+  "pageSpecReferenceable": 18
+ },
+ "tokens": {
+  "breakpoint.phone": {
+   "category": "breakpoint",
+   "value": "860px",
+   "file": "tokens/00-foundation/breakpoint.json",
+   "pageSpecReferenceable": false
+  },
+  "breakpoint.zoom-width": {
+   "category": "breakpoint",
+   "value": "1600px",
+   "file": "tokens/00-foundation/breakpoint.json",
+   "pageSpecReferenceable": false
+  },
+  "breakpoint.zoom-height": {
+   "category": "breakpoint",
+   "value": "900px",
+   "file": "tokens/00-foundation/breakpoint.json",
+   "pageSpecReferenceable": false
+  },
+  "color.bg": {
+   "category": "color",
+   "value": "#0a0a0b",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.ink": {
+   "category": "color",
+   "value": "#f2f2f2",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.white": {
+   "category": "color",
+   "value": "#ffffff",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.black": {
+   "category": "color",
+   "value": "#000000",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.error": {
+   "category": "color",
+   "value": "#ff9b92",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.mute": {
+   "category": "color",
+   "value": "rgba(242, 242, 242, 0.55)",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.line": {
+   "category": "color",
+   "value": "rgba(255, 255, 255, 0.12)",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.ink-86": {
+   "category": "color",
+   "value": "rgba(242, 242, 242, 0.86)",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.ink-82": {
+   "category": "color",
+   "value": "rgba(242, 242, 242, 0.82)",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.ink-80": {
+   "category": "color",
+   "value": "rgba(242, 242, 242, 0.8)",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.ink-78": {
+   "category": "color",
+   "value": "rgba(242, 242, 242, 0.78)",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.ink-72": {
+   "category": "color",
+   "value": "rgba(242, 242, 242, 0.72)",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.white-30": {
+   "category": "color",
+   "value": "rgba(255, 255, 255, 0.3)",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.white-35": {
+   "category": "color",
+   "value": "rgba(255, 255, 255, 0.35)",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.white-45": {
+   "category": "color",
+   "value": "rgba(255, 255, 255, 0.45)",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.white-09": {
+   "category": "color",
+   "value": "rgba(255, 255, 255, 0.09)",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.white-08": {
+   "category": "color",
+   "value": "rgba(255, 255, 255, 0.08)",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.white-06": {
+   "category": "color",
+   "value": "rgba(255, 255, 255, 0.06)",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.white-05": {
+   "category": "color",
+   "value": "rgba(255, 255, 255, 0.05)",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.white-04": {
+   "category": "color",
+   "value": "rgba(255, 255, 255, 0.04)",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.white-03": {
+   "category": "color",
+   "value": "rgba(255, 255, 255, 0.03)",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.glass": {
+   "category": "color",
+   "value": "rgba(22, 22, 24, 0.6)",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.glass-menu": {
+   "category": "color",
+   "value": "rgba(22, 22, 24, 0.62)",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.hud": {
+   "category": "color",
+   "value": "rgba(0, 0, 0, 0.62)",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.bg-25": {
+   "category": "color",
+   "value": "rgba(10, 10, 11, 0.25)",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.bg-35": {
+   "category": "color",
+   "value": "rgba(10, 10, 11, 0.35)",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.fade-92": {
+   "category": "color",
+   "value": "rgba(10, 10, 11, 0.92)",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.fade-94": {
+   "category": "color",
+   "value": "rgba(10, 10, 11, 0.94)",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.invalid": {
+   "category": "color",
+   "value": "rgba(255, 120, 110, 0.7)",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "shadow.glass": {
+   "category": "elevation",
+   "value": "0 30px 80px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.06)",
+   "file": "tokens/00-foundation/elevation.json",
+   "pageSpecReferenceable": false
+  },
+  "shadow.menu": {
+   "category": "elevation",
+   "value": "0 30px 80px rgba(0, 0, 0, 0.45)",
+   "file": "tokens/00-foundation/elevation.json",
+   "pageSpecReferenceable": false
+  },
+  "shadow.lead-text": {
+   "category": "elevation",
+   "value": "0 0 18px rgba(0, 0, 0, 0.9), 0 0 4px rgba(0, 0, 0, 0.7)",
+   "file": "tokens/00-foundation/elevation.json",
+   "pageSpecReferenceable": false
+  },
+  "blur.glass": {
+   "category": "blur",
+   "value": "blur(18px)",
+   "file": "tokens/00-foundation/elevation.json",
+   "pageSpecReferenceable": false
+  },
+  "blur.menu": {
+   "category": "blur",
+   "value": "blur(26px) saturate(1.25)",
+   "file": "tokens/00-foundation/elevation.json",
+   "pageSpecReferenceable": false
+  },
+  "blur.hud": {
+   "category": "blur",
+   "value": "blur(10px)",
+   "file": "tokens/00-foundation/elevation.json",
+   "pageSpecReferenceable": false
+  },
+  "blur.pill": {
+   "category": "blur",
+   "value": "blur(6px)",
+   "file": "tokens/00-foundation/elevation.json",
+   "pageSpecReferenceable": false
+  },
+  "blur.phone-start": {
+   "category": "blur",
+   "value": "blur(8px)",
+   "file": "tokens/00-foundation/elevation.json",
+   "pageSpecReferenceable": false
+  },
+  "z.signature": {
+   "category": "zIndex",
+   "value": "0",
+   "file": "tokens/00-foundation/elevation.json",
+   "pageSpecReferenceable": false
+  },
+  "z.canvas": {
+   "category": "zIndex",
+   "value": "1",
+   "file": "tokens/00-foundation/elevation.json",
+   "pageSpecReferenceable": false
+  },
+  "z.hero": {
+   "category": "zIndex",
+   "value": "2",
+   "file": "tokens/00-foundation/elevation.json",
+   "pageSpecReferenceable": false
+  },
+  "z.flybar": {
+   "category": "zIndex",
+   "value": "3",
+   "file": "tokens/00-foundation/elevation.json",
+   "pageSpecReferenceable": false
+  },
+  "z.topbar": {
+   "category": "zIndex",
+   "value": "4",
+   "file": "tokens/00-foundation/elevation.json",
+   "pageSpecReferenceable": false
+  },
+  "z.box": {
+   "category": "zIndex",
+   "value": "5",
+   "file": "tokens/00-foundation/elevation.json",
+   "pageSpecReferenceable": false
+  },
+  "z.hud": {
+   "category": "zIndex",
+   "value": "6",
+   "file": "tokens/00-foundation/elevation.json",
+   "pageSpecReferenceable": false
+  },
+  "z.loader": {
+   "category": "zIndex",
+   "value": "10",
+   "file": "tokens/00-foundation/elevation.json",
+   "pageSpecReferenceable": false
+  },
+  "z.toast": {
+   "category": "zIndex",
+   "value": "20",
+   "file": "tokens/00-foundation/elevation.json",
+   "pageSpecReferenceable": false
+  },
+  "ease.house": {
+   "category": "easing",
+   "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "duration.200": {
+   "category": "duration",
+   "value": "200ms",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "duration.250": {
+   "category": "duration",
+   "value": "250ms",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "duration.300": {
+   "category": "duration",
+   "value": "300ms",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "duration.350": {
+   "category": "duration",
+   "value": "350ms",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "duration.450": {
+   "category": "duration",
+   "value": "450ms",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "duration.500": {
+   "category": "duration",
+   "value": "500ms",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "duration.600": {
+   "category": "duration",
+   "value": "600ms",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "duration.700": {
+   "category": "duration",
+   "value": "700ms",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "duration.750": {
+   "category": "duration",
+   "value": "750ms",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "duration.800": {
+   "category": "duration",
+   "value": "800ms",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "duration.900": {
+   "category": "duration",
+   "value": "900ms",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "duration.1600": {
+   "category": "duration",
+   "value": "1600ms",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "duration.1800": {
+   "category": "duration",
+   "value": "1800ms",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "radius.pill": {
+   "category": "radius",
+   "value": "999px",
+   "file": "tokens/00-foundation/radius.json",
+   "pageSpecReferenceable": false
+  },
+  "radius.glass": {
+   "category": "radius",
+   "value": "22px",
+   "file": "tokens/00-foundation/radius.json",
+   "pageSpecReferenceable": false
+  },
+  "radius.card": {
+   "category": "radius",
+   "value": "16px",
+   "file": "tokens/00-foundation/radius.json",
+   "pageSpecReferenceable": false
+  },
+  "radius.media": {
+   "category": "radius",
+   "value": "14px",
+   "file": "tokens/00-foundation/radius.json",
+   "pageSpecReferenceable": false
+  },
+  "radius.field": {
+   "category": "radius",
+   "value": "12px",
+   "file": "tokens/00-foundation/radius.json",
+   "pageSpecReferenceable": false
+  },
+  "radius.media-phone": {
+   "category": "radius",
+   "value": "10px",
+   "file": "tokens/00-foundation/radius.json",
+   "pageSpecReferenceable": false
+  },
+  "radius.thumb": {
+   "category": "radius",
+   "value": "8px",
+   "file": "tokens/00-foundation/radius.json",
+   "pageSpecReferenceable": false
+  },
+  "radius.circle": {
+   "category": "radius",
+   "value": "50%",
+   "file": "tokens/00-foundation/radius.json",
+   "pageSpecReferenceable": false
+  },
+  "space.pad": {
+   "category": "spacing",
+   "value": "clamp(16px, 2vw, 32px)",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": true
+  },
+  "space.panel": {
+   "category": "spacing",
+   "value": "28px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.panel-phone": {
+   "category": "spacing",
+   "value": "14px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.gap-6": {
+   "category": "spacing",
+   "value": "6px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.gap-8": {
+   "category": "spacing",
+   "value": "8px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.gap-10": {
+   "category": "spacing",
+   "value": "10px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.gap-12": {
+   "category": "spacing",
+   "value": "12px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.gap-14": {
+   "category": "spacing",
+   "value": "14px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.gap-16": {
+   "category": "spacing",
+   "value": "16px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.gap-20": {
+   "category": "spacing",
+   "value": "20px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.gap-22": {
+   "category": "spacing",
+   "value": "22px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.gap-24": {
+   "category": "spacing",
+   "value": "24px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.section-block": {
+   "category": "spacing",
+   "value": "clamp(48px, 10vh, 120px)",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": true
+  },
+  "space.next-gap": {
+   "category": "spacing",
+   "value": "clamp(64px, 12vh, 140px)",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": true
+  },
+  "space.head-gap": {
+   "category": "spacing",
+   "value": "clamp(32px, 6vh, 64px)",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": true
+  },
+  "space.hero-row": {
+   "category": "spacing",
+   "value": "clamp(24px, 3.4vh, 40px)",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "font.family.sans": {
+   "category": "fontFamily",
+   "value": "'Inter Tight', 'Inter', -apple-system, 'Helvetica Neue', Arial, sans-serif",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": true
+  },
+  "font.family.serif": {
+   "category": "fontFamily",
+   "value": "'Instrument Serif', 'Times New Roman', serif",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": true
+  },
+  "font.weight.regular": {
+   "category": "fontWeight",
+   "value": "400",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.weight.medium": {
+   "category": "fontWeight",
+   "value": "500",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.xs": {
+   "category": "fontSize",
+   "value": "11.5px",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.label": {
+   "category": "fontSize",
+   "value": "12px",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.caption": {
+   "category": "fontSize",
+   "value": "12.5px",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.ui": {
+   "category": "fontSize",
+   "value": "13px",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.control": {
+   "category": "fontSize",
+   "value": "13.5px",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.fact": {
+   "category": "fontSize",
+   "value": "14px",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.desc": {
+   "category": "fontSize",
+   "value": "14.5px",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.body": {
+   "category": "fontSize",
+   "value": "15px",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.root": {
+   "category": "fontSize",
+   "value": "16px",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.lead": {
+   "category": "fontSize",
+   "value": "16.5px",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.list-title": {
+   "category": "fontSize",
+   "value": "27px",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.menu-link": {
+   "category": "fontSize",
+   "value": "45px",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.panel-title": {
+   "category": "fontSize",
+   "value": "clamp(31px, 2.58vw, 42.5px)",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.cta-title": {
+   "category": "fontSize",
+   "value": "clamp(21.3px, 1.624vw, 25.8px)",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.counter": {
+   "category": "fontSize",
+   "value": "clamp(45px, 4.03vw, 67px)",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.caption-title": {
+   "category": "fontSize",
+   "value": "clamp(21px, 1.68vw, 27px)",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.display-case": {
+   "category": "fontSize",
+   "value": "clamp(64px, 11vw, 200px)",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.display-next": {
+   "category": "fontSize",
+   "value": "clamp(56px, 8vw, 140px)",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.line.ui": {
+   "category": "lineHeight",
+   "value": "1.35",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.line.body": {
+   "category": "lineHeight",
+   "value": "1.5",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.line.desc": {
+   "category": "lineHeight",
+   "value": "1.55",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.line.box-body": {
+   "category": "lineHeight",
+   "value": "1.6",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.line.display-case": {
+   "category": "lineHeight",
+   "value": "0.92",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.line.case-heading": {
+   "category": "lineHeight",
+   "value": "1.08",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.line.panel-title": {
+   "category": "lineHeight",
+   "value": "0.964",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.tracking.display": {
+   "category": "letterSpacing",
+   "value": "-0.03em",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.tracking.case-heading": {
+   "category": "letterSpacing",
+   "value": "-0.015em",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.tracking.panel-title": {
+   "category": "letterSpacing",
+   "value": "-0.004em",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.tracking.counter": {
+   "category": "letterSpacing",
+   "value": "0.039em",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "surface.page": {
+   "category": "surface",
+   "value": "#0a0a0b",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "surface.glass": {
+   "category": "surface",
+   "value": "rgba(22, 22, 24, 0.6)",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "surface.glass-menu": {
+   "category": "surface",
+   "value": "rgba(22, 22, 24, 0.62)",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "surface.card": {
+   "category": "surface",
+   "value": "rgba(255, 255, 255, 0.03)",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "surface.hud": {
+   "category": "surface",
+   "value": "rgba(0, 0, 0, 0.62)",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": false
+  },
+  "surface.solid": {
+   "category": "surface",
+   "value": "#ffffff",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "text.primary": {
+   "category": "text",
+   "value": "#f2f2f2",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "text.muted": {
+   "category": "text",
+   "value": "rgba(242, 242, 242, 0.55)",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "text.lead": {
+   "category": "text",
+   "value": "rgba(242, 242, 242, 0.86)",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "text.body": {
+   "category": "text",
+   "value": "rgba(242, 242, 242, 0.78)",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "text.sub": {
+   "category": "text",
+   "value": "rgba(242, 242, 242, 0.72)",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "text.on-solid": {
+   "category": "text",
+   "value": "#000000",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "text.error": {
+   "category": "text",
+   "value": "#ff9b92",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "border.hairline": {
+   "category": "border",
+   "value": "rgba(255, 255, 255, 0.12)",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": false
+  },
+  "border.glass": {
+   "category": "border",
+   "value": "rgba(255, 255, 255, 0.09)",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": false
+  },
+  "border.strong": {
+   "category": "border",
+   "value": "rgba(255, 255, 255, 0.35)",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": false
+  },
+  "border.focus": {
+   "category": "border",
+   "value": "rgba(255, 255, 255, 0.45)",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": false
+  },
+  "border.invalid": {
+   "category": "border",
+   "value": "rgba(255, 120, 110, 0.7)",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": false
+  },
+  "border.underline": {
+   "category": "border",
+   "value": "rgba(255, 255, 255, 0.3)",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": false
+  },
+  "component.pill-solid.padding": {
+   "category": "component",
+   "value": "10px 18px",
+   "file": "tokens/20-component/component.json",
+   "pageSpecReferenceable": false
+  },
+  "component.pill-white.padding": {
+   "category": "component",
+   "value": "8px 15px",
+   "file": "tokens/20-component/component.json",
+   "pageSpecReferenceable": false
+  },
+  "component.back-link.padding": {
+   "category": "component",
+   "value": "6px 13px 6px 9px",
+   "file": "tokens/20-component/component.json",
+   "pageSpecReferenceable": false
+  },
+  "component.start.padding": {
+   "category": "component",
+   "value": "6px 6px 6px 18px",
+   "file": "tokens/20-component/component.json",
+   "pageSpecReferenceable": false
+  },
+  "component.start.circle": {
+   "category": "component",
+   "value": "32px",
+   "file": "tokens/20-component/component.json",
+   "pageSpecReferenceable": false
+  },
+  "component.chip.padding": {
+   "category": "component",
+   "value": "7px 13px",
+   "file": "tokens/20-component/component.json",
+   "pageSpecReferenceable": false
+  },
+  "component.field.padding": {
+   "category": "component",
+   "value": "10px 13px",
+   "file": "tokens/20-component/component.json",
+   "pageSpecReferenceable": false
+  },
+  "component.cta-card.padding": {
+   "category": "component",
+   "value": "16px 16px 16px 20px",
+   "file": "tokens/20-component/component.json",
+   "pageSpecReferenceable": false
+  },
+  "component.cta-card.background": {
+   "category": "component",
+   "value": "radial-gradient(120% 140% at 100% 0%, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02) 55%), rgba(255, 255, 255, 0.03)",
+   "file": "tokens/20-component/component.json",
+   "pageSpecReferenceable": false
+  },
+  "component.hud.padding": {
+   "category": "component",
+   "value": "7px 12px",
+   "file": "tokens/20-component/component.json",
+   "pageSpecReferenceable": false
+  },
+  "component.thumb.size": {
+   "category": "component",
+   "value": "84px 63px",
+   "file": "tokens/20-component/component.json",
+   "pageSpecReferenceable": false
+  },
+  "component.logo.width": {
+   "category": "component",
+   "value": "48px",
+   "file": "tokens/20-component/component.json",
+   "pageSpecReferenceable": false
+  },
+  "component.loader-mark.width": {
+   "category": "component",
+   "value": "84px",
+   "file": "tokens/20-component/component.json",
+   "pageSpecReferenceable": false
+  },
+  "component.back.padding": {
+   "category": "component",
+   "value": "8px 14px 8px 11px",
+   "file": "tokens/20-component/component.json",
+   "pageSpecReferenceable": false
+  },
+  "layout.box-width": {
+   "category": "layout",
+   "value": "clamp(460px, 42vw, 780px)",
+   "file": "tokens/30-layout/layout.json",
+   "pageSpecReferenceable": false
+  },
+  "layout.box-top": {
+   "category": "layout",
+   "value": "calc(2 * var(--pad) + 42px)",
+   "file": "tokens/30-layout/layout.json",
+   "pageSpecReferenceable": false
+  },
+  "layout.case-max-width": {
+   "category": "layout",
+   "value": "1720px",
+   "file": "tokens/30-layout/layout.json",
+   "pageSpecReferenceable": false
+  },
+  "layout.case-top-pad": {
+   "category": "layout",
+   "value": "calc(2 * var(--pad) + 42px + 9vh)",
+   "file": "tokens/30-layout/layout.json",
+   "pageSpecReferenceable": false
+  },
+  "layout.case-facts-columns": {
+   "category": "layout",
+   "value": "repeat(4, minmax(0, 1fr))",
+   "file": "tokens/30-layout/layout.json",
+   "pageSpecReferenceable": false
+  },
+  "layout.case-text-columns": {
+   "category": "layout",
+   "value": "minmax(0, 1fr) minmax(0, 1.4fr)",
+   "file": "tokens/30-layout/layout.json",
+   "pageSpecReferenceable": false
+  },
+  "layout.lead-max": {
+   "category": "layout",
+   "value": "440px",
+   "file": "tokens/30-layout/layout.json",
+   "pageSpecReferenceable": false
+  },
+  "layout.case-intro-max": {
+   "category": "layout",
+   "value": "560px",
+   "file": "tokens/30-layout/layout.json",
+   "pageSpecReferenceable": false
+  },
+  "layout.case-text-max": {
+   "category": "layout",
+   "value": "620px",
+   "file": "tokens/30-layout/layout.json",
+   "pageSpecReferenceable": false
+  },
+  "layout.phone-sheet-height": {
+   "category": "layout",
+   "value": "calc(100% - 2 * var(--pad) - 60px)",
+   "file": "tokens/30-layout/layout.json",
+   "pageSpecReferenceable": false
+  }
+ }
+}

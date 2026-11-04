@@ -1,0 +1,14 @@
+{
+ "id": "glass-panel",
+ "kind": "component",
+ "description": "Blurred translucent panel with hairline border and soft shadow (box, phone menu).",
+ "uses": [
+  "back-link"
+ ],
+ "evidence": [
+  {
+   "cite": "src/index.css:187",
+   "needle": ".box {"
+  }
+ ]
+}

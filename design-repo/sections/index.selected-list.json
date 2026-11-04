@@ -1,0 +1,172 @@
+{
+ "id": "index.selected-list",
+ "title": "Selected work list",
+ "version": "1.0.0",
+ "purpose": "Box view listing the selected case studies (thumbnail, serif title, kind, number) with an invitation to fly through everything.",
+ "semantic": {
+  "id": "index.selected-list",
+  "category": "INDEX"
+ },
+ "source": {
+  "id": "dom:section.view.v-selected",
+  "file": "src/components/Box.jsx",
+  "tag": "section",
+  "lines": "247",
+  "needle": "<section className={`view v-selected"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Box.jsx:93",
+   "needle": "function SelectedView("
+  },
+  {
+   "cite": "src/index.css:283",
+   "needle": ".sel-list {"
+  }
+ ],
+ "iaSectionId": "panel.selected",
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "requires": [
+   "overlay.glass-box"
+  ],
+  "templates": [
+   "cosmos-home"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "label": {
+   "kind": "text",
+   "maxWords": 2,
+   "required": true
+  },
+  "title": {
+   "kind": "text",
+   "maxWords": 6,
+   "required": true
+  },
+  "body": {
+   "kind": "text",
+   "maxWords": 25,
+   "required": true
+  },
+  "items": {
+   "kind": "items",
+   "fields": {
+    "title": {
+     "kind": "text",
+     "maxWords": 3,
+     "required": true
+    },
+    "kind": {
+     "kind": "text",
+     "maxWords": 5,
+     "required": true
+    },
+    "workSlug": {
+     "kind": "text",
+     "maxWords": 1,
+     "required": true
+    },
+    "thumb": {
+     "kind": "media",
+     "assetRoles": [
+      "work.piece-image",
+      "work.piece-video"
+     ],
+     "generatedAssetRoles": [
+      "generated.work-visual",
+      "user.work-media",
+      "placeholder.work-video"
+     ],
+     "required": true
+    }
+   },
+   "minItems": 1,
+   "maxItems": 8,
+   "required": true
+  },
+  "footPrefix": {
+   "kind": "text",
+   "maxWords": 1,
+   "required": true
+  },
+  "footLink": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": true
+  },
+  "footSuffix": {
+   "kind": "text",
+   "maxWords": 10,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "view-crossfade"
+  ],
+  "default": "view-crossfade"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.glass"
+  ],
+  "text": [
+   "text.primary",
+   "text.muted",
+   "text.body"
+  ]
+ },
+ "responsive": {
+  "phoneMaxWidth": 860,
+  "changes": [
+   "thumbnails 64x48, titles 22.5px"
+  ],
+  "cite": {
+   "cite": "src/index.css:448",
+   "needle": ".sel-item img { width: 64px; height: 48px; }"
+  }
+ },
+ "layer": {
+  "position": "fixed",
+  "parent": "overlay.glass-box"
+ },
+ "referenceAssetRoles": [
+  "work.piece-image",
+  "work.piece-video"
+ ],
+ "generatedAssetRoles": [
+  "generated.work-visual",
+  "original.copy",
+  "placeholder.url",
+  "placeholder.work-video",
+  "user.work-media"
+ ],
+ "measured": {
+  "inFlowAt1440": false,
+  "positionAt1440": "fixed",
+  "source": "extraction/measured-values.json#sectionHeights",
+  "rectAt1440": [
+   -10.2,
+   100.6,
+   602.8,
+   769.6
+  ],
+  "rectAt390": [
+   17,
+   117,
+   356,
+   750
+  ],
+  "note": "position:fixed layer (or inside one); takes no page height."
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:463",
+   "needle": "- **Selected view**:"
+  }
+ ]
+}

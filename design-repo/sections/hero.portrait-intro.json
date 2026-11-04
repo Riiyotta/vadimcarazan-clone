@@ -1,0 +1,145 @@
+{
+ "id": "hero.portrait-intro",
+ "title": "Portrait intro hero",
+ "version": "1.0.0",
+ "purpose": "Page-opening composition at the portrait: a three-line lead with a studio link, an 'Explore the work' pill that starts the flight, and the owner's name full-bleed along the bottom.",
+ "semantic": {
+  "id": "hero.portrait-intro",
+  "category": "HERO"
+ },
+ "source": {
+  "id": "dom:section.hero#intro",
+  "file": "src/components/Hero.jsx",
+  "tag": "section",
+  "lines": "53",
+  "needle": "<section className=\"hero\" id=\"intro\">"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Hero.jsx:51",
+   "needle": "export default function Hero"
+  },
+  {
+   "cite": "src/index.css:87",
+   "needle": ".hero {"
+  }
+ ],
+ "iaSectionId": "hero.cosmos-intro",
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "cosmos-home"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "leadText": {
+   "kind": "text",
+   "maxWords": 26,
+   "required": true
+  },
+  "leadLink": {
+   "kind": "link",
+   "maxWords": 3,
+   "required": true
+  },
+  "leadTail": {
+   "kind": "text",
+   "maxWords": 8,
+   "required": true
+  },
+  "startLabel": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": true
+  },
+  "name": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": true
+  },
+  "nameLines": {
+   "kind": "textList",
+   "maxWords": 2,
+   "minItems": 1,
+   "maxItems": 2,
+   "required": true
+  },
+  "lettering": {
+   "kind": "media",
+   "assetRoles": [
+    "brand.name-lettering"
+   ],
+   "generatedAssetRoles": [
+    "generated.name-lettering"
+   ],
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "hero-fade",
+   "arrow-bob"
+  ],
+  "default": "hero-fade"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.lead"
+  ]
+ },
+ "responsive": {
+  "phoneMaxWidth": 860,
+  "changes": [
+   "lead hidden (moves into the phone menu)",
+   "name switches to a two-line stacked setting (aspect 2545:1288)",
+   "start pill becomes a 38px circle level with the first name line"
+  ],
+  "cite": {
+   "cite": "src/index.css:412",
+   "needle": ".bigname .stack { display: block; }"
+  },
+  "measured390": "hero.portrait-intro rect in measured-values.json sectionHeights390"
+ },
+ "layer": {
+  "position": "fixed",
+  "zIndex": "z.hero"
+ },
+ "referenceAssetRoles": [
+  "brand.name-lettering"
+ ],
+ "generatedAssetRoles": [
+  "generated.name-lettering",
+  "original.copy",
+  "placeholder.url"
+ ],
+ "measured": {
+  "inFlowAt1440": false,
+  "positionAt1440": "fixed",
+  "source": "extraction/measured-values.json#sectionHeights",
+  "rectAt1440": [
+   28.8,
+   581.4,
+   1382.4,
+   318.6
+  ],
+  "rectAt390": [
+   16,
+   649.9,
+   358,
+   194.1
+  ],
+  "note": "position:fixed layer (or inside one); takes no page height."
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:387",
+   "needle": "### 4.2 Hero (`.hero`, z 2)"
+  }
+ ]
+}

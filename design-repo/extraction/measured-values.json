@@ -1,0 +1,6152 @@
+{
+ "version": "1.0.0",
+ "note": "Measured values ledger. Values only: the capture scripts and raw JSON of earlier audits are not shipped and no machine path is recorded. Every number here was produced by a real headless-browser run against the running clone (or copied from a named earlier audit), never estimated.",
+ "sourceStackNote": "Documentation only: the clone is a single-page app with a WebGL (three.js r169) field and plain-CSS styling; none of this vocabulary appears in contracts.",
+ "thresholds": {
+  "heroWarnPx": 1800,
+  "heroErrorPx": 3000,
+  "shareWarn": 0.5,
+  "shareError": 0.6
+ },
+ "sectionHeights": {
+  "viewport": "1440x900",
+  "measuredWith": "extraction/measure_sections.mjs MODE=sections (playwright-core driving Chromium 1243 headless, deviceScaleFactor 1, .rv reveal transform neutralised, fonts ready)",
+  "measuredAt": "2026-11-04T10:25:23.219Z",
+  "target": "clone dev server (local)",
+  "coverage": "every route (16/16)",
+  "fixedLayerNote": "On '/' html/body are overflow:hidden and every layer is position:fixed: document height = viewport height (900) and there are 0 in-flow sections. The share rule therefore skips '/' (fewer than 3 in-flow sections); HERO heights are still gated on their rendered height whether or not they are in flow.",
+  "routes": {
+   "/": {
+    "template": "cosmos-home",
+    "pageHeight": 900,
+    "docOverflowY": "hidden",
+    "inFlowSections": 0,
+    "sections": [
+     {
+      "id": "shell.loader",
+      "top": 0,
+      "h": 900,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "shell.phone-menu",
+      "top": 0,
+      "h": 0,
+      "inFlow": false,
+      "position": "fixed",
+      "hidden": true
+     },
+     {
+      "id": "showcase.work-cosmos",
+      "top": 0,
+      "h": 900,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "utility.hover-hud",
+      "top": 0,
+      "h": 0,
+      "inFlow": false,
+      "position": "fixed",
+      "hidden": true
+     },
+     {
+      "id": "utility.fly-fades",
+      "top": 0,
+      "h": 127.6,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 28.8,
+      "h": 41.3,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "overlay.glass-box",
+      "top": 99.6,
+      "h": 771.6,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "detail.project-view",
+      "top": 100.6,
+      "h": 769.6,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "index.selected-list",
+      "top": 100.6,
+      "h": 769.6,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "about.studio-bio",
+      "top": 100.6,
+      "h": 769.6,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "conversion.brief-form",
+      "top": 100.6,
+      "h": 769.6,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "media.signature",
+      "top": 108,
+      "h": 660.1,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.portrait-intro",
+      "top": 581.4,
+      "h": 318.6,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "utility.fly-fades",
+      "top": 692.406,
+      "h": 207.6,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::after"
+     },
+     {
+      "id": "utility.copy-toast",
+      "top": 823.7,
+      "h": 37.5,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "utility.flybar",
+      "top": 843.4,
+      "h": 41.8,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "chrome.social",
+      "top": 846.1,
+      "h": 35.1,
+      "inFlow": false,
+      "position": "fixed"
+     }
+    ]
+   },
+   "/work/northwind": {
+    "template": "case-study",
+    "pageHeight": 5612,
+    "docOverflowY": "auto",
+    "inFlowSections": 12,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 127.6,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 28.8,
+      "h": 41.3,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 180.6,
+      "h": 352,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 586.6,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1376.2,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 1607.3,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 2396.9,
+      "h": 513.9,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 2922.8,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 3153.9,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 3943.5,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 4733.1,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 4972.2,
+      "h": 79.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 5159.6,
+      "h": 279.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 5547,
+      "h": 36.5,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   },
+   "/work/halcyon": {
+    "template": "case-study",
+    "pageHeight": 6402,
+    "docOverflowY": "auto",
+    "inFlowSections": 13,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 127.6,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 28.8,
+      "h": 41.3,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 180.6,
+      "h": 352,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 586.6,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1376.2,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 1607.3,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 2396.9,
+      "h": 513.9,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 2922.8,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 3153.9,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 3943.5,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 4733.1,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 5522.7,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 5761.8,
+      "h": 79.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 5949.2,
+      "h": 279.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 6336.6,
+      "h": 36.5,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   },
+   "/work/meridian": {
+    "template": "case-study",
+    "pageHeight": 7191,
+    "docOverflowY": "auto",
+    "inFlowSections": 14,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 127.6,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 28.8,
+      "h": 41.3,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 180.6,
+      "h": 352,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 586.6,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1376.2,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 1607.3,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 2396.9,
+      "h": 513.9,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 2922.8,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 3153.9,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 3943.5,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 4733.1,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 5522.7,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 6312.3,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 6551.4,
+      "h": 79.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 6738.8,
+      "h": 279.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 7126.2,
+      "h": 36.5,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   },
+   "/work/fieldnote": {
+    "template": "case-study",
+    "pageHeight": 7956,
+    "docOverflowY": "auto",
+    "inFlowSections": 15,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 127.6,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 28.8,
+      "h": 41.3,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 180.6,
+      "h": 327.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 561.8,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1351.4,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 1582.5,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 2372.1,
+      "h": 513.9,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 2898,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 3129.1,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 3918.7,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 4708.3,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 5497.9,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 6287.5,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 7077.1,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 7316.2,
+      "h": 79.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 7503.6,
+      "h": 279.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 7891,
+      "h": 36.5,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   },
+   "/work/quarry-law": {
+    "template": "case-study",
+    "pageHeight": 5588,
+    "docOverflowY": "auto",
+    "inFlowSections": 12,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 127.6,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 28.8,
+      "h": 41.3,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 180.6,
+      "h": 327.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 561.8,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1351.4,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 1582.5,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 2372.1,
+      "h": 513.9,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 2898,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 3129.1,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 3918.7,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 4708.3,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 4947.5,
+      "h": 79.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 5134.8,
+      "h": 279.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 5522.2,
+      "h": 36.5,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   },
+   "/work/lumen-labs": {
+    "template": "case-study",
+    "pageHeight": 6402,
+    "docOverflowY": "auto",
+    "inFlowSections": 13,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 127.6,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 28.8,
+      "h": 41.3,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 180.6,
+      "h": 352,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 586.6,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1376.2,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 1607.3,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 2396.9,
+      "h": 513.9,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 2922.8,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 3153.9,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 3943.5,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 4733.1,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 5522.7,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 5761.8,
+      "h": 79.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 5949.2,
+      "h": 279.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 6336.6,
+      "h": 36.5,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   },
+   "/work/parallel": {
+    "template": "case-study",
+    "pageHeight": 7191,
+    "docOverflowY": "auto",
+    "inFlowSections": 14,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 127.6,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 28.8,
+      "h": 41.3,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 180.6,
+      "h": 352,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 586.6,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1376.2,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 1607.3,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 2396.9,
+      "h": 513.9,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 2922.8,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 3153.9,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 3943.5,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 4733.1,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 5522.7,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 6312.3,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 6551.4,
+      "h": 79.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 6738.8,
+      "h": 279.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 7126.2,
+      "h": 36.5,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   },
+   "/work/atlasai": {
+    "template": "case-study",
+    "pageHeight": 7981,
+    "docOverflowY": "auto",
+    "inFlowSections": 15,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 127.6,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 28.8,
+      "h": 41.3,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 180.6,
+      "h": 352,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 586.6,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1376.2,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 1607.3,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 2396.9,
+      "h": 513.9,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 2922.8,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 3153.9,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 3943.5,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 4733.1,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 5522.7,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 6312.3,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 7101.9,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 7341,
+      "h": 79.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 7528.4,
+      "h": 279.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 7915.8,
+      "h": 36.5,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   },
+   "/work/kestrel": {
+    "template": "case-study",
+    "pageHeight": 5588,
+    "docOverflowY": "auto",
+    "inFlowSections": 12,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 127.6,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 28.8,
+      "h": 41.3,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 180.6,
+      "h": 327.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 561.8,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1351.4,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 1582.5,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 2372.1,
+      "h": 513.9,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 2898,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 3129.1,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 3918.7,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 4708.3,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 4947.5,
+      "h": 79.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 5134.8,
+      "h": 279.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 5522.2,
+      "h": 36.5,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   },
+   "/work/omnifield": {
+    "template": "case-study",
+    "pageHeight": 4008,
+    "docOverflowY": "auto",
+    "inFlowSections": 10,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 127.6,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 28.8,
+      "h": 41.3,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 180.6,
+      "h": 327.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 561.8,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1351.4,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 1582.5,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 2372.1,
+      "h": 513.9,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 2898,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 3129.1,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 3368.3,
+      "h": 79.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 3555.7,
+      "h": 279.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 3943,
+      "h": 36.5,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   },
+   "/work/brightline": {
+    "template": "case-study",
+    "pageHeight": 4823,
+    "docOverflowY": "auto",
+    "inFlowSections": 11,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 127.6,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 28.8,
+      "h": 41.3,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 180.6,
+      "h": 352,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 586.6,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1376.2,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 1607.3,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 2396.9,
+      "h": 513.9,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 2922.8,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 3153.9,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 3943.5,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 4182.6,
+      "h": 79.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 4370,
+      "h": 279.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 4757.4,
+      "h": 36.5,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   },
+   "/work/solace": {
+    "template": "case-study",
+    "pageHeight": 5612,
+    "docOverflowY": "auto",
+    "inFlowSections": 12,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 127.6,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 28.8,
+      "h": 41.3,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 180.6,
+      "h": 352,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 586.6,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1376.2,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 1607.3,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 2396.9,
+      "h": 513.9,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 2922.8,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 3153.9,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 3943.5,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 4733.1,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 4972.2,
+      "h": 79.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 5159.6,
+      "h": 279.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 5547,
+      "h": 36.5,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   },
+   "/work/vantage": {
+    "template": "case-study",
+    "pageHeight": 4033,
+    "docOverflowY": "auto",
+    "inFlowSections": 10,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 127.6,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 28.8,
+      "h": 41.3,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 180.6,
+      "h": 352,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 586.6,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1376.2,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 1607.3,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 2396.9,
+      "h": 513.9,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 2922.8,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 3153.9,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 3393,
+      "h": 79.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 3580.4,
+      "h": 279.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 3967.8,
+      "h": 36.5,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   },
+   "/work/corvid": {
+    "template": "case-study",
+    "pageHeight": 4798,
+    "docOverflowY": "auto",
+    "inFlowSections": 11,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 127.6,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 28.8,
+      "h": 41.3,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 180.6,
+      "h": 327.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 561.8,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1351.4,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 1582.5,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 2372.1,
+      "h": 513.9,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 2898,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 3129.1,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 3918.7,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 4157.9,
+      "h": 79.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 4345.3,
+      "h": 279.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 4732.6,
+      "h": 36.5,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   },
+   "/work/tessera": {
+    "template": "case-study",
+    "pageHeight": 5588,
+    "docOverflowY": "auto",
+    "inFlowSections": 12,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 127.6,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 28.8,
+      "h": 41.3,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 180.6,
+      "h": 327.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 561.8,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1351.4,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 1582.5,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 2372.1,
+      "h": 513.9,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 2898,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 3129.1,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 3918.7,
+      "h": 777.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 4708.3,
+      "h": 231.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 4947.5,
+      "h": 79.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 5134.8,
+      "h": 279.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 5522.2,
+      "h": 36.5,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   }
+  }
+ },
+ "sectionHeights390": {
+  "viewport": "390x844",
+  "measuredAt": "2026-11-04T10:25:52.093Z",
+  "measuredWith": "extraction/measure_sections.mjs VIEWPORT=390x844 MODE=sections",
+  "routes": {
+   "/": {
+    "template": "cosmos-home",
+    "pageHeight": 844,
+    "docOverflowY": "hidden",
+    "inFlowSections": 0,
+    "sections": [
+     {
+      "id": "shell.loader",
+      "top": 0,
+      "h": 844,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "showcase.work-cosmos",
+      "top": 0,
+      "h": 844,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "chrome.social",
+      "top": 0,
+      "h": 0,
+      "inFlow": false,
+      "position": "fixed",
+      "hidden": true
+     },
+     {
+      "id": "utility.hover-hud",
+      "top": 0,
+      "h": 0,
+      "inFlow": false,
+      "position": "fixed",
+      "hidden": true
+     },
+     {
+      "id": "utility.fly-fades",
+      "top": 0,
+      "h": 102,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 16,
+      "h": 32.7,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "media.signature",
+      "top": 38,
+      "h": 85.9,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "shell.phone-menu",
+      "top": 58,
+      "h": 429.5,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "overlay.glass-box",
+      "top": 116,
+      "h": 752,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "detail.project-view",
+      "top": 117,
+      "h": 750,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "index.selected-list",
+      "top": 117,
+      "h": 750,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "about.studio-bio",
+      "top": 117,
+      "h": 750,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "conversion.brief-form",
+      "top": 117,
+      "h": 750,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.portrait-intro",
+      "top": 649.9,
+      "h": 194.1,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "utility.fly-fades",
+      "top": 662,
+      "h": 182,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::after"
+     },
+     {
+      "id": "utility.copy-toast",
+      "top": 780.5,
+      "h": 37.5,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "utility.flybar",
+      "top": 804.5,
+      "h": 37.5,
+      "inFlow": false,
+      "position": "fixed"
+     }
+    ]
+   },
+   "/work/northwind": {
+    "template": "case-study",
+    "pageHeight": 3097,
+    "docOverflowY": "auto",
+    "inFlowSections": 12,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 102,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 16,
+      "h": 32.7,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 118.6,
+      "h": 328.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 497.4,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 710.8,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 928.9,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 1142.3,
+      "h": 549,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1703.3,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 1921.4,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 2134.8,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 2348.2,
+      "h": 192.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 2548.8,
+      "h": 119.8,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 2769.8,
+      "h": 138.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 3009.3,
+      "h": 72,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   },
+   "/work/halcyon": {
+    "template": "case-study",
+    "pageHeight": 3311,
+    "docOverflowY": "auto",
+    "inFlowSections": 13,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 102,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 16,
+      "h": 32.7,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 118.6,
+      "h": 328.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 497.4,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 710.8,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 928.9,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 1142.3,
+      "h": 549,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1703.3,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 1921.4,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 2134.8,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 2348.2,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 2561.6,
+      "h": 192.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 2762.2,
+      "h": 119.8,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 2983.2,
+      "h": 138.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 3222.6,
+      "h": 72,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   },
+   "/work/meridian": {
+    "template": "case-study",
+    "pageHeight": 3524,
+    "docOverflowY": "auto",
+    "inFlowSections": 14,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 102,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 16,
+      "h": 32.7,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 118.6,
+      "h": 328.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 497.4,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 710.8,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 928.9,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 1142.3,
+      "h": 549,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1703.3,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 1921.4,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 2134.8,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 2348.2,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 2561.6,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 2774.9,
+      "h": 192.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 2975.5,
+      "h": 119.8,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 3196.5,
+      "h": 138.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 3436,
+      "h": 72,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   },
+   "/work/fieldnote": {
+    "template": "case-study",
+    "pageHeight": 3737,
+    "docOverflowY": "auto",
+    "inFlowSections": 15,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 102,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 16,
+      "h": 32.7,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 118.6,
+      "h": 328.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 497.4,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 710.8,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 928.9,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 1142.3,
+      "h": 549,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1703.3,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 1921.4,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 2134.8,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 2348.2,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 2561.6,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 2774.9,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 2988.3,
+      "h": 192.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 3188.9,
+      "h": 119.8,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 3409.9,
+      "h": 138.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 3649.4,
+      "h": 72,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   },
+   "/work/quarry-law": {
+    "template": "case-study",
+    "pageHeight": 3097,
+    "docOverflowY": "auto",
+    "inFlowSections": 12,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 102,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 16,
+      "h": 32.7,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 118.6,
+      "h": 328.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 497.4,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 710.8,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 928.9,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 1142.3,
+      "h": 549,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1703.3,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 1921.4,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 2134.8,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 2348.2,
+      "h": 192.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 2548.8,
+      "h": 119.8,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 2769.8,
+      "h": 138.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 3009.3,
+      "h": 72,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   },
+   "/work/lumen-labs": {
+    "template": "case-study",
+    "pageHeight": 3311,
+    "docOverflowY": "auto",
+    "inFlowSections": 13,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 102,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 16,
+      "h": 32.7,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 118.6,
+      "h": 328.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 497.4,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 710.8,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 928.9,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 1142.3,
+      "h": 549,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1703.3,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 1921.4,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 2134.8,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 2348.2,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 2561.6,
+      "h": 192.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 2762.2,
+      "h": 119.8,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 2983.2,
+      "h": 138.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 3222.6,
+      "h": 72,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   },
+   "/work/parallel": {
+    "template": "case-study",
+    "pageHeight": 3524,
+    "docOverflowY": "auto",
+    "inFlowSections": 14,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 102,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 16,
+      "h": 32.7,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 118.6,
+      "h": 328.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 497.4,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 710.8,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 928.9,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 1142.3,
+      "h": 549,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1703.3,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 1921.4,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 2134.8,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 2348.2,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 2561.6,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 2774.9,
+      "h": 192.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 2975.5,
+      "h": 119.8,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 3196.5,
+      "h": 138.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 3436,
+      "h": 72,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   },
+   "/work/atlasai": {
+    "template": "case-study",
+    "pageHeight": 3737,
+    "docOverflowY": "auto",
+    "inFlowSections": 15,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 102,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 16,
+      "h": 32.7,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 118.6,
+      "h": 328.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 497.4,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 710.8,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 928.9,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 1142.3,
+      "h": 549,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1703.3,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 1921.4,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 2134.8,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 2348.2,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 2561.6,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 2774.9,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 2988.3,
+      "h": 192.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 3188.9,
+      "h": 119.8,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 3409.9,
+      "h": 138.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 3649.4,
+      "h": 72,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   },
+   "/work/kestrel": {
+    "template": "case-study",
+    "pageHeight": 3097,
+    "docOverflowY": "auto",
+    "inFlowSections": 12,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 102,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 16,
+      "h": 32.7,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 118.6,
+      "h": 328.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 497.4,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 710.8,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 928.9,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 1142.3,
+      "h": 549,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1703.3,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 1921.4,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 2134.8,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 2348.2,
+      "h": 192.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 2548.8,
+      "h": 119.8,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 2769.8,
+      "h": 138.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 3009.3,
+      "h": 72,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   },
+   "/work/omnifield": {
+    "template": "case-study",
+    "pageHeight": 2671,
+    "docOverflowY": "auto",
+    "inFlowSections": 10,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 102,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 16,
+      "h": 32.7,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 118.6,
+      "h": 328.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 497.4,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 710.8,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 928.9,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 1142.3,
+      "h": 549,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1703.3,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1921.4,
+      "h": 192.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 2122,
+      "h": 119.8,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 2343,
+      "h": 138.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 2582.5,
+      "h": 72,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   },
+   "/work/brightline": {
+    "template": "case-study",
+    "pageHeight": 2884,
+    "docOverflowY": "auto",
+    "inFlowSections": 11,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 102,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 16,
+      "h": 32.7,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 118.6,
+      "h": 328.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 497.4,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 710.8,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 928.9,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 1142.3,
+      "h": 549,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1703.3,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 1921.4,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 2134.8,
+      "h": 192.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 2335.4,
+      "h": 119.8,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 2556.4,
+      "h": 138.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 2795.9,
+      "h": 72,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   },
+   "/work/solace": {
+    "template": "case-study",
+    "pageHeight": 3097,
+    "docOverflowY": "auto",
+    "inFlowSections": 12,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 102,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 16,
+      "h": 32.7,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 118.6,
+      "h": 328.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 497.4,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 710.8,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 928.9,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 1142.3,
+      "h": 549,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1703.3,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 1921.4,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 2134.8,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 2348.2,
+      "h": 192.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 2548.8,
+      "h": 119.8,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 2769.8,
+      "h": 138.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 3009.3,
+      "h": 72,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   },
+   "/work/vantage": {
+    "template": "case-study",
+    "pageHeight": 2671,
+    "docOverflowY": "auto",
+    "inFlowSections": 10,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 102,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 16,
+      "h": 32.7,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 118.6,
+      "h": 328.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 497.4,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 710.8,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 928.9,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 1142.3,
+      "h": 549,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1703.3,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1921.4,
+      "h": 192.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 2122,
+      "h": 119.8,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 2343,
+      "h": 138.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 2582.5,
+      "h": 72,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   },
+   "/work/corvid": {
+    "template": "case-study",
+    "pageHeight": 2884,
+    "docOverflowY": "auto",
+    "inFlowSections": 11,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 102,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 16,
+      "h": 32.7,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 118.6,
+      "h": 328.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 497.4,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 710.8,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 928.9,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 1142.3,
+      "h": 549,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1703.3,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 1921.4,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 2134.8,
+      "h": 192.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 2335.4,
+      "h": 119.8,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 2556.4,
+      "h": 138.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 2795.9,
+      "h": 72,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   },
+   "/work/tessera": {
+    "template": "case-study",
+    "pageHeight": 3097,
+    "docOverflowY": "auto",
+    "inFlowSections": 12,
+    "sections": [
+     {
+      "id": "utility.page-top-fade",
+      "top": 0,
+      "h": 102,
+      "inFlow": false,
+      "position": "fixed",
+      "pseudo": "::before"
+     },
+     {
+      "id": "chrome.topbar",
+      "top": 16,
+      "h": 32.7,
+      "inFlow": false,
+      "position": "fixed"
+     },
+     {
+      "id": "hero.case-header",
+      "top": 118.6,
+      "h": 328.1,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-cover",
+      "top": 497.4,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 710.8,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 928.9,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "gallery.case-pair",
+      "top": 1142.3,
+      "h": 549,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 1703.3,
+      "h": 218.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 1921.4,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "media.case-image",
+      "top": 2134.8,
+      "h": 201.4,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "editorial.case-text",
+      "top": 2348.2,
+      "h": 192.6,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "cta.start-project",
+      "top": 2548.8,
+      "h": 119.8,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "index.next-case",
+      "top": 2769.8,
+      "h": 138.2,
+      "inFlow": true,
+      "position": "static"
+     },
+     {
+      "id": "chrome.case-footer",
+      "top": 3009.3,
+      "h": 72,
+      "inFlow": true,
+      "position": "static"
+     }
+    ]
+   }
+  }
+ },
+ "homeStates": {
+  "1440x900": {
+   "default": {
+    "bodyClass": "",
+    "boxView": "closed",
+    "box": [
+     -11.2,
+     99.6,
+     604.8,
+     771.6
+    ],
+    "activeView": null,
+    "activeScrollHeight": null,
+    "hero": [
+     28.8,
+     581.4,
+     1382.4,
+     318.6
+    ],
+    "flybar": [
+     28.8,
+     843.4,
+     1382.4,
+     41.8
+    ],
+    "topbar": [
+     28.8,
+     28.8,
+     1382.4,
+     41.3
+    ],
+    "social": [
+     1297.7,
+     846.1,
+     113.5,
+     35.1
+    ],
+    "mnav": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "url": ""
+   },
+   "fly": {
+    "bodyClass": "away far",
+    "boxView": "closed",
+    "box": [
+     -11.2,
+     99.6,
+     604.8,
+     771.6
+    ],
+    "activeView": null,
+    "activeScrollHeight": null,
+    "hero": [
+     28.8,
+     641.4,
+     1382.4,
+     318.6
+    ],
+    "flybar": [
+     28.8,
+     829.4,
+     1382.4,
+     41.8
+    ],
+    "topbar": [
+     28.8,
+     28.8,
+     1382.4,
+     41.3
+    ],
+    "social": [
+     1297.7,
+     794.1,
+     113.5,
+     35.1
+    ],
+    "mnav": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "url": ""
+   },
+   "about": {
+    "bodyClass": "boxed side",
+    "boxView": "about",
+    "box": [
+     28.8,
+     99.6,
+     604.8,
+     771.6
+    ],
+    "activeView": "view v-about on",
+    "activeScrollHeight": 687,
+    "hero": [
+     28.8,
+     611.4,
+     1382.4,
+     318.6
+    ],
+    "flybar": [
+     28.8,
+     843.4,
+     1382.4,
+     41.8
+    ],
+    "topbar": [
+     28.8,
+     28.8,
+     1382.4,
+     41.3
+    ],
+    "social": [
+     1297.7,
+     836.1,
+     113.5,
+     35.1
+    ],
+    "mnav": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "url": ""
+   },
+   "contact": {
+    "bodyClass": "boxed side",
+    "boxView": "contact",
+    "box": [
+     28.8,
+     99.6,
+     604.8,
+     771.6
+    ],
+    "activeView": "view v-contact on",
+    "activeScrollHeight": 687,
+    "hero": [
+     28.8,
+     611.4,
+     1382.4,
+     318.6
+    ],
+    "flybar": [
+     28.8,
+     843.4,
+     1382.4,
+     41.8
+    ],
+    "topbar": [
+     28.8,
+     28.8,
+     1382.4,
+     41.3
+    ],
+    "social": [
+     1297.7,
+     836.1,
+     113.5,
+     35.1
+    ],
+    "mnav": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "url": ""
+   },
+   "selected": {
+    "bodyClass": "boxed",
+    "boxView": "selected",
+    "box": [
+     28.8,
+     99.6,
+     604.8,
+     771.6
+    ],
+    "activeView": "view v-selected on",
+    "activeScrollHeight": 920,
+    "hero": [
+     28.8,
+     611.4,
+     1382.4,
+     318.6
+    ],
+    "flybar": [
+     28.8,
+     843.4,
+     1382.4,
+     41.8
+    ],
+    "topbar": [
+     28.8,
+     28.8,
+     1382.4,
+     41.3
+    ],
+    "social": [
+     1297.7,
+     846.1,
+     113.5,
+     35.1
+    ],
+    "mnav": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "url": ""
+   },
+   "project": {
+    "bodyClass": "away far boxed",
+    "boxView": "project",
+    "box": [
+     28.8,
+     99.6,
+     604.8,
+     771.6
+    ],
+    "activeView": "view v-project on",
+    "activeScrollHeight": 2152,
+    "hero": [
+     28.8,
+     611.4,
+     1382.4,
+     318.6
+    ],
+    "flybar": [
+     28.8,
+     829.4,
+     1382.4,
+     41.8
+    ],
+    "topbar": [
+     28.8,
+     28.8,
+     1382.4,
+     41.3
+    ],
+    "social": [
+     1297.7,
+     794.1,
+     113.5,
+     35.1
+    ],
+    "mnav": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "url": "?work=4"
+   }
+  },
+  "390x844": {
+   "default": {
+    "bodyClass": "",
+    "boxView": "closed",
+    "box": [
+     16,
+     116,
+     358,
+     752
+    ],
+    "activeView": null,
+    "activeScrollHeight": null,
+    "hero": [
+     16,
+     649.9,
+     358,
+     194.1
+    ],
+    "flybar": [
+     16,
+     804.5,
+     358,
+     37.5
+    ],
+    "topbar": [
+     16,
+     16,
+     358,
+     32.7
+    ],
+    "social": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "mnav": [
+     16,
+     58,
+     358,
+     429.5
+    ],
+    "url": ""
+   },
+   "fly": {
+    "bodyClass": "away far",
+    "boxView": "closed",
+    "box": [
+     16,
+     116,
+     358,
+     752
+    ],
+    "activeView": null,
+    "activeScrollHeight": null,
+    "hero": [
+     16,
+     709.9,
+     358,
+     194.1
+    ],
+    "flybar": [
+     16,
+     790.5,
+     358,
+     37.5
+    ],
+    "topbar": [
+     16,
+     16,
+     358,
+     32.7
+    ],
+    "social": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "mnav": [
+     16,
+     58,
+     358,
+     429.5
+    ],
+    "url": ""
+   },
+   "about": {
+    "bodyClass": "boxed side",
+    "boxView": "about",
+    "box": [
+     16,
+     76,
+     358,
+     752
+    ],
+    "activeView": "view v-about on",
+    "activeScrollHeight": 694,
+    "hero": [
+     16,
+     679.9,
+     358,
+     194.1
+    ],
+    "flybar": [
+     16,
+     804.5,
+     358,
+     37.5
+    ],
+    "topbar": [
+     16,
+     16,
+     358,
+     32.7
+    ],
+    "social": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "mnav": [
+     16,
+     58,
+     358,
+     429.5
+    ],
+    "url": ""
+   },
+   "contact": {
+    "bodyClass": "boxed side",
+    "boxView": "contact",
+    "box": [
+     16,
+     76,
+     358,
+     752
+    ],
+    "activeView": "view v-contact on",
+    "activeScrollHeight": 750,
+    "hero": [
+     16,
+     679.9,
+     358,
+     194.1
+    ],
+    "flybar": [
+     16,
+     804.5,
+     358,
+     37.5
+    ],
+    "topbar": [
+     16,
+     16,
+     358,
+     32.7
+    ],
+    "social": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "mnav": [
+     16,
+     58,
+     358,
+     429.5
+    ],
+    "url": ""
+   },
+   "selected": {
+    "bodyClass": "boxed",
+    "boxView": "selected",
+    "box": [
+     16,
+     76,
+     358,
+     752
+    ],
+    "activeView": "view v-selected on",
+    "activeScrollHeight": 821,
+    "hero": [
+     16,
+     679.9,
+     358,
+     194.1
+    ],
+    "flybar": [
+     16,
+     804.5,
+     358,
+     37.5
+    ],
+    "topbar": [
+     16,
+     16,
+     358,
+     32.7
+    ],
+    "social": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "mnav": [
+     16,
+     58,
+     358,
+     429.5
+    ],
+    "url": ""
+   },
+   "project": {
+    "bodyClass": "away far boxed",
+    "boxView": "project",
+    "box": [
+     16,
+     76,
+     358,
+     752
+    ],
+    "activeView": "view v-project on",
+    "activeScrollHeight": 1412,
+    "hero": [
+     16,
+     679.9,
+     358,
+     194.1
+    ],
+    "flybar": [
+     16,
+     790.5,
+     358,
+     37.5
+    ],
+    "topbar": [
+     16,
+     16,
+     358,
+     32.7
+    ],
+    "social": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "mnav": [
+     16,
+     58,
+     358,
+     429.5
+    ],
+    "url": "?work=4"
+   }
+  },
+  "note": "Glass box geometry with each view opened through the clone's own entry points (?open=..., flybar caption click for the project view). Matches CLONE_SPEC 4.5 (604.8 x 771.6 at 28.8,99.6 on 1440; bottom sheet 358 x 752 at 390, 76px from the top when open)."
+ },
+ "computedStyles": {
+  "measuredAt": "2026-11-04T10:27:35.768Z",
+  "viewport": "1440x900",
+  "samples": {
+   "/": {
+    "html": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "16px",
+     "fontWeight": "400",
+     "fontStyle": "normal",
+     "lineHeight": "24px",
+     "letterSpacing": "normal",
+     "color": "rgb(242, 242, 242)",
+     "backgroundColor": "rgb(10, 10, 11)",
+     "borderRadius": "0px",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      0,
+      0,
+      1440,
+      900
+     ]
+    },
+    ".topbar": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "13px",
+     "fontWeight": "400",
+     "fontStyle": "normal",
+     "lineHeight": "17.55px",
+     "letterSpacing": "normal",
+     "color": "rgb(242, 242, 242)",
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "borderRadius": "0px",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      28.8,
+      28.8,
+      1382.4,
+      41.3
+     ]
+    },
+    ".col-go .k": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "13px",
+     "fontWeight": "400",
+     "fontStyle": "normal",
+     "lineHeight": "17.55px",
+     "letterSpacing": "normal",
+     "color": "rgba(242, 242, 242, 0.55)",
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "borderRadius": "0px",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      357,
+      28.8,
+      147,
+      17.5
+     ]
+    },
+    ".logo": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "13px",
+     "fontWeight": "400",
+     "fontStyle": "normal",
+     "lineHeight": "0px",
+     "letterSpacing": "normal",
+     "color": "rgb(242, 242, 242)",
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "borderRadius": "0px",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      28.8,
+      28.8,
+      48,
+      41.3
+     ]
+    },
+    ".lead": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "16.5px",
+     "fontWeight": "400",
+     "fontStyle": "normal",
+     "lineHeight": "24.75px",
+     "letterSpacing": "normal",
+     "color": "rgba(242, 242, 242, 0.86)",
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "borderRadius": "0px",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      28.8,
+      581.4,
+      440,
+      74.3
+     ]
+    },
+    ".start": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "14px",
+     "fontWeight": "400",
+     "fontStyle": "normal",
+     "lineHeight": "21px",
+     "letterSpacing": "normal",
+     "color": "rgb(242, 242, 242)",
+     "backgroundColor": "rgba(10, 10, 11, 0.25)",
+     "borderRadius": "999px",
+     "paddingTop": "6px",
+     "paddingRight": "6px",
+     "paddingBottom": "6px",
+     "paddingLeft": "18px",
+     "backdropFilter": "blur(6px)",
+     "boxShadow": "none",
+     "rect": [
+      1240.7,
+      604.7,
+      170.5,
+      46
+     ]
+    },
+    ".start i": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "14px",
+     "fontWeight": "400",
+     "fontStyle": "italic",
+     "lineHeight": "21px",
+     "letterSpacing": "normal",
+     "color": "rgb(242, 242, 242)",
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "borderRadius": "50%",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      1372.2,
+      611.7,
+      32,
+      32
+     ]
+    },
+    ".bigname svg.wide": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "32px",
+     "fontWeight": "700",
+     "fontStyle": "normal",
+     "lineHeight": "0px",
+     "letterSpacing": "normal",
+     "color": "rgb(242, 242, 242)",
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "borderRadius": "0px",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      28.8,
+      681.3,
+      1382.4,
+      189.9
+     ]
+    },
+    ".flybar": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "16px",
+     "fontWeight": "400",
+     "fontStyle": "normal",
+     "lineHeight": "24px",
+     "letterSpacing": "normal",
+     "color": "rgb(242, 242, 242)",
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "borderRadius": "0px",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      28.8,
+      843.4,
+      1382.4,
+      41.8
+     ]
+    },
+    ".now-i": {
+     "fontFamily": "\"Instrument Serif\", \"Times New Roman\", serif",
+     "fontSize": "58.032px",
+     "fontWeight": "400",
+     "fontStyle": "italic",
+     "lineHeight": "58.032px",
+     "letterSpacing": "2.26325px",
+     "color": "rgb(242, 242, 242)",
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "borderRadius": "0px",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      28.8,
+      843.4,
+      74.7,
+      41.8
+     ]
+    },
+    ".now-t": {
+     "fontFamily": "\"Instrument Serif\", \"Times New Roman\", serif",
+     "fontSize": "24.192px",
+     "fontWeight": "400",
+     "fontStyle": "italic",
+     "lineHeight": "26.6112px",
+     "letterSpacing": "normal",
+     "color": "rgb(242, 242, 242)",
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "borderRadius": "0px",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "2px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      117.5,
+      843.4,
+      124.1,
+      19.4
+     ]
+    },
+    ".back": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "13px",
+     "fontWeight": "400",
+     "fontStyle": "normal",
+     "lineHeight": "19.5px",
+     "letterSpacing": "normal",
+     "color": "rgb(0, 0, 0)",
+     "backgroundColor": "rgb(255, 255, 255)",
+     "borderRadius": "999px",
+     "paddingTop": "8px",
+     "paddingRight": "14px",
+     "paddingBottom": "8px",
+     "paddingLeft": "11px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      1288.3,
+      849.7,
+      122.9,
+      35.5
+     ]
+    },
+    ".hud": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "12.5px",
+     "fontWeight": "400",
+     "fontStyle": "normal",
+     "lineHeight": "18.75px",
+     "letterSpacing": "normal",
+     "color": "rgb(242, 242, 242)",
+     "backgroundColor": "rgba(0, 0, 0, 0.62)",
+     "borderRadius": "999px",
+     "paddingTop": "7px",
+     "paddingRight": "12px",
+     "paddingBottom": "7px",
+     "paddingLeft": "12px",
+     "backdropFilter": "blur(10px)",
+     "boxShadow": "none",
+     "rect": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "/?open=about": {
+    "#box": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "16px",
+     "fontWeight": "400",
+     "fontStyle": "normal",
+     "lineHeight": "24px",
+     "letterSpacing": "normal",
+     "color": "rgb(242, 242, 242)",
+     "backgroundColor": "rgba(22, 22, 24, 0.6)",
+     "borderRadius": "22px",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "blur(18px)",
+     "boxShadow": "rgba(0, 0, 0, 0.4) 0px 30px 80px 0px, rgba(255, 255, 255, 0.06) 0px 1px 0px 0px inset",
+     "rect": [
+      28.8,
+      99.6,
+      604.8,
+      771.6
+     ]
+    },
+    ".v-about h2": {
+     "fontFamily": "\"Instrument Serif\", \"Times New Roman\", serif",
+     "fontSize": "37.152px",
+     "fontWeight": "400",
+     "fontStyle": "italic",
+     "lineHeight": "35.8145px",
+     "letterSpacing": "-0.148608px",
+     "color": "rgb(242, 242, 242)",
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "borderRadius": "0px",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      57.8,
+      182.8,
+      546.8,
+      71.6
+     ]
+    },
+    ".v-about .body": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "15px",
+     "fontWeight": "400",
+     "fontStyle": "normal",
+     "lineHeight": "24px",
+     "letterSpacing": "normal",
+     "color": "rgba(242, 242, 242, 0.78)",
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "borderRadius": "0px",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      57.8,
+      268.5,
+      546.8,
+      48
+     ]
+    },
+    ".facts .label": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "12px",
+     "fontWeight": "400",
+     "fontStyle": "normal",
+     "lineHeight": "18px",
+     "letterSpacing": "normal",
+     "color": "rgba(242, 242, 242, 0.55)",
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "borderRadius": "0px",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      57.8,
+      423.5,
+      261.4,
+      18
+     ]
+    },
+    ".p-cta": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "16px",
+     "fontWeight": "400",
+     "fontStyle": "normal",
+     "lineHeight": "24px",
+     "letterSpacing": "normal",
+     "color": "rgb(242, 242, 242)",
+     "backgroundColor": "rgba(255, 255, 255, 0.03)",
+     "borderRadius": "16px",
+     "paddingTop": "16px",
+     "paddingRight": "16px",
+     "paddingBottom": "16px",
+     "paddingLeft": "20px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      57.8,
+      762.8,
+      546.8,
+      79.4
+     ]
+    },
+    ".p-cta-t": {
+     "fontFamily": "\"Instrument Serif\", \"Times New Roman\", serif",
+     "fontSize": "23.3856px",
+     "fontWeight": "400",
+     "fontStyle": "italic",
+     "lineHeight": "22.3856px",
+     "letterSpacing": "-0.058464px",
+     "color": "rgb(242, 242, 242)",
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "borderRadius": "0px",
+     "paddingTop": "1px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      78.8,
+      801.8,
+      245.9,
+      23.4
+     ]
+    },
+    ".p-cta-btn": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "13.5px",
+     "fontWeight": "500",
+     "fontStyle": "normal",
+     "lineHeight": "20.25px",
+     "letterSpacing": "normal",
+     "color": "rgb(0, 0, 0)",
+     "backgroundColor": "rgb(255, 255, 255)",
+     "borderRadius": "999px",
+     "paddingTop": "10px",
+     "paddingRight": "18px",
+     "paddingBottom": "10px",
+     "paddingLeft": "18px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      370.7,
+      782.4,
+      119.7,
+      40.3
+     ]
+    },
+    ".back-link": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "13.5px",
+     "fontWeight": "400",
+     "fontStyle": "normal",
+     "lineHeight": "20.25px",
+     "letterSpacing": "normal",
+     "color": "rgb(242, 242, 242)",
+     "backgroundColor": "rgba(255, 255, 255, 0.06)",
+     "borderRadius": "999px",
+     "paddingTop": "6px",
+     "paddingRight": "13px",
+     "paddingBottom": "6px",
+     "paddingLeft": "9px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      57.8,
+      128.6,
+      78.8,
+      34.3
+     ]
+    },
+    ".social": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "13px",
+     "fontWeight": "400",
+     "fontStyle": "normal",
+     "lineHeight": "17.55px",
+     "letterSpacing": "normal",
+     "color": "rgb(242, 242, 242)",
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "borderRadius": "0px",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      1297.7,
+      836.1,
+      113.5,
+      35.1
+     ]
+    }
+   },
+   "/?open=contact": {
+    ".v-contact h2": {
+     "fontFamily": "\"Instrument Serif\", \"Times New Roman\", serif",
+     "fontSize": "37.152px",
+     "fontWeight": "400",
+     "fontStyle": "italic",
+     "lineHeight": "35.8145px",
+     "letterSpacing": "-0.148608px",
+     "color": "rgb(242, 242, 242)",
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "borderRadius": "0px",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      57.8,
+      182.8,
+      546.8,
+      35.8
+     ]
+    },
+    ".c-sub": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "14.5px",
+     "fontWeight": "400",
+     "fontStyle": "normal",
+     "lineHeight": "22.475px",
+     "letterSpacing": "normal",
+     "color": "rgba(242, 242, 242, 0.72)",
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "borderRadius": "0px",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      57.8,
+      227.7,
+      385.6,
+      44.9
+     ]
+    },
+    ".field input": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "14.5px",
+     "fontWeight": "400",
+     "fontStyle": "normal",
+     "lineHeight": "21.75px",
+     "letterSpacing": "normal",
+     "color": "rgb(242, 242, 242)",
+     "backgroundColor": "rgba(255, 255, 255, 0.08)",
+     "borderRadius": "12px",
+     "paddingTop": "10px",
+     "paddingRight": "13px",
+     "paddingBottom": "10px",
+     "paddingLeft": "13px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      57.8,
+      310.3,
+      267.4,
+      43.8
+     ]
+    },
+    ".chip span": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "13px",
+     "fontWeight": "400",
+     "fontStyle": "normal",
+     "lineHeight": "19.5px",
+     "letterSpacing": "normal",
+     "color": "rgba(242, 242, 242, 0.8)",
+     "backgroundColor": "rgba(255, 255, 255, 0.04)",
+     "borderRadius": "999px",
+     "paddingTop": "7px",
+     "paddingRight": "13px",
+     "paddingBottom": "7px",
+     "paddingLeft": "13px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      57.8,
+      474.3,
+      105.2,
+      35.5
+     ]
+    },
+    ".c-send": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "13.5px",
+     "fontWeight": "500",
+     "fontStyle": "normal",
+     "lineHeight": "20.25px",
+     "letterSpacing": "normal",
+     "color": "rgb(0, 0, 0)",
+     "backgroundColor": "rgb(255, 255, 255)",
+     "borderRadius": "999px",
+     "paddingTop": "10px",
+     "paddingRight": "18px",
+     "paddingBottom": "10px",
+     "paddingLeft": "18px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      57.8,
+      726.1,
+      119.1,
+      40.3
+     ]
+    },
+    ".c-note": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "13px",
+     "fontWeight": "400",
+     "fontStyle": "normal",
+     "lineHeight": "19.5px",
+     "letterSpacing": "normal",
+     "color": "rgba(242, 242, 242, 0.55)",
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "borderRadius": "0px",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      194.9,
+      736.5,
+      174,
+      19.5
+     ]
+    }
+   },
+   "/work/northwind": {
+    ".cs": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "16px",
+     "fontWeight": "400",
+     "fontStyle": "normal",
+     "lineHeight": "24px",
+     "letterSpacing": "normal",
+     "color": "rgb(242, 242, 242)",
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "borderRadius": "0px",
+     "paddingTop": "180.6px",
+     "paddingRight": "28.8px",
+     "paddingBottom": "28.8px",
+     "paddingLeft": "28.8px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      0,
+      0,
+      1440,
+      5612.3
+     ]
+    },
+    ".cs-kicker": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "12.5px",
+     "fontWeight": "400",
+     "fontStyle": "normal",
+     "lineHeight": "18.75px",
+     "letterSpacing": "normal",
+     "color": "rgba(242, 242, 242, 0.55)",
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "borderRadius": "0px",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      28.8,
+      180.6,
+      1382.4,
+      18.8
+     ]
+    },
+    ".cs-title": {
+     "fontFamily": "\"Instrument Serif\", \"Times New Roman\", serif",
+     "fontSize": "158.4px",
+     "fontWeight": "400",
+     "fontStyle": "italic",
+     "lineHeight": "145.728px",
+     "letterSpacing": "-4.752px",
+     "color": "rgb(242, 242, 242)",
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "borderRadius": "0px",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      28.8,
+      221.3,
+      1382.4,
+      145.7
+     ]
+    },
+    ".cs-intro": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "16.5px",
+     "fontWeight": "400",
+     "fontStyle": "normal",
+     "lineHeight": "24.75px",
+     "letterSpacing": "normal",
+     "color": "rgba(242, 242, 242, 0.86)",
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "borderRadius": "0px",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      28.8,
+      389.1,
+      560,
+      49.5
+     ]
+    },
+    ".cs-facts dt": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "12px",
+     "fontWeight": "400",
+     "fontStyle": "normal",
+     "lineHeight": "18px",
+     "letterSpacing": "normal",
+     "color": "rgba(242, 242, 242, 0.55)",
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "borderRadius": "0px",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      28.8,
+      489.6,
+      327.6,
+      18
+     ]
+    },
+    ".cs-facts dd": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "14px",
+     "fontWeight": "400",
+     "fontStyle": "normal",
+     "lineHeight": "21px",
+     "letterSpacing": "normal",
+     "color": "rgb(242, 242, 242)",
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "borderRadius": "0px",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      28.8,
+      511.6,
+      327.6,
+      21
+     ]
+    },
+    ".cs-cover .cs-img": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "16px",
+     "fontWeight": "400",
+     "fontStyle": "normal",
+     "lineHeight": "24px",
+     "letterSpacing": "normal",
+     "color": "rgb(242, 242, 242)",
+     "backgroundColor": "rgba(255, 255, 255, 0.03)",
+     "borderRadius": "22px",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      28.8,
+      586.6,
+      1382.4,
+      777.6
+     ]
+    },
+    ".cs-text h2": {
+     "fontFamily": "\"Instrument Serif\", \"Times New Roman\", serif",
+     "fontSize": "37.152px",
+     "fontWeight": "400",
+     "fontStyle": "italic",
+     "lineHeight": "40.1242px",
+     "letterSpacing": "-0.55728px",
+     "color": "rgb(242, 242, 242)",
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "borderRadius": "0px",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      28.8,
+      1466.2,
+      566,
+      51.1
+     ]
+    },
+    ".cs-text p": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "16.5px",
+     "fontWeight": "400",
+     "fontStyle": "normal",
+     "lineHeight": "25.575px",
+     "letterSpacing": "normal",
+     "color": "rgba(242, 242, 242, 0.78)",
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "borderRadius": "0px",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      618.8,
+      1466.2,
+      620,
+      51.1
+     ]
+    },
+    ".cs-pair": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "16px",
+     "fontWeight": "400",
+     "fontStyle": "normal",
+     "lineHeight": "24px",
+     "letterSpacing": "normal",
+     "color": "rgb(242, 242, 242)",
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "borderRadius": "0px",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      28.8,
+      2396.9,
+      1382.4,
+      513.9
+     ]
+    },
+    ".cs-next-t": {
+     "fontFamily": "\"Instrument Serif\", \"Times New Roman\", serif",
+     "fontSize": "115.2px",
+     "fontWeight": "400",
+     "fontStyle": "italic",
+     "lineHeight": "109.44px",
+     "letterSpacing": "-3.456px",
+     "color": "rgb(242, 242, 242)",
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "borderRadius": "0px",
+     "paddingTop": "0px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      28.8,
+      5257.1,
+      313.7,
+      109.4
+     ]
+    },
+    ".cs-foot": {
+     "fontFamily": "\"Inter Tight\", Inter, -apple-system, \"Helvetica Neue\", Arial, sans-serif",
+     "fontSize": "13px",
+     "fontWeight": "400",
+     "fontStyle": "normal",
+     "lineHeight": "19.5px",
+     "letterSpacing": "normal",
+     "color": "rgba(242, 242, 242, 0.55)",
+     "backgroundColor": "rgba(0, 0, 0, 0)",
+     "borderRadius": "0px",
+     "paddingTop": "16px",
+     "paddingRight": "0px",
+     "paddingBottom": "0px",
+     "paddingLeft": "0px",
+     "backdropFilter": "none",
+     "boxShadow": "none",
+     "rect": [
+      28.8,
+      5547,
+      1382.4,
+      36.5
+     ]
+    }
+   }
+  }
+ },
+ "motionFromOriginal": {
+  "source": "motion QA pass on the live original, 2026-11-04 (values relayed to this build)",
+  "signatureStartAfterLoaderMs": 1000,
+  "signatureDrawS": 2.88,
+  "openParamDelayAfterLoaderMs": 2500,
+  "wheelWithBoxOpen": "camera holds; input only accumulates toward the 120-unit close",
+  "fovOnCloseDeg": [
+   37.49,
+   34.37
+  ],
+  "fovSnapWithinMs": 32,
+  "cloneNow": "src/App.jsx starts the signature 1000 ms after the loader (setTimeout 1000) and opens ?open= views after 2500 ms; cosmos.js push(d, scroll) ignores wheel/touch movement while boxed; setBoxed sets snapFov on close. These supersede CLONE_SPEC 3.3 (22% of intro) and section 6 (1.8 s)."
+ },
+ "cloneVsOriginalElementAudit": {
+  "source": "element-geometry audit run earlier in this session (orig = vadimcarazan.com/?internal=1, clone = local dev server), same selectors on both, rect = [x, y, w, h] at 1440x900, 1280x800 and 390x844 in states home/fly/project/selected/about/contact/menu",
+  "capturedAt": "2026-11-04T15:23 (orig) / 15:29 (clone)",
+  "caveat": "The clone side was captured with a throwaway sample import ('Sample Case 1' titles), not today's placeholder data, and before the motion fixes. Mismatches are content-driven (different titles, description and gallery lengths, lane caption widths) - chrome geometry (top bar, hero, name, box frame, back pill, flybar frame) is within 1px. It is NOT a pixel parity number.",
+  "byViewportState": {
+   "1440x900/home": {
+    "elementsCompared": 35,
+    "within1px": 27,
+    "over1px": [
+     [
+      "col2",
+      1.3
+     ],
+     [
+      "startSvg",
+      2.1
+     ],
+     [
+      "now",
+      3.7
+     ],
+     [
+      "nowTxt",
+      3.7
+     ],
+     [
+      "nowT",
+      3.7
+     ],
+     [
+      "nowS",
+      3.7
+     ],
+     [
+      "flyright",
+      17.9
+     ],
+     [
+      "seen",
+      17.9
+     ]
+    ]
+   },
+   "1440x900/fly": {
+    "elementsCompared": 36,
+    "within1px": 28,
+    "over1px": [
+     [
+      "col2",
+      1.3
+     ],
+     [
+      "now",
+      34.2
+     ],
+     [
+      "nowI",
+      3.1
+     ],
+     [
+      "nowTxt",
+      37.2
+     ],
+     [
+      "nowT",
+      37.2
+     ],
+     [
+      "nowS",
+      37.2
+     ],
+     [
+      "flyright",
+      17.9
+     ],
+     [
+      "seen",
+      17.9
+     ]
+    ]
+   },
+   "1440x900/project": {
+    "elementsCompared": 49,
+    "within1px": 28,
+    "over1px": [
+     [
+      "col2",
+      1.3
+     ],
+     [
+      "now",
+      34.2
+     ],
+     [
+      "nowI",
+      3.1
+     ],
+     [
+      "nowTxt",
+      37.2
+     ],
+     [
+      "nowT",
+      37.2
+     ],
+     [
+      "nowS",
+      37.2
+     ],
+     [
+      "flyright",
+      17.9
+     ],
+     [
+      "seen",
+      17.9
+     ],
+     [
+      "vhead",
+      2.0
+     ],
+     [
+      "copyLink",
+      159.5
+     ],
+     [
+      "pscroll",
+      2.0
+     ],
+     [
+      "pkind",
+      2.0
+     ],
+     [
+      "h2",
+      2.0
+     ],
+     [
+      "desc",
+      22.4
+     ],
+     [
+      "stage",
+      4942.8
+     ],
+     [
+      "stageImg",
+      99.3
+     ],
+     [
+      "pcta",
+      4967.3
+     ],
+     [
+      "pctaK",
+      4967.3
+     ],
+     [
+      "pctaT",
+      4967.3
+     ],
+     [
+      "pctaBtn",
+      4967.3
+     ],
+     [
+      "pctaAlt",
+      4967.3
+     ]
+    ]
+   },
+   "1440x900/selected": {
+    "elementsCompared": 48,
+    "within1px": 35,
+    "over1px": [
+     [
+      "col2",
+      1.3
+     ],
+     [
+      "startSvg",
+      3.8
+     ],
+     [
+      "now",
+      34.2
+     ],
+     [
+      "nowI",
+      3.1
+     ],
+     [
+      "nowTxt",
+      37.2
+     ],
+     [
+      "nowT",
+      37.2
+     ],
+     [
+      "nowS",
+      37.2
+     ],
+     [
+      "flyright",
+      17.9
+     ],
+     [
+      "seen",
+      17.9
+     ],
+     [
+      "selList",
+      528
+     ],
+     [
+      "selT",
+      286.7
+     ],
+     [
+      "selK",
+      286.7
+     ],
+     [
+      "selFoot",
+      527.9
+     ]
+    ]
+   },
+   "1440x900/about": {
+    "elementsCompared": 50,
+    "within1px": 37,
+    "over1px": [
+     [
+      "col2",
+      1.3
+     ],
+     [
+      "now",
+      34.2
+     ],
+     [
+      "nowI",
+      3.1
+     ],
+     [
+      "nowTxt",
+      37.2
+     ],
+     [
+      "nowT",
+      37.2
+     ],
+     [
+      "nowS",
+      37.2
+     ],
+     [
+      "flyright",
+      17.9
+     ],
+     [
+      "seen",
+      17.9
+     ],
+     [
+      "body",
+      24
+     ],
+     [
+      "body2",
+      23.9
+     ],
+     [
+      "facts",
+      23.9
+     ],
+     [
+      "factLabel",
+      23.9
+     ],
+     [
+      "factVal",
+      23.9
+     ]
+    ]
+   },
+   "1440x900/contact": {
+    "elementsCompared": 53,
+    "within1px": 43,
+    "over1px": [
+     [
+      "col2",
+      1.3
+     ],
+     [
+      "startSvg",
+      1.8
+     ],
+     [
+      "now",
+      34.2
+     ],
+     [
+      "nowI",
+      3.1
+     ],
+     [
+      "nowTxt",
+      37.2
+     ],
+     [
+      "nowT",
+      37.2
+     ],
+     [
+      "nowS",
+      37.2
+     ],
+     [
+      "flyright",
+      17.9
+     ],
+     [
+      "seen",
+      17.9
+     ],
+     [
+      "cnote",
+      14.4
+     ]
+    ]
+   },
+   "1280x800/home": {
+    "elementsCompared": 35,
+    "within1px": 27,
+    "over1px": [
+     [
+      "col2",
+      1.3
+     ],
+     [
+      "startSvg",
+      3.2
+     ],
+     [
+      "now",
+      19.1
+     ],
+     [
+      "nowTxt",
+      19.1
+     ],
+     [
+      "nowT",
+      19.1
+     ],
+     [
+      "nowS",
+      19.1
+     ],
+     [
+      "flyright",
+      17.9
+     ],
+     [
+      "seen",
+      17.9
+     ]
+    ]
+   },
+   "1280x800/fly": {
+    "elementsCompared": 36,
+    "within1px": 27,
+    "over1px": [
+     [
+      "col2",
+      1.3
+     ],
+     [
+      "startSvg",
+      1.6
+     ],
+     [
+      "now",
+      30.4
+     ],
+     [
+      "nowI",
+      2.7
+     ],
+     [
+      "nowTxt",
+      33.1
+     ],
+     [
+      "nowT",
+      33.1
+     ],
+     [
+      "nowS",
+      33.1
+     ],
+     [
+      "flyright",
+      17.9
+     ],
+     [
+      "seen",
+      17.9
+     ]
+    ]
+   },
+   "1280x800/project": {
+    "elementsCompared": 49,
+    "within1px": 27,
+    "over1px": [
+     [
+      "col2",
+      1.3
+     ],
+     [
+      "startSvg",
+      4.2
+     ],
+     [
+      "now",
+      30.4
+     ],
+     [
+      "nowI",
+      2.7
+     ],
+     [
+      "nowTxt",
+      33.1
+     ],
+     [
+      "nowT",
+      33.1
+     ],
+     [
+      "nowS",
+      33.1
+     ],
+     [
+      "flyright",
+      17.9
+     ],
+     [
+      "seen",
+      17.9
+     ],
+     [
+      "vhead",
+      2.0
+     ],
+     [
+      "copyLink",
+      159.5
+     ],
+     [
+      "pscroll",
+      2.0
+     ],
+     [
+      "pkind",
+      2.0
+     ],
+     [
+      "h2",
+      2.0
+     ],
+     [
+      "desc",
+      22.4
+     ],
+     [
+      "stage",
+      4363.6
+     ],
+     [
+      "stageImg",
+      87.1
+     ],
+     [
+      "pcta",
+      4388.0
+     ],
+     [
+      "pctaK",
+      4388.0
+     ],
+     [
+      "pctaT",
+      4388.0
+     ],
+     [
+      "pctaBtn",
+      4388.2
+     ],
+     [
+      "pctaAlt",
+      4388.2
+     ]
+    ]
+   },
+   "1280x800/selected": {
+    "elementsCompared": 48,
+    "within1px": 35,
+    "over1px": [
+     [
+      "col2",
+      1.3
+     ],
+     [
+      "startSvg",
+      2.1
+     ],
+     [
+      "now",
+      30.4
+     ],
+     [
+      "nowI",
+      2.7
+     ],
+     [
+      "nowTxt",
+      33.1
+     ],
+     [
+      "nowT",
+      33.1
+     ],
+     [
+      "nowS",
+      33.1
+     ],
+     [
+      "flyright",
+      17.9
+     ],
+     [
+      "seen",
+      17.9
+     ],
+     [
+      "selList",
+      528
+     ],
+     [
+      "selT",
+      219.5
+     ],
+     [
+      "selK",
+      219.5
+     ],
+     [
+      "selFoot",
+      527.9
+     ]
+    ]
+   },
+   "1280x800/about": {
+    "elementsCompared": 50,
+    "within1px": 32,
+    "over1px": [
+     [
+      "col2",
+      1.3
+     ],
+     [
+      "now",
+      30.4
+     ],
+     [
+      "nowI",
+      2.7
+     ],
+     [
+      "nowTxt",
+      33.1
+     ],
+     [
+      "nowT",
+      33.1
+     ],
+     [
+      "nowS",
+      33.1
+     ],
+     [
+      "flyright",
+      17.9
+     ],
+     [
+      "seen",
+      17.9
+     ],
+     [
+      "pcta",
+      25.8
+     ],
+     [
+      "pctaK",
+      25.8
+     ],
+     [
+      "pctaT",
+      25.8
+     ],
+     [
+      "pctaBtn",
+      26.1
+     ],
+     [
+      "pctaAlt",
+      26.1
+     ],
+     [
+      "body",
+      24
+     ],
+     [
+      "body2",
+      23.9
+     ],
+     [
+      "facts",
+      23.9
+     ],
+     [
+      "factLabel",
+      23.9
+     ],
+     [
+      "factVal",
+      23.9
+     ]
+    ]
+   },
+   "1280x800/contact": {
+    "elementsCompared": 53,
+    "within1px": 43,
+    "over1px": [
+     [
+      "col2",
+      1.3
+     ],
+     [
+      "startSvg",
+      4.9
+     ],
+     [
+      "now",
+      30.4
+     ],
+     [
+      "nowI",
+      2.7
+     ],
+     [
+      "nowTxt",
+      33.1
+     ],
+     [
+      "nowT",
+      33.1
+     ],
+     [
+      "nowS",
+      33.1
+     ],
+     [
+      "flyright",
+      17.9
+     ],
+     [
+      "seen",
+      17.9
+     ],
+     [
+      "cnote",
+      14.4
+     ]
+    ]
+   },
+   "390x844/home": {
+    "elementsCompared": 28,
+    "within1px": 21,
+    "over1px": [
+     [
+      "heroRow",
+      320
+     ],
+     [
+      "startSpan",
+      683.8
+     ],
+     [
+      "startSvg",
+      4.7
+     ],
+     [
+      "now",
+      21.4
+     ],
+     [
+      "nowTxt",
+      21.9
+     ],
+     [
+      "nowT",
+      21.9
+     ],
+     [
+      "nowS",
+      21.9
+     ]
+    ]
+   },
+   "390x844/menu": {
+    "elementsCompared": 28,
+    "within1px": 22,
+    "over1px": [
+     [
+      "heroRow",
+      320
+     ],
+     [
+      "startSpan",
+      683.8
+     ],
+     [
+      "now",
+      21.4
+     ],
+     [
+      "nowTxt",
+      21.9
+     ],
+     [
+      "nowT",
+      21.9
+     ],
+     [
+      "nowS",
+      21.9
+     ]
+    ]
+   },
+   "390x844/fly": {
+    "elementsCompared": 29,
+    "within1px": 22,
+    "over1px": [
+     [
+      "heroRow",
+      320
+     ],
+     [
+      "startSpan",
+      743.8
+     ],
+     [
+      "now",
+      27.7
+     ],
+     [
+      "nowI",
+      1.6
+     ],
+     [
+      "nowTxt",
+      29.3
+     ],
+     [
+      "nowT",
+      29.3
+     ],
+     [
+      "nowS",
+      29.3
+     ]
+    ]
+   },
+   "390x844/project": {
+    "elementsCompared": 42,
+    "within1px": 25,
+    "over1px": [
+     [
+      "heroRow",
+      320
+     ],
+     [
+      "startSpan",
+      713.8
+     ],
+     [
+      "startSvg",
+      2.7
+     ],
+     [
+      "now",
+      27.7
+     ],
+     [
+      "nowI",
+      1.6
+     ],
+     [
+      "nowTxt",
+      29.3
+     ],
+     [
+      "nowT",
+      29.3
+     ],
+     [
+      "nowS",
+      29.3
+     ],
+     [
+      "copyLink",
+      150
+     ],
+     [
+      "desc",
+      40.5
+     ],
+     [
+      "stage",
+      4164.1
+     ],
+     [
+      "stageImg",
+      59.6
+     ],
+     [
+      "pcta",
+      4204.5
+     ],
+     [
+      "pctaK",
+      4204.5
+     ],
+     [
+      "pctaT",
+      4204.4
+     ],
+     [
+      "pctaBtn",
+      4204.7
+     ],
+     [
+      "pctaAlt",
+      4204.7
+     ]
+    ]
+   },
+   "390x844/selected": {
+    "elementsCompared": 41,
+    "within1px": 29,
+    "over1px": [
+     [
+      "heroRow",
+      320
+     ],
+     [
+      "startSpan",
+      713.8
+     ],
+     [
+      "startSvg",
+      1.5
+     ],
+     [
+      "now",
+      27.7
+     ],
+     [
+      "nowI",
+      1.6
+     ],
+     [
+      "nowTxt",
+      29.3
+     ],
+     [
+      "nowT",
+      29.3
+     ],
+     [
+      "nowS",
+      29.3
+     ],
+     [
+      "selList",
+      438
+     ],
+     [
+      "selT",
+      87.9
+     ],
+     [
+      "selK",
+      87.9
+     ],
+     [
+      "selFoot",
+      437.9
+     ]
+    ]
+   },
+   "390x844/about": {
+    "elementsCompared": 43,
+    "within1px": 25,
+    "over1px": [
+     [
+      "heroRow",
+      320
+     ],
+     [
+      "startSpan",
+      713.8
+     ],
+     [
+      "startSvg",
+      3.6
+     ],
+     [
+      "now",
+      27.7
+     ],
+     [
+      "nowI",
+      1.6
+     ],
+     [
+      "nowTxt",
+      29.3
+     ],
+     [
+      "nowT",
+      29.3
+     ],
+     [
+      "nowS",
+      29.3
+     ],
+     [
+      "pcta",
+      89.8
+     ],
+     [
+      "pctaK",
+      89.8
+     ],
+     [
+      "pctaT",
+      89.8
+     ],
+     [
+      "pctaBtn",
+      90.1
+     ],
+     [
+      "pctaAlt",
+      90.1
+     ],
+     [
+      "body",
+      48
+     ],
+     [
+      "body2",
+      47.8
+     ],
+     [
+      "facts",
+      47.8
+     ],
+     [
+      "factLabel",
+      47.8
+     ],
+     [
+      "factVal",
+      47.8
+     ]
+    ]
+   },
+   "390x844/contact": {
+    "elementsCompared": 46,
+    "within1px": 37,
+    "over1px": [
+     [
+      "heroRow",
+      320
+     ],
+     [
+      "startSpan",
+      713.8
+     ],
+     [
+      "startSvg",
+      3.9
+     ],
+     [
+      "now",
+      27.7
+     ],
+     [
+      "nowI",
+      1.6
+     ],
+     [
+      "nowTxt",
+      29.3
+     ],
+     [
+      "nowT",
+      29.3
+     ],
+     [
+      "nowS",
+      29.3
+     ],
+     [
+      "cnote",
+      14.4
+     ]
+    ]
+   }
+  }
+ },
+ "parity": {
+  "status": "not-measured",
+  "perSectionGateRun": false,
+  "reason": "No live-vs-clone pixel parity harness was run for this design-repo. A pixel compare of '/' is not meaningful as a fidelity number: the clone deliberately renders different work images (procedural), a different portrait, different lettering, signature and copy inside a WebGL field whose tile placement is random per load. The /work/<slug> pages have no counterpart on the original (its case studies live on an external studio site). The available evidence is the element-geometry audit above. No parity percentage is claimed anywhere in this repo."
+ },
+ "findings": [
+  {
+   "id": "WORK_PARAM_STRIPPED",
+   "severity": "fixed",
+   "detail": "Fixed in the clone after the first build: the view effect now clears ?work= only when a project view is being closed, so on first render the param survives until handleParams reads it. Verified: '/?work=3' opens the project view (title 'Northwind') after the intro, and Escape clears the param.",
+   "evidence": [
+    {
+     "cite": "src/App.jsx:60",
+     "needle": "const leavingProject"
+    },
+    {
+     "cite": "src/App.jsx:164",
+     "needle": "const work = u.searchParams.get('work')"
+    }
+   ]
+  },
+  {
+   "id": "REDUCED_MOTION_GAPS",
+   "severity": "gap",
+   "detail": "Loader stroke drawing, portrait arrival and the signature draw have no reduced-motion branch in the clone (motion-patterns.json fallback 'unchanged'). CLONE_SPEC says the original skips the loader drawing."
+  },
+  {
+   "id": "COPY_REUSED_FROM_ORIGINAL",
+   "severity": "licensing",
+   "detail": "Much of the clone's placeholder UI copy is verbatim from the original (e.g. 'Let's make the next one yours.', 'A few to start with.', 'Tell me what you're building.', the needs/budget chips, 'Explore the work'). It is therefore treated as source copy: generated mode rejects it through the phrase list and the 6-word shingle hashes."
+  },
+  {
+   "id": "PORTRAIT_CELLS",
+   "severity": "info",
+   "detail": "The clone builds 12,028 portrait cells from the user-supplied portrait (public/data/portrait.json) vs 7,832 on the original; 200 placeholder images across 100 projects (15 case studies) vs 1,067 / 730."
+  }
+ ],
+ "iaCrossCheck": {
+  "note": "ia/ia.json (16 routes, 2 templates, 25 sections) maps 1:1 onto the contracts through iaSectionId; overlay.glass-box is the one extra contract (the box container, retrieval-ineligible), and the ia's conversion.cta-card is categorised CTA here (it links to the brief form rather than collecting anything). Checked by verify_all.py IA_SYNC when ia/ia.json is present."
+ },
+ "routesEvidence": {
+  "source": "src/main.jsx routes '/' and /work/<slug>; slugs from src/engine/data.js SELECTED + EXTRA_CASES via slugify; every route was loaded at 1440 and 390 in the runs above",
+  "routes": [
+   "/",
+   "/work/northwind",
+   "/work/halcyon",
+   "/work/meridian",
+   "/work/fieldnote",
+   "/work/quarry-law",
+   "/work/lumen-labs",
+   "/work/parallel",
+   "/work/atlasai",
+   "/work/kestrel",
+   "/work/omnifield",
+   "/work/brightline",
+   "/work/solace",
+   "/work/vantage",
+   "/work/corvid",
+   "/work/tessera"
+  ]
+ }
+}

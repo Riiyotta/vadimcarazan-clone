@@ -1,0 +1,14 @@
+{
+ "id": "underline-link",
+ "kind": "primitive",
+ "description": "Text link with a .3 underline at 3-4px offset that turns full colour on hover.",
+ "tokens": [
+  "border.underline"
+ ],
+ "evidence": [
+  {
+   "cite": "src/index.css:274",
+   "needle": ".p-cta-alt, .sel-all, .go-work {"
+  }
+ ]
+}

@@ -1,0 +1,164 @@
+{
+ "category": "motion",
+ "note": "CSS easings/durations. Engine-driven motion (camera travel, arrival, signature pen, WebGL blur) lives in motion-patterns.json with its measured constants.",
+ "tokens": {
+  "ease.house": {
+   "$type": "cubicBezier",
+   "$value": "cubic-bezier(0.22, 1, 0.36, 1)",
+   "category": "easing",
+   "evidence": [
+    {
+     "cite": "src/index.css:13",
+     "needle": "--ease: cubic-bezier(0.22, 1, 0.36, 1)"
+    },
+    {
+     "cite": "CLONE_SPEC.md:85",
+     "needle": "- `--ease: cubic-bezier(0.22, 1, 0.36, 1)`"
+    }
+   ]
+  },
+  "duration.200": {
+   "$type": "duration",
+   "$value": "200ms",
+   "category": "duration",
+   "evidence": [
+    {
+     "cite": "src/index.css:167",
+     "needle": "transition: transform 0.2s ease"
+    }
+   ]
+  },
+  "duration.250": {
+   "$type": "duration",
+   "$value": "250ms",
+   "category": "duration",
+   "evidence": [
+    {
+     "cite": "src/index.css:357",
+     "needle": "opacity 0.25s ease"
+    }
+   ]
+  },
+  "duration.300": {
+   "$type": "duration",
+   "$value": "300ms",
+   "category": "duration",
+   "evidence": [
+    {
+     "cite": "src/index.css:116",
+     "needle": "border-color 0.3s ease, background 0.3s ease"
+    }
+   ]
+  },
+  "duration.350": {
+   "$type": "duration",
+   "$value": "350ms",
+   "category": "duration",
+   "evidence": [
+    {
+     "cite": "src/index.css:50",
+     "needle": "background-size 0.35s"
+    }
+   ]
+  },
+  "duration.450": {
+   "$type": "duration",
+   "$value": "450ms",
+   "category": "duration",
+   "evidence": [
+    {
+     "cite": "src/index.css:180",
+     "needle": "opacity 0.45s ease"
+    }
+   ]
+  },
+  "duration.500": {
+   "$type": "duration",
+   "$value": "500ms",
+   "category": "duration",
+   "evidence": [
+    {
+     "cite": "src/index.css:140",
+     "needle": "opacity 0.5s ease"
+    }
+   ]
+  },
+  "duration.600": {
+   "$type": "duration",
+   "$value": "600ms",
+   "category": "duration",
+   "evidence": [
+    {
+     "cite": "src/index.css:55",
+     "needle": "opacity 0.6s ease"
+    }
+   ]
+  },
+  "duration.700": {
+   "$type": "duration",
+   "$value": "700ms",
+   "category": "duration",
+   "evidence": [
+    {
+     "cite": "src/index.css:140",
+     "needle": "transform 0.7s var(--ease)"
+    }
+   ]
+  },
+  "duration.750": {
+   "$type": "duration",
+   "$value": "750ms",
+   "category": "duration",
+   "evidence": [
+    {
+     "cite": "src/index.css:204",
+     "needle": "transform 0.75s var(--ease)"
+    }
+   ]
+  },
+  "duration.800": {
+   "$type": "duration",
+   "$value": "800ms",
+   "category": "duration",
+   "evidence": [
+    {
+     "cite": "src/index.css:367",
+     "needle": "transform 0.8s var(--ease)"
+    }
+   ]
+  },
+  "duration.900": {
+   "$type": "duration",
+   "$value": "900ms",
+   "category": "duration",
+   "evidence": [
+    {
+     "cite": "src/index.css:91",
+     "needle": "transform 0.9s var(--ease)"
+    }
+   ]
+  },
+  "duration.1600": {
+   "$type": "duration",
+   "$value": "1600ms",
+   "category": "duration",
+   "evidence": [
+    {
+     "cite": "src/index.css:367",
+     "needle": "settle 1.6s"
+    }
+   ]
+  },
+  "duration.1800": {
+   "$type": "duration",
+   "$value": "1800ms",
+   "category": "duration",
+   "evidence": [
+    {
+     "cite": "src/index.css:125",
+     "needle": "bob 1.8s"
+    }
+   ]
+  }
+ }
+}

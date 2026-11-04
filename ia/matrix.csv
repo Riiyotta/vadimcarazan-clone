@@ -1,0 +1,27 @@
+section,category,templates,routes,Cosmos home (fixed layers, no native scroll),Case-study page (scrolling)
+shell.topbar,SHELL,2,16,x,x
+conversion.cta-card,CONVERSION,2,16,x,x
+shell.page-top-fade,SHELL,1,15,,x
+hero.case-header,HERO,1,15,,x
+content.case-cover,CONTENT,1,15,,x
+content.case-text,CONTENT,1,15,,x
+content.case-image,CONTENT,1,15,,x
+content.case-pair,CONTENT,1,15,,x
+content.case-video,CONTENT,1,15,,x
+nav.next-case,NAV,1,15,,x
+footer.case-footer,FOOTER,1,15,,x
+stage.signature,STAGE,1,1,x,
+stage.cosmos,STAGE,1,1,x,
+shell.fly-fades,SHELL,1,1,x,
+shell.mobile-menu,SHELL,1,1,x,
+hero.cosmos-intro,HERO,1,1,x,
+shell.social,SHELL,1,1,x,
+nav.flybar,NAV,1,1,x,
+panel.project,PANEL,1,1,x,
+panel.selected,PANEL,1,1,x,
+panel.about,PANEL,1,1,x,
+conversion.contact-brief,CONVERSION,1,1,x,
+shell.hover-hud,SHELL,1,1,x,
+shell.loader,SHELL,1,1,x,
+shell.copy-toast,SHELL,1,1,x,
+ROUTE COUNT,,,16,1,15

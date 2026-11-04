@@ -1,0 +1,108 @@
+{
+ "id": "media.signature",
+ "title": "Signature layer",
+ "version": "1.0.0",
+ "purpose": "Decorative pen-line signature drawn behind the transparent canvas at the portrait, with an elliptical hole around the head; hidden while flying.",
+ "semantic": {
+  "id": "media.signature",
+  "category": "MEDIA"
+ },
+ "source": {
+  "id": "dom:svg.sig#sig",
+  "file": "src/components/Signature.jsx",
+  "tag": "svg",
+  "lines": "97",
+  "needle": "<svg className=\"sig\" id=\"sig\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Signature.jsx:34",
+   "needle": "export default function Signature"
+  },
+  {
+   "cite": "src/index.css:459",
+   "needle": ".sig { left: -2vw; top: 12vh; width: 104vw;"
+  }
+ ],
+ "iaSectionId": "stage.signature",
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "cosmos-home"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "trace": {
+   "kind": "media",
+   "assetRoles": [
+    "brand.signature-trace"
+   ],
+   "generatedAssetRoles": [
+    "generated.signature"
+   ],
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "signature-draw",
+   "none"
+  ],
+  "default": "signature-draw"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": []
+ },
+ "responsive": {
+  "phoneMaxWidth": 860,
+  "changes": [
+   "small and centred at the top (left 25vw, width 50vw, top pad + 22px)",
+   "no head mask",
+   "stroke 11px"
+  ],
+  "cite": {
+   "cite": "src/index.css:413",
+   "needle": ".sig { left: 25vw !important; width: 50vw !important;"
+  }
+ },
+ "layer": {
+  "position": "fixed",
+  "zIndex": "z.signature"
+ },
+ "referenceAssetRoles": [
+  "brand.signature-trace"
+ ],
+ "generatedAssetRoles": [
+  "generated.signature",
+  "original.copy"
+ ],
+ "measured": {
+  "inFlowAt1440": false,
+  "positionAt1440": "fixed",
+  "source": "extraction/measured-values.json#sectionHeights",
+  "rectAt1440": [
+   -28.8,
+   108,
+   1497.6,
+   660.1
+  ],
+  "rectAt390": [
+   97.5,
+   38,
+   195,
+   85.9
+  ],
+  "note": "position:fixed layer (or inside one); takes no page height."
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:223",
+   "needle": "3. **Signature** (behind the canvas):"
+  }
+ ]
+}

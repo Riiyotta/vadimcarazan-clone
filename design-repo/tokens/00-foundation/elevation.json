@@ -1,0 +1,193 @@
+{
+ "category": "elevation",
+ "note": "Shadows, backdrop blurs and the fixed layer stack (CLONE_SPEC.md section 1 z-order).",
+ "tokens": {
+  "shadow.glass": {
+   "$type": "shadow",
+   "$value": "0 30px 80px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.06)",
+   "category": "elevation",
+   "evidence": [
+    {
+     "cite": "src/index.css:195",
+     "needle": "box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.06)"
+    }
+   ]
+  },
+  "shadow.menu": {
+   "$type": "shadow",
+   "$value": "0 30px 80px rgba(0, 0, 0, 0.45)",
+   "category": "elevation",
+   "evidence": [
+    {
+     "cite": "src/index.css:380",
+     "needle": "box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45)"
+    }
+   ]
+  },
+  "shadow.lead-text": {
+   "$type": "shadow",
+   "$value": "0 0 18px rgba(0, 0, 0, 0.9), 0 0 4px rgba(0, 0, 0, 0.7)",
+   "category": "elevation",
+   "evidence": [
+    {
+     "cite": "src/index.css:105",
+     "needle": "text-shadow: 0 0 18px rgba(0, 0, 0, 0.9)"
+    }
+   ]
+  },
+  "blur.glass": {
+   "$type": "filter",
+   "$value": "blur(18px)",
+   "category": "blur",
+   "evidence": [
+    {
+     "cite": "src/index.css:193",
+     "needle": "backdrop-filter: blur(18px)"
+    }
+   ]
+  },
+  "blur.menu": {
+   "$type": "filter",
+   "$value": "blur(26px) saturate(1.25)",
+   "category": "blur",
+   "evidence": [
+    {
+     "cite": "src/index.css:379",
+     "needle": "backdrop-filter: blur(26px) saturate(1.25)"
+    }
+   ]
+  },
+  "blur.hud": {
+   "$type": "filter",
+   "$value": "blur(10px)",
+   "category": "blur",
+   "evidence": [
+    {
+     "cite": "src/index.css:348",
+     "needle": "backdrop-filter: blur(10px)"
+    }
+   ]
+  },
+  "blur.pill": {
+   "$type": "filter",
+   "$value": "blur(6px)",
+   "category": "blur",
+   "evidence": [
+    {
+     "cite": "src/index.css:115",
+     "needle": "backdrop-filter: blur(6px)"
+    }
+   ]
+  },
+  "blur.phone-start": {
+   "$type": "filter",
+   "$value": "blur(8px)",
+   "category": "blur",
+   "evidence": [
+    {
+     "cite": "src/index.css:409",
+     "needle": "backdrop-filter: blur(8px)"
+    }
+   ]
+  },
+  "z.signature": {
+   "$type": "number",
+   "$value": "0",
+   "category": "zIndex",
+   "evidence": [
+    {
+     "cite": "src/index.css:55",
+     "needle": ".sig { position: fixed; z-index: 0"
+    }
+   ]
+  },
+  "z.canvas": {
+   "$type": "number",
+   "$value": "1",
+   "category": "zIndex",
+   "evidence": [
+    {
+     "cite": "src/index.css:56",
+     "needle": "#c { position: fixed; inset: 0; z-index: 1"
+    }
+   ]
+  },
+  "z.hero": {
+   "$type": "number",
+   "$value": "2",
+   "category": "zIndex",
+   "evidence": [
+    {
+     "cite": "src/index.css:88",
+     "needle": "position: fixed; z-index: 2;"
+    }
+   ]
+  },
+  "z.flybar": {
+   "$type": "number",
+   "$value": "3",
+   "category": "zIndex",
+   "evidence": [
+    {
+     "cite": "src/index.css:136",
+     "needle": "position: fixed; z-index: 3;"
+    }
+   ]
+  },
+  "z.topbar": {
+   "$type": "number",
+   "$value": "4",
+   "category": "zIndex",
+   "evidence": [
+    {
+     "cite": "src/index.css:72",
+     "needle": "position: fixed; z-index: 4;"
+    }
+   ]
+  },
+  "z.box": {
+   "$type": "number",
+   "$value": "5",
+   "category": "zIndex",
+   "evidence": [
+    {
+     "cite": "src/index.css:188",
+     "needle": "position: fixed; z-index: 5;"
+    }
+   ]
+  },
+  "z.hud": {
+   "$type": "number",
+   "$value": "6",
+   "category": "zIndex",
+   "evidence": [
+    {
+     "cite": "src/index.css:343",
+     "needle": "position: fixed; z-index: 6; left: 0; top: 0;"
+    }
+   ]
+  },
+  "z.loader": {
+   "$type": "number",
+   "$value": "10",
+   "category": "zIndex",
+   "evidence": [
+    {
+     "cite": "src/index.css:361",
+     "needle": "position: fixed; inset: 0; z-index: 10"
+    }
+   ]
+  },
+  "z.toast": {
+   "$type": "number",
+   "$value": "20",
+   "category": "zIndex",
+   "evidence": [
+    {
+     "cite": "src/index.css:354",
+     "needle": "position: fixed; z-index: 20"
+    }
+   ]
+  }
+ }
+}

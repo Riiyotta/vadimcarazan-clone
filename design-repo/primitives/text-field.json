@@ -1,0 +1,15 @@
+{
+ "id": "text-field",
+ "kind": "primitive",
+ "description": "Labelled input / textarea, radius 12px.",
+ "tokens": [
+  "border.hairline",
+  "border.focus"
+ ],
+ "evidence": [
+  {
+   "cite": "src/index.css:314",
+   "needle": ".field input, .field textarea {"
+  }
+ ]
+}

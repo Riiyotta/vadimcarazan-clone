@@ -1,0 +1,14 @@
+{
+ "id": "serif-title",
+ "kind": "primitive",
+ "description": "Italic display serif title (box h2, case headings).",
+ "tokens": [
+  "text.primary"
+ ],
+ "evidence": [
+  {
+   "cite": "src/index.css:239",
+   "needle": ".box h2 {"
+  }
+ ]
+}

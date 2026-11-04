@@ -1,0 +1,94 @@
+{
+ "id": "utility.page-top-fade",
+ "title": "Page top fade",
+ "version": "1.0.0",
+ "purpose": "On case-study pages the top dark fade stays on permanently (fixed) so the fixed top bar reads over scrolling content.",
+ "semantic": {
+  "id": "utility.page-top-fade",
+  "category": "UTILITY"
+ },
+ "source": {
+  "id": "dom:html.page body::before",
+  "file": "src/case.css",
+  "tag": "css-pseudo",
+  "lines": "3",
+  "needle": "html.page body::before { opacity: 1; position: fixed; }"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/case.css:4",
+   "needle": "html.page body::after { display: none; }"
+  }
+ ],
+ "iaSectionId": "shell.page-top-fade",
+ "retrievalEligible": false,
+ "retrievalReason": "Decorative fixed gradient pseudo-element with no DOM node or text; page chrome, not content.",
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "case-study"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "visibleWhen": {
+   "kind": "enum",
+   "values": [
+    "always"
+   ],
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "none"
+  ],
+  "default": "none"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": []
+ },
+ "responsive": {
+  "phoneMaxWidth": 860,
+  "changes": [],
+  "cite": {
+   "cite": "src/case.css:3",
+   "needle": "html.page body::before"
+  }
+ },
+ "layer": {
+  "position": "fixed",
+  "zIndex": "z.hero"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy"
+ ],
+ "measured": {
+  "inFlowAt1440": false,
+  "positionAt1440": "fixed",
+  "source": "extraction/measured-values.json#sectionHeights",
+  "rectAt1440": [
+   0,
+   0,
+   1440,
+   127.6
+  ],
+  "rectAt390": [
+   0,
+   0,
+   390,
+   102
+  ],
+  "note": "position:fixed layer (or inside one); takes no page height."
+ },
+ "evidence": [
+  {
+   "cite": "src/case.css:2",
+   "needle": "html.page, html.page body { overflow: auto;"
+  }
+ ]
+}

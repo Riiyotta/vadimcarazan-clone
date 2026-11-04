@@ -1,0 +1,388 @@
+{
+ "version": "1.0.0",
+ "fallbackEnum": [
+  "none",
+  "instant",
+  "static-final-state",
+  "disabled",
+  "unchanged"
+ ],
+ "note": "Closed motion vocabulary. reducedMotionFallback records what the CLONE actually does under prefers-reduced-motion (cited); 'unchanged' means no reduced-motion branch exists for it (gaps are noted). Timings are CLONE_SPEC.md values unless a later motion QA on the original corrected them (signature start 1.00 s, draw 2.88 s; ?open delay 2.5 s; wheel holds the camera with a box open; FOV snap on close).",
+ "patterns": {
+  "none": {
+   "description": "No motion.",
+   "reducedMotionFallback": "none",
+   "ambient": false,
+   "evidence": []
+  },
+  "loader-draw": {
+   "description": "Mark draws as two masked strokes (easeInOutCubic, stroke 1 over progress 0-0.58, stroke 2 over 0.44-1); shown progress chases real progress at rate 7/s, never faster than 1.6 s; then opacity 0.6s and mark scale 1.06 over 0.8s house ease.",
+   "reducedMotionFallback": "unchanged",
+   "ambient": false,
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:204",
+     "needle": "1. **Loader**"
+    },
+    {
+     "cite": "src/components/Loader.jsx:10",
+     "needle": "seg(progress, 0, 0.58)"
+    },
+    {
+     "cite": "src/App.jsx:141",
+     "needle": "(tn - t0) / 1600"
+    }
+   ],
+   "fallbackNote": "The clone only removes the settle keyframe under reduced motion (index.css); the stroke draw still follows load progress. CLONE_SPEC says the original skips the drawing: a known gap."
+  },
+  "portrait-arrival": {
+   "description": "Every portrait tile flies home easeOutCubic over 1300-2200 ms from (60-180)*k units out; delay rand*1500 ms + 9 ms per grid step from the centre; scale 0.35 -> 1.",
+   "reducedMotionFallback": "unchanged",
+   "ambient": false,
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:216",
+     "needle": "2. **Arrival**"
+    }
+   ],
+   "fallbackNote": "No reduced-motion branch for the arrival in cosmos.js."
+  },
+  "halo-drift": {
+   "description": "Halo pieces loop from the dark to the silhouette at 0.05-0.12 cycles/s with a flow-field swirl; 260 motes drift into the face in 5-9 s trips.",
+   "reducedMotionFallback": "unchanged",
+   "ambient": true,
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:188",
+     "needle": "Halo pieces (cells with dim < 1)"
+    }
+   ],
+   "fallbackNote": "Not covered by the reduced-motion branches."
+  },
+  "signature-draw": {
+   "description": "Signature pen line draws in 2.9 s (original measured 2.88 s) with curvature-dependent pen speed, a 60-unit bright tip and a nib glow; first draw starts 1000 ms after the loader is done (original measured 1.00 s); redrawn 350 ms after returning from a flight; hidden (opacity 0.6s) when away.",
+   "reducedMotionFallback": "unchanged",
+   "ambient": false,
+   "evidence": [
+    {
+     "cite": "src/App.jsx:148",
+     "needle": "setTimeout(() => setSigPlay(true), 1000)"
+    },
+    {
+     "cite": "src/App.jsx:191",
+     "needle": "else if (wasAway.current)"
+    },
+    {
+     "cite": "src/components/Signature.jsx:31",
+     "needle": "const DRAW = 2.9"
+    }
+   ],
+   "fallbackNote": "Signature.jsx has no reduced-motion branch.",
+   "originalMeasurement": "measured on the original by the motion QA pass of 2026-11-04 (values relayed to this build; no capture file in the repo)"
+  },
+  "scroll-travel": {
+   "description": "Camera travels along -Z: dist chases target with 1 - e^(-4 dt) (250 ms time constant), no end. Wheel x0.55, ArrowUp/Down +-160, PageUp/Down/Space +-600, touch x1.6/px with a release-only fling (x16, decays e^(-3.5 dt), frame-rate independent). While a box is open wheel/touch do not move the camera; they accumulate toward the 120-unit close.",
+   "reducedMotionFallback": "instant",
+   "ambient": false,
+   "evidence": [
+    {
+     "cite": "src/engine/cosmos.js:303",
+     "needle": "this.push(dy * 0.55, true)"
+    },
+    {
+     "cite": "src/engine/cosmos.js:362",
+     "needle": "push(d, scroll = false) {"
+    },
+    {
+     "cite": "src/engine/cosmos.js:476",
+     "needle": "if (reduced) this.dist = this.target"
+    },
+    {
+     "cite": "CLONE_SPEC.md:233",
+     "needle": "### 3.4 Scroll → camera travel"
+    }
+   ],
+   "fallbackNote": "Reduced motion: dist = target (no damping), cosmos.js."
+  },
+  "pointer-parallax": {
+   "description": "Pointer smoothed at rate 1.5/s; camera drift 0.5 units at the portrait rising to 3.0 while flying; look-at moves 0.6x.",
+   "reducedMotionFallback": "disabled",
+   "ambient": true,
+   "evidence": [
+    {
+     "cite": "src/engine/cosmos.js:498",
+     "needle": "const kp = reduced ? 0 : 1 - Math.exp(-1.5 * dt)"
+    },
+    {
+     "cite": "CLONE_SPEC.md:295",
+     "needle": "### 3.7 Pointer parallax"
+    }
+   ],
+   "fallbackNote": "Reduced motion: kp = 0 and drift = 0 in cosmos.js."
+  },
+  "rewind": {
+   "description": "Back to the portrait: reverse flight easeInOutCubic over min(2600, 1200 + 14 * sqrt(dist)) ms; any input cancels it.",
+   "reducedMotionFallback": "instant",
+   "ambient": false,
+   "evidence": [
+    {
+     "cite": "src/engine/cosmos.js:383",
+     "needle": "dur: Math.min(2600, 1200 + Math.sqrt(this.dist) * 14) / 1000"
+    },
+    {
+     "cite": "src/engine/cosmos.js:382",
+     "needle": "if (reduced) { this.dist = this.target = 0; return }"
+    }
+   ],
+   "fallbackNote": "Reduced motion: dist = target = 0 immediately."
+  },
+  "tile-hover": {
+   "description": "Hovered tile tinted 6% toward white with a 1.4% white edge, cursor pointer; instant.",
+   "reducedMotionFallback": "unchanged",
+   "ambient": false,
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:293",
+     "needle": "- **Hover**: the tile colour is mixed 6% toward white"
+    }
+   ]
+  },
+  "hero-fade": {
+   "description": "Hero opacity 0.6s ease + transform 0.9s house ease; away: translateY(60px), boxed: translateY(30px).",
+   "reducedMotionFallback": "instant",
+   "ambient": false,
+   "evidence": [
+    {
+     "cite": "src/index.css:93",
+     "needle": "body.away .hero { opacity: 0; transform: translateY(60px); }"
+    },
+    {
+     "cite": "src/index.css:454",
+     "needle": ".box, .view, .hero, .flybar { transition: none !important; }"
+    }
+   ],
+   "fallbackNote": "index.css reduced-motion block removes the hero transition."
+  },
+  "arrow-bob": {
+   "description": "Start-pill arrow bobs translateY -2px <-> +3px, 1.8s house ease, infinite alternate.",
+   "reducedMotionFallback": "disabled",
+   "ambient": true,
+   "evidence": [
+    {
+     "cite": "src/index.css:125",
+     "needle": "animation: bob 1.8s var(--ease) infinite alternate"
+    },
+    {
+     "cite": "src/index.css:455",
+     "needle": ".start svg, .ld-mark { animation: none; }"
+    }
+   ],
+   "fallbackNote": "animation: none under reduced motion."
+  },
+  "flybar-reveal": {
+   "description": "Flybar shows with body.far (dist > 60): opacity 0.5s ease, translateY(14px) -> 0 over 0.7s house ease.",
+   "reducedMotionFallback": "instant",
+   "ambient": false,
+   "evidence": [
+    {
+     "cite": "src/index.css:140",
+     "needle": "transition: opacity 0.5s ease, transform 0.7s var(--ease)"
+    },
+    {
+     "cite": "src/index.css:454",
+     "needle": ".box, .view, .hero, .flybar { transition: none !important; }"
+    }
+   ]
+  },
+  "fade-layers": {
+   "description": "Top and bottom dark fades (body pseudo-elements) fade in with body.far, opacity 0.6s ease.",
+   "reducedMotionFallback": "unchanged",
+   "ambient": false,
+   "evidence": [
+    {
+     "cite": "src/index.css:67",
+     "needle": "body.far::before, body.far::after { opacity: 1; }"
+    }
+   ],
+   "fallbackNote": "Opacity-only; not in the reduced-motion block."
+  },
+  "side-reveal": {
+   "description": "Social block shows with body.side: opacity 0.45s ease, translateY(10px) -> 0 over 0.6s house ease; lifts to pad + 52px while flying (bottom 0.4s ease).",
+   "reducedMotionFallback": "unchanged",
+   "ambient": false,
+   "evidence": [
+    {
+     "cite": "src/index.css:180",
+     "needle": "transition: opacity 0.45s ease, transform 0.6s var(--ease), bottom 0.4s ease"
+    }
+   ]
+  },
+  "box-slide": {
+   "description": "Glass box open: translateX(-40px) -> 0 over 0.75s house ease, opacity 0.45s; close: 0.6s / 0.45s, visibility after 0.6s. Background blurred in WebGL (13-tap separable, uSoft rate 6/s, field dimmed 35%); portrait reframes beside the box at rate 5/s; on close the FOV snaps back (original: 37.49 -> 34.37 deg within 32 ms) while the view offset eases.",
+   "reducedMotionFallback": "instant",
+   "ambient": false,
+   "evidence": [
+    {
+     "cite": "src/index.css:204",
+     "needle": "transition: transform 0.75s var(--ease), opacity 0.45s ease, visibility 0s, width 0.6s var(--ease)"
+    },
+    {
+     "cite": "src/engine/cosmos.js:520",
+     "needle": "this.soft += ((this.boxed && !reduced ? 1 : 0) - this.soft)"
+    },
+    {
+     "cite": "src/engine/cosmos.js:510",
+     "needle": "if (this.snapFov) { this.stage.fov = st.fov; this.snapFov = false }"
+    }
+   ],
+   "fallbackNote": "CSS transitions removed; no WebGL blur pass (soft target 0 when reduced).",
+   "originalMeasurement": "measured on the original by the motion QA pass of 2026-11-04 (values relayed to this build; no capture file in the repo)"
+  },
+  "view-crossfade": {
+   "description": "Active box view fades in opacity 0.45s with 0.1s delay; outgoing view fades 0.35s.",
+   "reducedMotionFallback": "instant",
+   "ambient": false,
+   "evidence": [
+    {
+     "cite": "src/index.css:213",
+     "needle": ".view.on { opacity: 1; visibility: visible; transition: opacity 0.45s ease 0.1s"
+    }
+   ]
+  },
+  "focus-drift": {
+   "description": "The opened tile slides 30% closer along its camera ray over 10 s (cosine ease); returns at rate 3.2/s on close.",
+   "reducedMotionFallback": "disabled",
+   "ambient": false,
+   "evidence": [
+    {
+     "cite": "src/engine/cosmos.js:667",
+     "needle": "else f.e = reduced ? 0 : 0.3 * (1 - Math.cos"
+    }
+   ],
+   "fallbackNote": "f.e = 0 when reduced."
+  },
+  "underline-grow": {
+   "description": "1px underline grows from the left: background-size 0 -> 100% 1px over 0.35s house ease.",
+   "reducedMotionFallback": "unchanged",
+   "ambient": false,
+   "evidence": [
+    {
+     "cite": "src/index.css:50",
+     "needle": "transition: background-size 0.35s var(--ease)"
+    }
+   ]
+  },
+  "pill-press": {
+   "description": "Solid pills scale 1.04 on hover over 0.2s ease.",
+   "reducedMotionFallback": "unchanged",
+   "ambient": false,
+   "evidence": [
+    {
+     "cite": "src/index.css:273",
+     "needle": ".p-cta-btn:hover { transform: scale(1.04); }"
+    }
+   ]
+  },
+  "chip-toggle": {
+   "description": "Chips: background / colour / border 0.2s ease; checked = white bg, black text.",
+   "reducedMotionFallback": "unchanged",
+   "ambient": false,
+   "evidence": [
+    {
+     "cite": "src/index.css:328",
+     "needle": "transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease"
+    }
+   ]
+  },
+  "field-focus": {
+   "description": "Inputs: border .45 and bg .08 on focus over 0.2s ease.",
+   "reducedMotionFallback": "unchanged",
+   "ambient": false,
+   "evidence": [
+    {
+     "cite": "src/index.css:318",
+     "needle": "outline: none; transition: border-color 0.2s ease, background 0.2s ease"
+    }
+   ]
+  },
+  "toast-rise": {
+   "description": "Toast in: opacity 0.25s, translateY 8px -> 0 over 0.35s house ease; auto-hides after 1.8 s.",
+   "reducedMotionFallback": "unchanged",
+   "ambient": false,
+   "evidence": [
+    {
+     "cite": "src/index.css:357",
+     "needle": "transition: opacity 0.25s ease, transform 0.35s var(--ease)"
+    },
+    {
+     "cite": "src/App.jsx:213",
+     "needle": "setTimeout(() => setToast(false), 1800)"
+    }
+   ]
+  },
+  "menu-panel": {
+   "description": "Phone menu: opacity 0.35s ease, translateY(-10px) -> 0 over 0.5s house ease; visibility delayed 0.35s on close.",
+   "reducedMotionFallback": "unchanged",
+   "ambient": false,
+   "evidence": [
+    {
+     "cite": "src/index.css:384",
+     "needle": ".mnav.open { opacity: 1; transform: none; visibility: visible;"
+    }
+   ]
+  },
+  "hud-follow": {
+   "description": "Hover label pill follows the pointer, centred 14px above it; shown/hidden instantly.",
+   "reducedMotionFallback": "unchanged",
+   "ambient": false,
+   "evidence": [
+    {
+     "cite": "src/index.css:344",
+     "needle": "transform: translate(-50%, calc(-100% - 14px))"
+    }
+   ]
+  },
+  "case-reveal": {
+   "description": "Case blocks fade + rise as they enter: opacity 0.6s ease, translateY(30px) -> 0 over 0.9s house ease; IntersectionObserver threshold 0.08, rootMargin -8% bottom; pair images staggered 80 ms.",
+   "reducedMotionFallback": "static-final-state",
+   "ambient": false,
+   "evidence": [
+    {
+     "cite": "src/case.css:65",
+     "needle": ".rv { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.9s var(--ease); }"
+    },
+    {
+     "cite": "src/case.css:67",
+     "needle": "@media (prefers-reduced-motion: reduce) { .rv"
+    },
+    {
+     "cite": "src/pages/CaseStudy.jsx:43",
+     "needle": "{ rootMargin: '0px 0px -8% 0px', threshold: 0.08 }"
+    }
+   ],
+   "fallbackNote": "case.css reduced-motion block shows blocks with no transition."
+  },
+  "image-develop": {
+   "description": "Images fade in on load, opacity 0.5s ease.",
+   "reducedMotionFallback": "unchanged",
+   "ambient": false,
+   "evidence": [
+    {
+     "cite": "src/case.css:30",
+     "needle": "opacity: 0; transition: opacity 0.5s ease; object-fit: cover"
+    }
+   ]
+  },
+  "next-case-hover": {
+   "description": "Next-case link: title underline (offset 8px) and thumbnail scale 1.04 over 0.6s house ease.",
+   "reducedMotionFallback": "unchanged",
+   "ambient": false,
+   "evidence": [
+    {
+     "cite": "src/case.css:54",
+     "needle": ".cs-next:hover .cs-next-img { transform: scale(1.04); }"
+    }
+   ]
+  }
+ }
+}

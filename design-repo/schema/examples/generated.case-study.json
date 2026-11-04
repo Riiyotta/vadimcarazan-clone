@@ -1,0 +1,285 @@
+{
+ "pageSpecVersion": "1.0.0",
+ "mode": "generated",
+ "template": "case-study",
+ "route": "/work/copperfin",
+ "locale": "en",
+ "theme": "dark",
+ "meta": {
+  "title": "Copperfin Smokehouse · Wren Halloway",
+  "description": "A packaging system for a coastal smokehouse."
+ },
+ "brand": {
+  "ownerName": "Wren Halloway",
+  "studioName": "Lattice Room",
+  "domain": "latticeroom.example"
+ },
+ "nodes": [
+  {
+   "section": "chrome.topbar",
+   "content": {
+    "homeMark": {
+     "assetRole": "generated.brand-mark",
+     "ref": "generated://mark/lattice-room-knot",
+     "alt": ""
+    },
+    "homeLabel": "Wren Halloway, start",
+    "factKeys": [
+     "Now:",
+     "Studio in:",
+     "Go to:"
+    ],
+    "role": "Packaging designer",
+    "studio": {
+     "label": "Lattice Room",
+     "href": "https://latticeroom.example"
+    },
+    "city": "Port Avelin, Norvale",
+    "timeZone": "Etc/UTC",
+    "navItems": [
+     {
+      "label": "Highlights",
+      "action": "selected"
+     },
+     {
+      "label": "Archive",
+      "action": "work"
+     },
+     {
+      "label": "Studio",
+      "action": "about"
+     },
+     {
+      "label": "Write",
+      "action": "contact"
+     }
+    ],
+    "menuLabel": "Index",
+    "closeLabel": "Hide"
+   },
+   "motion": {
+    "pattern": "underline-grow",
+    "reducedMotionFallback": "unchanged"
+   },
+   "tokens": {
+    "surface": "surface.page",
+    "text": "text.primary"
+   }
+  },
+  {
+   "section": "utility.page-top-fade",
+   "content": {
+    "visibleWhen": "always"
+   },
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "hero.case-header",
+   "content": {
+    "crumb": {
+     "label": "Archive",
+     "href": "/?fly=1"
+    },
+    "kickerText": "/ Packaging story · Smoked fish",
+    "title": "Copperfin Smokehouse",
+    "intro": "A family smokehouse wanted its tins to look as good as the fish inside, on a budget of two inks and one die line.",
+    "liveLink": {
+     "label": "See the tins",
+     "href": "https://copperfin.example"
+    },
+    "facts": [
+     {
+      "label": "Maker",
+      "value": "Copperfin Smokehouse"
+     },
+     {
+      "label": "Season",
+      "value": "Autumn"
+     },
+     {
+      "label": "Pieces",
+      "value": "Tin, sleeve, crate stamp"
+     },
+     {
+      "label": "Boards",
+      "value": "Five"
+     }
+    ]
+   },
+   "motion": {
+    "pattern": "case-reveal",
+    "reducedMotionFallback": "static-final-state"
+   },
+   "tokens": {
+    "surface": "surface.page",
+    "text": "text.lead",
+    "font": "font.family.serif"
+   }
+  },
+  {
+   "section": "media.case-cover",
+   "content": {
+    "media": {
+     "assetRole": "generated.work-visual",
+     "ref": "generated://work/copperfin/0",
+     "alt": ""
+    }
+   },
+   "motion": {
+    "pattern": "case-reveal",
+    "reducedMotionFallback": "static-final-state"
+   }
+  },
+  {
+   "section": "editorial.case-text",
+   "content": {
+    "title": "The problem",
+    "body": "Every tin on the shelf was silver and blue. Copperfin needed to be spotted from across the market hall."
+   },
+   "motion": {
+    "pattern": "case-reveal",
+    "reducedMotionFallback": "static-final-state"
+   },
+   "tokens": {
+    "surface": "surface.page",
+    "text": "text.body"
+   }
+  },
+  {
+   "section": "media.case-image",
+   "content": {
+    "media": {
+     "assetRole": "generated.work-visual",
+     "ref": "generated://work/copperfin/1",
+     "alt": ""
+    }
+   },
+   "motion": {
+    "pattern": "case-reveal",
+    "reducedMotionFallback": "static-final-state"
+   }
+  },
+  {
+   "section": "gallery.case-pair",
+   "content": {
+    "media": [
+     {
+      "assetRole": "generated.work-visual",
+      "ref": "generated://work/copperfin/2",
+      "alt": ""
+     },
+     {
+      "assetRole": "generated.work-visual",
+      "ref": "generated://work/copperfin/3",
+      "alt": ""
+     }
+    ]
+   },
+   "motion": {
+    "pattern": "case-reveal",
+    "reducedMotionFallback": "static-final-state"
+   }
+  },
+  {
+   "section": "editorial.case-text",
+   "content": {
+    "title": "The answer",
+    "body": "A rust-orange band that wraps the tin like a fish wrapper, with the catch date stamped by hand."
+   },
+   "motion": {
+    "pattern": "case-reveal",
+    "reducedMotionFallback": "static-final-state"
+   },
+   "tokens": {
+    "surface": "surface.page",
+    "text": "text.body"
+   }
+  },
+  {
+   "section": "media.case-video",
+   "content": {
+    "video": {
+     "assetRole": "placeholder.work-video",
+     "ref": "placeholder://video/tin-spin-loop",
+     "alt": ""
+    }
+   },
+   "motion": {
+    "pattern": "case-reveal",
+    "reducedMotionFallback": "static-final-state"
+   }
+  },
+  {
+   "section": "cta.start-project",
+   "content": {
+    "kicker": "A label to fix?",
+    "title": "Bring the jar, we bring the ink.",
+    "button": {
+     "label": "Begin a brief",
+     "href": "?open=contact"
+    },
+    "alt": {
+     "label": "Visit the print shop",
+     "href": "https://latticeroom.example/shop"
+    }
+   },
+   "motion": {
+    "pattern": "case-reveal",
+    "reducedMotionFallback": "static-final-state"
+   },
+   "tokens": {
+    "surface": "surface.card",
+    "text": "text.primary",
+    "spaceBlock": "space.section-block"
+   }
+  },
+  {
+   "section": "index.next-case",
+   "content": {
+    "label": "Another jar",
+    "title": "Mossgate Honey",
+    "kind": "Label and jar",
+    "href": "/work/mossgate",
+    "thumb": {
+     "assetRole": "generated.work-visual",
+     "ref": "generated://work/1/0",
+     "alt": ""
+    }
+   },
+   "motion": {
+    "pattern": "case-reveal",
+    "reducedMotionFallback": "static-final-state"
+   },
+   "tokens": {
+    "spaceBlock": "space.next-gap"
+   }
+  },
+  {
+   "section": "chrome.case-footer",
+   "content": {
+    "copyright": "© Lattice Room",
+    "links": [
+     {
+      "label": "Journal",
+      "href": "https://journal.latticeroom.example"
+     },
+     {
+      "label": "Newsletter",
+      "href": "https://latticeroom.example/letters"
+     }
+    ],
+    "email": {
+     "label": "studio@latticeroom.example",
+     "href": "mailto:studio@latticeroom.example"
+    }
+   },
+   "motion": {
+    "pattern": "underline-grow",
+    "reducedMotionFallback": "unchanged"
+   }
+  }
+ ]
+}

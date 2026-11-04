@@ -1,0 +1,108 @@
+{
+ "id": "chrome.social",
+ "title": "Elsewhere links",
+ "version": "1.0.0",
+ "purpose": "Bottom-right 'Elsewhere:' line with the social links; visible only while About or Contact is open.",
+ "semantic": {
+  "id": "chrome.social",
+  "category": "SHELL"
+ },
+ "source": {
+  "id": "dom:div.social",
+  "file": "src/components/Social.jsx",
+  "tag": "div",
+  "lines": "5",
+  "needle": "<div className=\"social\">"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Social.jsx:3",
+   "needle": "export default function Social"
+  },
+  {
+   "cite": "src/index.css:174",
+   "needle": ".social {"
+  }
+ ],
+ "iaSectionId": "shell.social",
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "cosmos-home"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "label": {
+   "kind": "text",
+   "maxWords": 1,
+   "required": true
+  },
+  "links": {
+   "kind": "linkList",
+   "maxWords": 2,
+   "minItems": 1,
+   "maxItems": 6,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "side-reveal"
+  ],
+  "default": "side-reveal"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.muted"
+  ]
+ },
+ "responsive": {
+  "phoneMaxWidth": 860,
+  "changes": [
+   "hidden on phones"
+  ],
+  "cite": {
+   "cite": "src/index.css:424",
+   "needle": ".social { display: none; }"
+  }
+ },
+ "layer": {
+  "position": "fixed",
+  "zIndex": "z.topbar"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy",
+  "placeholder.url"
+ ],
+ "measured": {
+  "inFlowAt1440": false,
+  "positionAt1440": "fixed",
+  "source": "extraction/measured-values.json#sectionHeights",
+  "rectAt1440": [
+   1297.7,
+   846.1,
+   113.5,
+   35.1
+  ],
+  "rectAt390": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "note": "position:fixed layer (or inside one); takes no page height."
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:429",
+   "needle": "### 4.4 Social (`.social`, z 4)"
+  }
+ ]
+}

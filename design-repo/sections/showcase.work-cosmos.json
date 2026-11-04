@@ -1,0 +1,178 @@
+{
+ "id": "showcase.work-cosmos",
+ "title": "Work cosmos (WebGL field)",
+ "version": "1.0.0",
+ "purpose": "The work index itself: a full-viewport WebGL field where every piece is a 4:3 tile; at rest the tiles form a halftone portrait, scrolling flies the camera through an endless lane of the work in time order; clicking a tile opens it.",
+ "semantic": {
+  "id": "showcase.work-cosmos",
+  "category": "SHOWCASE"
+ },
+ "source": {
+  "id": "dom:canvas#c",
+  "file": "src/App.jsx",
+  "tag": "canvas",
+  "lines": "220",
+  "needle": "<canvas id=\"c\""
+ },
+ "implementedBy": [
+  {
+   "cite": "src/engine/cosmos.js:25",
+   "needle": "export class Cosmos {"
+  },
+  {
+   "cite": "src/engine/shaders.js:69",
+   "needle": "export const FIELD_FRAG"
+  },
+  {
+   "cite": "src/engine/data.js:86",
+   "needle": "function buildWorks()"
+  }
+ ],
+ "iaSectionId": "stage.cosmos",
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "cosmos-home"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "portrait": {
+   "kind": "media",
+   "assetRoles": [
+    "portrait.subject-photo",
+    "generated.portrait-silhouette"
+   ],
+   "generatedAssetRoles": [
+    "user.portrait-photo",
+    "generated.portrait-silhouette"
+   ],
+   "required": true
+  },
+  "works": {
+   "kind": "items",
+   "fields": {
+    "title": {
+     "kind": "text",
+     "maxWords": 4,
+     "required": true
+    },
+    "kind": {
+     "kind": "text",
+     "maxWords": 5,
+     "required": true
+    },
+    "description": {
+     "kind": "text",
+     "maxWords": 30,
+     "required": true
+    },
+    "isCaseStudy": {
+     "kind": "boolean",
+     "required": true
+    },
+    "slug": {
+     "kind": "text",
+     "maxWords": 1,
+     "required": false
+    },
+    "media": {
+     "kind": "mediaList",
+     "assetRoles": [
+      "work.piece-image",
+      "work.piece-video"
+     ],
+     "generatedAssetRoles": [
+      "generated.work-visual",
+      "user.work-media",
+      "placeholder.work-video"
+     ],
+     "minItems": 1,
+     "maxItems": 12,
+     "required": true
+    }
+   },
+   "minItems": 1,
+   "maxItems": 1100,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "portrait-arrival",
+   "halo-drift",
+   "scroll-travel",
+   "pointer-parallax",
+   "rewind",
+   "tile-hover"
+  ],
+  "default": "portrait-arrival"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": []
+ },
+ "responsive": {
+  "phoneMaxWidth": 860,
+  "changes": [
+   "portrait framing fits height only: frame 0.7H, centre (0.47W, 0.475H)",
+   "touch drag x1.6 with release-only fling",
+   "half-size atlas sheets",
+   "no hover HUD"
+  ],
+  "cite": {
+   "cite": "CLONE_SPEC.md:588",
+   "needle": "- Portrait framing: fills the height only."
+  }
+ },
+ "layer": {
+  "position": "fixed",
+  "zIndex": "z.canvas"
+ },
+ "referenceAssetRoles": [
+  "generated.portrait-silhouette",
+  "portrait.subject-photo",
+  "work.piece-image",
+  "work.piece-video"
+ ],
+ "generatedAssetRoles": [
+  "generated.portrait-silhouette",
+  "generated.work-visual",
+  "original.copy",
+  "placeholder.url",
+  "placeholder.work-video",
+  "user.portrait-photo",
+  "user.work-media"
+ ],
+ "measured": {
+  "inFlowAt1440": false,
+  "positionAt1440": "fixed",
+  "source": "extraction/measured-values.json#sectionHeights",
+  "rectAt1440": [
+   0,
+   0,
+   1440,
+   900
+  ],
+  "rectAt390": [
+   0,
+   0,
+   390,
+   844
+  ],
+  "note": "position:fixed layer (or inside one); takes no page height."
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:124",
+   "needle": "## 3. The 3D scene"
+  },
+  {
+   "cite": "CLONE_SPEC.md:272",
+   "needle": "### 3.5 The central lane"
+  }
+ ]
+}

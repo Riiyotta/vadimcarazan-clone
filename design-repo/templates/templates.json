@@ -1,0 +1,232 @@
+{
+ "version": "1.0.0",
+ "note": "One template per page purpose. nodes are structured objects; a 'slot' node accepts a run of the listed sections in any order (case bodies vary per project). Routes: templates/routes.json (16, each exactly once).",
+ "templates": {
+  "cosmos-home": {
+   "purpose": "Single fixed-layer portfolio page: the work as a WebGL portrait cosmos you fly through, with a glass box for a work, the selected list, about and a brief form.",
+   "family": "home",
+   "routePattern": "^/$",
+   "scroll": "none (html/body overflow hidden; every layer position:fixed)",
+   "nodeOrder": "reading order; z-order is in each contract's layer.zIndex",
+   "states": {
+    "loader": "until the field is built",
+    "portrait": "intro, hero, signature",
+    "flying": "body.away (dist > 8), body.far (dist > 60): flybar + fades",
+    "boxed": "glass box open on one view (project | selected | about | contact); body.side for about/contact",
+    "phoneMenu": "<= 860px Menu panel"
+   },
+   "queryParams": {
+    "?work=<id>": "intended: fly to and open that work 2.6 s + 1.4 s after the intro (see measured-values findings: the clone strips it before reading)",
+    "?open=about|contact|selected": "opens that view 2.5 s after the loader is done",
+    "?fly=1": "starts the flight (target 460)"
+   },
+   "evidence": [
+    {
+     "cite": "src/App.jsx:23",
+     "needle": "export default function App"
+    },
+    {
+     "cite": "src/main.jsx:9",
+     "needle": "const m = location.pathname.match"
+    },
+    {
+     "cite": "CLONE_SPEC.md:539",
+     "needle": "## 6. URL parameters, routes, keyboard"
+    }
+   ],
+   "nodes": [
+    {
+     "section": "shell.loader",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": false
+    },
+    {
+     "section": "chrome.topbar",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "shell.phone-menu",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": false
+    },
+    {
+     "section": "hero.portrait-intro",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "media.signature",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "showcase.work-cosmos",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "utility.fly-fades",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": false
+    },
+    {
+     "section": "utility.flybar",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": false
+    },
+    {
+     "section": "chrome.social",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "overlay.glass-box",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": false
+    },
+    {
+     "section": "detail.project-view",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "index.selected-list",
+     "required": false,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "about.studio-bio",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "conversion.brief-form",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "utility.hover-hud",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": false
+    },
+    {
+     "section": "utility.copy-toast",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": false
+    }
+   ],
+   "routes": [
+    "/"
+   ]
+  },
+  "case-study": {
+   "purpose": "A normal scrolling case-study page for one project: header, cover, a body of text / image / pair / video blocks, CTA, next case, footer.",
+   "family": "article",
+   "routePattern": "^/work/[a-z0-9-]+$",
+   "scroll": "native document scroll (html.page overflow auto)",
+   "fallbackStates": {
+    "unknown slug": "renders 'Not found.' with a link home (CaseStudy.jsx cs-missing); a state, not a route"
+   },
+   "evidence": [
+    {
+     "cite": "src/pages/CaseStudy.jsx:50",
+     "needle": "export default function CaseStudy"
+    },
+    {
+     "cite": "src/main.jsx:8",
+     "needle": "// two routes:"
+    }
+   ],
+   "nodes": [
+    {
+     "section": "chrome.topbar",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "utility.page-top-fade",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": false
+    },
+    {
+     "section": "hero.case-header",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "media.case-cover",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "slot": "case-body",
+     "allowed": [
+      "editorial.case-text",
+      "media.case-image",
+      "gallery.case-pair",
+      "media.case-video"
+     ],
+     "minItems": 1,
+     "maxItems": 40,
+     "retrievalEligible": true
+    },
+    {
+     "section": "cta.start-project",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "index.next-case",
+     "required": false,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "chrome.case-footer",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    }
+   ],
+   "routes": [
+    "/work/northwind",
+    "/work/halcyon",
+    "/work/meridian",
+    "/work/fieldnote",
+    "/work/quarry-law",
+    "/work/lumen-labs",
+    "/work/parallel",
+    "/work/atlasai",
+    "/work/kestrel",
+    "/work/omnifield",
+    "/work/brightline",
+    "/work/solace",
+    "/work/vantage",
+    "/work/corvid",
+    "/work/tessera"
+   ]
+  }
+ }
+}

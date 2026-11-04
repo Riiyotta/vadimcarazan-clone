@@ -1,0 +1,192 @@
+{
+ "id": "about.studio-bio",
+ "title": "About view",
+ "version": "1.0.0",
+ "purpose": "Box view about the owner: serif statement, two paragraphs, a facts grid (selected clients that fly to their work, a count line, elsewhere links, contact) and the CTA card pinned to the bottom.",
+ "semantic": {
+  "id": "about.studio-bio",
+  "category": "ABOUT"
+ },
+ "source": {
+  "id": "dom:section.view.v-about",
+  "file": "src/components/Box.jsx",
+  "tag": "section",
+  "lines": "250",
+  "needle": "<section className={`view v-about"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Box.jsx:126",
+   "needle": "function AboutView("
+  },
+  {
+   "cite": "src/index.css:298",
+   "needle": ".facts {"
+  }
+ ],
+ "iaSectionId": "panel.about",
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "requires": [
+   "overlay.glass-box"
+  ],
+  "templates": [
+   "cosmos-home"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "label": {
+   "kind": "text",
+   "maxWords": 1,
+   "required": true
+  },
+  "title": {
+   "kind": "text",
+   "maxWords": 12,
+   "required": true
+  },
+  "paragraphs": {
+   "kind": "textList",
+   "maxWords": 45,
+   "minItems": 1,
+   "maxItems": 3,
+   "required": true
+  },
+  "clientsLabel": {
+   "kind": "text",
+   "maxWords": 2,
+   "required": true
+  },
+  "clients": {
+   "kind": "textList",
+   "maxWords": 3,
+   "minItems": 1,
+   "maxItems": 12,
+   "required": true
+  },
+  "clientsTail": {
+   "kind": "text",
+   "maxWords": 3,
+   "required": false
+  },
+  "statsLabel": {
+   "kind": "text",
+   "maxWords": 3,
+   "required": true
+  },
+  "statsTemplate": {
+   "kind": "text",
+   "maxWords": 6,
+   "required": true
+  },
+  "elsewhereLabel": {
+   "kind": "text",
+   "maxWords": 1,
+   "required": true
+  },
+  "elsewhereLinks": {
+   "kind": "linkList",
+   "maxWords": 2,
+   "minItems": 1,
+   "maxItems": 6,
+   "required": true
+  },
+  "contactLabel": {
+   "kind": "text",
+   "maxWords": 1,
+   "required": true
+  },
+  "contactAction": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": true
+  },
+  "cta": {
+   "kind": "group",
+   "fields": {
+    "kicker": {
+     "kind": "text",
+     "maxWords": 4,
+     "required": true
+    },
+    "title": {
+     "kind": "text",
+     "maxWords": 8,
+     "required": true
+    },
+    "button": {
+     "kind": "link",
+     "maxWords": 3,
+     "required": true
+    },
+    "alt": {
+     "kind": "link",
+     "maxWords": 5,
+     "required": true
+    }
+   },
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "view-crossfade"
+  ],
+  "default": "view-crossfade"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.glass"
+  ],
+  "text": [
+   "text.primary",
+   "text.muted",
+   "text.body"
+  ]
+ },
+ "responsive": {
+  "phoneMaxWidth": 860,
+  "changes": [
+   "facts grid becomes 1 column"
+  ],
+  "cite": {
+   "cite": "src/index.css:450",
+   "needle": ".facts, .c-row { grid-template-columns: 1fr; }"
+  }
+ },
+ "layer": {
+  "position": "fixed",
+  "parent": "overlay.glass-box"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy",
+  "placeholder.url"
+ ],
+ "measured": {
+  "inFlowAt1440": false,
+  "positionAt1440": "fixed",
+  "source": "extraction/measured-values.json#sectionHeights",
+  "rectAt1440": [
+   -10.2,
+   100.6,
+   602.8,
+   769.6
+  ],
+  "rectAt390": [
+   17,
+   117,
+   356,
+   750
+  ],
+  "note": "position:fixed layer (or inside one); takes no page height."
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:476",
+   "needle": "- **About view**:"
+  }
+ ]
+}

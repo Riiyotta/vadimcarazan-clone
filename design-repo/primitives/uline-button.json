@@ -1,0 +1,14 @@
+{
+ "id": "uline-button",
+ "kind": "primitive",
+ "description": "Text button whose 1px underline grows from the left.",
+ "tokens": [
+  "text.primary"
+ ],
+ "evidence": [
+  {
+   "cite": "src/index.css:48",
+   "needle": ".uline {"
+  }
+ ]
+}

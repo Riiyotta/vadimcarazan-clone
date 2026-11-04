@@ -1,0 +1,14 @@
+{
+ "id": "media-frame",
+ "kind": "primitive",
+ "description": "Rounded image/video frame that fades in on load.",
+ "tokens": [
+  "surface.card"
+ ],
+ "evidence": [
+  {
+   "cite": "src/case.css:30",
+   "needle": ".cs-img {"
+  }
+ ]
+}

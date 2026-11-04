@@ -1,0 +1,14 @@
+{
+ "id": "chip",
+ "kind": "primitive",
+ "description": "Checkbox / radio chip; checked = white bg, black text.",
+ "tokens": [
+  "border.hairline"
+ ],
+ "evidence": [
+  {
+   "cite": "src/index.css:325",
+   "needle": ".chip span {"
+  }
+ ]
+}

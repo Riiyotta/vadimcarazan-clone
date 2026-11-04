@@ -1,0 +1,424 @@
+{
+ "version": "1.0.0",
+ "note": "DERIVED by extraction/build_derived.py. The closed list of what a generator may compose and set. verify_all.py checks parity both ways with the contract files and the schema node properties.",
+ "nodeProperties": [
+  "section",
+  "content",
+  "tokens",
+  "motion",
+  "retrievalEligible"
+ ],
+ "sections": {
+  "about.studio-bio": {
+   "category": "ABOUT",
+   "contentFields": [
+    "clients",
+    "clientsLabel",
+    "clientsTail",
+    "contactAction",
+    "contactLabel",
+    "cta",
+    "elsewhereLabel",
+    "elsewhereLinks",
+    "label",
+    "paragraphs",
+    "statsLabel",
+    "statsTemplate",
+    "title"
+   ],
+   "variants": [],
+   "motion": [
+    "view-crossfade"
+   ],
+   "retrievalEligible": true
+  },
+  "chrome.case-footer": {
+   "category": "SHELL",
+   "contentFields": [
+    "copyright",
+    "email",
+    "links"
+   ],
+   "variants": [],
+   "motion": [
+    "underline-grow",
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "chrome.social": {
+   "category": "SHELL",
+   "contentFields": [
+    "label",
+    "links"
+   ],
+   "variants": [],
+   "motion": [
+    "side-reveal"
+   ],
+   "retrievalEligible": true
+  },
+  "chrome.topbar": {
+   "category": "SHELL",
+   "contentFields": [
+    "city",
+    "closeLabel",
+    "factKeys",
+    "homeLabel",
+    "homeMark",
+    "menuLabel",
+    "navItems",
+    "role",
+    "studio",
+    "timeZone"
+   ],
+   "variants": [],
+   "motion": [
+    "underline-grow",
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "conversion.brief-form": {
+   "category": "CONVERSION",
+   "contentFields": [
+    "budgetLegend",
+    "budgets",
+    "companyLabel",
+    "delivery",
+    "doneBack",
+    "doneText",
+    "doneTitle",
+    "email",
+    "emailLabel",
+    "errorText",
+    "label",
+    "messageLabel",
+    "messagePlaceholder",
+    "nameLabel",
+    "needs",
+    "needsLegend",
+    "notePrefix",
+    "sub",
+    "submitLabel",
+    "title"
+   ],
+   "variants": [],
+   "motion": [
+    "view-crossfade",
+    "chip-toggle",
+    "field-focus"
+   ],
+   "retrievalEligible": true
+  },
+  "cta.start-project": {
+   "category": "CTA",
+   "contentFields": [
+    "alt",
+    "button",
+    "kicker",
+    "title"
+   ],
+   "variants": [],
+   "motion": [
+    "case-reveal",
+    "pill-press"
+   ],
+   "retrievalEligible": true
+  },
+  "detail.project-view": {
+   "category": "DETAIL",
+   "contentFields": [
+    "caseStudyLabel",
+    "copiedLabel",
+    "copyLinkLabel",
+    "cta",
+    "piecesLabel"
+   ],
+   "variants": [],
+   "motion": [
+    "view-crossfade",
+    "focus-drift"
+   ],
+   "retrievalEligible": true
+  },
+  "editorial.case-text": {
+   "category": "EDITORIAL",
+   "contentFields": [
+    "body",
+    "title"
+   ],
+   "variants": [],
+   "motion": [
+    "case-reveal",
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "gallery.case-pair": {
+   "category": "GALLERY",
+   "contentFields": [
+    "media"
+   ],
+   "variants": [],
+   "motion": [
+    "case-reveal",
+    "image-develop"
+   ],
+   "retrievalEligible": true
+  },
+  "hero.case-header": {
+   "category": "HERO",
+   "contentFields": [
+    "crumb",
+    "facts",
+    "intro",
+    "kickerText",
+    "liveLink",
+    "title"
+   ],
+   "variants": [],
+   "motion": [
+    "case-reveal",
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "hero.portrait-intro": {
+   "category": "HERO",
+   "contentFields": [
+    "leadLink",
+    "leadTail",
+    "leadText",
+    "lettering",
+    "name",
+    "nameLines",
+    "startLabel"
+   ],
+   "variants": [],
+   "motion": [
+    "hero-fade",
+    "arrow-bob"
+   ],
+   "retrievalEligible": true
+  },
+  "index.next-case": {
+   "category": "INDEX",
+   "contentFields": [
+    "href",
+    "kind",
+    "label",
+    "thumb",
+    "title"
+   ],
+   "variants": [],
+   "motion": [
+    "case-reveal",
+    "next-case-hover"
+   ],
+   "retrievalEligible": true
+  },
+  "index.selected-list": {
+   "category": "INDEX",
+   "contentFields": [
+    "body",
+    "footLink",
+    "footPrefix",
+    "footSuffix",
+    "items",
+    "label",
+    "title"
+   ],
+   "variants": [],
+   "motion": [
+    "view-crossfade"
+   ],
+   "retrievalEligible": true
+  },
+  "media.case-cover": {
+   "category": "MEDIA",
+   "contentFields": [
+    "media"
+   ],
+   "variants": [],
+   "motion": [
+    "case-reveal",
+    "image-develop"
+   ],
+   "retrievalEligible": true
+  },
+  "media.case-image": {
+   "category": "MEDIA",
+   "contentFields": [
+    "media"
+   ],
+   "variants": [],
+   "motion": [
+    "case-reveal",
+    "image-develop"
+   ],
+   "retrievalEligible": true
+  },
+  "media.case-video": {
+   "category": "MEDIA",
+   "contentFields": [
+    "video"
+   ],
+   "variants": [],
+   "motion": [
+    "case-reveal",
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "media.signature": {
+   "category": "MEDIA",
+   "contentFields": [
+    "trace"
+   ],
+   "variants": [],
+   "motion": [
+    "signature-draw",
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "overlay.glass-box": {
+   "category": "UTILITY",
+   "contentFields": [
+    "closeLabel",
+    "views"
+   ],
+   "variants": [],
+   "motion": [
+    "box-slide"
+   ],
+   "retrievalEligible": false
+  },
+  "shell.loader": {
+   "category": "SHELL",
+   "contentFields": [
+    "label",
+    "mark"
+   ],
+   "variants": [],
+   "motion": [
+    "loader-draw",
+    "none"
+   ],
+   "retrievalEligible": false
+  },
+  "shell.phone-menu": {
+   "category": "SHELL",
+   "contentFields": [
+    "facts",
+    "leadLink",
+    "leadTail",
+    "leadText",
+    "links"
+   ],
+   "variants": [],
+   "motion": [
+    "menu-panel"
+   ],
+   "retrievalEligible": false
+  },
+  "showcase.work-cosmos": {
+   "category": "SHOWCASE",
+   "contentFields": [
+    "portrait",
+    "works"
+   ],
+   "variants": [],
+   "motion": [
+    "portrait-arrival",
+    "halo-drift",
+    "scroll-travel",
+    "pointer-parallax",
+    "rewind",
+    "tile-hover"
+   ],
+   "retrievalEligible": true
+  },
+  "utility.copy-toast": {
+   "category": "UTILITY",
+   "contentFields": [
+    "label"
+   ],
+   "variants": [],
+   "motion": [
+    "toast-rise"
+   ],
+   "retrievalEligible": false
+  },
+  "utility.fly-fades": {
+   "category": "UTILITY",
+   "contentFields": [
+    "visibleWhen"
+   ],
+   "variants": [],
+   "motion": [
+    "fade-layers"
+   ],
+   "retrievalEligible": false
+  },
+  "utility.flybar": {
+   "category": "UTILITY",
+   "contentFields": [
+    "allSeenTemplate",
+    "backLabel",
+    "backShortLabel",
+    "seenTemplate"
+   ],
+   "variants": [],
+   "motion": [
+    "flybar-reveal"
+   ],
+   "retrievalEligible": false
+  },
+  "utility.hover-hud": {
+   "category": "UTILITY",
+   "contentFields": [
+    "labelSource"
+   ],
+   "variants": [],
+   "motion": [
+    "hud-follow"
+   ],
+   "retrievalEligible": false
+  },
+  "utility.page-top-fade": {
+   "category": "UTILITY",
+   "contentFields": [
+    "visibleWhen"
+   ],
+   "variants": [],
+   "motion": [
+    "none"
+   ],
+   "retrievalEligible": false
+  }
+ },
+ "primitives": [
+  "back-link",
+  "chip",
+  "fact-pair",
+  "icon",
+  "media-frame",
+  "pill-glass",
+  "pill-solid",
+  "serif-title",
+  "text-field",
+  "uline-button",
+  "underline-link"
+ ],
+ "components": [
+  "chip-group",
+  "cta-card",
+  "facts-grid",
+  "glass-panel",
+  "now-caption",
+  "selected-row",
+  "view-header"
+ ]
+}

@@ -1,0 +1,102 @@
+{
+ "id": "gallery.case-pair",
+ "title": "Case image pair",
+ "version": "1.0.0",
+ "purpose": "Two pieces side by side, cropped 4:3, 12px gap; the second staggered 80 ms.",
+ "semantic": {
+  "id": "gallery.case-pair",
+  "category": "GALLERY"
+ },
+ "source": {
+  "id": "dom:div.cs-pair",
+  "file": "src/pages/CaseStudy.jsx",
+  "tag": "div",
+  "lines": "124",
+  "needle": "<div className=\"cs-pair\" key={i}>"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/case.css:33",
+   "needle": ".cs-pair { display: grid; grid-template-columns: 1fr 1fr;"
+  }
+ ],
+ "iaSectionId": "content.case-pair",
+ "retrievalEligible": true,
+ "constraints": {
+  "templates": [
+   "case-study"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "media": {
+   "kind": "mediaList",
+   "assetRoles": [
+    "work.piece-image",
+    "work.piece-video"
+   ],
+   "generatedAssetRoles": [
+    "generated.work-visual",
+    "user.work-media",
+    "placeholder.work-video"
+   ],
+   "minItems": 2,
+   "maxItems": 2,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "case-reveal",
+   "image-develop"
+  ],
+  "default": "case-reveal"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": []
+ },
+ "responsive": {
+  "phoneMaxWidth": 860,
+  "changes": [
+   "stacks to one column"
+  ],
+  "cite": {
+   "cite": "src/case.css:72",
+   "needle": ".cs-pair, .cs-text { grid-template-columns: 1fr; }"
+  }
+ },
+ "referenceAssetRoles": [
+  "work.piece-image",
+  "work.piece-video"
+ ],
+ "generatedAssetRoles": [
+  "generated.work-visual",
+  "original.copy",
+  "placeholder.work-video",
+  "user.work-media"
+ ],
+ "measured": {
+  "inFlowAt1440": true,
+  "positionAt1440": "static",
+  "source": "extraction/measured-values.json#sectionHeights",
+  "heightPx1440": {
+   "min": 513.9,
+   "max": 513.9,
+   "instances": 15,
+   "routes": 15
+  },
+  "heightPx390": {
+   "min": 549,
+   "max": 549
+  }
+ },
+ "evidence": [
+  {
+   "cite": "src/engine/data.js:60",
+   "needle": "out.push({ type: 'pair', ids: [m[2], m[3]] })"
+  }
+ ]
+}

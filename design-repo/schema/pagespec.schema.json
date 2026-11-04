@@ -1,0 +1,1692 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "$id": "design-repo/schema/pagespec.schema.json",
+ "title": "PageSpec",
+ "description": "A page composed from this design-repo. mode=reference reconstructs the reference build faithfully; mode=generated builds a new page for someone else and must contain no source identity or content (schema/semantic_validate.py GENERATED_MODE_* rules). DERIVED by extraction/build_derived.py - do not hand-edit.",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "pageSpecVersion",
+  "mode",
+  "template",
+  "route",
+  "locale",
+  "theme",
+  "meta",
+  "brand",
+  "nodes"
+ ],
+ "properties": {
+  "pageSpecVersion": {
+   "const": "1.0.0"
+  },
+  "mode": {
+   "enum": [
+    "reference",
+    "generated"
+   ]
+  },
+  "template": {
+   "enum": [
+    "cosmos-home",
+    "case-study"
+   ]
+  },
+  "route": {
+   "type": "string",
+   "pattern": "^/"
+  },
+  "locale": {
+   "enum": [
+    "en"
+   ]
+  },
+  "theme": {
+   "enum": [
+    "dark"
+   ]
+  },
+  "meta": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "title",
+    "description"
+   ],
+   "properties": {
+    "title": {
+     "type": "string",
+     "minLength": 1
+    },
+    "description": {
+     "type": "string",
+     "minLength": 1
+    }
+   }
+  },
+  "brand": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "ownerName",
+    "studioName",
+    "domain"
+   ],
+   "properties": {
+    "ownerName": {
+     "type": "string",
+     "minLength": 1
+    },
+    "studioName": {
+     "type": "string",
+     "minLength": 1
+    },
+    "domain": {
+     "type": "string",
+     "minLength": 1
+    }
+   }
+  },
+  "nodes": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "$ref": "#/definitions/node"
+   }
+  }
+ },
+ "definitions": {
+  "link": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "label",
+    "href"
+   ],
+   "properties": {
+    "label": {
+     "type": "string",
+     "minLength": 1
+    },
+    "href": {
+     "type": "string",
+     "minLength": 1
+    }
+   }
+  },
+  "media": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "assetRole",
+    "ref",
+    "alt"
+   ],
+   "properties": {
+    "assetRole": {
+     "enum": [
+      "brand.logo-mark",
+      "brand.name-lettering",
+      "brand.signature-trace",
+      "fictional.person",
+      "font.display-original",
+      "generated.brand-mark",
+      "generated.name-lettering",
+      "generated.portrait-silhouette",
+      "generated.signature",
+      "generated.work-visual",
+      "icon.ui",
+      "licensed-or-fallback.font",
+      "original.copy",
+      "placeholder.brand-mark",
+      "placeholder.metric",
+      "placeholder.url",
+      "placeholder.work-video",
+      "portrait.subject-photo",
+      "social.share-image-original",
+      "user.portrait-photo",
+      "user.work-media",
+      "work.piece-image",
+      "work.piece-video"
+     ]
+    },
+    "ref": {
+     "type": "string",
+     "minLength": 1
+    },
+    "alt": {
+     "type": "string"
+    }
+   }
+  },
+  "tokens": {
+   "type": "object",
+   "additionalProperties": false,
+   "properties": {
+    "surface": {
+     "type": "string",
+     "minLength": 1
+    },
+    "text": {
+     "type": "string",
+     "minLength": 1
+    },
+    "spaceBlock": {
+     "type": "string",
+     "minLength": 1
+    },
+    "font": {
+     "type": "string",
+     "minLength": 1
+    }
+   }
+  },
+  "motion": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "pattern",
+    "reducedMotionFallback"
+   ],
+   "properties": {
+    "pattern": {
+     "enum": [
+      "arrow-bob",
+      "box-slide",
+      "case-reveal",
+      "chip-toggle",
+      "fade-layers",
+      "field-focus",
+      "flybar-reveal",
+      "focus-drift",
+      "halo-drift",
+      "hero-fade",
+      "hud-follow",
+      "image-develop",
+      "loader-draw",
+      "menu-panel",
+      "next-case-hover",
+      "none",
+      "pill-press",
+      "pointer-parallax",
+      "portrait-arrival",
+      "rewind",
+      "scroll-travel",
+      "side-reveal",
+      "signature-draw",
+      "tile-hover",
+      "toast-rise",
+      "underline-grow",
+      "view-crossfade"
+     ]
+    },
+    "reducedMotionFallback": {
+     "enum": [
+      "none",
+      "instant",
+      "static-final-state",
+      "disabled",
+      "unchanged"
+     ]
+    }
+   }
+  },
+  "content.about.studio-bio": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "clients",
+    "clientsLabel",
+    "contactAction",
+    "contactLabel",
+    "cta",
+    "elsewhereLabel",
+    "elsewhereLinks",
+    "label",
+    "paragraphs",
+    "statsLabel",
+    "statsTemplate",
+    "title"
+   ],
+   "properties": {
+    "label": {
+     "type": "string",
+     "minLength": 1
+    },
+    "title": {
+     "type": "string",
+     "minLength": 1
+    },
+    "paragraphs": {
+     "type": "array",
+     "minItems": 1,
+     "maxItems": 3,
+     "items": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "clientsLabel": {
+     "type": "string",
+     "minLength": 1
+    },
+    "clients": {
+     "type": "array",
+     "minItems": 1,
+     "maxItems": 12,
+     "items": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "clientsTail": {
+     "type": "string",
+     "minLength": 1
+    },
+    "statsLabel": {
+     "type": "string",
+     "minLength": 1
+    },
+    "statsTemplate": {
+     "type": "string",
+     "minLength": 1
+    },
+    "elsewhereLabel": {
+     "type": "string",
+     "minLength": 1
+    },
+    "elsewhereLinks": {
+     "type": "array",
+     "minItems": 1,
+     "maxItems": 6,
+     "items": {
+      "$ref": "#/definitions/link"
+     }
+    },
+    "contactLabel": {
+     "type": "string",
+     "minLength": 1
+    },
+    "contactAction": {
+     "type": "string",
+     "minLength": 1
+    },
+    "cta": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "alt",
+      "button",
+      "kicker",
+      "title"
+     ],
+     "properties": {
+      "kicker": {
+       "type": "string",
+       "minLength": 1
+      },
+      "title": {
+       "type": "string",
+       "minLength": 1
+      },
+      "button": {
+       "$ref": "#/definitions/link"
+      },
+      "alt": {
+       "$ref": "#/definitions/link"
+      }
+     }
+    }
+   }
+  },
+  "content.chrome.case-footer": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "copyright",
+    "email",
+    "links"
+   ],
+   "properties": {
+    "copyright": {
+     "type": "string",
+     "minLength": 1
+    },
+    "links": {
+     "type": "array",
+     "minItems": 1,
+     "maxItems": 6,
+     "items": {
+      "$ref": "#/definitions/link"
+     }
+    },
+    "email": {
+     "$ref": "#/definitions/link"
+    }
+   }
+  },
+  "content.chrome.social": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "label",
+    "links"
+   ],
+   "properties": {
+    "label": {
+     "type": "string",
+     "minLength": 1
+    },
+    "links": {
+     "type": "array",
+     "minItems": 1,
+     "maxItems": 6,
+     "items": {
+      "$ref": "#/definitions/link"
+     }
+    }
+   }
+  },
+  "content.chrome.topbar": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "city",
+    "closeLabel",
+    "factKeys",
+    "homeLabel",
+    "homeMark",
+    "menuLabel",
+    "navItems",
+    "role",
+    "studio",
+    "timeZone"
+   ],
+   "properties": {
+    "homeMark": {
+     "$ref": "#/definitions/media"
+    },
+    "homeLabel": {
+     "type": "string",
+     "minLength": 1
+    },
+    "factKeys": {
+     "type": "array",
+     "minItems": 3,
+     "maxItems": 3,
+     "items": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "role": {
+     "type": "string",
+     "minLength": 1
+    },
+    "studio": {
+     "$ref": "#/definitions/link"
+    },
+    "city": {
+     "type": "string",
+     "minLength": 1
+    },
+    "timeZone": {
+     "type": "string",
+     "minLength": 1
+    },
+    "navItems": {
+     "type": "array",
+     "minItems": 1,
+     "maxItems": 4,
+     "items": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "action",
+       "label"
+      ],
+      "properties": {
+       "label": {
+        "type": "string",
+        "minLength": 1
+       },
+       "action": {
+        "enum": [
+         "selected",
+         "work",
+         "about",
+         "contact"
+        ]
+       }
+      }
+     }
+    },
+    "menuLabel": {
+     "type": "string",
+     "minLength": 1
+    },
+    "closeLabel": {
+     "type": "string",
+     "minLength": 1
+    }
+   }
+  },
+  "content.conversion.brief-form": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "budgetLegend",
+    "budgets",
+    "companyLabel",
+    "delivery",
+    "doneBack",
+    "doneText",
+    "doneTitle",
+    "email",
+    "emailLabel",
+    "errorText",
+    "label",
+    "messageLabel",
+    "messagePlaceholder",
+    "nameLabel",
+    "needs",
+    "needsLegend",
+    "notePrefix",
+    "sub",
+    "submitLabel",
+    "title"
+   ],
+   "properties": {
+    "label": {
+     "type": "string",
+     "minLength": 1
+    },
+    "title": {
+     "type": "string",
+     "minLength": 1
+    },
+    "sub": {
+     "type": "string",
+     "minLength": 1
+    },
+    "nameLabel": {
+     "type": "string",
+     "minLength": 1
+    },
+    "emailLabel": {
+     "type": "string",
+     "minLength": 1
+    },
+    "companyLabel": {
+     "type": "string",
+     "minLength": 1
+    },
+    "needsLegend": {
+     "type": "string",
+     "minLength": 1
+    },
+    "needs": {
+     "type": "array",
+     "minItems": 1,
+     "maxItems": 6,
+     "items": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "budgetLegend": {
+     "type": "string",
+     "minLength": 1
+    },
+    "budgets": {
+     "type": "array",
+     "minItems": 1,
+     "maxItems": 6,
+     "items": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "messageLabel": {
+     "type": "string",
+     "minLength": 1
+    },
+    "messagePlaceholder": {
+     "type": "string",
+     "minLength": 1
+    },
+    "submitLabel": {
+     "type": "string",
+     "minLength": 1
+    },
+    "notePrefix": {
+     "type": "string",
+     "minLength": 1
+    },
+    "email": {
+     "$ref": "#/definitions/link"
+    },
+    "errorText": {
+     "type": "string",
+     "minLength": 1
+    },
+    "doneTitle": {
+     "type": "string",
+     "minLength": 1
+    },
+    "doneText": {
+     "type": "string",
+     "minLength": 1
+    },
+    "doneBack": {
+     "type": "string",
+     "minLength": 1
+    },
+    "delivery": {
+     "enum": [
+      "mailto",
+      "post-endpoint"
+     ]
+    }
+   }
+  },
+  "content.cta.start-project": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "alt",
+    "button",
+    "kicker",
+    "title"
+   ],
+   "properties": {
+    "kicker": {
+     "type": "string",
+     "minLength": 1
+    },
+    "title": {
+     "type": "string",
+     "minLength": 1
+    },
+    "button": {
+     "$ref": "#/definitions/link"
+    },
+    "alt": {
+     "$ref": "#/definitions/link"
+    }
+   }
+  },
+  "content.detail.project-view": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "caseStudyLabel",
+    "copiedLabel",
+    "copyLinkLabel",
+    "cta",
+    "piecesLabel"
+   ],
+   "properties": {
+    "copyLinkLabel": {
+     "type": "string",
+     "minLength": 1
+    },
+    "copiedLabel": {
+     "type": "string",
+     "minLength": 1
+    },
+    "caseStudyLabel": {
+     "type": "string",
+     "minLength": 1
+    },
+    "piecesLabel": {
+     "type": "string",
+     "minLength": 1
+    },
+    "cta": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "alt",
+      "button",
+      "kicker",
+      "title"
+     ],
+     "properties": {
+      "kicker": {
+       "type": "string",
+       "minLength": 1
+      },
+      "title": {
+       "type": "string",
+       "minLength": 1
+      },
+      "button": {
+       "$ref": "#/definitions/link"
+      },
+      "alt": {
+       "$ref": "#/definitions/link"
+      }
+     }
+    }
+   }
+  },
+  "content.editorial.case-text": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "body",
+    "title"
+   ],
+   "properties": {
+    "title": {
+     "type": "string",
+     "minLength": 1
+    },
+    "body": {
+     "type": "string",
+     "minLength": 1
+    }
+   }
+  },
+  "content.gallery.case-pair": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "media"
+   ],
+   "properties": {
+    "media": {
+     "type": "array",
+     "minItems": 2,
+     "maxItems": 2,
+     "items": {
+      "$ref": "#/definitions/media"
+     }
+    }
+   }
+  },
+  "content.hero.case-header": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "crumb",
+    "facts",
+    "intro",
+    "kickerText",
+    "title"
+   ],
+   "properties": {
+    "crumb": {
+     "$ref": "#/definitions/link"
+    },
+    "kickerText": {
+     "type": "string",
+     "minLength": 1
+    },
+    "title": {
+     "type": "string",
+     "minLength": 1
+    },
+    "intro": {
+     "type": "string",
+     "minLength": 1
+    },
+    "liveLink": {
+     "$ref": "#/definitions/link"
+    },
+    "facts": {
+     "type": "array",
+     "minItems": 1,
+     "maxItems": 4,
+     "items": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "label",
+       "value"
+      ],
+      "properties": {
+       "label": {
+        "type": "string",
+        "minLength": 1
+       },
+       "value": {
+        "type": "string",
+        "minLength": 1
+       }
+      }
+     }
+    }
+   }
+  },
+  "content.hero.portrait-intro": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "leadLink",
+    "leadTail",
+    "leadText",
+    "lettering",
+    "name",
+    "nameLines",
+    "startLabel"
+   ],
+   "properties": {
+    "leadText": {
+     "type": "string",
+     "minLength": 1
+    },
+    "leadLink": {
+     "$ref": "#/definitions/link"
+    },
+    "leadTail": {
+     "type": "string",
+     "minLength": 1
+    },
+    "startLabel": {
+     "type": "string",
+     "minLength": 1
+    },
+    "name": {
+     "type": "string",
+     "minLength": 1
+    },
+    "nameLines": {
+     "type": "array",
+     "minItems": 1,
+     "maxItems": 2,
+     "items": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "lettering": {
+     "$ref": "#/definitions/media"
+    }
+   }
+  },
+  "content.index.next-case": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "href",
+    "kind",
+    "label",
+    "thumb",
+    "title"
+   ],
+   "properties": {
+    "label": {
+     "type": "string",
+     "minLength": 1
+    },
+    "title": {
+     "type": "string",
+     "minLength": 1
+    },
+    "kind": {
+     "type": "string",
+     "minLength": 1
+    },
+    "href": {
+     "type": "string",
+     "minLength": 1
+    },
+    "thumb": {
+     "$ref": "#/definitions/media"
+    }
+   }
+  },
+  "content.index.selected-list": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "body",
+    "footLink",
+    "footPrefix",
+    "footSuffix",
+    "items",
+    "label",
+    "title"
+   ],
+   "properties": {
+    "label": {
+     "type": "string",
+     "minLength": 1
+    },
+    "title": {
+     "type": "string",
+     "minLength": 1
+    },
+    "body": {
+     "type": "string",
+     "minLength": 1
+    },
+    "items": {
+     "type": "array",
+     "minItems": 1,
+     "maxItems": 8,
+     "items": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "kind",
+       "thumb",
+       "title",
+       "workSlug"
+      ],
+      "properties": {
+       "title": {
+        "type": "string",
+        "minLength": 1
+       },
+       "kind": {
+        "type": "string",
+        "minLength": 1
+       },
+       "workSlug": {
+        "type": "string",
+        "minLength": 1
+       },
+       "thumb": {
+        "$ref": "#/definitions/media"
+       }
+      }
+     }
+    },
+    "footPrefix": {
+     "type": "string",
+     "minLength": 1
+    },
+    "footLink": {
+     "type": "string",
+     "minLength": 1
+    },
+    "footSuffix": {
+     "type": "string",
+     "minLength": 1
+    }
+   }
+  },
+  "content.media.case-cover": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "media"
+   ],
+   "properties": {
+    "media": {
+     "$ref": "#/definitions/media"
+    }
+   }
+  },
+  "content.media.case-image": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "media"
+   ],
+   "properties": {
+    "media": {
+     "$ref": "#/definitions/media"
+    }
+   }
+  },
+  "content.media.case-video": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "video"
+   ],
+   "properties": {
+    "video": {
+     "$ref": "#/definitions/media"
+    }
+   }
+  },
+  "content.media.signature": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "trace"
+   ],
+   "properties": {
+    "trace": {
+     "$ref": "#/definitions/media"
+    }
+   }
+  },
+  "content.overlay.glass-box": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "closeLabel",
+    "views"
+   ],
+   "properties": {
+    "views": {
+     "type": "array",
+     "minItems": 1,
+     "maxItems": 4,
+     "uniqueItems": true,
+     "items": {
+      "enum": [
+       "project",
+       "selected",
+       "about",
+       "contact"
+      ]
+     }
+    },
+    "closeLabel": {
+     "type": "string",
+     "minLength": 1
+    }
+   }
+  },
+  "content.shell.loader": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "label",
+    "mark"
+   ],
+   "properties": {
+    "mark": {
+     "$ref": "#/definitions/media"
+    },
+    "label": {
+     "type": "string",
+     "minLength": 1
+    }
+   }
+  },
+  "content.shell.phone-menu": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "facts",
+    "leadLink",
+    "leadTail",
+    "leadText",
+    "links"
+   ],
+   "properties": {
+    "links": {
+     "type": "array",
+     "minItems": 1,
+     "maxItems": 4,
+     "items": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "action",
+       "label"
+      ],
+      "properties": {
+       "label": {
+        "type": "string",
+        "minLength": 1
+       },
+       "action": {
+        "enum": [
+         "selected",
+         "work",
+         "about",
+         "contact"
+        ]
+       }
+      }
+     }
+    },
+    "leadText": {
+     "type": "string",
+     "minLength": 1
+    },
+    "leadLink": {
+     "$ref": "#/definitions/link"
+    },
+    "leadTail": {
+     "type": "string",
+     "minLength": 1
+    },
+    "facts": {
+     "type": "array",
+     "minItems": 1,
+     "maxItems": 2,
+     "items": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "label",
+       "value"
+      ],
+      "properties": {
+       "label": {
+        "type": "string",
+        "minLength": 1
+       },
+       "value": {
+        "type": "string",
+        "minLength": 1
+       }
+      }
+     }
+    }
+   }
+  },
+  "content.showcase.work-cosmos": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "portrait",
+    "works"
+   ],
+   "properties": {
+    "portrait": {
+     "$ref": "#/definitions/media"
+    },
+    "works": {
+     "type": "array",
+     "minItems": 1,
+     "maxItems": 1100,
+     "items": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "description",
+       "isCaseStudy",
+       "kind",
+       "media",
+       "title"
+      ],
+      "properties": {
+       "title": {
+        "type": "string",
+        "minLength": 1
+       },
+       "kind": {
+        "type": "string",
+        "minLength": 1
+       },
+       "description": {
+        "type": "string",
+        "minLength": 1
+       },
+       "isCaseStudy": {
+        "type": "boolean"
+       },
+       "slug": {
+        "type": "string",
+        "minLength": 1
+       },
+       "media": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 12,
+        "items": {
+         "$ref": "#/definitions/media"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "content.utility.copy-toast": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "label"
+   ],
+   "properties": {
+    "label": {
+     "type": "string",
+     "minLength": 1
+    }
+   }
+  },
+  "content.utility.fly-fades": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "visibleWhen"
+   ],
+   "properties": {
+    "visibleWhen": {
+     "enum": [
+      "far"
+     ]
+    }
+   }
+  },
+  "content.utility.flybar": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "allSeenTemplate",
+    "backLabel",
+    "backShortLabel",
+    "seenTemplate"
+   ],
+   "properties": {
+    "backLabel": {
+     "type": "string",
+     "minLength": 1
+    },
+    "backShortLabel": {
+     "type": "string",
+     "minLength": 1
+    },
+    "seenTemplate": {
+     "type": "string",
+     "minLength": 1
+    },
+    "allSeenTemplate": {
+     "type": "string",
+     "minLength": 1
+    }
+   }
+  },
+  "content.utility.hover-hud": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "labelSource"
+   ],
+   "properties": {
+    "labelSource": {
+     "enum": [
+      "work-title"
+     ]
+    }
+   }
+  },
+  "content.utility.page-top-fade": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "visibleWhen"
+   ],
+   "properties": {
+    "visibleWhen": {
+     "enum": [
+      "always"
+     ]
+    }
+   }
+  },
+  "node": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "section",
+    "content",
+    "motion"
+   ],
+   "properties": {
+    "section": {
+     "enum": [
+      "about.studio-bio",
+      "chrome.case-footer",
+      "chrome.social",
+      "chrome.topbar",
+      "conversion.brief-form",
+      "cta.start-project",
+      "detail.project-view",
+      "editorial.case-text",
+      "gallery.case-pair",
+      "hero.case-header",
+      "hero.portrait-intro",
+      "index.next-case",
+      "index.selected-list",
+      "media.case-cover",
+      "media.case-image",
+      "media.case-video",
+      "media.signature",
+      "overlay.glass-box",
+      "shell.loader",
+      "shell.phone-menu",
+      "showcase.work-cosmos",
+      "utility.copy-toast",
+      "utility.fly-fades",
+      "utility.flybar",
+      "utility.hover-hud",
+      "utility.page-top-fade"
+     ]
+    },
+    "content": {
+     "type": "object"
+    },
+    "tokens": {
+     "$ref": "#/definitions/tokens"
+    },
+    "motion": {
+     "$ref": "#/definitions/motion"
+    },
+    "retrievalEligible": {
+     "type": "boolean"
+    }
+   },
+   "allOf": [
+    {
+     "if": {
+      "properties": {
+       "section": {
+        "const": "about.studio-bio"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "content": {
+        "$ref": "#/definitions/content.about.studio-bio"
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "section": {
+        "const": "chrome.case-footer"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "content": {
+        "$ref": "#/definitions/content.chrome.case-footer"
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "section": {
+        "const": "chrome.social"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "content": {
+        "$ref": "#/definitions/content.chrome.social"
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "section": {
+        "const": "chrome.topbar"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "content": {
+        "$ref": "#/definitions/content.chrome.topbar"
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "section": {
+        "const": "conversion.brief-form"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "content": {
+        "$ref": "#/definitions/content.conversion.brief-form"
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "section": {
+        "const": "cta.start-project"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "content": {
+        "$ref": "#/definitions/content.cta.start-project"
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "section": {
+        "const": "detail.project-view"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "content": {
+        "$ref": "#/definitions/content.detail.project-view"
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "section": {
+        "const": "editorial.case-text"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "content": {
+        "$ref": "#/definitions/content.editorial.case-text"
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "section": {
+        "const": "gallery.case-pair"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "content": {
+        "$ref": "#/definitions/content.gallery.case-pair"
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "section": {
+        "const": "hero.case-header"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "content": {
+        "$ref": "#/definitions/content.hero.case-header"
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "section": {
+        "const": "hero.portrait-intro"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "content": {
+        "$ref": "#/definitions/content.hero.portrait-intro"
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "section": {
+        "const": "index.next-case"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "content": {
+        "$ref": "#/definitions/content.index.next-case"
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "section": {
+        "const": "index.selected-list"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "content": {
+        "$ref": "#/definitions/content.index.selected-list"
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "section": {
+        "const": "media.case-cover"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "content": {
+        "$ref": "#/definitions/content.media.case-cover"
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "section": {
+        "const": "media.case-image"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "content": {
+        "$ref": "#/definitions/content.media.case-image"
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "section": {
+        "const": "media.case-video"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "content": {
+        "$ref": "#/definitions/content.media.case-video"
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "section": {
+        "const": "media.signature"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "content": {
+        "$ref": "#/definitions/content.media.signature"
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "section": {
+        "const": "overlay.glass-box"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "content": {
+        "$ref": "#/definitions/content.overlay.glass-box"
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "section": {
+        "const": "shell.loader"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "content": {
+        "$ref": "#/definitions/content.shell.loader"
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "section": {
+        "const": "shell.phone-menu"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "content": {
+        "$ref": "#/definitions/content.shell.phone-menu"
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "section": {
+        "const": "showcase.work-cosmos"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "content": {
+        "$ref": "#/definitions/content.showcase.work-cosmos"
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "section": {
+        "const": "utility.copy-toast"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "content": {
+        "$ref": "#/definitions/content.utility.copy-toast"
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "section": {
+        "const": "utility.fly-fades"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "content": {
+        "$ref": "#/definitions/content.utility.fly-fades"
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "section": {
+        "const": "utility.flybar"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "content": {
+        "$ref": "#/definitions/content.utility.flybar"
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "section": {
+        "const": "utility.hover-hud"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "content": {
+        "$ref": "#/definitions/content.utility.hover-hud"
+       }
+      }
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "section": {
+        "const": "utility.page-top-fade"
+       }
+      }
+     },
+     "then": {
+      "properties": {
+       "content": {
+        "$ref": "#/definitions/content.utility.page-top-fade"
+       }
+      }
+     }
+    }
+   ]
+  }
+ }
+}

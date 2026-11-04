@@ -1,0 +1,104 @@
+{
+ "id": "chrome.case-footer",
+ "title": "Case footer",
+ "version": "1.0.0",
+ "purpose": "Hairline-topped footer: copyright line, social links, email.",
+ "semantic": {
+  "id": "chrome.case-footer",
+  "category": "SHELL"
+ },
+ "source": {
+  "id": "dom:footer.cs-foot",
+  "file": "src/pages/CaseStudy.jsx",
+  "tag": "footer",
+  "lines": "155",
+  "needle": "<footer className=\"cs-foot\">"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/case.css:56",
+   "needle": ".cs-foot {"
+  }
+ ],
+ "iaSectionId": "footer.case-footer",
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "mustBeLast": true,
+  "templates": [
+   "case-study"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "copyright": {
+   "kind": "text",
+   "maxWords": 5,
+   "required": true
+  },
+  "links": {
+   "kind": "linkList",
+   "maxWords": 2,
+   "minItems": 1,
+   "maxItems": 6,
+   "required": true
+  },
+  "email": {
+   "kind": "link",
+   "maxWords": 1,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "underline-grow",
+   "none"
+  ],
+  "default": "underline-grow"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.muted"
+  ]
+ },
+ "responsive": {
+  "phoneMaxWidth": 860,
+  "changes": [
+   "wraps"
+  ],
+  "cite": {
+   "cite": "src/case.css:57",
+   "needle": "display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;"
+  }
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy",
+  "placeholder.url"
+ ],
+ "measured": {
+  "inFlowAt1440": true,
+  "positionAt1440": "static",
+  "source": "extraction/measured-values.json#sectionHeights",
+  "heightPx1440": {
+   "min": 36.5,
+   "max": 36.5,
+   "instances": 15,
+   "routes": 15
+  },
+  "heightPx390": {
+   "min": 72,
+   "max": 72
+  }
+ },
+ "evidence": [
+  {
+   "cite": "src/pages/CaseStudy.jsx:156",
+   "needle": "© {new Date().getFullYear()} {content.name}"
+  }
+ ]
+}

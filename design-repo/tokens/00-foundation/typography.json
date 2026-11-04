@@ -1,0 +1,377 @@
+{
+ "category": "typography",
+ "note": "Sizes are the clone's computed values (Instrument Serif sized x1.12 to match the commercial PP Editorial Old Italic cap height, see CLONE_SPEC.md 2.4). Measured at 1440: panel-title 37.152px, display-case 158.4px, counter 58.032px (extraction/measured-values.json -> computedStyles).",
+ "tokens": {
+  "font.family.sans": {
+   "$type": "fontFamily",
+   "$value": "'Inter Tight', 'Inter', -apple-system, 'Helvetica Neue', Arial, sans-serif",
+   "category": "fontFamily",
+   "evidence": [
+    {
+     "cite": "src/index.css:15",
+     "needle": "--sans: 'Inter Tight'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:92",
+     "needle": "| `--sans` |"
+    }
+   ]
+  },
+  "font.family.serif": {
+   "$type": "fontFamily",
+   "$value": "'Instrument Serif', 'Times New Roman', serif",
+   "category": "fontFamily",
+   "evidence": [
+    {
+     "cite": "src/index.css:17",
+     "needle": "--serif: 'Instrument Serif'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:93",
+     "needle": "| `--serif` |"
+    }
+   ]
+  },
+  "font.weight.regular": {
+   "$type": "fontWeight",
+   "$value": "400",
+   "category": "fontWeight",
+   "evidence": [
+    {
+     "cite": "src/case.css:17",
+     "needle": "font-style: italic; font-weight: 400"
+    }
+   ]
+  },
+  "font.weight.medium": {
+   "$type": "fontWeight",
+   "$value": "500",
+   "category": "fontWeight",
+   "evidence": [
+    {
+     "cite": "src/index.css:230",
+     "needle": "font-weight: 500"
+    }
+   ]
+  },
+  "font.size.xs": {
+   "$type": "dimension",
+   "$value": "11.5px",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "src/index.css:419",
+     "needle": ".now-s { font-size: 11.5px; }"
+    }
+   ]
+  },
+  "font.size.label": {
+   "$type": "dimension",
+   "$value": "12px",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "src/index.css:265",
+     "needle": ".p-cta-k { font-size: 12px"
+    }
+   ]
+  },
+  "font.size.caption": {
+   "$type": "dimension",
+   "$value": "12.5px",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "src/index.css:345",
+     "needle": "font-size: 12.5px; line-height: 18.75px"
+    }
+   ]
+  },
+  "font.size.ui": {
+   "$type": "dimension",
+   "$value": "13px",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "src/index.css:75",
+     "needle": "font-size: 13px; line-height: 1.35"
+    }
+   ]
+  },
+  "font.size.control": {
+   "$type": "dimension",
+   "$value": "13.5px",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "src/index.css:219",
+     "needle": "font-size: 13.5px; padding: 6px 13px 6px 9px"
+    }
+   ]
+  },
+  "font.size.fact": {
+   "$type": "dimension",
+   "$value": "14px",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "src/index.css:303",
+     "needle": ".facts p:not(.label) { font-size: 14px"
+    }
+   ]
+  },
+  "font.size.desc": {
+   "$type": "dimension",
+   "$value": "14.5px",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "src/index.css:244",
+     "needle": ".desc { font-size: 14.5px"
+    }
+   ]
+  },
+  "font.size.body": {
+   "$type": "dimension",
+   "$value": "15px",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "src/index.css:253",
+     "needle": ".body { font-size: 15px"
+    }
+   ]
+  },
+  "font.size.root": {
+   "$type": "dimension",
+   "$value": "16px",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "src/index.css:31",
+     "needle": "font-size: 16px;"
+    }
+   ]
+  },
+  "font.size.lead": {
+   "$type": "dimension",
+   "$value": "16.5px",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "src/index.css:103",
+     "needle": "font-size: 16.5px; line-height: 1.5;"
+    }
+   ]
+  },
+  "font.size.list-title": {
+   "$type": "dimension",
+   "$value": "27px",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "src/index.css:291",
+     "needle": "font-size: 27px; letter-spacing: 0; line-height: 0.933"
+    }
+   ]
+  },
+  "font.size.menu-link": {
+   "$type": "dimension",
+   "$value": "45px",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "src/index.css:387",
+     "needle": "font-size: 45px; line-height: 42px"
+    }
+   ]
+  },
+  "font.size.panel-title": {
+   "$type": "dimension",
+   "$value": "clamp(31px, 2.58vw, 42.5px)",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "src/index.css:242",
+     "needle": "font-size: clamp(31px, 2.58vw, 42.5px); line-height: 0.964"
+    }
+   ]
+  },
+  "font.size.cta-title": {
+   "$type": "dimension",
+   "$value": "clamp(21.3px, 1.624vw, 25.8px)",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "src/index.css:266",
+     "needle": "font-size: clamp(21.3px, 1.624vw, 25.8px)"
+    }
+   ]
+  },
+  "font.size.counter": {
+   "$type": "dimension",
+   "$value": "clamp(45px, 4.03vw, 67px)",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "src/index.css:148",
+     "needle": "font-size: clamp(45px, 4.03vw, 67px)"
+    }
+   ]
+  },
+  "font.size.caption-title": {
+   "$type": "dimension",
+   "$value": "clamp(21px, 1.68vw, 27px)",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "src/index.css:155",
+     "needle": "font-size: clamp(21px, 1.68vw, 27px)"
+    }
+   ]
+  },
+  "font.size.display-case": {
+   "$type": "dimension",
+   "$value": "clamp(64px, 11vw, 200px)",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "src/case.css:18",
+     "needle": "font-size: clamp(64px, 11vw, 200px)"
+    }
+   ]
+  },
+  "font.size.display-next": {
+   "$type": "dimension",
+   "$value": "clamp(56px, 8vw, 140px)",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "src/case.css:50",
+     "needle": "font-size: clamp(56px, 8vw, 140px)"
+    }
+   ]
+  },
+  "font.line.ui": {
+   "$type": "number",
+   "$value": "1.35",
+   "category": "lineHeight",
+   "evidence": [
+    {
+     "cite": "src/index.css:75",
+     "needle": "font-size: 13px; line-height: 1.35"
+    }
+   ]
+  },
+  "font.line.body": {
+   "$type": "number",
+   "$value": "1.5",
+   "category": "lineHeight",
+   "evidence": [
+    {
+     "cite": "src/index.css:103",
+     "needle": "font-size: 16.5px; line-height: 1.5;"
+    }
+   ]
+  },
+  "font.line.desc": {
+   "$type": "number",
+   "$value": "1.55",
+   "category": "lineHeight",
+   "evidence": [
+    {
+     "cite": "src/index.css:244",
+     "needle": ".desc { font-size: 14.5px; line-height: 1.55"
+    }
+   ]
+  },
+  "font.line.box-body": {
+   "$type": "number",
+   "$value": "1.6",
+   "category": "lineHeight",
+   "evidence": [
+    {
+     "cite": "src/index.css:253",
+     "needle": ".body { font-size: 15px; line-height: 1.6"
+    }
+   ]
+  },
+  "font.line.display-case": {
+   "$type": "number",
+   "$value": "0.92",
+   "category": "lineHeight",
+   "evidence": [
+    {
+     "cite": "src/case.css:18",
+     "needle": "line-height: 0.92; letter-spacing: -0.03em"
+    }
+   ]
+  },
+  "font.line.case-heading": {
+   "$type": "number",
+   "$value": "1.08",
+   "category": "lineHeight",
+   "evidence": [
+    {
+     "cite": "src/case.css:40",
+     "needle": "line-height: 1.08; letter-spacing: -0.015em"
+    }
+   ]
+  },
+  "font.line.panel-title": {
+   "$type": "number",
+   "$value": "0.964",
+   "category": "lineHeight",
+   "evidence": [
+    {
+     "cite": "src/index.css:242",
+     "needle": "line-height: 0.964"
+    }
+   ]
+  },
+  "font.tracking.display": {
+   "$type": "dimension",
+   "$value": "-0.03em",
+   "category": "letterSpacing",
+   "evidence": [
+    {
+     "cite": "src/case.css:18",
+     "needle": "line-height: 0.92; letter-spacing: -0.03em"
+    }
+   ]
+  },
+  "font.tracking.case-heading": {
+   "$type": "dimension",
+   "$value": "-0.015em",
+   "category": "letterSpacing",
+   "evidence": [
+    {
+     "cite": "src/case.css:40",
+     "needle": "letter-spacing: -0.015em"
+    }
+   ]
+  },
+  "font.tracking.panel-title": {
+   "$type": "dimension",
+   "$value": "-0.004em",
+   "category": "letterSpacing",
+   "evidence": [
+    {
+     "cite": "src/index.css:242",
+     "needle": "letter-spacing: -0.004em"
+    }
+   ]
+  },
+  "font.tracking.counter": {
+   "$type": "dimension",
+   "$value": "0.039em",
+   "category": "letterSpacing",
+   "evidence": [
+    {
+     "cite": "src/index.css:149",
+     "needle": "letter-spacing: 0.039em"
+    }
+   ]
+  }
+ }
+}

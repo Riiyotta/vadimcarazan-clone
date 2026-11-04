@@ -1,0 +1,215 @@
+{
+ "id": "conversion.brief-form",
+ "title": "Project brief form",
+ "version": "1.0.0",
+ "purpose": "Contact view: a short project brief (name, email, company, needs chips, budget chips, message) submitted by mail or to an endpoint, with a thank-you state.",
+ "semantic": {
+  "id": "conversion.brief-form",
+  "category": "CONVERSION"
+ },
+ "source": {
+  "id": "dom:section.view.v-contact",
+  "file": "src/components/Box.jsx",
+  "tag": "section",
+  "lines": "253",
+  "needle": "<section className={`view v-contact"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Box.jsx:172",
+   "needle": "function ContactView("
+  },
+  {
+   "cite": "src/components/Box.jsx:202",
+   "needle": "<form className={`cform"
+  }
+ ],
+ "iaSectionId": "conversion.contact-brief",
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "requires": [
+   "overlay.glass-box"
+  ],
+  "templates": [
+   "cosmos-home"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "label": {
+   "kind": "text",
+   "maxWords": 3,
+   "required": true
+  },
+  "title": {
+   "kind": "text",
+   "maxWords": 6,
+   "required": true
+  },
+  "sub": {
+   "kind": "text",
+   "maxWords": 20,
+   "required": true
+  },
+  "nameLabel": {
+   "kind": "text",
+   "maxWords": 2,
+   "required": true
+  },
+  "emailLabel": {
+   "kind": "text",
+   "maxWords": 2,
+   "required": true
+  },
+  "companyLabel": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": true
+  },
+  "needsLegend": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": true
+  },
+  "needs": {
+   "kind": "textList",
+   "maxWords": 3,
+   "minItems": 1,
+   "maxItems": 6,
+   "required": true
+  },
+  "budgetLegend": {
+   "kind": "text",
+   "maxWords": 2,
+   "required": true
+  },
+  "budgets": {
+   "kind": "textList",
+   "maxWords": 4,
+   "minItems": 1,
+   "maxItems": 6,
+   "required": true
+  },
+  "messageLabel": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": true
+  },
+  "messagePlaceholder": {
+   "kind": "text",
+   "maxWords": 14,
+   "required": true
+  },
+  "submitLabel": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": true
+  },
+  "notePrefix": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": true
+  },
+  "email": {
+   "kind": "link",
+   "maxWords": 1,
+   "required": true
+  },
+  "errorText": {
+   "kind": "text",
+   "maxWords": 20,
+   "required": true
+  },
+  "doneTitle": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": true
+  },
+  "doneText": {
+   "kind": "text",
+   "maxWords": 14,
+   "required": true
+  },
+  "doneBack": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": true
+  },
+  "delivery": {
+   "kind": "enum",
+   "values": [
+    "mailto",
+    "post-endpoint"
+   ],
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "view-crossfade",
+   "chip-toggle",
+   "field-focus"
+  ],
+  "default": "view-crossfade"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.glass"
+  ],
+  "text": [
+   "text.primary",
+   "text.muted",
+   "text.sub",
+   "text.error"
+  ]
+ },
+ "responsive": {
+  "phoneMaxWidth": 860,
+  "changes": [
+   "form rows become 1 column",
+   "Name is not auto-focused on phones"
+  ],
+  "cite": {
+   "cite": "src/index.css:450",
+   "needle": ".facts, .c-row { grid-template-columns: 1fr; }"
+  }
+ },
+ "layer": {
+  "position": "fixed",
+  "parent": "overlay.glass-box"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy",
+  "placeholder.url"
+ ],
+ "measured": {
+  "inFlowAt1440": false,
+  "positionAt1440": "fixed",
+  "source": "extraction/measured-values.json#sectionHeights",
+  "rectAt1440": [
+   -10.2,
+   100.6,
+   602.8,
+   769.6
+  ],
+  "rectAt390": [
+   17,
+   117,
+   356,
+   750
+  ],
+  "note": "position:fixed layer (or inside one); takes no page height."
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:480",
+   "needle": "- **Contact view** (brief form, gap 13px):"
+  },
+  {
+   "cite": "src/components/Box.jsx:189",
+   "needle": "// no backend in the replica: hand the brief to the mail client"
+  }
+ ]
+}

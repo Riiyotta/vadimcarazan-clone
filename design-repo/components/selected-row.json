@@ -1,0 +1,15 @@
+{
+ "id": "selected-row",
+ "kind": "component",
+ "description": "Thumbnail, serif title, kind and number in a hairline-bordered row.",
+ "uses": [
+  "serif-title",
+  "media-frame"
+ ],
+ "evidence": [
+  {
+   "cite": "src/index.css:285",
+   "needle": ".sel-item {"
+  }
+ ]
+}

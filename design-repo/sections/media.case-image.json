@@ -1,0 +1,104 @@
+{
+ "id": "media.case-image",
+ "title": "Case image",
+ "version": "1.0.0",
+ "purpose": "One full-width piece of the case study at its own aspect.",
+ "semantic": {
+  "id": "media.case-image",
+  "category": "MEDIA"
+ },
+ "source": {
+  "id": "dom:figure.cs-full",
+  "file": "src/pages/CaseStudy.jsx",
+  "tag": "figure",
+  "lines": "130",
+  "needle": "return <figure className=\"cs-full rv\" key={i}><Media"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/pages/CaseStudy.jsx:10",
+   "needle": "function Pic({"
+  },
+  {
+   "cite": "src/case.css:30",
+   "needle": ".cs-img {"
+  }
+ ],
+ "iaSectionId": "content.case-image",
+ "retrievalEligible": true,
+ "constraints": {
+  "templates": [
+   "case-study"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "media": {
+   "kind": "media",
+   "assetRoles": [
+    "work.piece-image",
+    "work.piece-video"
+   ],
+   "generatedAssetRoles": [
+    "generated.work-visual",
+    "user.work-media",
+    "placeholder.work-video"
+   ],
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "case-reveal",
+   "image-develop"
+  ],
+  "default": "case-reveal"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": []
+ },
+ "responsive": {
+  "phoneMaxWidth": 860,
+  "changes": [
+   "radius 12px"
+  ],
+  "cite": {
+   "cite": "src/case.css:74",
+   "needle": ".cs-img { border-radius: 12px; }"
+  }
+ },
+ "referenceAssetRoles": [
+  "work.piece-image",
+  "work.piece-video"
+ ],
+ "generatedAssetRoles": [
+  "generated.work-visual",
+  "original.copy",
+  "placeholder.work-video",
+  "user.work-media"
+ ],
+ "measured": {
+  "inFlowAt1440": true,
+  "positionAt1440": "static",
+  "source": "extraction/measured-values.json#sectionHeights",
+  "heightPx1440": {
+   "min": 777.6,
+   "max": 777.6,
+   "instances": 51,
+   "routes": 15
+  },
+  "heightPx390": {
+   "min": 201.4,
+   "max": 201.4
+  }
+ },
+ "evidence": [
+  {
+   "cite": "src/engine/data.js:62",
+   "needle": "out.push({ type: 'image', id: m[i] })"
+  }
+ ]
+}

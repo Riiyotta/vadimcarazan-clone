@@ -1,0 +1,14 @@
+{
+ "id": "now-caption",
+ "kind": "component",
+ "description": "3-digit serif index + title + kind, cap-aligned.",
+ "uses": [
+  "serif-title"
+ ],
+ "evidence": [
+  {
+   "cite": "src/index.css:144",
+   "needle": ".now {"
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+ "id": "chip-group",
+ "kind": "component",
+ "description": "Fieldset with a legend and wrapping chips.",
+ "uses": [
+  "chip"
+ ],
+ "evidence": [
+  {
+   "cite": "src/index.css:323",
+   "needle": ".chips {"
+  }
+ ]
+}

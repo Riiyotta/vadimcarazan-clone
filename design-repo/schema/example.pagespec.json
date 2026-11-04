@@ -1,0 +1,2334 @@
+{
+ "pageSpecVersion": "1.0.0",
+ "mode": "reference",
+ "template": "cosmos-home",
+ "route": "/",
+ "locale": "en",
+ "theme": "dark",
+ "meta": {
+  "title": "Morgan Ellsworth, Creative Director",
+  "description": "Placeholder portfolio — a 3D fly-through of the work."
+ },
+ "brand": {
+  "ownerName": "Morgan Ellsworth",
+  "studioName": "Fernway",
+  "domain": "vadimcarazan.com"
+ },
+ "nodes": [
+  {
+   "section": "shell.loader",
+   "content": {
+    "mark": {
+     "assetRole": "brand.logo-mark",
+     "ref": "clone://src/components/Mark.jsx",
+     "alt": ""
+    },
+    "label": "Loading"
+   },
+   "motion": {
+    "pattern": "loader-draw",
+    "reducedMotionFallback": "unchanged"
+   }
+  },
+  {
+   "section": "chrome.topbar",
+   "content": {
+    "homeMark": {
+     "assetRole": "brand.logo-mark",
+     "ref": "clone://src/components/Mark.jsx",
+     "alt": ""
+    },
+    "homeLabel": "Morgan Ellsworth, home",
+    "factKeys": [
+     "Currently:",
+     "Based in:",
+     "Navigation:"
+    ],
+    "role": "Creative Director",
+    "studio": {
+     "label": "Fernway",
+     "href": "#"
+    },
+    "city": "Leiria-Fátima, Portugal",
+    "timeZone": "Europe/Lisbon",
+    "navItems": [
+     {
+      "label": "Selected",
+      "action": "selected"
+     },
+     {
+      "label": "Work",
+      "action": "work"
+     },
+     {
+      "label": "About",
+      "action": "about"
+     },
+     {
+      "label": "Contact",
+      "action": "contact"
+     }
+    ],
+    "menuLabel": "Menu",
+    "closeLabel": "Close"
+   },
+   "motion": {
+    "pattern": "underline-grow",
+    "reducedMotionFallback": "unchanged"
+   },
+   "tokens": {
+    "surface": "surface.page",
+    "text": "text.primary"
+   }
+  },
+  {
+   "section": "shell.phone-menu",
+   "content": {
+    "links": [
+     {
+      "label": "Selected work",
+      "action": "selected"
+     },
+     {
+      "label": "Work",
+      "action": "work"
+     },
+     {
+      "label": "About",
+      "action": "about"
+     },
+     {
+      "label": "Contact",
+      "action": "contact"
+     }
+    ],
+    "leadText": "Ten years of brand identities, websites and products for founders, from first logos to companies raising their next round. Founder of",
+    "leadLink": {
+     "label": "Fernway",
+     "href": "#"
+    },
+    "leadTail": ". Scroll to fly through the work.",
+    "facts": [
+     {
+      "label": "Currently:",
+      "value": "Creative Director, Fernway"
+     },
+     {
+      "label": "Based in:",
+      "value": "Leiria-Fátima, Portugal"
+     }
+    ]
+   },
+   "motion": {
+    "pattern": "menu-panel",
+    "reducedMotionFallback": "unchanged"
+   },
+   "tokens": {
+    "surface": "surface.glass-menu",
+    "text": "text.primary"
+   }
+  },
+  {
+   "section": "hero.portrait-intro",
+   "content": {
+    "leadText": "Ten years of brand identities, websites and products for founders, from first logos to companies raising their next round. Founder of",
+    "leadLink": {
+     "label": "Fernway",
+     "href": "#"
+    },
+    "leadTail": ". Scroll to fly through the work.",
+    "startLabel": "Explore the work",
+    "name": "Morgan Ellsworth",
+    "nameLines": [
+     "Morgan",
+     "Ellsworth"
+    ],
+    "lettering": {
+     "assetRole": "brand.name-lettering",
+     "ref": "clone://src/components/Hero.jsx#FitText",
+     "alt": ""
+    }
+   },
+   "motion": {
+    "pattern": "hero-fade",
+    "reducedMotionFallback": "instant"
+   },
+   "tokens": {
+    "surface": "surface.page",
+    "text": "text.lead",
+    "font": "font.family.serif"
+   }
+  },
+  {
+   "section": "media.signature",
+   "content": {
+    "trace": {
+     "assetRole": "brand.signature-trace",
+     "ref": "clone://src/components/Signature.jsx#buildPath",
+     "alt": ""
+    }
+   },
+   "motion": {
+    "pattern": "signature-draw",
+    "reducedMotionFallback": "unchanged"
+   }
+  },
+  {
+   "section": "showcase.work-cosmos",
+   "content": {
+    "portrait": {
+     "assetRole": "portrait.subject-photo",
+     "ref": "clone://public/data/portrait.json",
+     "alt": ""
+    },
+    "works": [
+     {
+      "title": "Northwind",
+      "kind": "Brand, web and motion",
+      "description": "A placeholder for a real piece. Swap in your own image, title and a line about the idea behind it.",
+      "isCaseStudy": true,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100000/Device?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100001/Signage?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100002/Stationery?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100003/Branding?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100004/Website?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100005/Device?aspect=1.7778",
+        "alt": ""
+       }
+      ],
+      "slug": "northwind"
+     },
+     {
+      "title": "Halcyon",
+      "kind": "Visual identity",
+      "description": "Placeholder work. One sentence about the brief, one about the idea, and you are done.",
+      "isCaseStudy": true,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100050/Device?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100051/Signage?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100052/Stationery?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100053/Branding?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100054/Branding?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100055/Device?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100056/Signage?aspect=1.7778",
+        "alt": ""
+       }
+      ],
+      "slug": "halcyon"
+     },
+     {
+      "title": "Meridian",
+      "kind": "Brand identity and website",
+      "description": "A generated stand-in. The mark, the colours and the layout are all drawn from a seed.",
+      "isCaseStudy": true,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100100/Device?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100101/Signage?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100102/Stationery?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100103/Branding?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100104/Website?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100105/Device?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100106/Signage?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100107/Stationery?aspect=1.7778",
+        "alt": ""
+       }
+      ],
+      "slug": "meridian"
+     },
+     {
+      "title": "Fieldnote",
+      "kind": "Identity and digital",
+      "description": "Replace this with the story of the work: who it was for and what it had to do.",
+      "isCaseStudy": true,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100150/Device?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100151/Signage?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100152/Stationery?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100153/Branding?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100154/Website?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100155/Device?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100156/Signage?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100157/Stationery?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100158/Branding?aspect=1.7778",
+        "alt": ""
+       }
+      ],
+      "slug": "fieldnote"
+     },
+     {
+      "title": "Quarry Law",
+      "kind": "Brand identity",
+      "description": "Placeholder description. Keep it short, the work should do most of the talking.",
+      "isCaseStudy": true,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100200/Device?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100201/Signage?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100202/Stationery?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100203/Branding?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100204/Branding?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100205/Device?aspect=1.7778",
+        "alt": ""
+       }
+      ],
+      "slug": "quarry-law"
+     },
+     {
+      "title": "Lumen Labs",
+      "kind": "Website",
+      "description": "A placeholder for a real piece. Swap in your own image, title and a line about the idea behind it.",
+      "isCaseStudy": true,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100250/Device?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100251/Signage?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100252/Stationery?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100253/Branding?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100254/Website?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100255/Device?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100256/Signage?aspect=1.7778",
+        "alt": ""
+       }
+      ],
+      "slug": "lumen-labs"
+     },
+     {
+      "title": "Parallel",
+      "kind": "Brand and product",
+      "description": "Placeholder work. One sentence about the brief, one about the idea, and you are done.",
+      "isCaseStudy": true,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100300/Device?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100301/Signage?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100302/Stationery?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100303/Branding?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100304/Website?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100305/Device?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100306/Signage?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100307/Stationery?aspect=1.7778",
+        "alt": ""
+       }
+      ],
+      "slug": "parallel"
+     },
+     {
+      "title": "Atlas.ai",
+      "kind": "Rebrand and website",
+      "description": "A generated stand-in. The mark, the colours and the layout are all drawn from a seed.",
+      "isCaseStudy": true,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100350/Device?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100351/Signage?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100352/Stationery?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100353/Branding?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100354/Branding?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100355/Device?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100356/Signage?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100357/Stationery?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100358/Branding?aspect=1.7778",
+        "alt": ""
+       }
+      ],
+      "slug": "atlasai"
+     },
+     {
+      "title": "Kestrel",
+      "kind": "Brand identity and website",
+      "description": "Replace this with the story of the work: who it was for and what it had to do.",
+      "isCaseStudy": true,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100400/Device?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100401/Signage?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100402/Stationery?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100403/Branding?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100404/Website?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100405/Device?aspect=1.7778",
+        "alt": ""
+       }
+      ],
+      "slug": "kestrel"
+     },
+     {
+      "title": "Omnifield",
+      "kind": "Brand identity and website",
+      "description": "Placeholder description. Keep it short, the work should do most of the talking.",
+      "isCaseStudy": true,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100450/Device?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100451/Signage?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100452/Stationery?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100453/Branding?aspect=1.7778",
+        "alt": ""
+       }
+      ],
+      "slug": "omnifield"
+     },
+     {
+      "title": "Brightline",
+      "kind": "Brand identity and website",
+      "description": "A placeholder for a real piece. Swap in your own image, title and a line about the idea behind it.",
+      "isCaseStudy": true,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100500/Device?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100501/Signage?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100502/Stationery?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100503/Branding?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100504/Branding?aspect=1.7778",
+        "alt": ""
+       }
+      ],
+      "slug": "brightline"
+     },
+     {
+      "title": "Solace",
+      "kind": "Brand identity and website",
+      "description": "Placeholder work. One sentence about the brief, one about the idea, and you are done.",
+      "isCaseStudy": true,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100550/Device?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100551/Signage?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100552/Stationery?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100553/Branding?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100554/Website?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100555/Device?aspect=1.7778",
+        "alt": ""
+       }
+      ],
+      "slug": "solace"
+     },
+     {
+      "title": "Vantage",
+      "kind": "Brand identity and website",
+      "description": "A generated stand-in. The mark, the colours and the layout are all drawn from a seed.",
+      "isCaseStudy": true,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100600/Device?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100601/Signage?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100602/Stationery?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100603/Branding?aspect=1.7778",
+        "alt": ""
+       }
+      ],
+      "slug": "vantage"
+     },
+     {
+      "title": "Corvid",
+      "kind": "Brand identity and website",
+      "description": "Replace this with the story of the work: who it was for and what it had to do.",
+      "isCaseStudy": true,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100650/Device?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100651/Signage?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100652/Stationery?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100653/Branding?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100654/Branding?aspect=1.7778",
+        "alt": ""
+       }
+      ],
+      "slug": "corvid"
+     },
+     {
+      "title": "Tessera",
+      "kind": "Brand identity and website",
+      "description": "Placeholder description. Keep it short, the work should do most of the talking.",
+      "isCaseStudy": true,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100700/Device?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100701/Signage?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100702/Stationery?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100703/Branding?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100704/Website?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://100705/Device?aspect=1.7778",
+        "alt": ""
+       }
+      ],
+      "slug": "tessera"
+     },
+     {
+      "title": "Boae",
+      "kind": "App design",
+      "description": "A placeholder for a real piece. Swap in your own image, title and a line about the idea behind it.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://2977/App?aspect=1.3333",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3008/App?aspect=1.3333",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3039/App?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Fenhal",
+      "kind": "Key visual",
+      "description": "Replace this with the story of the work: who it was for and what it had to do.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3070/Poster?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Veltherther",
+      "kind": "Key visual",
+      "description": "Placeholder description. Keep it short, the work should do most of the talking.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3101/Poster?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3132/Poster?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Mercyra",
+      "kind": "Key visual",
+      "description": "Replace this with the story of the work: who it was for and what it had to do.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3163/Poster?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Strazenke",
+      "kind": "Visual identity",
+      "description": "Placeholder description. Keep it short, the work should do most of the talking.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3194/Branding?aspect=1.5",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3225/Branding?aspect=1.3333",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3256/Branding?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Fenonpi",
+      "kind": "Wordmark",
+      "description": "A generated stand-in. The mark, the colours and the layout are all drawn from a seed.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3287/Type?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Vaaelu",
+      "kind": "Symbol",
+      "description": "A placeholder for a real piece. Swap in your own image, title and a line about the idea behind it.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3318/Logo?aspect=1.7778",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Solmen",
+      "kind": "Visual identity",
+      "description": "A generated stand-in. The mark, the colours and the layout are all drawn from a seed.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3349/Branding?aspect=1.3333",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3380/Branding?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3411/Branding?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Ethquarid",
+      "kind": "Poster",
+      "description": "A generated stand-in. The mark, the colours and the layout are all drawn from a seed.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3442/Poster?aspect=1.7778",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Rasollot",
+      "kind": "Website",
+      "description": "A generated stand-in. The mark, the colours and the layout are all drawn from a seed.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3473/Device?aspect=0.8",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Dalent",
+      "kind": "Logo",
+      "description": "A placeholder for a real piece. Swap in your own image, title and a line about the idea behind it.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3504/Logo?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Norfendal",
+      "kind": "Wordmark",
+      "description": "A generated stand-in. The mark, the colours and the layout are all drawn from a seed.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3535/Type?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Kinrytic",
+      "kind": "Pattern system",
+      "description": "Placeholder work. One sentence about the brief, one about the idea, and you are done.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3566/Pattern?aspect=0.8",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Mopither",
+      "kind": "Product design",
+      "description": "Placeholder work. One sentence about the brief, one about the idea, and you are done.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3597/Device?aspect=1.7778",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Ixvakin",
+      "kind": "Logo, unused direction",
+      "description": "A placeholder for a real piece. Swap in your own image, title and a line about the idea behind it.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3628/Logo?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Arnor",
+      "kind": "Visual identity",
+      "description": "A placeholder for a real piece. Swap in your own image, title and a line about the idea behind it.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3659/Branding?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3690/Branding?aspect=1.3333",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3721/Branding?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Rymo",
+      "kind": "Pattern system",
+      "description": "Placeholder work. One sentence about the brief, one about the idea, and you are done.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3752/Pattern?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Quaro",
+      "kind": "Logo, unused direction",
+      "description": "A generated stand-in. The mark, the colours and the layout are all drawn from a seed.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3783/Logo?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Armaquar",
+      "kind": "Landing page",
+      "description": "Placeholder description. Keep it short, the work should do most of the talking.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3814/Website?aspect=1.7778",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Rylotmen",
+      "kind": "Logo",
+      "description": "Placeholder work. One sentence about the brief, one about the idea, and you are done.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3845/Logo?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Ixlotry",
+      "kind": "Product design",
+      "description": "Replace this with the story of the work: who it was for and what it had to do.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3876/Device?aspect=1.3333",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3907/Device?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Ryke",
+      "kind": "Illustration",
+      "description": "Replace this with the story of the work: who it was for and what it had to do.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3938/Pattern?aspect=1.3333",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://3969/Pattern?aspect=1.5",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Solzenian",
+      "kind": "Logo and branding",
+      "description": "Placeholder work. One sentence about the brief, one about the idea, and you are done.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4000/Logo?aspect=1.2",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Aron",
+      "kind": "Poster",
+      "description": "A placeholder for a real piece. Swap in your own image, title and a line about the idea behind it.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4031/Poster?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Straonma",
+      "kind": "Identity system",
+      "description": "Replace this with the story of the work: who it was for and what it had to do.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4062/Branding?aspect=1.5",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4093/Branding?aspect=1.3333",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4124/Branding?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Entnorfen",
+      "kind": "Lettering",
+      "description": "Placeholder description. Keep it short, the work should do most of the talking.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4155/Type?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Luma",
+      "kind": "Web design",
+      "description": "A placeholder for a real piece. Swap in your own image, title and a line about the idea behind it.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4186/Website?aspect=1.5",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Normer",
+      "kind": "Mobile app",
+      "description": "Replace this with the story of the work: who it was for and what it had to do.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4217/App?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4248/App?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Velid",
+      "kind": "Mobile app",
+      "description": "A placeholder for a real piece. Swap in your own image, title and a line about the idea behind it.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4279/App?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Idaedal",
+      "kind": "Stationery",
+      "description": "Placeholder work. One sentence about the brief, one about the idea, and you are done.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4310/Stationery?aspect=0.8",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Mamaquar",
+      "kind": "Campaign",
+      "description": "A placeholder for a real piece. Swap in your own image, title and a line about the idea behind it.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4341/Poster?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Keixtal",
+      "kind": "Out of home",
+      "description": "Placeholder work. One sentence about the brief, one about the idea, and you are done.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4372/Signage?aspect=1.7778",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Solcyquar",
+      "kind": "Website",
+      "description": "A generated stand-in. The mark, the colours and the layout are all drawn from a seed.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4403/Device?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Pientry",
+      "kind": "Pattern system",
+      "description": "A generated stand-in. The mark, the colours and the layout are all drawn from a seed.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4434/Pattern?aspect=1.7778",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Moquar",
+      "kind": "Symbol",
+      "description": "A generated stand-in. The mark, the colours and the layout are all drawn from a seed.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4465/Logo?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Idoeth",
+      "kind": "Illustration",
+      "description": "Placeholder description. Keep it short, the work should do most of the talking.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4496/Pattern?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Onsol",
+      "kind": "Visual identity",
+      "description": "Placeholder work. One sentence about the brief, one about the idea, and you are done.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4527/Branding?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Fenianfen",
+      "kind": "Wordmark",
+      "description": "Replace this with the story of the work: who it was for and what it had to do.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4558/Type?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Mavelquar",
+      "kind": "Type study",
+      "description": "Placeholder work. One sentence about the brief, one about the idea, and you are done.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4589/Type?aspect=1.3333",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4620/Type?aspect=1.7778",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4651/Type?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Raarar",
+      "kind": "Web design",
+      "description": "A placeholder for a real piece. Swap in your own image, title and a line about the idea behind it.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4682/Website?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Dallulu",
+      "kind": "Campaign",
+      "description": "Placeholder description. Keep it short, the work should do most of the talking.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4713/Poster?aspect=1.7778",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Oonpi",
+      "kind": "Stationery",
+      "description": "Placeholder description. Keep it short, the work should do most of the talking.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4744/Stationery?aspect=1.5",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Luo",
+      "kind": "Identity system",
+      "description": "A generated stand-in. The mark, the colours and the layout are all drawn from a seed.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4775/Branding?aspect=1.3333",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4806/Branding?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Pike",
+      "kind": "Campaign",
+      "description": "Placeholder work. One sentence about the brief, one about the idea, and you are done.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4837/Poster?aspect=1.3333",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4868/Poster?aspect=1.3333",
+        "alt": ""
+       },
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4899/Poster?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Arnor",
+      "kind": "Product design",
+      "description": "Replace this with the story of the work: who it was for and what it had to do.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4930/App?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Ixra",
+      "kind": "Brand graphics",
+      "description": "A placeholder for a real piece. Swap in your own image, title and a line about the idea behind it.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4961/Pattern?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Daltichal",
+      "kind": "Stationery",
+      "description": "Placeholder work. One sentence about the brief, one about the idea, and you are done.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://4992/Stationery?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Velixzen",
+      "kind": "Product design",
+      "description": "Placeholder description. Keep it short, the work should do most of the talking.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5023/App?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Norsol",
+      "kind": "Brand identity",
+      "description": "A placeholder for a real piece. Swap in your own image, title and a line about the idea behind it.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5054/Branding?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Entdalo",
+      "kind": "Landing page",
+      "description": "Replace this with the story of the work: who it was for and what it had to do.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5085/Website?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Arstraent",
+      "kind": "Campaign",
+      "description": "Replace this with the story of the work: who it was for and what it had to do.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5116/Poster?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Therva",
+      "kind": "Stationery",
+      "description": "Placeholder description. Keep it short, the work should do most of the talking.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5147/Stationery?aspect=0.8",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Keenteth",
+      "kind": "Product design",
+      "description": "A generated stand-in. The mark, the colours and the layout are all drawn from a seed.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5178/App?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Ketalzen",
+      "kind": "Type study",
+      "description": "Placeholder work. One sentence about the brief, one about the idea, and you are done.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5209/Type?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Talva",
+      "kind": "Stationery",
+      "description": "Placeholder work. One sentence about the brief, one about the idea, and you are done.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5240/Stationery?aspect=1.7778",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Ethfen",
+      "kind": "Visual identity",
+      "description": "Placeholder description. Keep it short, the work should do most of the talking.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5271/Branding?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Mamerry",
+      "kind": "Out of home",
+      "description": "Replace this with the story of the work: who it was for and what it had to do.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5302/Signage?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Ixmer",
+      "kind": "Poster",
+      "description": "A placeholder for a real piece. Swap in your own image, title and a line about the idea behind it.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5333/Poster?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Mernu",
+      "kind": "Logo",
+      "description": "Placeholder description. Keep it short, the work should do most of the talking.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5364/Logo?aspect=0.8",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Ticar",
+      "kind": "Landing page",
+      "description": "Placeholder work. One sentence about the brief, one about the idea, and you are done.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5395/Website?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Thervara",
+      "kind": "Brand identity",
+      "description": "A placeholder for a real piece. Swap in your own image, title and a line about the idea behind it.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5426/Branding?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Idtal",
+      "kind": "Wordmark",
+      "description": "Placeholder description. Keep it short, the work should do most of the talking.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5457/Type?aspect=1.7778",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Ryva",
+      "kind": "Out of home",
+      "description": "Placeholder description. Keep it short, the work should do most of the talking.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5488/Signage?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Cyhalix",
+      "kind": "Logo and branding",
+      "description": "Replace this with the story of the work: who it was for and what it had to do.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5519/Logo?aspect=1.7778",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Piarhal",
+      "kind": "Campaign",
+      "description": "Placeholder description. Keep it short, the work should do most of the talking.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5550/Poster?aspect=1.7778",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Iancy",
+      "kind": "Brand identity",
+      "description": "Placeholder work. One sentence about the brief, one about the idea, and you are done.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5581/Branding?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Luoma",
+      "kind": "Type study",
+      "description": "Placeholder work. One sentence about the brief, one about the idea, and you are done.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5612/Type?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Talma",
+      "kind": "App design",
+      "description": "Placeholder description. Keep it short, the work should do most of the talking.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5643/App?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Kintal",
+      "kind": "Stationery",
+      "description": "A generated stand-in. The mark, the colours and the layout are all drawn from a seed.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5674/Stationery?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Stratic",
+      "kind": "Lettering",
+      "description": "A generated stand-in. The mark, the colours and the layout are all drawn from a seed.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5705/Type?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Monor",
+      "kind": "Illustration",
+      "description": "Placeholder work. One sentence about the brief, one about the idea, and you are done.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5736/Pattern?aspect=1.7778",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Zenhal",
+      "kind": "Logo, unused direction",
+      "description": "Placeholder work. One sentence about the brief, one about the idea, and you are done.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5767/Logo?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Kinraid",
+      "kind": "Website",
+      "description": "Replace this with the story of the work: who it was for and what it had to do.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5798/Website?aspect=1.7778",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Luixbo",
+      "kind": "Illustration",
+      "description": "Placeholder description. Keep it short, the work should do most of the talking.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5829/Pattern?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Arlunu",
+      "kind": "Website",
+      "description": "Placeholder work. One sentence about the brief, one about the idea, and you are done.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5860/Website?aspect=1.7778",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Rahal",
+      "kind": "Web design",
+      "description": "Replace this with the story of the work: who it was for and what it had to do.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5891/Website?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Therketal",
+      "kind": "Website",
+      "description": "A placeholder for a real piece. Swap in your own image, title and a line about the idea behind it.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5922/Device?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Kintal",
+      "kind": "Identity system",
+      "description": "Replace this with the story of the work: who it was for and what it had to do.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5953/Branding?aspect=1.7778",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Straeth",
+      "kind": "Visual identity",
+      "description": "Placeholder work. One sentence about the brief, one about the idea, and you are done.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://5984/Branding?aspect=1.7778",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Ticry",
+      "kind": "Lettering",
+      "description": "Placeholder description. Keep it short, the work should do most of the talking.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://6015/Type?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Idboma",
+      "kind": "Web design",
+      "description": "A generated stand-in. The mark, the colours and the layout are all drawn from a seed.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://6046/Website?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Feniddal",
+      "kind": "Stationery",
+      "description": "Replace this with the story of the work: who it was for and what it had to do.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://6077/Stationery?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Motic",
+      "kind": "Website",
+      "description": "Placeholder description. Keep it short, the work should do most of the talking.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://6108/Device?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Ryra",
+      "kind": "Type study",
+      "description": "Placeholder work. One sentence about the brief, one about the idea, and you are done.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://6139/Type?aspect=1.3333",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "title": "Dalticvel",
+      "kind": "Visual identity",
+      "description": "A generated stand-in. The mark, the colours and the layout are all drawn from a seed.",
+      "isCaseStudy": false,
+      "media": [
+       {
+        "assetRole": "work.piece-image",
+        "ref": "clone-art://6170/Branding?aspect=1.7778",
+        "alt": ""
+       }
+      ]
+     }
+    ]
+   },
+   "motion": {
+    "pattern": "portrait-arrival",
+    "reducedMotionFallback": "unchanged"
+   }
+  },
+  {
+   "section": "utility.fly-fades",
+   "content": {
+    "visibleWhen": "far"
+   },
+   "motion": {
+    "pattern": "fade-layers",
+    "reducedMotionFallback": "unchanged"
+   }
+  },
+  {
+   "section": "utility.flybar",
+   "content": {
+    "backLabel": "Back to home",
+    "backShortLabel": "Back",
+    "seenTemplate": "{seen} of {total} works",
+    "allSeenTemplate": "All {total} works seen"
+   },
+   "motion": {
+    "pattern": "flybar-reveal",
+    "reducedMotionFallback": "instant"
+   }
+  },
+  {
+   "section": "chrome.social",
+   "content": {
+    "label": "Elsewhere:",
+    "links": [
+     {
+      "label": "X",
+      "href": "#"
+     },
+     {
+      "label": "Dribbble",
+      "href": "#"
+     },
+     {
+      "label": "LinkedIn",
+      "href": "#"
+     }
+    ]
+   },
+   "motion": {
+    "pattern": "side-reveal",
+    "reducedMotionFallback": "unchanged"
+   }
+  },
+  {
+   "section": "overlay.glass-box",
+   "content": {
+    "views": [
+     "project",
+     "selected",
+     "about",
+     "contact"
+    ],
+    "closeLabel": "Close"
+   },
+   "motion": {
+    "pattern": "box-slide",
+    "reducedMotionFallback": "instant"
+   },
+   "tokens": {
+    "surface": "surface.glass"
+   }
+  },
+  {
+   "section": "detail.project-view",
+   "content": {
+    "copyLinkLabel": "Copy link",
+    "copiedLabel": "Link copied",
+    "caseStudyLabel": "Read the case study",
+    "piecesLabel": "pieces",
+    "cta": {
+     "kicker": "Have something in mind?",
+     "title": "Let's make the next one yours.",
+     "button": {
+      "label": "Start a project",
+      "href": "?open=contact"
+     },
+     "alt": {
+      "label": "See the studio",
+      "href": "#"
+     }
+    }
+   },
+   "motion": {
+    "pattern": "view-crossfade",
+    "reducedMotionFallback": "instant"
+   },
+   "tokens": {
+    "surface": "surface.glass",
+    "text": "text.body"
+   }
+  },
+  {
+   "section": "index.selected-list",
+   "content": {
+    "label": "Selected work",
+    "title": "A few to start with.",
+    "body": "Full case studies, each one a brand and a website built together. Pick one and the flight takes you straight to it.",
+    "items": [
+     {
+      "title": "Northwind",
+      "kind": "Brand, web and motion",
+      "workSlug": "northwind",
+      "thumb": {
+       "assetRole": "work.piece-image",
+       "ref": "clone-art://100000/Device?aspect=1.7778",
+       "alt": ""
+      }
+     },
+     {
+      "title": "Halcyon",
+      "kind": "Visual identity",
+      "workSlug": "halcyon",
+      "thumb": {
+       "assetRole": "work.piece-image",
+       "ref": "clone-art://100050/Device?aspect=1.7778",
+       "alt": ""
+      }
+     },
+     {
+      "title": "Meridian",
+      "kind": "Brand identity and website",
+      "workSlug": "meridian",
+      "thumb": {
+       "assetRole": "work.piece-image",
+       "ref": "clone-art://100100/Device?aspect=1.7778",
+       "alt": ""
+      }
+     },
+     {
+      "title": "Fieldnote",
+      "kind": "Identity and digital",
+      "workSlug": "fieldnote",
+      "thumb": {
+       "assetRole": "work.piece-image",
+       "ref": "clone-art://100150/Device?aspect=1.7778",
+       "alt": ""
+      }
+     },
+     {
+      "title": "Quarry Law",
+      "kind": "Brand identity",
+      "workSlug": "quarry-law",
+      "thumb": {
+       "assetRole": "work.piece-image",
+       "ref": "clone-art://100200/Device?aspect=1.7778",
+       "alt": ""
+      }
+     },
+     {
+      "title": "Lumen Labs",
+      "kind": "Website",
+      "workSlug": "lumen-labs",
+      "thumb": {
+       "assetRole": "work.piece-image",
+       "ref": "clone-art://100250/Device?aspect=1.7778",
+       "alt": ""
+      }
+     },
+     {
+      "title": "Parallel",
+      "kind": "Brand and product",
+      "workSlug": "parallel",
+      "thumb": {
+       "assetRole": "work.piece-image",
+       "ref": "clone-art://100300/Device?aspect=1.7778",
+       "alt": ""
+      }
+     },
+     {
+      "title": "Atlas.ai",
+      "kind": "Rebrand and website",
+      "workSlug": "atlasai",
+      "thumb": {
+       "assetRole": "work.piece-image",
+       "ref": "clone-art://100350/Device?aspect=1.7778",
+       "alt": ""
+      }
+     }
+    ],
+    "footPrefix": "Or",
+    "footLink": "fly through everything",
+    "footSuffix": ", {total} works in the order they were made."
+   },
+   "motion": {
+    "pattern": "view-crossfade",
+    "reducedMotionFallback": "instant"
+   },
+   "tokens": {
+    "surface": "surface.glass",
+    "text": "text.body"
+   }
+  },
+  {
+   "section": "about.studio-bio",
+   "content": {
+    "label": "About",
+    "title": "I make brands for founders who are building something new.",
+    "paragraphs": [
+     "I'm Morgan. This paragraph is a placeholder for how you started, what you studied and how you ended up doing this work for a living, roughly two sentences long.",
+     "A second placeholder paragraph about how you work today: who you work with, how long projects take and what you care about getting right."
+    ],
+    "clientsLabel": "Selected clients",
+    "clients": [
+     "Northwind",
+     "Halcyon",
+     "Meridian",
+     "Fieldnote",
+     "Quarry Law",
+     "Lumen Labs",
+     "Parallel",
+     "Atlas.ai"
+    ],
+    "clientsTail": "Omnifield",
+    "statsLabel": "On this page",
+    "statsTemplate": "{images} images from {projects} projects",
+    "elsewhereLabel": "Elsewhere",
+    "elsewhereLinks": [
+     {
+      "label": "X",
+      "href": "#"
+     },
+     {
+      "label": "Dribbble",
+      "href": "#"
+     },
+     {
+      "label": "LinkedIn",
+      "href": "#"
+     }
+    ],
+    "contactLabel": "Contact",
+    "contactAction": "Send me a message",
+    "cta": {
+     "kicker": "Have something in mind?",
+     "title": "Let's make the next one yours.",
+     "button": {
+      "label": "Start a project",
+      "href": "?open=contact"
+     },
+     "alt": {
+      "label": "See the studio",
+      "href": "#"
+     }
+    }
+   },
+   "motion": {
+    "pattern": "view-crossfade",
+    "reducedMotionFallback": "instant"
+   },
+   "tokens": {
+    "surface": "surface.glass",
+    "text": "text.body"
+   }
+  },
+  {
+   "section": "conversion.brief-form",
+   "content": {
+    "label": "Start a project",
+    "title": "Tell me what you're building.",
+    "sub": "A few lines are enough. I reply to every brief within two working days.",
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "companyLabel": "Company or website",
+    "needsLegend": "What do you need?",
+    "needs": [
+     "Brand identity",
+     "Website",
+     "Product design",
+     "Pitch deck",
+     "Something else"
+    ],
+    "budgetLegend": "Budget",
+    "budgets": [
+     "Under €10k",
+     "€10k to €25k",
+     "€25k to €50k",
+     "€50k+",
+     "Not sure yet"
+    ],
+    "messageLabel": "About the project",
+    "messagePlaceholder": "What the company does, what you need and when.",
+    "submitLabel": "Send the brief",
+    "notePrefix": "Or write to",
+    "email": {
+     "label": "hello@example.com",
+     "href": "mailto:hello@example.com"
+    },
+    "errorText": "Please fill in your name, a valid email and a few words about the project.",
+    "doneTitle": "Thank you",
+    "doneText": "I'll be in touch within two working days.",
+    "doneBack": "Back to the work",
+    "delivery": "mailto"
+   },
+   "motion": {
+    "pattern": "view-crossfade",
+    "reducedMotionFallback": "instant"
+   },
+   "tokens": {
+    "surface": "surface.glass",
+    "text": "text.sub"
+   }
+  },
+  {
+   "section": "utility.hover-hud",
+   "content": {
+    "labelSource": "work-title"
+   },
+   "motion": {
+    "pattern": "hud-follow",
+    "reducedMotionFallback": "unchanged"
+   }
+  },
+  {
+   "section": "utility.copy-toast",
+   "content": {
+    "label": "Link copied"
+   },
+   "motion": {
+    "pattern": "toast-rise",
+    "reducedMotionFallback": "unchanged"
+   }
+  }
+ ]
+}

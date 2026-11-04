@@ -1,0 +1,298 @@
+{
+ "version": "1.0.0",
+ "availabilityEnum": [
+  "reference-only",
+  "generation-safe",
+  "blocked-for-generation"
+ ],
+ "referencePolicyEnum": [
+  "clone-placeholder-only",
+  "cite-as-evidence-only",
+  "not-applicable"
+ ],
+ "generationPolicyEnum": [
+  "may-generate-new",
+  "may-reuse-licensed",
+  "must-not-reuse",
+  "user-supplied-only"
+ ],
+ "note": "Availability is ALSO pinned in code (PINNED_AVAILABILITY in extraction/verify_all.py and schema/semantic_validate.py); editing this file alone cannot loosen it. No source mark is ever reusable in generated mode. Generated media refs must use generated://, placeholder:// or user://.",
+ "roles": {
+  "brand.logo-mark": {
+   "availability": "blocked-for-generation",
+   "description": "The site's logo mark: the original's logo.png (two-stroke mark) and, in the clone, its own placeholder mark (Mark.jsx). Identifies the source in either form.",
+   "referencePolicy": "clone-placeholder-only",
+   "generationPolicy": "must-not-reuse",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:363",
+     "needle": "- Other assets: `logo.png` 744x640"
+    },
+    {
+     "cite": "src/components/Mark.jsx:2",
+     "needle": "export const MARK_STROKES"
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "generated.brand-mark",
+    "placeholder.brand-mark"
+   ],
+   "licensing": "Source is the real, live portfolio of a named designer (vadimcarazan.com). Never reproduce the original's work images, portrait, signature, lettering, logo or copy - not in generated pages and not in the reference build (the clone already uses its own placeholders). Reference mode may cite the original only as evidence."
+  },
+  "brand.name-lettering": {
+   "availability": "blocked-for-generation",
+   "description": "The giant name at the bottom of the hero. The original is SVG outlines of the owner's lettering; the clone sets its placeholder name in the serif.",
+   "referencePolicy": "clone-placeholder-only",
+   "generationPolicy": "must-not-reuse",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:409",
+     "needle": "- **Replace with our own lettering**"
+    },
+    {
+     "cite": "src/components/Hero.jsx:63",
+     "needle": "<h1 className=\"bigname\""
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "generated.name-lettering"
+   ],
+   "licensing": "Source is the real, live portfolio of a named designer (vadimcarazan.com). Never reproduce the original's work images, portrait, signature, lettering, logo or copy - not in generated pages and not in the reference build (the clone already uses its own placeholders). Reference mode may cite the original only as evidence."
+  },
+  "brand.signature-trace": {
+   "availability": "blocked-for-generation",
+   "description": "Hand signature behind the canvas: the original is the owner's handwriting; the clone draws its own generated pen line.",
+   "referencePolicy": "clone-placeholder-only",
+   "generationPolicy": "must-not-reuse",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:231",
+     "needle": "- **Replace with our own signature path.**"
+    },
+    {
+     "cite": "src/components/Signature.jsx:5",
+     "needle": "function buildPath()"
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "generated.signature"
+   ],
+   "licensing": "Source is the real, live portfolio of a named designer (vadimcarazan.com). Never reproduce the original's work images, portrait, signature, lettering, logo or copy - not in generated pages and not in the reference build (the clone already uses its own placeholders). Reference mode may cite the original only as evidence."
+  },
+  "portrait.subject-photo": {
+   "availability": "blocked-for-generation",
+   "description": "The halftoned head-and-shoulders photo the cosmos forms. Original: the owner's photo baked into data/cosmos.json. Clone: a user-supplied photo (content/portrait.png) halftoned to public/data/portrait.json. Both are real people's likenesses.",
+   "referencePolicy": "clone-placeholder-only",
+   "generationPolicy": "must-not-reuse",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:10",
+     "needle": "- The portrait halftone data (`data/cosmos.json`"
+    },
+    {
+     "cite": "src/engine/data.js:264",
+     "needle": "getJSON('/data/portrait.json')"
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "user.portrait-photo",
+    "generated.portrait-silhouette"
+   ],
+   "licensing": "Source is the real, live portfolio of a named designer (vadimcarazan.com). Never reproduce the original's work images, portrait, signature, lettering, logo or copy - not in generated pages and not in the reference build (the clone already uses its own placeholders). Reference mode may cite the original only as evidence."
+  },
+  "work.piece-image": {
+   "availability": "reference-only",
+   "description": "A work piece (atlas tile, hi-res close-up, box gallery image, case-study board). The original's 1,067 images are the owner's client work; the clone draws procedural stand-ins from seeds (src/engine/art.js).",
+   "referencePolicy": "clone-placeholder-only",
+   "generationPolicy": "must-not-reuse",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:348",
+     "needle": "- 1,067 images from 730 projects."
+    },
+    {
+     "cite": "src/engine/art.js:234",
+     "needle": "export function artURL(seed, kind, W, H)"
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "generated.work-visual",
+    "user.work-media"
+   ],
+   "licensing": "Source is the real, live portfolio of a named designer (vadimcarazan.com). Never reproduce the original's work images, portrait, signature, lettering, logo or copy - not in generated pages and not in the reference build (the clone already uses its own placeholders). Reference mode may cite the original only as evidence."
+  },
+  "work.piece-video": {
+   "availability": "reference-only",
+   "description": "A looping work video (original: 8 video entries). The clone's placeholder data has none; the code path exists.",
+   "referencePolicy": "clone-placeholder-only",
+   "generationPolicy": "must-not-reuse",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:348",
+     "needle": "1,068 media entries, 8 of them videos"
+    },
+    {
+     "cite": "src/pages/CaseStudy.jsx:128",
+     "needle": "if (s.type === 'video')"
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "placeholder.work-video",
+    "user.work-media"
+   ],
+   "licensing": "Source is the real, live portfolio of a named designer (vadimcarazan.com). Never reproduce the original's work images, portrait, signature, lettering, logo or copy - not in generated pages and not in the reference build (the clone already uses its own placeholders). Reference mode may cite the original only as evidence."
+  },
+  "font.display-original": {
+   "availability": "reference-only",
+   "description": "PP Editorial Old Italic, the original's commercial display face (self-hosted woff2). Never shipped by the clone.",
+   "referencePolicy": "cite-as-evidence-only",
+   "generationPolicy": "must-not-reuse",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:93",
+     "needle": "| `--serif` | \"Editorial Old Italic\""
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "licensed-or-fallback.font"
+   ],
+   "licensing": "Source is the real, live portfolio of a named designer (vadimcarazan.com). Never reproduce the original's work images, portrait, signature, lettering, logo or copy - not in generated pages and not in the reference build (the clone already uses its own placeholders). Reference mode may cite the original only as evidence."
+  },
+  "social.share-image-original": {
+   "availability": "reference-only",
+   "description": "The original's og:image (og.jpg). The clone ships none.",
+   "referencePolicy": "cite-as-evidence-only",
+   "generationPolicy": "must-not-reuse",
+   "evidence": [
+    {
+     "cite": "Vadim Carazan, Creative Director.html:21",
+     "needle": "og.jpg"
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "generated.work-visual"
+   ],
+   "licensing": "Source is the real, live portfolio of a named designer (vadimcarazan.com). Never reproduce the original's work images, portrait, signature, lettering, logo or copy - not in generated pages and not in the reference build (the clone already uses its own placeholders). Reference mode may cite the original only as evidence."
+  },
+  "generated.brand-mark": {
+   "availability": "generation-safe",
+   "description": "A mark generated for, or supplied by, the new page's owner.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": []
+  },
+  "placeholder.brand-mark": {
+   "availability": "generation-safe",
+   "description": "A neutral geometric placeholder mark (e.g. two strokes) with no source shape.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": []
+  },
+  "generated.name-lettering": {
+   "availability": "generation-safe",
+   "description": "The new owner's name set in the licensed serif (licensed-or-fallback.font), fitted full-bleed.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": []
+  },
+  "generated.signature": {
+   "availability": "generation-safe",
+   "description": "A procedurally generated pen line; never traced from a real signature.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": []
+  },
+  "user.portrait-photo": {
+   "availability": "generation-safe",
+   "description": "A portrait the new page's owner supplies of themselves, with consent. Never a stock or third-party likeness.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "user-supplied-only",
+   "evidence": []
+  },
+  "generated.portrait-silhouette": {
+   "availability": "generation-safe",
+   "description": "The neutral generated head-and-shoulders silhouette (data.js drawPortrait) or another non-identifying figure.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": [
+    {
+     "cite": "src/engine/data.js:127",
+     "needle": "function drawPortrait(S)"
+    }
+   ]
+  },
+  "generated.work-visual": {
+   "availability": "generation-safe",
+   "description": "Procedurally drawn or newly generated work imagery (logos, boards, mockups) with no client marks.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": []
+  },
+  "user.work-media": {
+   "availability": "generation-safe",
+   "description": "The new owner's own work images or videos, supplied by them.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "user-supplied-only",
+   "evidence": []
+  },
+  "placeholder.work-video": {
+   "availability": "generation-safe",
+   "description": "A neutral looping placeholder video.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": []
+  },
+  "licensed-or-fallback.font": {
+   "availability": "generation-safe",
+   "description": "Instrument Serif (OFL) / Inter Tight (OFL), as the clone ships them.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-reuse-licensed",
+   "evidence": [
+    {
+     "cite": "index.html:12",
+     "needle": "family=Instrument+Serif"
+    }
+   ]
+  },
+  "icon.ui": {
+   "availability": "generation-safe",
+   "description": "The clone's own 14px stroke icons (arrow, chevron, cross, rewind, link).",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-reuse-licensed",
+   "evidence": [
+    {
+     "cite": "src/components/Icons.jsx:3",
+     "needle": "export const ArrowDown"
+    }
+   ]
+  },
+  "placeholder.url": {
+   "availability": "generation-safe",
+   "description": "Links on reserved domains only (.example, .invalid, example.com/.org/.net), relative paths, query strings or anchors.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": []
+  },
+  "original.copy": {
+   "availability": "generation-safe",
+   "description": "Newly written copy for the new owner; no source sentence or 6-word window.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": []
+  },
+  "fictional.person": {
+   "availability": "generation-safe",
+   "description": "Fictional owner / client names. The source has no avatars, reviewer photos or testimonials (grep of the snapshot), so no avatar role exists.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": []
+  },
+  "placeholder.metric": {
+   "availability": "generation-safe",
+   "description": "Fictional counts (pieces, projects, years). Stands in for the source's real claims ('1,067 works', 'fourteen years'); the source has no ratings or reviews, so this is the rating/metric placeholder.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": []
+  }
+ }
+}

@@ -1,0 +1,86 @@
+{
+ "id": "media.case-video",
+ "title": "Case video",
+ "version": "1.0.0",
+ "purpose": "A full-width looping muted video block. Supported by the code and the import format; no served route renders one with the placeholder data.",
+ "semantic": {
+  "id": "media.case-video",
+  "category": "MEDIA"
+ },
+ "source": {
+  "id": "dom:figure.cs-full>video",
+  "file": "src/pages/CaseStudy.jsx",
+  "tag": "figure",
+  "lines": "129",
+  "needle": "return <figure className=\"cs-full rv\" key={i}><video"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/pages/CaseStudy.jsx:128",
+   "needle": "if (s.type === 'video')"
+  }
+ ],
+ "iaSectionId": "content.case-video",
+ "retrievalEligible": true,
+ "constraints": {
+  "templates": [
+   "case-study"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "video": {
+   "kind": "media",
+   "assetRoles": [
+    "work.piece-video"
+   ],
+   "generatedAssetRoles": [
+    "placeholder.work-video",
+    "user.work-media"
+   ],
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "case-reveal",
+   "none"
+  ],
+  "default": "case-reveal"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": []
+ },
+ "responsive": {
+  "phoneMaxWidth": 860,
+  "changes": [
+   "radius 12px"
+  ],
+  "cite": {
+   "cite": "src/case.css:74",
+   "needle": ".cs-img { border-radius: 12px; }"
+  }
+ },
+ "referenceAssetRoles": [
+  "work.piece-video"
+ ],
+ "generatedAssetRoles": [
+  "original.copy",
+  "placeholder.work-video",
+  "user.work-media"
+ ],
+ "measured": {
+  "inFlowAt1440": null,
+  "note": "Not rendered on any served route (code path only); no measurement exists.",
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "content/projects.example.json:20",
+   "needle": "{ \"type\": \"video\", \"src\": \"northwind/reel.mp4\" }"
+  }
+ ]
+}

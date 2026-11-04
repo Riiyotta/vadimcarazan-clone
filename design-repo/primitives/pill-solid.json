@@ -1,0 +1,15 @@
+{
+ "id": "pill-solid",
+ "kind": "primitive",
+ "description": "White pill button (Start a project, Send the brief, Back to home).",
+ "tokens": [
+  "text.on-solid",
+  "surface.solid"
+ ],
+ "evidence": [
+  {
+   "cite": "src/index.css:268",
+   "needle": ".p-cta-btn {"
+  }
+ ]
+}

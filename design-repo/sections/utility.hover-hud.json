@@ -1,0 +1,105 @@
+{
+ "id": "utility.hover-hud",
+ "title": "Hover label",
+ "version": "1.0.0",
+ "purpose": "Pill label that follows the pointer 14px above it, naming the hovered tile.",
+ "semantic": {
+  "id": "utility.hover-hud",
+  "category": "UTILITY"
+ },
+ "source": {
+  "id": "dom:div.hud",
+  "file": "src/App.jsx",
+  "tag": "div",
+  "lines": "227",
+  "needle": "<div className=\"hud\" ref={hudRef} hidden />"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/App.jsx:117",
+   "needle": "onHover: (h, x, y) => {"
+  },
+  {
+   "cite": "src/index.css:342",
+   "needle": ".hud {"
+  }
+ ],
+ "iaSectionId": "shell.hover-hud",
+ "retrievalEligible": false,
+ "retrievalReason": "Cursor-following tooltip, hidden by default and filled at runtime from the hovered tile; a utility affordance, not content.",
+ "constraints": {
+  "onePerPage": true,
+  "requires": [
+   "showcase.work-cosmos"
+  ],
+  "templates": [
+   "cosmos-home"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "labelSource": {
+   "kind": "enum",
+   "values": [
+    "work-title"
+   ],
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "hud-follow"
+  ],
+  "default": "hud-follow"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.hud"
+  ],
+  "text": [
+   "text.primary"
+  ]
+ },
+ "responsive": {
+  "phoneMaxWidth": 860,
+  "changes": [
+   "not shown on touch"
+  ],
+  "cite": {
+   "cite": "CLONE_SPEC.md:608",
+   "needle": "There is no hover HUD on touch."
+  }
+ },
+ "layer": {
+  "position": "fixed",
+  "zIndex": "z.hud"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy"
+ ],
+ "measured": {
+  "inFlowAt1440": false,
+  "positionAt1440": "fixed",
+  "source": "extraction/measured-values.json#sectionHeights",
+  "rectAt1440": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "rectAt390": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "note": "position:fixed layer (or inside one); takes no page height."
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:315",
+   "needle": "- HUD: 12.5px Inter Tight"
+  }
+ ]
+}

@@ -1,0 +1,115 @@
+{
+ "category": "layout",
+ "tokens": {
+  "layout.box-width": {
+   "$type": "dimension",
+   "$value": "clamp(460px, 42vw, 780px)",
+   "category": "layout",
+   "evidence": [
+    {
+     "cite": "src/index.css:12",
+     "needle": "--box-open: clamp(460px, 42vw, 780px)"
+    }
+   ]
+  },
+  "layout.box-top": {
+   "$type": "dimension",
+   "$value": "calc(2 * var(--pad) + 42px)",
+   "category": "layout",
+   "evidence": [
+    {
+     "cite": "src/index.css:189",
+     "needle": "top: calc(2 * var(--pad) + 42px)"
+    }
+   ]
+  },
+  "layout.case-max-width": {
+   "$type": "dimension",
+   "$value": "1720px",
+   "category": "layout",
+   "evidence": [
+    {
+     "cite": "src/case.css:8",
+     "needle": "max-width: 1720px"
+    }
+   ]
+  },
+  "layout.case-top-pad": {
+   "$type": "dimension",
+   "$value": "calc(2 * var(--pad) + 42px + 9vh)",
+   "category": "layout",
+   "evidence": [
+    {
+     "cite": "src/case.css:7",
+     "needle": "padding: calc(2 * var(--pad) + 42px + 9vh)"
+    }
+   ]
+  },
+  "layout.case-facts-columns": {
+   "$type": "grid",
+   "$value": "repeat(4, minmax(0, 1fr))",
+   "category": "layout",
+   "evidence": [
+    {
+     "cite": "src/case.css:23",
+     "needle": "grid-template-columns: repeat(4, minmax(0, 1fr))"
+    }
+   ]
+  },
+  "layout.case-text-columns": {
+   "$type": "grid",
+   "$value": "minmax(0, 1fr) minmax(0, 1.4fr)",
+   "category": "layout",
+   "evidence": [
+    {
+     "cite": "src/case.css:37",
+     "needle": "grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr)"
+    }
+   ]
+  },
+  "layout.lead-max": {
+   "$type": "dimension",
+   "$value": "440px",
+   "category": "layout",
+   "evidence": [
+    {
+     "cite": "src/index.css:102",
+     "needle": "max-width: 440px"
+    }
+   ]
+  },
+  "layout.case-intro-max": {
+   "$type": "dimension",
+   "$value": "560px",
+   "category": "layout",
+   "evidence": [
+    {
+     "cite": "src/case.css:21",
+     "needle": "max-width: 560px"
+    }
+   ]
+  },
+  "layout.case-text-max": {
+   "$type": "dimension",
+   "$value": "620px",
+   "category": "layout",
+   "evidence": [
+    {
+     "cite": "src/case.css:41",
+     "needle": "max-width: 620px"
+    }
+   ]
+  },
+  "layout.phone-sheet-height": {
+   "$type": "dimension",
+   "$value": "calc(100% - 2 * var(--pad) - 60px)",
+   "category": "layout",
+   "evidence": [
+    {
+     "cite": "src/index.css:429",
+     "needle": "height: calc(100% - 2 * var(--pad) - 60px)"
+    }
+   ]
+  }
+ }
+}

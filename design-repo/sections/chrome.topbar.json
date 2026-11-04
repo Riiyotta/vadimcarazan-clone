@@ -1,0 +1,177 @@
+{
+ "id": "chrome.topbar",
+ "title": "Top bar",
+ "version": "1.0.0",
+ "purpose": "Fixed header: home mark, two fact columns (current role + studio link, city + live clock) and a comma-separated text navigation; a 'Menu' word on phones.",
+ "semantic": {
+  "id": "chrome.topbar",
+  "category": "SHELL"
+ },
+ "source": {
+  "id": "dom:header.topbar",
+  "file": "src/components/Topbar.jsx",
+  "tag": "header",
+  "lines": "7",
+  "needle": "<header className=\"topbar\">"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Topbar.jsx:4",
+   "needle": "export default function Topbar"
+  },
+  {
+   "cite": "src/index.css:71",
+   "needle": ".topbar {"
+  }
+ ],
+ "iaSectionId": "shell.topbar",
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true
+ },
+ "variants": [],
+ "content": {
+  "homeMark": {
+   "kind": "media",
+   "assetRoles": [
+    "brand.logo-mark"
+   ],
+   "generatedAssetRoles": [
+    "generated.brand-mark",
+    "placeholder.brand-mark"
+   ],
+   "required": true
+  },
+  "homeLabel": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": true
+  },
+  "factKeys": {
+   "kind": "textList",
+   "maxWords": 2,
+   "minItems": 3,
+   "maxItems": 3,
+   "required": true
+  },
+  "role": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": true
+  },
+  "studio": {
+   "kind": "link",
+   "maxWords": 3,
+   "required": true
+  },
+  "city": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": true
+  },
+  "timeZone": {
+   "kind": "text",
+   "maxWords": 1,
+   "required": true
+  },
+  "navItems": {
+   "kind": "items",
+   "fields": {
+    "label": {
+     "kind": "text",
+     "maxWords": 2,
+     "required": true
+    },
+    "action": {
+     "kind": "enum",
+     "values": [
+      "selected",
+      "work",
+      "about",
+      "contact"
+     ],
+     "required": true
+    }
+   },
+   "minItems": 1,
+   "maxItems": 4,
+   "required": true
+  },
+  "menuLabel": {
+   "kind": "text",
+   "maxWords": 1,
+   "required": true
+  },
+  "closeLabel": {
+   "kind": "text",
+   "maxWords": 1,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "underline-grow",
+   "none"
+  ],
+  "default": "underline-grow"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.muted"
+  ]
+ },
+ "responsive": {
+  "phoneMaxWidth": 860,
+  "changes": [
+   "13px -> 12px",
+   "logo 48px -> 38px",
+   "fact columns hidden",
+   "'Menu' word button 15px shown top-right"
+  ],
+  "cite": {
+   "cite": "src/index.css:397",
+   "needle": ".col { display: none; }"
+  }
+ },
+ "layer": {
+  "position": "fixed",
+  "zIndex": "z.topbar"
+ },
+ "referenceAssetRoles": [
+  "brand.logo-mark"
+ ],
+ "generatedAssetRoles": [
+  "generated.brand-mark",
+  "original.copy",
+  "placeholder.brand-mark",
+  "placeholder.url"
+ ],
+ "measured": {
+  "inFlowAt1440": false,
+  "positionAt1440": "fixed",
+  "source": "extraction/measured-values.json#sectionHeights",
+  "rectAt1440": [
+   28.8,
+   28.8,
+   1382.4,
+   41.3
+  ],
+  "rectAt390": [
+   16,
+   16,
+   358,
+   32.7
+  ],
+  "note": "position:fixed layer (or inside one); takes no page height."
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:372",
+   "needle": "### 4.1 Top bar (`.topbar`)"
+  }
+ ]
+}

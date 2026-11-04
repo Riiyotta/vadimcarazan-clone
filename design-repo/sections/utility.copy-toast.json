@@ -1,0 +1,101 @@
+{
+ "id": "utility.copy-toast",
+ "title": "Copy-link toast",
+ "version": "1.0.0",
+ "purpose": "Centred white pill confirming a copied link; auto-hides after 1.8 s.",
+ "semantic": {
+  "id": "utility.copy-toast",
+  "category": "UTILITY"
+ },
+ "source": {
+  "id": "dom:div.copy-toast",
+  "file": "src/App.jsx",
+  "tag": "div",
+  "lines": "229",
+  "needle": "<div className={`copy-toast"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/App.jsx:209",
+   "needle": "const onCopy = () => {"
+  },
+  {
+   "cite": "src/index.css:353",
+   "needle": ".copy-toast {"
+  }
+ ],
+ "iaSectionId": "shell.copy-toast",
+ "retrievalEligible": false,
+ "retrievalReason": "Success toast: transient runtime feedback (opacity 0 until a link is copied); not a content section.",
+ "constraints": {
+  "onePerPage": true,
+  "requires": [
+   "detail.project-view"
+  ],
+  "templates": [
+   "cosmos-home"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "label": {
+   "kind": "text",
+   "maxWords": 2,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "toast-rise"
+  ],
+  "default": "toast-rise"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.solid"
+  ],
+  "text": [
+   "text.on-solid"
+  ]
+ },
+ "responsive": {
+  "phoneMaxWidth": 860,
+  "changes": [],
+  "cite": {
+   "cite": "src/index.css:353",
+   "needle": ".copy-toast {"
+  }
+ },
+ "layer": {
+  "position": "fixed",
+  "zIndex": "z.toast"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy"
+ ],
+ "measured": {
+  "inFlowAt1440": false,
+  "positionAt1440": "fixed",
+  "source": "extraction/measured-values.json#sectionHeights",
+  "rectAt1440": [
+   672.2,
+   823.7,
+   95.5,
+   37.5
+  ],
+  "rectAt390": [
+   147.2,
+   780.5,
+   95.5,
+   37.5
+  ],
+  "note": "position:fixed layer (or inside one); takes no page height."
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:459",
+   "needle": "- **Copy link**: copies `origin + path + ?work=<id>`."
+  }
+ ]
+}

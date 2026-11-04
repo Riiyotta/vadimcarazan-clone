@@ -1,0 +1,115 @@
+{
+ "id": "shell.loader",
+ "title": "Loader",
+ "version": "1.0.0",
+ "purpose": "Full-screen loader over everything while the field builds; the site mark draws itself in two strokes, then the panel fades.",
+ "semantic": {
+  "id": "shell.loader",
+  "category": "SHELL"
+ },
+ "source": {
+  "id": "dom:div.loader",
+  "file": "src/components/Loader.jsx",
+  "tag": "div",
+  "lines": "9",
+  "needle": "className={`loader${done ? ' done' : ''}`}"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Loader.jsx:7",
+   "needle": "export default function Loader"
+  },
+  {
+   "cite": "src/index.css:360",
+   "needle": ".loader {"
+  }
+ ],
+ "iaSectionId": "shell.loader",
+ "retrievalEligible": false,
+ "retrievalReason": "Preloader: a full-screen runtime layer shown only until the field is built, then hidden (visibility: hidden). Not retrievable content.",
+ "constraints": {
+  "onePerPage": true,
+  "mustBeFirst": true,
+  "templates": [
+   "cosmos-home"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "mark": {
+   "kind": "media",
+   "assetRoles": [
+    "brand.logo-mark"
+   ],
+   "generatedAssetRoles": [
+    "generated.brand-mark",
+    "placeholder.brand-mark"
+   ],
+   "required": true
+  },
+  "label": {
+   "kind": "text",
+   "maxWords": 2,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "loader-draw",
+   "none"
+  ],
+  "default": "loader-draw"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": []
+ },
+ "responsive": {
+  "phoneMaxWidth": 860,
+  "changes": [
+   "mark stays 84px wide, centred"
+  ],
+  "cite": {
+   "cite": "src/index.css:367",
+   "needle": ".ld-mark { width: 84px"
+  }
+ },
+ "layer": {
+  "position": "fixed",
+  "zIndex": "z.loader"
+ },
+ "referenceAssetRoles": [
+  "brand.logo-mark"
+ ],
+ "generatedAssetRoles": [
+  "generated.brand-mark",
+  "original.copy",
+  "placeholder.brand-mark"
+ ],
+ "measured": {
+  "inFlowAt1440": false,
+  "positionAt1440": "fixed",
+  "source": "extraction/measured-values.json#sectionHeights",
+  "rectAt1440": [
+   0,
+   0,
+   1440,
+   900
+  ],
+  "rectAt390": [
+   0,
+   0,
+   390,
+   844
+  ],
+  "note": "position:fixed layer (or inside one); takes no page height."
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:204",
+   "needle": "1. **Loader**"
+  }
+ ]
+}

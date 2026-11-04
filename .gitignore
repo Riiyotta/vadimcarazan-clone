@@ -1,0 +1,10 @@
+node_modules
+dist
+.DS_Store
+__pycache__/
+*.pyc
+# imported works are rebuilt by `npm run import` from content/
+public/works/
+public/data/works.json
+# the design-repo package is regenerated from design-repo/, never committed next to it
+design-repo.zip

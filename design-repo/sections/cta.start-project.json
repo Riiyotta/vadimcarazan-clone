@@ -1,0 +1,110 @@
+{
+ "id": "cta.start-project",
+ "title": "Start-a-project card",
+ "version": "1.0.0",
+ "purpose": "The closing CTA card (kicker, serif line, white 'start' pill, underline link). Standalone section at the end of a case study; the same card component closes the project and about views.",
+ "semantic": {
+  "id": "cta.start-project",
+  "category": "CTA"
+ },
+ "source": {
+  "id": "dom:aside.p-cta.cs-cta",
+  "file": "src/pages/CaseStudy.jsx",
+  "tag": "aside",
+  "lines": "133",
+  "needle": "<aside className=\"p-cta cs-cta rv\" aria-label=\"Start a project\">"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Box.jsx:6",
+   "needle": "function Cta({"
+  },
+  {
+   "cite": "src/index.css:255",
+   "needle": ".p-cta {"
+  }
+ ],
+ "iaSectionId": "conversion.cta-card",
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "case-study"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "kicker": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": true
+  },
+  "title": {
+   "kind": "text",
+   "maxWords": 8,
+   "required": true
+  },
+  "button": {
+   "kind": "link",
+   "maxWords": 3,
+   "required": true
+  },
+  "alt": {
+   "kind": "link",
+   "maxWords": 5,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "case-reveal",
+   "pill-press"
+  ],
+  "default": "case-reveal"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.card"
+  ],
+  "text": [
+   "text.primary",
+   "text.muted"
+  ]
+ },
+ "responsive": {
+  "phoneMaxWidth": 860,
+  "changes": [
+   "padding 14px, radius 12px, title 21px"
+  ],
+  "cite": {
+   "cite": "src/index.css:443",
+   "needle": ".p-cta { padding: 14px; border-radius: 12px;"
+  }
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy",
+  "placeholder.url"
+ ],
+ "measured": {
+  "inFlowAt1440": true,
+  "positionAt1440": "static",
+  "source": "extraction/measured-values.json#sectionHeights",
+  "heightPx1440": {
+   "min": 79.4,
+   "max": 79.4,
+   "instances": 15,
+   "routes": 15
+  },
+  "heightPx390": {
+   "min": 119.8,
+   "max": 119.8
+  }
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:453",
+   "needle": "- closing CTA card (`.p-cta`)"
+  }
+ ]
+}

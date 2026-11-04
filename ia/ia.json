@@ -1,0 +1,226 @@
+{
+  "$comment": "IA of the vadimcarazan.com experience rebuild (placeholder content). Routes come from src/main.jsx (two route shapes) and the 15 case-study projects in src/engine/data.js, slugged with the app's own slugify(). Sections were read from src/App.jsx, src/components/*, src/pages/CaseStudy.jsx and src/index.css / src/case.css.",
+  "meta": {
+    "source": "Local rebuild of https://vadimcarazan.com (React + Vite + three.js, placeholder content), served by `npm run dev`",
+    "status": "measured-from-codebase",
+    "productionApproved": false,
+    "totalRoutes": 16,
+    "totalTemplates": 2
+  },
+  "categories": {
+    "SHELL": "Fixed chrome and runtime utility layers: top bar, loader, menus, hover label, toast, fades.",
+    "STAGE": "The full-viewport visual stage behind the UI: the WebGL portrait cosmos and the signature drawn behind it.",
+    "HERO": "The page-opening composition.",
+    "NAV": "In-page wayfinding that moves you through the work: the fly-through caption bar, the next-case link.",
+    "PANEL": "Views inside the glass box that opens over the cosmos (project, selected work, about).",
+    "CONTENT": "Body blocks of a case-study page: cover, prose, images, pairs, video.",
+    "CONVERSION": "Blocks whose job is to start a project: the CTA card and the contact brief.",
+    "FOOTER": "Closing page furniture."
+  },
+  "sections": {
+    "stage.signature": {
+      "category": "STAGE",
+      "description": "Hand-drawn pen line behind the canvas, drawn in 2.9 s after the intro with a nib glow, masked with an elliptical hole around the portrait's head; hidden while flying or while the glass box is open.",
+      "scope": "Only the cosmos home route.",
+      "implementedBy": "src/components/Signature.jsx"
+    },
+    "stage.cosmos": {
+      "category": "STAGE",
+      "description": "Full-viewport WebGL field of work tiles: forms the halftone portrait at rest, flies the camera forward on scroll/keys/touch through an endless stream with a central lane of works, hover-picks and click-opens a work, blurs and reframes beside the glass box.",
+      "scope": "Only the cosmos home route.",
+      "implementedBy": "src/engine/cosmos.js (+ shaders.js, data.js, art.js)"
+    },
+    "shell.fly-fades": {
+      "category": "SHELL",
+      "description": "Top and bottom dark gradient bands over the stage that fade in once the camera is flying, so the top bar and fly bar stay legible.",
+      "scope": "Only the cosmos home route, and only in the flying state.",
+      "implementedBy": "src/index.css > body::before / body::after"
+    },
+    "shell.topbar": {
+      "category": "SHELL",
+      "description": "Fixed top row: logo mark (home), 'Currently' and 'Based in' fact columns with a live clock, and the Selected / Work / About / Contact navigation; collapses to a 'Menu' word at 860 px and below.",
+      "scope": "Every route: the cosmos home and all case-study pages.",
+      "implementedBy": "src/components/Topbar.jsx"
+    },
+    "shell.mobile-menu": {
+      "category": "SHELL",
+      "description": "Phone-only glass panel opened by the 'Menu' word: four large serif links, the intro lead and the two fact columns.",
+      "scope": "Only the cosmos home route, at 860 px and below.",
+      "implementedBy": "src/components/MobileNav.jsx"
+    },
+    "hero.cosmos-intro": {
+      "category": "HERO",
+      "description": "Bottom-anchored intro over the portrait: a three-line lead, the 'Explore the work' pill with a bobbing arrow, and the full-bleed serif name; slides away once you fly in or a box opens.",
+      "scope": "Only the cosmos home route.",
+      "implementedBy": "src/components/Hero.jsx"
+    },
+    "shell.social": {
+      "category": "SHELL",
+      "description": "Bottom-right 'Elsewhere' link list, visible only while the About or Contact view is open; lifts above the fly bar when flying.",
+      "scope": "Only the cosmos home route, desktop only.",
+      "implementedBy": "src/components/Social.jsx"
+    },
+    "nav.flybar": {
+      "category": "NAV",
+      "description": "Bottom bar while flying: the zero-padded number, title and kind of the next lane piece (click opens it), an 'N of M works' seen counter, and the 'Back to home' pill that rewinds to the portrait.",
+      "scope": "Only the cosmos home route, in the flying state.",
+      "implementedBy": "src/components/Flybar.jsx"
+    },
+    "panel.project": {
+      "category": "PANEL",
+      "description": "Glass-box view for one work: Close / Copy link / 'Read the case study' header, kind line, serif title, description, the piece and the rest of its set in a vertical gallery, then the CTA card.",
+      "scope": "Only the cosmos home route, when a work is opened (click, fly bar, or ?work=).",
+      "implementedBy": "src/components/Box.jsx > ProjectView"
+    },
+    "panel.selected": {
+      "category": "PANEL",
+      "description": "Glass-box view listing the first eight case studies as numbered rows with a thumbnail; a row flies the camera to that work and opens it.",
+      "scope": "Only the cosmos home route (nav 'Selected' or ?open=selected).",
+      "implementedBy": "src/components/Box.jsx > SelectedView"
+    },
+    "panel.about": {
+      "category": "PANEL",
+      "description": "Glass-box about view: serif statement, two body paragraphs, a two-column facts grid (selected clients as fly-to buttons, counts, elsewhere, contact) and the CTA card pinned to the bottom.",
+      "scope": "Only the cosmos home route (nav 'About', fact columns, or ?open=about).",
+      "implementedBy": "src/components/Box.jsx > AboutView"
+    },
+    "conversion.contact-brief": {
+      "category": "CONVERSION",
+      "description": "Glass-box project brief form: name, email, company, 'What do you need?' checkbox chips, budget radio chips, message, submit pill and a mailto note; swaps to a thank-you block on send.",
+      "scope": "Only the cosmos home route (nav 'Contact', any 'Start a project', or ?open=contact).",
+      "implementedBy": "src/components/Box.jsx > ContactView"
+    },
+    "conversion.cta-card": {
+      "category": "CONVERSION",
+      "description": "Gradient-lit card: 'Have something in mind?' kicker, serif line, a white 'Start a project' pill and one underlined secondary link.",
+      "scope": "The cosmos home route (inside the project and about views) and every case-study page (after the body).",
+      "implementedBy": "src/components/Box.jsx > Cta; duplicated inline in src/pages/CaseStudy.jsx"
+    },
+    "shell.hover-hud": {
+      "category": "SHELL",
+      "description": "Small dark pill with the hovered work's title, following the pointer 14 px above it; desktop pointer only.",
+      "scope": "Only the cosmos home route.",
+      "implementedBy": "src/App.jsx > .hud (positioned by the engine's hover hook)"
+    },
+    "shell.loader": {
+      "category": "SHELL",
+      "description": "Full-screen loader whose two-stroke mark draws itself with real load progress, then fades out to start the intro.",
+      "scope": "Only the cosmos home route, on first load.",
+      "implementedBy": "src/components/Loader.jsx"
+    },
+    "shell.copy-toast": {
+      "category": "SHELL",
+      "description": "White 'Link copied' pill that rises at the bottom centre for 1.8 s after Copy link.",
+      "scope": "Only the cosmos home route.",
+      "implementedBy": "src/App.jsx > .copy-toast"
+    },
+    "shell.page-top-fade": {
+      "category": "SHELL",
+      "description": "Permanent dark gradient under the fixed top bar so scrolling content passes beneath it legibly (the same pseudo-element as the fly fade, but always on and top only).",
+      "scope": "Every case-study page.",
+      "implementedBy": "src/case.css > html.page body::before"
+    },
+    "hero.case-header": {
+      "category": "HERO",
+      "description": "Case-study opening: 'Work / Case study · kind' crumb, very large serif title, intro paragraph with an optional live-site pill, and a four-column facts row (client, year, services, scope).",
+      "scope": "Every case-study page.",
+      "implementedBy": "src/pages/CaseStudy.jsx > .cs-head"
+    },
+    "content.case-cover": {
+      "category": "CONTENT",
+      "description": "Full-width cover image (or video) of the project's first piece at its own aspect, 22 px radius.",
+      "scope": "Every case-study page.",
+      "implementedBy": "src/pages/CaseStudy.jsx > .cs-cover"
+    },
+    "content.case-text": {
+      "category": "CONTENT",
+      "description": "Two-column prose block: serif heading on the left, one paragraph on the right (brief, idea, outcome).",
+      "scope": "Every case-study page, repeated per text section in the project's sections list.",
+      "implementedBy": "src/pages/CaseStudy.jsx > .cs-text"
+    },
+    "content.case-image": {
+      "category": "CONTENT",
+      "description": "One full-width image at its own aspect.",
+      "scope": "Every case-study page, repeated per image section.",
+      "implementedBy": "src/pages/CaseStudy.jsx > .cs-full"
+    },
+    "content.case-pair": {
+      "category": "CONTENT",
+      "description": "Two images side by side, cropped to 4:3, stacking on phones.",
+      "scope": "Case-study pages whose project has at least four pieces (all placeholder case studies do).",
+      "implementedBy": "src/pages/CaseStudy.jsx > .cs-pair"
+    },
+    "content.case-video": {
+      "category": "CONTENT",
+      "description": "Full-width muted looping video.",
+      "scope": "Case-study pages whose imported project declares a video section; none of the placeholder case studies do.",
+      "implementedBy": "src/pages/CaseStudy.jsx > .cs-full video"
+    },
+    "nav.next-case": {
+      "category": "NAV",
+      "description": "Large serif link to the next case study in order, with its kind and a 4:3 thumbnail that scales on hover.",
+      "scope": "Every case-study page (the last wraps to the first).",
+      "implementedBy": "src/pages/CaseStudy.jsx > .cs-next"
+    },
+    "footer.case-footer": {
+      "category": "FOOTER",
+      "description": "Thin rule with copyright, social links and the email address.",
+      "scope": "Every case-study page.",
+      "implementedBy": "src/pages/CaseStudy.jsx > .cs-foot"
+    }
+  },
+  "templates": [
+    {
+      "id": "template.cosmos",
+      "name": "Cosmos home (fixed layers, no native scroll)",
+      "routeCount": 1,
+      "routes": ["/"],
+      "routePattern": null,
+      "chrome": "fixed-layers",
+      "states": "loader -> portrait -> flying; glass box with project | selected | about | contact; phone menu. Query params ?work=<id>, ?open=about|contact|selected, ?fly=1 select states on the same route.",
+      "sections": [
+        "stage.signature",
+        "stage.cosmos",
+        "shell.fly-fades",
+        "shell.topbar",
+        "shell.mobile-menu",
+        "hero.cosmos-intro",
+        "shell.social",
+        "nav.flybar",
+        "panel.project",
+        "panel.selected",
+        "panel.about",
+        "conversion.contact-brief",
+        "conversion.cta-card",
+        "shell.hover-hud",
+        "shell.loader",
+        "shell.copy-toast"
+      ]
+    },
+    {
+      "id": "template.case-study",
+      "name": "Case-study page (scrolling)",
+      "routeCount": 15,
+      "routes": [
+        "/work/northwind", "/work/halcyon", "/work/meridian", "/work/fieldnote", "/work/quarry-law",
+        "/work/lumen-labs", "/work/parallel", "/work/atlasai", "/work/kestrel", "/work/omnifield",
+        "/work/brightline", "/work/solace", "/work/vantage", "/work/corvid", "/work/tessera"
+      ],
+      "routePattern": "/work/{slug}",
+      "chrome": "topbar-and-footer",
+      "sections": [
+        "shell.page-top-fade",
+        "shell.topbar",
+        "hero.case-header",
+        "content.case-cover",
+        "content.case-text",
+        "content.case-image",
+        "content.case-pair",
+        "content.case-video",
+        "conversion.cta-card",
+        "nav.next-case",
+        "footer.case-footer"
+      ]
+    }
+  ]
+}

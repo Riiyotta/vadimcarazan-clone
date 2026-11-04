@@ -1,0 +1,96 @@
+{
+ "id": "utility.fly-fades",
+ "title": "Fly fades",
+ "version": "1.0.0",
+ "purpose": "Top and bottom dark gradients that fade in while flying so the top bar and flybar stay legible.",
+ "semantic": {
+  "id": "utility.fly-fades",
+  "category": "UTILITY"
+ },
+ "source": {
+  "id": "dom:body::before,body::after",
+  "file": "src/index.css",
+  "tag": "css-pseudo",
+  "lines": "59",
+  "needle": "body::before, body::after {"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/index.css:67",
+   "needle": "body.far::before, body.far::after { opacity: 1; }"
+  }
+ ],
+ "iaSectionId": "shell.fly-fades",
+ "retrievalEligible": false,
+ "retrievalReason": "Decorative gradient pseudo-elements (no DOM node, no text) toggled by the flight state; runtime chrome, not content.",
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "cosmos-home"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "visibleWhen": {
+   "kind": "enum",
+   "values": [
+    "far"
+   ],
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "fade-layers"
+  ],
+  "default": "fade-layers"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": []
+ },
+ "responsive": {
+  "phoneMaxWidth": 860,
+  "changes": [
+   "heights follow --pad: 2*pad+70px / 2*pad+150px (102 / 182px at 390)"
+  ],
+  "cite": {
+   "cite": "src/index.css:65",
+   "needle": "body::before { top: 0; height: calc(2 * var(--pad) + 70px)"
+  }
+ },
+ "layer": {
+  "position": "fixed",
+  "zIndex": "z.hero"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy"
+ ],
+ "measured": {
+  "inFlowAt1440": false,
+  "positionAt1440": "fixed",
+  "source": "extraction/measured-values.json#sectionHeights",
+  "rectAt1440": [
+   0,
+   692.406,
+   1440,
+   207.6
+  ],
+  "rectAt390": [
+   0,
+   662,
+   390,
+   182
+  ],
+  "note": "position:fixed layer (or inside one); takes no page height."
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:75",
+   "needle": "Fly fades (only with `body.far`"
+  }
+ ]
+}

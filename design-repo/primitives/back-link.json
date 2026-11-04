@@ -1,0 +1,14 @@
+{
+ "id": "back-link",
+ "kind": "primitive",
+ "description": "Small translucent pill with an icon (Close, Copy link).",
+ "tokens": [
+  "border.hairline"
+ ],
+ "evidence": [
+  {
+   "cite": "src/index.css:217",
+   "needle": ".back-link {"
+  }
+ ]
+}

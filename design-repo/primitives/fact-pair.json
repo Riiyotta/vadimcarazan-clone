@@ -1,0 +1,15 @@
+{
+ "id": "fact-pair",
+ "kind": "primitive",
+ "description": "Muted key line over an ink value line (top bar columns, facts).",
+ "tokens": [
+  "text.muted",
+  "text.primary"
+ ],
+ "evidence": [
+  {
+   "cite": "src/index.css:41",
+   "needle": ".k { display: block; color: var(--mute); }"
+  }
+ ]
+}

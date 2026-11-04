@@ -1,0 +1,111 @@
+{
+ "id": "overlay.glass-box",
+ "title": "Glass box",
+ "version": "1.0.0",
+ "purpose": "The glass overlay panel that hosts the four views (project, selected, about, contact); slides in from the left on desktop, a bottom sheet on phones.",
+ "semantic": {
+  "id": "overlay.glass-box",
+  "category": "UTILITY"
+ },
+ "source": {
+  "id": "dom:aside.box#box",
+  "file": "src/components/Box.jsx",
+  "tag": "aside",
+  "lines": "243",
+  "needle": "id=\"box\" data-view={view}"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Box.jsx:241",
+   "needle": "export default function Box"
+  },
+  {
+   "cite": "src/index.css:187",
+   "needle": ".box {"
+  }
+ ],
+ "iaSectionId": null,
+ "retrievalEligible": false,
+ "retrievalReason": "Overlay container panel (visibility hidden until a view opens). It holds no content of its own; its four views are the retrievable sections.",
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "cosmos-home"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "views": {
+   "kind": "enumList",
+   "values": [
+    "project",
+    "selected",
+    "about",
+    "contact"
+   ],
+   "minItems": 1,
+   "maxItems": 4,
+   "required": true
+  },
+  "closeLabel": {
+   "kind": "text",
+   "maxWords": 1,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "box-slide"
+  ],
+  "default": "box-slide"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.glass"
+  ],
+  "text": []
+ },
+ "responsive": {
+  "phoneMaxWidth": 860,
+  "changes": [
+   "bottom sheet: left/right pad, height 100% - 2*pad - 60px, closed state translateY(40px)",
+   "--bp 14px"
+  ],
+  "cite": {
+   "cite": "src/index.css:429",
+   "needle": "height: calc(100% - 2 * var(--pad) - 60px)"
+  }
+ },
+ "layer": {
+  "position": "fixed",
+  "zIndex": "z.box"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy"
+ ],
+ "measured": {
+  "inFlowAt1440": false,
+  "positionAt1440": "fixed",
+  "source": "extraction/measured-values.json#sectionHeights",
+  "rectAt1440": [
+   -11.2,
+   99.6,
+   604.8,
+   771.6
+  ],
+  "rectAt390": [
+   16,
+   116,
+   358,
+   752
+  ],
+  "note": "position:fixed layer (or inside one); takes no page height."
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:437",
+   "needle": "### 4.5 The glass box (`aside.box`, z 5)"
+  }
+ ]
+}

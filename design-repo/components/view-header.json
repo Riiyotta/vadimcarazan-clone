@@ -1,0 +1,15 @@
+{
+ "id": "view-header",
+ "kind": "component",
+ "description": "Close pill on the left, a muted source label or actions on the right.",
+ "uses": [
+  "back-link",
+  "pill-solid"
+ ],
+ "evidence": [
+  {
+   "cite": "src/index.css:214",
+   "needle": ".v-head {"
+  }
+ ]
+}

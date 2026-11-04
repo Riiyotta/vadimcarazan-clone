@@ -1,0 +1,31 @@
+{
+  "portrait": "portrait.jpg",
+  "portraitThreshold": 22,
+  "projects": [
+    {
+      "title": "Northwind",
+      "slug": "northwind",
+      "kind": "Brand, web and motion",
+      "description": "One or two sentences shown in the box and at the top of the case-study page.",
+      "case": true,
+      "client": "Northwind Inc.",
+      "year": "2025",
+      "services": ["Brand identity", "Website", "Motion"],
+      "url": "https://example.com",
+      "images": ["northwind/cover.jpg", "northwind/02.jpg", { "src": "northwind/loop.mp4", "poster": "northwind/loop.jpg" }],
+      "sections": [
+        { "type": "text", "title": "The brief", "body": "What the company does and what had to change." },
+        { "type": "image", "src": "northwind/03.jpg" },
+        { "type": "pair", "src": ["northwind/04.jpg", "northwind/05.jpg"] },
+        { "type": "video", "src": "northwind/reel.mp4" },
+        { "type": "text", "title": "Outcome", "body": "What launched and what it changed." }
+      ]
+    },
+    {
+      "title": "Fox mark",
+      "kind": "Logo",
+      "description": "A single shot: one image, no case-study page.",
+      "images": ["shots/fox.png"]
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+ "version": "1.0.0",
+ "pageSpecTokenFields": {
+  "surface": {
+   "category": "surface"
+  },
+  "text": {
+   "category": "text"
+  },
+  "spaceBlock": {
+   "category": "spacing"
+  },
+  "font": {
+   "category": "fontFamily"
+  }
+ },
+ "pageSpecReferenceable": [
+  "surface.page",
+  "surface.glass",
+  "surface.card",
+  "surface.glass-menu",
+  "surface.solid",
+  "text.primary",
+  "text.muted",
+  "text.lead",
+  "text.body",
+  "text.sub",
+  "text.on-solid",
+  "text.error",
+  "space.section-block",
+  "space.next-gap",
+  "space.head-gap",
+  "space.pad",
+  "font.family.serif",
+  "font.family.sans"
+ ],
+ "fontFamilyAllowed": [
+  "font.family.serif",
+  "font.family.sans"
+ ],
+ "rawValueRestrictions": {
+  "color": {
+   "rule": "TOKEN_RAW_COLOR",
+   "regex": "(?i)(#[0-9a-f]{3,8}\\b|\\brgba?\\(|\\bhsla?\\(|\\b(red|black|white|blue|green|orange|purple|pink|gray|grey|yellow)\\b)"
+  },
+  "spacing": {
+   "rule": "TOKEN_ARBITRARY_SPACING",
+   "regex": "(?i)^(-?[0-9.]+\\s*(px|rem|em|%|vw|vh|dvh)?|clamp\\(.*|calc\\(.*)$"
+  },
+  "fontFamily": {
+   "rule": "TOKEN_FONT_UNSUPPORTED",
+   "allowed": [
+    "font.family.serif",
+    "font.family.sans"
+   ]
+  }
+ },
+ "surfaceTextPairs": {
+  "surface.page": [
+   "text.primary",
+   "text.muted",
+   "text.lead",
+   "text.body"
+  ],
+  "surface.glass": [
+   "text.primary",
+   "text.muted",
+   "text.body",
+   "text.sub",
+   "text.error"
+  ],
+  "surface.glass-menu": [
+   "text.primary",
+   "text.muted",
+   "text.body"
+  ],
+  "surface.card": [
+   "text.primary",
+   "text.muted"
+  ],
+  "surface.solid": [
+   "text.on-solid"
+  ]
+ },
+ "themes": {
+  "dark": [
+   "surface.page",
+   "surface.glass",
+   "surface.glass-menu",
+   "surface.card",
+   "surface.hud",
+   "surface.solid"
+  ]
+ },
+ "sectionSurfaces": "Read from each section contract's tokens.surfaces / tokens.text (single source of truth).",
+ "enforced": [
+  "TOKEN_UNKNOWN",
+  "TOKEN_CATEGORY",
+  "TOKEN_RAW_COLOR",
+  "TOKEN_ARBITRARY_SPACING",
+  "TOKEN_FONT_UNSUPPORTED",
+  "TOKEN_NOT_REFERENCEABLE",
+  "TOKEN_THEME_COMBINATION",
+  "TOKEN_SURFACE_NOT_ALLOWED"
+ ],
+ "convention": [
+  "The source is monochrome dark-only: no accent palette exists, so there is no accent field (do not invent one).",
+  "Type scale, radius, blur, motion and z-index are owned by the section/primitive contracts; a PageSpec cannot override them (no per-instance typography field exists).",
+  "The original's display face (PP Editorial Old Italic) is not a token: it is the reference-only asset role font.display-original; generated pages use font.family.serif (Instrument Serif, OFL)."
+ ],
+ "evidence": [
+  {
+   "cite": "src/index.css:6",
+   "needle": ":root {"
+  },
+  {
+   "cite": "CLONE_SPEC.md:47",
+   "needle": "### 2.1 Colour"
+  },
+  {
+   "cite": "index.html:7",
+   "needle": "<meta name=\"theme-color\" content=\"#0a0a0b\" />"
+  }
+ ]
+}

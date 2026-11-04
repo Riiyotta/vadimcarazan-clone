@@ -1,0 +1,366 @@
+{
+ "category": "color",
+ "note": "Every value is in src/index.css or src/case.css (cited line + needle) and agrees with CLONE_SPEC.md section 2.1. usageCount = occurrences of the value in the two stylesheets.",
+ "tokens": {
+  "color.bg": {
+   "$type": "color",
+   "$value": "#0a0a0b",
+   "evidence": [
+    {
+     "cite": "src/index.css:7",
+     "needle": "--bg: #0a0a0b"
+    },
+    {
+     "cite": "CLONE_SPEC.md:51",
+     "needle": "| `--bg` | `#0a0a0b`"
+    }
+   ],
+   "usageCount": 1,
+   "category": "color"
+  },
+  "color.ink": {
+   "$type": "color",
+   "$value": "#f2f2f2",
+   "evidence": [
+    {
+     "cite": "src/index.css:8",
+     "needle": "--ink: #f2f2f2"
+    },
+    {
+     "cite": "CLONE_SPEC.md:52",
+     "needle": "| `--ink` | `#f2f2f2`"
+    }
+   ],
+   "usageCount": 1,
+   "category": "color"
+  },
+  "color.white": {
+   "$type": "color",
+   "$value": "#ffffff",
+   "evidence": [
+    {
+     "cite": "src/index.css:127",
+     "needle": "background: #fff"
+    }
+   ],
+   "usageCount": 11,
+   "category": "color"
+  },
+  "color.black": {
+   "$type": "color",
+   "$value": "#000000",
+   "evidence": [
+    {
+     "cite": "src/index.css:127",
+     "needle": "color: #000"
+    }
+   ],
+   "usageCount": 7,
+   "category": "color"
+  },
+  "color.error": {
+   "$type": "color",
+   "$value": "#ff9b92",
+   "evidence": [
+    {
+     "cite": "src/index.css:337",
+     "needle": "color: #ff9b92"
+    },
+    {
+     "cite": "CLONE_SPEC.md:60",
+     "needle": "| error | `#ff9b92`"
+    }
+   ],
+   "usageCount": 1,
+   "category": "color"
+  },
+  "color.mute": {
+   "$type": "color",
+   "$value": "rgba(242, 242, 242, 0.55)",
+   "evidence": [
+    {
+     "cite": "src/index.css:9",
+     "needle": "--mute: rgba(242, 242, 242, 0.55)"
+    }
+   ],
+   "usageCount": 1,
+   "category": "color"
+  },
+  "color.line": {
+   "$type": "color",
+   "$value": "rgba(255, 255, 255, 0.12)",
+   "evidence": [
+    {
+     "cite": "src/index.css:10",
+     "needle": "--line: rgba(255, 255, 255, 0.12)"
+    }
+   ],
+   "usageCount": 3,
+   "category": "color"
+  },
+  "color.ink-86": {
+   "$type": "color",
+   "$value": "rgba(242, 242, 242, 0.86)",
+   "evidence": [
+    {
+     "cite": "src/index.css:104",
+     "needle": "color: rgba(242, 242, 242, 0.86)"
+    }
+   ],
+   "usageCount": 2,
+   "category": "color"
+  },
+  "color.ink-82": {
+   "$type": "color",
+   "$value": "rgba(242, 242, 242, 0.82)",
+   "evidence": [
+    {
+     "cite": "src/index.css:388",
+     "needle": "color: rgba(242, 242, 242, 0.82)"
+    }
+   ],
+   "usageCount": 1,
+   "category": "color"
+  },
+  "color.ink-80": {
+   "$type": "color",
+   "$value": "rgba(242, 242, 242, 0.8)",
+   "evidence": [
+    {
+     "cite": "src/index.css:327",
+     "needle": "color: rgba(242, 242, 242, 0.8)"
+    }
+   ],
+   "usageCount": 1,
+   "category": "color"
+  },
+  "color.ink-78": {
+   "$type": "color",
+   "$value": "rgba(242, 242, 242, 0.78)",
+   "evidence": [
+    {
+     "cite": "src/index.css:244",
+     "needle": "color: rgba(242, 242, 242, 0.78)"
+    }
+   ],
+   "usageCount": 3,
+   "category": "color"
+  },
+  "color.ink-72": {
+   "$type": "color",
+   "$value": "rgba(242, 242, 242, 0.72)",
+   "evidence": [
+    {
+     "cite": "src/index.css:309",
+     "needle": "color: rgba(242, 242, 242, 0.72)"
+    }
+   ],
+   "usageCount": 1,
+   "category": "color"
+  },
+  "color.white-30": {
+   "$type": "color",
+   "$value": "rgba(255, 255, 255, 0.3)",
+   "evidence": [
+    {
+     "cite": "src/index.css:44",
+     "needle": "text-decoration-color: rgba(255, 255, 255, 0.3)"
+    }
+   ],
+   "usageCount": 6,
+   "category": "color"
+  },
+  "color.white-35": {
+   "$type": "color",
+   "$value": "rgba(255, 255, 255, 0.35)",
+   "evidence": [
+    {
+     "cite": "src/index.css:114",
+     "needle": "border: 1px solid rgba(255, 255, 255, 0.35)"
+    }
+   ],
+   "usageCount": 2,
+   "category": "color"
+  },
+  "color.white-45": {
+   "$type": "color",
+   "$value": "rgba(255, 255, 255, 0.45)",
+   "evidence": [
+    {
+     "cite": "src/index.css:321",
+     "needle": "border-color: rgba(255, 255, 255, 0.45)"
+    }
+   ],
+   "usageCount": 1,
+   "category": "color"
+  },
+  "color.white-09": {
+   "$type": "color",
+   "$value": "rgba(255, 255, 255, 0.09)",
+   "evidence": [
+    {
+     "cite": "src/index.css:192",
+     "needle": "border: 1px solid rgba(255, 255, 255, 0.09)"
+    }
+   ],
+   "usageCount": 2,
+   "category": "color"
+  },
+  "color.white-08": {
+   "$type": "color",
+   "$value": "rgba(255, 255, 255, 0.08)",
+   "evidence": [
+    {
+     "cite": "src/index.css:321",
+     "needle": "background: rgba(255, 255, 255, 0.08)"
+    }
+   ],
+   "usageCount": 1,
+   "category": "color"
+  },
+  "color.white-06": {
+   "$type": "color",
+   "$value": "rgba(255, 255, 255, 0.06)",
+   "evidence": [
+    {
+     "cite": "src/index.css:220",
+     "needle": "background: rgba(255, 255, 255, 0.06)"
+    }
+   ],
+   "usageCount": 2,
+   "category": "color"
+  },
+  "color.white-05": {
+   "$type": "color",
+   "$value": "rgba(255, 255, 255, 0.05)",
+   "evidence": [
+    {
+     "cite": "src/index.css:289",
+     "needle": "background: rgba(255, 255, 255, 0.05)"
+    }
+   ],
+   "usageCount": 2,
+   "category": "color"
+  },
+  "color.white-04": {
+   "$type": "color",
+   "$value": "rgba(255, 255, 255, 0.04)",
+   "evidence": [
+    {
+     "cite": "src/index.css:249",
+     "needle": "background: rgba(255, 255, 255, 0.04)"
+    }
+   ],
+   "usageCount": 3,
+   "category": "color"
+  },
+  "color.white-03": {
+   "$type": "color",
+   "$value": "rgba(255, 255, 255, 0.03)",
+   "evidence": [
+    {
+     "cite": "src/index.css:261",
+     "needle": "rgba(255, 255, 255, 0.03)"
+    }
+   ],
+   "usageCount": 2,
+   "category": "color"
+  },
+  "color.glass": {
+   "$type": "color",
+   "$value": "rgba(22, 22, 24, 0.6)",
+   "evidence": [
+    {
+     "cite": "src/index.css:191",
+     "needle": "background: rgba(22, 22, 24, 0.6)"
+    }
+   ],
+   "usageCount": 1,
+   "category": "color"
+  },
+  "color.glass-menu": {
+   "$type": "color",
+   "$value": "rgba(22, 22, 24, 0.62)",
+   "evidence": [
+    {
+     "cite": "src/index.css:377",
+     "needle": "background: rgba(22, 22, 24, 0.62)"
+    }
+   ],
+   "usageCount": 1,
+   "category": "color"
+  },
+  "color.hud": {
+   "$type": "color",
+   "$value": "rgba(0, 0, 0, 0.62)",
+   "evidence": [
+    {
+     "cite": "src/index.css:346",
+     "needle": "background: rgba(0, 0, 0, 0.62)"
+    }
+   ],
+   "usageCount": 1,
+   "category": "color"
+  },
+  "color.bg-25": {
+   "$type": "color",
+   "$value": "rgba(10, 10, 11, 0.25)",
+   "evidence": [
+    {
+     "cite": "src/index.css:113",
+     "needle": "background: rgba(10, 10, 11, 0.25)"
+    }
+   ],
+   "usageCount": 1,
+   "category": "color"
+  },
+  "color.bg-35": {
+   "$type": "color",
+   "$value": "rgba(10, 10, 11, 0.35)",
+   "evidence": [
+    {
+     "cite": "src/index.css:409",
+     "needle": "background: rgba(10, 10, 11, 0.35)"
+    }
+   ],
+   "usageCount": 1,
+   "category": "color"
+  },
+  "color.fade-92": {
+   "$type": "color",
+   "$value": "rgba(10, 10, 11, 0.92)",
+   "evidence": [
+    {
+     "cite": "src/index.css:65",
+     "needle": "rgba(10, 10, 11, 0.92)"
+    }
+   ],
+   "usageCount": 1,
+   "category": "color"
+  },
+  "color.fade-94": {
+   "$type": "color",
+   "$value": "rgba(10, 10, 11, 0.94)",
+   "evidence": [
+    {
+     "cite": "src/index.css:66",
+     "needle": "rgba(10, 10, 11, 0.94)"
+    }
+   ],
+   "usageCount": 1,
+   "category": "color"
+  },
+  "color.invalid": {
+   "$type": "color",
+   "$value": "rgba(255, 120, 110, 0.7)",
+   "evidence": [
+    {
+     "cite": "src/index.css:322",
+     "needle": "border-color: rgba(255, 120, 110, 0.7)"
+    }
+   ],
+   "usageCount": 1,
+   "category": "color"
+  }
+ }
+}

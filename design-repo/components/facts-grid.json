@@ -1,0 +1,15 @@
+{
+ "id": "facts-grid",
+ "kind": "component",
+ "description": "Two-column grid of fact-pairs under a hairline.",
+ "uses": [
+  "fact-pair",
+  "underline-link"
+ ],
+ "evidence": [
+  {
+   "cite": "src/index.css:298",
+   "needle": ".facts {"
+  }
+ ]
+}

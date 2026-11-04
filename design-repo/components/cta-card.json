@@ -1,0 +1,16 @@
+{
+ "id": "cta-card",
+ "kind": "component",
+ "description": "Kicker + serif line + pill-solid + underline-link on the radial-gradient card. Used by detail.project-view, about.studio-bio and cta.start-project.",
+ "uses": [
+  "pill-solid",
+  "underline-link",
+  "serif-title"
+ ],
+ "evidence": [
+  {
+   "cite": "src/components/Box.jsx:6",
+   "needle": "function Cta({"
+  }
+ ]
+}

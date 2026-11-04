@@ -1,0 +1,93 @@
+{
+ "category": "radius",
+ "tokens": {
+  "radius.pill": {
+   "$type": "dimension",
+   "$value": "999px",
+   "category": "radius",
+   "evidence": [
+    {
+     "cite": "src/index.css:112",
+     "needle": "border-radius: 999px"
+    }
+   ]
+  },
+  "radius.glass": {
+   "$type": "dimension",
+   "$value": "22px",
+   "category": "radius",
+   "evidence": [
+    {
+     "cite": "src/index.css:194",
+     "needle": "border-radius: 22px;"
+    }
+   ]
+  },
+  "radius.card": {
+   "$type": "dimension",
+   "$value": "16px",
+   "category": "radius",
+   "evidence": [
+    {
+     "cite": "src/index.css:259",
+     "needle": "border-radius: 16px;"
+    }
+   ]
+  },
+  "radius.media": {
+   "$type": "dimension",
+   "$value": "14px",
+   "category": "radius",
+   "evidence": [
+    {
+     "cite": "src/index.css:249",
+     "needle": "border-radius: 14px"
+    }
+   ]
+  },
+  "radius.field": {
+   "$type": "dimension",
+   "$value": "12px",
+   "category": "radius",
+   "evidence": [
+    {
+     "cite": "src/index.css:316",
+     "needle": "padding: 10px 13px; border-radius: 12px"
+    }
+   ]
+  },
+  "radius.media-phone": {
+   "$type": "dimension",
+   "$value": "10px",
+   "category": "radius",
+   "evidence": [
+    {
+     "cite": "src/index.css:442",
+     "needle": ".gallery img { border-radius: 10px; }"
+    }
+   ]
+  },
+  "radius.thumb": {
+   "$type": "dimension",
+   "$value": "8px",
+   "category": "radius",
+   "evidence": [
+    {
+     "cite": "src/index.css:289",
+     "needle": "border-radius: 8px"
+    }
+   ]
+  },
+  "radius.circle": {
+   "$type": "dimension",
+   "$value": "50%",
+   "category": "radius",
+   "evidence": [
+    {
+     "cite": "src/index.css:121",
+     "needle": "border-radius: 50%"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,39 @@
+{
+ "category": "breakpoint",
+ "note": "Single layout breakpoint (<= 860px = phone). Above 1600x900 the UI scales with --z (zoom), not a breakpoint.",
+ "tokens": {
+  "breakpoint.phone": {
+   "$type": "dimension",
+   "$value": "860px",
+   "category": "breakpoint",
+   "evidence": [
+    {
+     "cite": "src/index.css:394",
+     "needle": "@media (max-width: 860px) {"
+    }
+   ]
+  },
+  "breakpoint.zoom-width": {
+   "$type": "dimension",
+   "$value": "1600px",
+   "category": "breakpoint",
+   "evidence": [
+    {
+     "cite": "src/App.jsx:19",
+     "needle": "innerWidth / 1600"
+    }
+   ]
+  },
+  "breakpoint.zoom-height": {
+   "$type": "dimension",
+   "$value": "900px",
+   "category": "breakpoint",
+   "evidence": [
+    {
+     "cite": "src/App.jsx:19",
+     "needle": "innerHeight / 900"
+    }
+   ]
+  }
+ }
+}

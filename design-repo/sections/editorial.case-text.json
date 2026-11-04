@@ -1,0 +1,98 @@
+{
+ "id": "editorial.case-text",
+ "title": "Case text block",
+ "version": "1.0.0",
+ "purpose": "A heading-bounded chapter of the case story: serif heading in the left column, one paragraph in the right (brief, idea, outcome).",
+ "semantic": {
+  "id": "editorial.case-text",
+  "category": "EDITORIAL"
+ },
+ "source": {
+  "id": "dom:section.cs-text",
+  "file": "src/pages/CaseStudy.jsx",
+  "tag": "section",
+  "lines": "117",
+  "needle": "<section className=\"cs-text rv\" key={i}>"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/pages/CaseStudy.jsx:115",
+   "needle": "if (s.type === 'text')"
+  },
+  {
+   "cite": "src/case.css:36",
+   "needle": ".cs-text {"
+  }
+ ],
+ "iaSectionId": "content.case-text",
+ "retrievalEligible": true,
+ "constraints": {
+  "templates": [
+   "case-study"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "title": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": true
+  },
+  "body": {
+   "kind": "text",
+   "maxWords": 60,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "case-reveal",
+   "none"
+  ],
+  "default": "case-reveal"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.body"
+  ]
+ },
+ "responsive": {
+  "phoneMaxWidth": 860,
+  "changes": [
+   "single column, gap 12px, padding 48px 0"
+  ],
+  "cite": {
+   "cite": "src/case.css:73",
+   "needle": ".cs-text { gap: 12px; padding: 48px 0; }"
+  }
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy"
+ ],
+ "measured": {
+  "inFlowAt1440": true,
+  "positionAt1440": "static",
+  "source": "extraction/measured-values.json#sectionHeights",
+  "heightPx1440": {
+   "min": 231.1,
+   "max": 231.1,
+   "instances": 45,
+   "routes": 15
+  },
+  "heightPx390": {
+   "min": 192.6,
+   "max": 218.2
+  }
+ },
+ "evidence": [
+  {
+   "cite": "src/engine/data.js:54",
+   "needle": "function placeholderSections(p)"
+  }
+ ]
+}
