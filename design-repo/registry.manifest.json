@@ -1,6 +1,6 @@
 {
  "repositoryId": "vadimcarazan-portrait-cosmos-design-repo",
- "repositoryVersion": "1.0.1",
+ "repositoryVersion": "1.1.0",
  "pageSpecVersion": "1.0.0",
  "allowlistVersion": "1.0.0",
  "versionFieldNote": "allowlistVersion is machine-checked by extraction/verify_all.py (must equal tokens/llm/component-allowlist.json version). pageSpecVersion is enforced by the schema (const). repositoryVersion is documentation-only and hand-maintained; nothing checks it.",
@@ -46,7 +46,9 @@
   "measureSections": "extraction/measure_sections.mjs",
   "buildDerived": "extraction/build_derived.py",
   "generationGuide": "docs/generation-guide.md",
-  "sensitivity": "docs/sensitivity-and-licensing.md"
+  "sensitivity": "docs/sensitivity-and-licensing.md",
+  "designPolicy": "policy/design-policy.json",
+  "policyHash": "extraction/policy_hash.py"
  },
  "counts": {
   "tokens": 163,
@@ -66,6 +68,37 @@
   "generatedExamples": 2,
   "adversarialMutations": 122,
   "adversarialControls": 5,
-  "driftCases": 37
+  "driftCases": 50
+ },
+ "category": "portfolio",
+ "designPolicy": {
+  "policyId": "n0-design-constraints-common",
+  "policyVersion": "0.1.0",
+  "commonIrVersion": "0.5",
+  "enforcementMode": "hard-and-soft",
+  "category": "portfolio",
+  "domain": "portfolio",
+  "contentHash": "sha256:2f373f2bc57287d62b1c81d8e0067e0b16f2edec3563dc63c7830453fb2be523",
+  "contentHashFiles": [
+   "tokens/llm/token-policy.json",
+   "compatibility/graph.json",
+   "schema/pagespec.schema.json",
+   "schema/semantic_validate.py"
+  ],
+  "contentHashMethod": "extraction/policy_hash.py: for each contentHashFiles entry in order append '<path>\\n<sha256 hex of bytes>\\n'; contentHash = 'sha256:' + sha256 hex of that text. Recomputed and compared by extraction/verify_all.py (design-policy check).",
+  "localExtension": {
+   "ref": "policy/design-policy.json",
+   "policyId": "portfolio-site-web",
+   "policyVersion": "1.0.0"
+  },
+  "notBoundTo": {
+   "n0-saas-design-constraints-common": "Not a SaaS product: the portfolio of a named creative director with no pricing tiers, feature matrices, integrations, dashboards or demo booking (evidence: policy/design-policy.json classification)."
+  },
+  "decision": {
+   "policyDecision": "defined-pending-architecture-review",
+   "architectureDecisionRecorded": false,
+   "recordedIn": "policy/design-policy.json approval",
+   "note": "Binding and classification are agent-derived on the owner's instruction; not ratified."
+  }
  }
 }

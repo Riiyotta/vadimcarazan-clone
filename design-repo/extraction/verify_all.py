@@ -32,6 +32,10 @@ Checks (each named in the output):
   EXAMPLES        every example passes schema + semantic validation; a generated AND a reference example
                   per template family
   WRAPPER_GATE    R9: extraction/wrapper_gate.py
+  DESIGN_POLICY   category == portfolio; designPolicy bound to n0-design-constraints-common 0.1.0 (Common IR 0.5,
+                  hard-and-soft), never the SaaS policy; notBoundTo kept; policy file present and consistent;
+                  contentHash recomputed over the enforcing files (extraction/policy_hash.py) matches; approval
+                  honestly pending
   HYGIENE         no absolute machine paths, no __pycache__/.DS_Store/__MACOSX/Thumbs.db
 Citations, source tags, slugs and the ia cross-check resolve against the project root (the folder containing
 design-repo/); when that source tree is absent they are reported as warnings, never as passes or failures.
@@ -59,7 +63,7 @@ RETRIEVAL_INELIGIBLE = {"shell.loader", "shell.phone-menu", "utility.fly-fades",
                         "utility.copy-toast", "utility.page-top-fade"}
 RUNTIME_ID = re.compile(r"(^shell\.|^utility\.|^overlay\.|overlay|modal|dialog|drawer|menu|loader|preloader|toast|hud|cookie|consent|cursor|lightbox|fade|flybar)")
 REQUIRED_ENTRYPOINTS = ("token-catalog", "token-policy", "component-allowlist", "motion-patterns", "asset-roles", "pagespec.schema", "section-contract.schema",
-                        "semantic_validate", "adversarial_test", "verify_all", "wrapper_gate", "prove_drift", "measured-values", "measure_sections", "build_derived", "protected-content")
+                        "semantic_validate", "adversarial_test", "verify_all", "wrapper_gate", "prove_drift", "measured-values", "measure_sections", "build_derived", "protected-content", "design-policy", "policy_hash")
 
 FAILS, WARNS, PASSES = [], [], []
 
@@ -150,6 +154,65 @@ def slugify(s):
     s = unicodedata.normalize("NFKD", s.lower())
     s = re.sub(r"[^\w\s-]", "", s).strip()
     return re.sub(r"[\s_.]+", "-", s)
+
+
+BOUND_POLICY = {"policyId": "n0-design-constraints-common", "policyVersion": "0.1.0", "commonIrVersion": "0.5",
+                "enforcementMode": "hard-and-soft", "category": "portfolio", "domain": "portfolio"}
+LOCAL_EXTENSION = {"ref": "policy/design-policy.json", "policyId": "portfolio-site-web", "policyVersion": "1.0.0"}
+SAAS_POLICY = "n0-saas-design-constraints-common"
+
+
+def check_design_policy(man):
+    errs = []
+    ph = load_module("policy_hash", "extraction/policy_hash.py")
+    dp = man.get("designPolicy") or {}
+    if man.get("category") != "portfolio":
+        errs.append(f"manifest category is {man.get('category')!r}, expected 'portfolio'")
+    for k, v in BOUND_POLICY.items():
+        if dp.get(k) != v:
+            errs.append(f"designPolicy.{k} is {dp.get(k)!r}, expected {v!r}")
+    if "saas" in str(dp.get("policyId", "")).lower() or "saas" in str(man.get("category", "")).lower():
+        errs.append("manifest is bound to / categorised as SaaS")
+    if SAAS_POLICY not in (dp.get("notBoundTo") or {}) or not str((dp.get("notBoundTo") or {}).get(SAAS_POLICY, "")).strip():
+        errs.append(f"designPolicy.notBoundTo must keep {SAAS_POLICY} with a reason")
+    ext = dp.get("localExtension") or {}
+    for k, v in LOCAL_EXTENSION.items():
+        if ext.get(k) != v:
+            errs.append(f"designPolicy.localExtension.{k} is {ext.get(k)!r}, expected {v!r}")
+    pol = {}
+    if not (ROOT / LOCAL_EXTENSION["ref"]).is_file():
+        errs.append("policy/design-policy.json is missing")
+    else:
+        pol = j(LOCAL_EXTENSION["ref"])
+        if pol.get("policyId") != LOCAL_EXTENSION["policyId"] or pol.get("policyVersion") != LOCAL_EXTENSION["policyVersion"]:
+            errs.append("policy/design-policy.json id/version disagree with designPolicy.localExtension")
+        ex = pol.get("extends") or {}
+        if ex.get("policyId") != BOUND_POLICY["policyId"] or ex.get("policyVersion") != BOUND_POLICY["policyVersion"] or pol.get("commonIrVersion") != "0.5":
+            errs.append("policy/design-policy.json must extend n0-design-constraints-common 0.1.0 on Common IR 0.5")
+        cls = pol.get("classification") or {}
+        if cls.get("productCategory") != "portfolio" or cls.get("isSaaS") is not False:
+            errs.append("policy classification must be productCategory 'portfolio', isSaaS false")
+        if SAAS_POLICY not in (pol.get("notBoundTo") or {}):
+            errs.append(f"policy/design-policy.json must record notBoundTo {SAAS_POLICY}")
+        ap = pol.get("approval") or {}
+        if ap.get("policyDecision") != "defined-pending-architecture-review" or ap.get("architectureDecisionRecorded") is not False:
+            errs.append("policy approval must stay defined-pending-architecture-review / architectureDecisionRecorded false until a real decision is recorded")
+        if (dp.get("decision") or {}).get("policyDecision") != ap.get("policyDecision"):
+            errs.append("designPolicy.decision disagrees with policy approval")
+        for rel in pol.get("enforcedBy", []):
+            if not (ROOT / rel).exists():
+                errs.append(f"policy enforcedBy {rel} does not exist")
+    if dp.get("contentHashFiles") != ph.POLICY_FILES:
+        errs.append("designPolicy.contentHashFiles != extraction/policy_hash.py POLICY_FILES")
+    want = ph.compute(str(ROOT))
+    if dp.get("contentHash") != want:
+        errs.append(f"designPolicy.contentHash {dp.get('contentHash')!r} != recomputed {want!r} (run extraction/policy_hash.py --write after a deliberate change to an enforcing file)")
+    eps = man.get("entryPoints", {})
+    if eps.get("designPolicy") != LOCAL_EXTENSION["ref"] or eps.get("policyHash") != "extraction/policy_hash.py":
+        errs.append("designPolicy / policyHash entry points not registered")
+    for e in errs:
+        fail("DESIGN_POLICY", e)
+    PASSES.append("DESIGN_POLICY")
 
 
 def main(write_counts=False):
@@ -402,6 +465,7 @@ def main(write_counts=False):
     for code, msg in e: fail("WRAPPER_GATE", f"{code} {msg}")
     for code, msg in w: warn("WRAPPER_GATE", f"{code} {msg}")
     PASSES.append("WRAPPER_GATE")
+    check_design_policy(man)
     # HYGIENE (character classes keep this file free of the literal patterns it searches for)
     absre = re.compile(r"/U[s]ers/[A-Za-z0-9._-]+/|/h[o]me/[A-Za-z0-9._-]+/|/p[r]ivate/(tmp|var)/|C:\\\\U[s]ers\\\\")
     for p in ROOT.rglob("*"):

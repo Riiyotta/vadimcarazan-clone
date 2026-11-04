@@ -1,0 +1,55 @@
+{
+  "policyId": "portfolio-site-web",
+  "policyVersion": "1.0.0",
+  "commonIrVersion": "0.5",
+  "role": "local-extension",
+  "extends": {
+    "policyId": "n0-design-constraints-common",
+    "policyVersion": "0.1.0",
+    "commonIrVersion": "0.5",
+    "note": "This file is a LOCAL EXTENSION layered on top of the generic (non-SaaS) common policy n0-design-constraints-common 0.1.0. It adds the portfolio rules below; it does not replace the common policy. The binding itself lives in registry.manifest.json designPolicy."
+  },
+  "title": "Creative-direction portfolio web generation policy",
+  "classification": {
+    "productCategory": "portfolio",
+    "productDomain": "creative-direction-portfolio",
+    "isSaaS": false,
+    "surfaces": [
+      "portfolio-home",
+      "case-study-pages",
+      "contact-brief-form"
+    ],
+    "audiences": [
+      "prospective-clients",
+      "collaborators-and-studios",
+      "peers-and-recruiters"
+    ],
+    "derivation": "Agent-derived from the clone's templates (cosmos-home, case-study), its 26 section contracts (work cosmos, selected list, case pages, about, brief form) and the source notice in registry.manifest.json. It has not been reviewed by a human."
+  },
+  "notBoundTo": {
+    "n0-saas-design-constraints-common": "Explicitly NOT applied. That policy assumes a SaaS product (pricing tiers, feature matrices, integrations, dashboards, demo booking). This repo is the portfolio of a named person (a creative director): none of those constructs exist here and a generator must not introduce them."
+  },
+  "generationRules": [
+    "Pages are drawn only from the 2 templates and 26 section contracts; no pricing-table, feature-matrix, integrations, dashboard or demo-booking sections, because the clone has none.",
+    "Work, project and case-study structures (showcase, selected list, case header, case media, case text, next case), about, and contact (brief form, start-project call to action) are first-class; start from them.",
+    "Every PageSpec declares mode: reference (faithful reconstruction of the source) or generated (a different person or studio). Generated pages carry no source brand, name, signature, portrait, client names, copy, URLs or media (GENERATED_MODE_* rules).",
+    "Real client names, partner and award marks, and personal identity and imagery (name, signature, portrait, contact details) are must-not-fabricate in generation mode: use the generation-safe roles (user-supplied portrait, fictional person, generated work visuals, placeholder URLs).",
+    "Page-level tokens come only from tokens/llm/token-catalog.json under tokens/llm/token-policy.json; no raw colours, lengths or font names.",
+    "Runtime layers (loader, phone menu, glass box, flybar, fades, hover HUD, toast) are not retrievable content (retrievalEligible false)."
+  ],
+  "enforcedBy": [
+    "schema/pagespec.schema.json",
+    "schema/semantic_validate.py",
+    "schema/protected-content.json",
+    "compatibility/graph.json",
+    "tokens/llm/token-policy.json",
+    "assets/asset-roles.json",
+    "docs/sensitivity-and-licensing.md"
+  ],
+  "approval": {
+    "policyDecision": "defined-pending-architecture-review",
+    "architectureDecisionRecorded": false,
+    "decision": "The common-policy binding (n0-design-constraints-common 0.1.0, not the SaaS policy) and the portfolio classification were set by the repository owner's instruction and derived by an agent from the clone's evidence. No architecture review has ratified them and no decision is recorded.",
+    "scope": "Policy binding only. Production approval, asset licensing and sensitivity review are separate and remain open (registry.manifest.json productionApproved false)."
+  }
+}

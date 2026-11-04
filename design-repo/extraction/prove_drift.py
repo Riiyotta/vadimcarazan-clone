@@ -33,6 +33,10 @@ def tedit(rel, old, new, count=1):
     return run
 
 
+def edit_text(repo, rel, old, new):
+    tedit(rel, old, new)(repo)
+
+
 def both(*fns):
     def run(repo):
         for f in fns: f(repo)
@@ -90,6 +94,20 @@ CASES = [
     ("gate threshold loosened in code", tedit("extraction/wrapper_gate.py", "HERO_ERROR_PX = 3000", "HERO_ERROR_PX = 30000"), "WRAPPER_GATE", False),
     ("absolute machine path", tedit("README.md", "# ", "# " + "/" + "Users/someone/project ", 1), "HYGIENE", False),
     ("junk file", lambda r: (r / "sections/.DS_Store").write_text("x"), "HYGIENE", False),
+    # category / common-policy binding
+    ("enforcing file edited without refreshing the hash", lambda r: edit_text(r, "compatibility/graph.json", " ", "  "), "DESIGN_POLICY", False),
+    ("contentHash tampered", jedit("registry.manifest.json", lambda d: d["designPolicy"].update(contentHash="sha256:" + "0" * 64)), "DESIGN_POLICY", False),
+    ("category changed to saas", jedit("registry.manifest.json", lambda d: d.update(category="saas")), "DESIGN_POLICY", False),
+    ("category removed", jedit("registry.manifest.json", lambda d: d.pop("category")), "DESIGN_POLICY", False),
+    ("common-policy binding removed", jedit("registry.manifest.json", lambda d: d.pop("designPolicy")), "DESIGN_POLICY", False),
+    ("bound to the SaaS policy", jedit("registry.manifest.json", lambda d: d["designPolicy"].update(policyId="n0-saas-design-constraints-common")), "DESIGN_POLICY", False),
+    ("bound policy version drift", jedit("registry.manifest.json", lambda d: d["designPolicy"].update(policyVersion="0.2.0")), "DESIGN_POLICY", False),
+    ("notBoundTo removed", jedit("registry.manifest.json", lambda d: d["designPolicy"].pop("notBoundTo")), "DESIGN_POLICY", False),
+    ("policy file missing", lambda r: os.remove(r / "policy/design-policy.json"), "DESIGN_POLICY", False),
+    ("policy file notBoundTo removed", jedit("policy/design-policy.json", lambda d: d.pop("notBoundTo")), "DESIGN_POLICY", False),
+    ("policy classified as SaaS", jedit("policy/design-policy.json", lambda d: d["classification"].update(isSaaS=True)), "DESIGN_POLICY", False),
+    ("approval claimed as ratified without a recorded decision", jedit("policy/design-policy.json", lambda d: d["approval"].update(policyDecision="ratified")), "DESIGN_POLICY", False),
+    ("policy hash script unregistered", jedit("registry.manifest.json", lambda d: d["entryPoints"].pop("policyHash")), "DESIGN_POLICY", False),
 ]
 
 

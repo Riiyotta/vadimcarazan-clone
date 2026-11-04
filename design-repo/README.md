@@ -20,7 +20,8 @@ identifies the source. Status: **design-review-pending**, not production-approve
 | `compatibility/graph.json` | rhythm / structure rules with severities (same ids as the validator) |
 | `schema/` | `pagespec.schema.json` (derived, Draft-07), `section-contract.schema.json` (derived), `semantic_validate.py`, `protected-content.json`, examples, `tests/adversarial_test.py` |
 | `assets/asset-roles.json` | three-way availability per role, substitutes, licensing |
-| `extraction/` | `measured-values.json`, `measure_sections.mjs`, `wrapper_gate.py`, `verify_all.py`, `prove_drift.py`, `build_derived.py` |
+| `policy/design-policy.json` | portfolio policy (`portfolio-site-web` 1.0.0), a local extension of the bound common policy |
+| `extraction/` | `policy_hash.py`, `measured-values.json`, `measure_sections.mjs`, `wrapper_gate.py`, `verify_all.py`, `prove_drift.py`, `build_derived.py` |
 
 ## Templates and routes
 
@@ -55,6 +56,20 @@ Re-measure (needs the clone's dev server and a Chromium; nothing machine-specifi
 CHROME_PATH=... PLAYWRIGHT_MODULE=... BASE_URL=http://localhost:5192 MODE=sections node extraction/measure_sections.mjs
 ```
 
+## Category and design policy
+
+This is a **portfolio** (`category: "portfolio"`), not a SaaS product. `registry.manifest.json -> designPolicy` binds
+the generic common policy `n0-design-constraints-common` 0.1.0 (Common IR 0.5, `hard-and-soft`) and records
+`notBoundTo: n0-saas-design-constraints-common` (no pricing tiers, feature matrices, integrations, dashboards or
+demo booking). `policy/design-policy.json` adds the portfolio rules (`portfolio-site-web` 1.0.0).
+`designPolicy.contentHash` covers the enforcing files (`tokens/llm/token-policy.json`, `compatibility/graph.json`,
+`schema/pagespec.schema.json`, `schema/semantic_validate.py`); after a deliberate edit to one of them run
+`python3 extraction/policy_hash.py --write`. `verify_all.py` (check `DESIGN_POLICY`) recomputes it.
+
+**Status: defined, pending architecture review.** No architecture decision is recorded
+(`architectureDecisionRecorded: false`). The binding and the policy classification (surfaces, audiences, domain)
+are agent-derived from the clone's evidence on the owner's instruction, not human-reviewed.
+
 ## Parity (R12)
 
 **Not measured.** No live-vs-clone pixel parity harness was run, and no parity percentage is claimed: the
@@ -84,5 +99,5 @@ element-geometry audit (see `extraction/measured-values.json -> cloneVsOriginalE
 | generatedExamples | 2 |
 | adversarialMutations | 122 |
 | adversarialControls | 5 |
-| driftCases | 37 |
+| driftCases | 50 |
 <!-- counts:end -->
