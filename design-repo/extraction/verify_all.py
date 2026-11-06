@@ -356,8 +356,9 @@ def check_parity(man):
         errs.append("geometryParity entry point not registered")
     # the classification is stated first in README and CHANGELOG
     for path, text in (("README.md", first_paragraph("README.md")), ("CHANGELOG.md", changelog_first_paragraph("CHANGELOG.md", "1.1.1"))):
-        if CLASSIFICATION.replace("-", " ") not in text.replace("-", " ") or "not a faithful reference clone" not in text or "pending" not in text:
-            errs.append(f"{path}: the first paragraph must state 'design-language reconstruction', 'not a faithful reference clone' and that approval is pending")
+        status_word = "approved" if ab is not None else "pending"
+        if CLASSIFICATION.replace("-", " ") not in text.replace("-", " ") or "not a faithful reference clone" not in text or status_word not in text:
+            errs.append(f"{path}: the first paragraph must state 'design-language reconstruction', 'not a faithful reference clone' and that approval is {status_word}")
     if man.get("repositoryVersion") != "1.1.1":
         errs.append(f"repositoryVersion is {man.get('repositoryVersion')!r}, expected '1.1.1'")
     # generated-mode / leakage notes remain

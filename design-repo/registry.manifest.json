@@ -72,7 +72,7 @@
   "generatedExamples": 2,
   "adversarialMutations": 122,
   "adversarialControls": 5,
-  "driftCases": 66
+  "driftCases": 67
  },
  "category": "portfolio",
  "designPolicy": {
@@ -104,8 +104,8 @@
  },
  "cloneClassification": {
   "value": "design-language-reconstruction",
-  "status": "pending-human-approval",
-  "approvedBy": null,
+  "status": "approved",
+  "approvedBy": "Riya Ghosh (repository owner)",
   "rationale": "The reference build is a design-language reconstruction of vadimcarazan.com, not a faithful reference clone. Substituted by design: the work images (procedural placeholders, never the original's), the portrait (user-supplied, not the original photo), the name lettering and the mark (generated), the signature (own path), the copy inside the WebGL field (placeholder name, studio and project titles) and the commercial serif (Instrument Serif in its place). Its 15 generated case-study routes (/work/<slug>) have no live counterpart: the original is a single route and returns HTTP 404 for each of them, its case studies being external links.",
   "substituted": [
    "work images (procedural art)",
@@ -117,7 +117,8 @@
    "15 generated case-study routes (no live counterpart)"
   ],
   "evidenceRef": "extraction/measured-values.json#parity",
-  "approvalNeeded": "A human owner decision to accept this repo as a design-language reconstruction instead of a faithful reference clone. An agent does not approve; approvedBy stays null until a named person records it (then status 'approved' and approvedOn).",
-  "recordedBy": "agent-prepared evidence, 2026-11-06"
+  "recordedBy": "owner decision recorded by Claude from the owner's chat message, 2026-11-06",
+  "approvedOn": "2026-11-06",
+  "approvalRecord": "Approved by the repository owner in chat on 2026-11-06: 'Vadim Carazan, treat this as a design-language reconstruction, not a faithful clone'. The 11 parity cells recorded in measured-values.json remain separate exceptions pending human approval; this approval covers the classification only."
  }
 }

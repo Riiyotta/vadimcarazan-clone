@@ -3,7 +3,7 @@
 ## 1.1.1 (2026-11-06) - design-language reconstruction classification and measured parity
 
 This repo is a design-language reconstruction, not a faithful reference clone; the classification is recorded in
-`registry.manifest.json -> cloneClassification` and is pending the owner's explicit approval (`approvedBy: null`).
+`registry.manifest.json -> cloneClassification` and was approved by the repository owner on 2026-11-06 (status `approved`; the 11 parity cells below stay separate exceptions pending human approval).
 
 - Measured, instead of "not-measured": text-free geometry / typography / token comparison of the live site and the built
   clone at 1440x900 and 390x844 in four home states, two full runs (`extraction/geometry_capture.mjs`,

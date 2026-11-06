@@ -1,7 +1,7 @@
 # vadimcarazan portrait-cosmos design-repo
 
-This repo is a **design-language reconstruction, not a faithful reference clone**, pending the owner's explicit
-approval (`registry.manifest.json -> cloneClassification`: status `pending-human-approval`, `approvedBy: null`).
+This repo is a **design-language reconstruction, not a faithful reference clone**, **approved as such by the repository
+owner on 2026-11-06** (`registry.manifest.json -> cloneClassification`: status `approved`, `approvedBy` a named human).
 It is a machine-validated PageSpec system extracted from the clone next to this folder (a rebuild of
 vadimcarazan.com whose work images, portrait, lettering, signature and copy are substituted, and whose 15
 `/work/<slug>` case-study routes have no counterpart on the live site). An AI can compose new pages in the same
@@ -119,5 +119,5 @@ tracked text-free dumps in `extraction/evidence/parity-2026-11-06/` (`run1`, `ru
 | generatedExamples | 2 |
 | adversarialMutations | 122 |
 | adversarialControls | 5 |
-| driftCases | 66 |
+| driftCases | 67 |
 <!-- counts:end -->
