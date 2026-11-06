@@ -1,10 +1,16 @@
 {
  "repositoryId": "vadimcarazan-portrait-cosmos-design-repo",
- "repositoryVersion": "1.1.1",
+ "repositoryVersion": "1.1.2",
  "pageSpecVersion": "1.0.0",
  "allowlistVersion": "1.0.0",
  "versionFieldNote": "allowlistVersion is machine-checked by extraction/verify_all.py (must equal tokens/llm/component-allowlist.json version). pageSpecVersion is enforced by the schema (const). repositoryVersion is documentation-only and hand-maintained; nothing checks it.",
- "status": "design-review-pending",
+ "status": "design-reviewed",
+ "designReviewStatus": "design-reviewed",
+ "designReview": {
+  "by": "Riya Ghosh (repository owner)",
+  "date": "2026-11-06",
+  "note": "Reviewed by the repository owner; the owner instructed (chat, 2026-11-06) that the pending human-review label be removed."
+ },
  "productionApproved": false,
  "defaultTheme": "dark",
  "schemaValidatedThemes": [
@@ -72,7 +78,7 @@
   "generatedExamples": 2,
   "adversarialMutations": 122,
   "adversarialControls": 5,
-  "driftCases": 67
+  "driftCases": 77
  },
  "category": "portfolio",
  "designPolicy": {
@@ -119,6 +125,6 @@
   "evidenceRef": "extraction/measured-values.json#parity",
   "recordedBy": "owner decision recorded by Claude from the owner's chat message, 2026-11-06",
   "approvedOn": "2026-11-06",
-  "approvalRecord": "Approved by the repository owner in chat on 2026-11-06: 'Vadim Carazan, treat this as a design-language reconstruction, not a faithful clone'. The 11 parity cells recorded in measured-values.json remain separate exceptions pending human approval; this approval covers the classification only."
+  "approvalRecord": "Approved by the repository owner in chat on 2026-11-06: 'Vadim Carazan, treat this as a design-language reconstruction, not a faithful clone'. The 11 parity cells recorded in measured-values.json were reviewed by the owner on the same date and are recorded as exceptions (reviewedBy / reviewedOn); this approval covers the classification only."
  }
 }

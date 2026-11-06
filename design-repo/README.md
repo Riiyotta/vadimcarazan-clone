@@ -6,7 +6,7 @@ It is a machine-validated PageSpec system extracted from the clone next to this 
 vadimcarazan.com whose work images, portrait, lettering, signature and copy are substituted, and whose 15
 `/work/<slug>` case-study routes have no counterpart on the live site). An AI can compose new pages in the same
 design language (`mode: "generated"`) without inventing colours, copy or structure, and without reusing anything
-that identifies the source. Status: **design-review-pending**, not production-approved. Read
+that identifies the source. Status: **design-reviewed** (reviewed by the repository owner on 2026-11-06, `registry.manifest.json -> designReview`), **not production-approved**. Read
 `docs/sensitivity-and-licensing.md` first.
 
 ## Layout
@@ -70,11 +70,12 @@ the common policy `n0-design-constraints-common` 0.1.0 (Common IR 0.5, `hard-and
 
 **Status: defined, pending architecture review.** No architecture decision is recorded
 (`architectureDecisionRecorded: false`). The binding and the policy classification (surfaces, audiences, domain)
-are agent-derived from the clone's evidence on the owner's instruction, not human-reviewed.
+are agent-derived from the clone's evidence on the owner's instruction; the repository owner reviewed the repo on
+2026-11-06. This block records only that no separate architecture decision has been made.
 
 ## Parity (R12)
 
-**Classification: design-language reconstruction** (not a faithful reference clone), approval pending. A
+**Classification: design-language reconstruction** (not a faithful reference clone), approved by the repository owner on 2026-11-06. A
 live-vs-clone comparison that does not depend on the substituted pixels is recorded in
 `extraction/measured-values.json -> parity` (status `geometry-measured-pixel-not-meaningful`), re-derivable from the
 tracked text-free dumps in `extraction/evidence/parity-2026-11-06/` (`run1`, `run2`):
@@ -84,7 +85,7 @@ tracked text-free dumps in `extraction/evidence/parity-2026-11-06/` (`run1`, `ru
   (box, typography, colour-token and text-row metrics per semantic section) and `extraction/pixel_parity.py`.
 - Row-weighted headline (mean over the four states): at 1440 position 86.5%, typography 89.4%, tokens 94.3%;
   at 390 position 74.9%, typography 81.3%, tokens 88.6%. Two full runs agree on every metric. Cells under 80% are
-  listed as exceptions (`status: pending human approval`, `approvedBy: null`) with the measured cause: copy that
+  listed as recorded exceptions (`status: recorded exception`, reviewed by the repository owner on 2026-11-06 via `reviewedBy` / `reviewedOn`) with the measured cause: copy that
   wraps differently, shrink-wrapped text widths, markup differences, and one real divergence (the clone fades its
   signature layer when a glass-box view is open, the live site does not).
 - **Pixel parity is not meaningful here and no pixel gate is claimed.** The work imagery, portrait, lettering,
@@ -119,5 +120,5 @@ tracked text-free dumps in `extraction/evidence/parity-2026-11-06/` (`run1`, `ru
 | generatedExamples | 2 |
 | adversarialMutations | 122 |
 | adversarialControls | 5 |
-| driftCases | 67 |
+| driftCases | 77 |
 <!-- counts:end -->

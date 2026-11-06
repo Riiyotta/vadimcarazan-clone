@@ -35,13 +35,14 @@ Checks (each named in the output):
   DESIGN_POLICY   category == portfolio; designPolicy bound to n0-design-constraints-common 0.1.0 (Common IR 0.5,
                   hard-and-soft); policy file and enforcedBy files present and consistent;
                   contentHash recomputed over the enforcing files (extraction/policy_hash.py) matches; approval
-                  honestly pending
+                  recorded as not yet ratified (architectureDecisionRecorded false)
   PARITY          R12: measured-values parity has real structure (not 'not-measured'), pixelParity.meaningful false with
                   reason, captureState; every result file under extraction/evidence is pinned by sha256; the recorded
                   geometry/typography/token numbers equal what extraction/geometry_parity.py re-derives from the tracked
                   text-free dumps (run1 and run2, reproducibility figure re-derived); manifest cloneClassification is
-                  design-language-reconstruction with approvedBy null (pending-human-approval) or a named human;
-                  README and CHANGELOG 1.1.1 first paragraph state the classification; generated-mode notice remains
+                  design-language-reconstruction approved by a named human; manifest status/designReviewStatus 'design-reviewed' with a designReview
+                  record (named human, date), productionApproved false; every parity exception carries reviewedBy (named human) and reviewedOn;
+                  README and CHANGELOG 1.1.2 first paragraph state the classification; generated-mode notice remains
   HYGIENE         no absolute machine paths, no __pycache__/.DS_Store/__MACOSX/Thumbs.db
 Citations, source tags, slugs and the ia cross-check resolve against the project root (the folder containing
 design-repo/); when that source tree is absent they are reported as warnings, never as passes or failures.
@@ -337,14 +338,38 @@ def check_parity(man):
     if cc.get("value") != CLASSIFICATION:
         errs.append(f"manifest cloneClassification.value is {cc.get('value')!r}, expected {CLASSIFICATION!r}")
     ab, st = cc.get("approvedBy"), cc.get("status")
-    if ab is None:
-        if st != "pending-human-approval":
-            errs.append("cloneClassification.approvedBy is null: status must be 'pending-human-approval'")
+    if not isinstance(ab, str) or not ab.strip() or HUMAN_BLOCKLIST.search(ab) or st != "approved":
+        errs.append("cloneClassification.approvedBy must be a named human approver (status 'approved'); an agent never approves")
+    if not cc.get("approvedOn"):
+        errs.append("cloneClassification approved without approvedOn")
+    # owner review state of the repo (the N0 engine's reviewed state): design-reviewed + a named human + a date
+    for k in ("status", "designReviewStatus"):
+        if man.get(k) != "design-reviewed":
+            errs.append(f"manifest {k} is {man.get(k)!r}, expected 'design-reviewed' (with a designReview record)")
+    dr = man.get("designReview")
+    if not isinstance(dr, dict):
+        errs.append("manifest designReview record missing (design-reviewed needs by, date, note)")
     else:
-        if not isinstance(ab, str) or not ab.strip() or HUMAN_BLOCKLIST.search(ab) or st != "approved":
-            errs.append("cloneClassification.approvedBy must be null or a named human approver (status 'approved'); an agent never approves")
-        if not cc.get("approvedOn"):
-            errs.append("cloneClassification approved without approvedOn")
+        rb = dr.get("by")
+        if not isinstance(rb, str) or not rb.strip() or HUMAN_BLOCKLIST.search(rb):
+            errs.append("manifest designReview.by must be a named human reviewer, never an agent")
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(dr.get("date", ""))):
+            errs.append("manifest designReview.date must be a YYYY-MM-DD date")
+        if not str(dr.get("note", "")).strip():
+            errs.append("manifest designReview.note missing")
+    if man.get("productionApproved") is not False:
+        errs.append("manifest productionApproved must stay false (design review is not production approval)")
+    # every parity exception is a recorded exception reviewed by a named human
+    for i, ex in enumerate(par.get("exceptions") or []):
+        rb = ex.get("reviewedBy")
+        if ex.get("status") != "recorded exception":
+            errs.append(f"parity.exceptions[{i}].status is {ex.get('status')!r}, expected 'recorded exception'")
+        if not isinstance(rb, str) or not rb.strip() or HUMAN_BLOCKLIST.search(rb):
+            errs.append(f"parity.exceptions[{i}].reviewedBy must be a named human, never an agent")
+        if not ex.get("reviewedOn"):
+            errs.append(f"parity.exceptions[{i}].reviewedOn missing")
+        if not ex.get("cause") or ex.get("belowGate") is None:
+            errs.append(f"parity.exceptions[{i}] lost its measured numbers or cause")
     rat = json.dumps(cc.get("rationale", "")).lower() + json.dumps(cc.get("substituted", "")).lower()
     for w in SUBSTITUTED_REQUIRED:
         if w not in rat:
@@ -355,12 +380,12 @@ def check_parity(man):
     if (man.get("entryPoints") or {}).get("geometryParity") != "extraction/geometry_parity.py":
         errs.append("geometryParity entry point not registered")
     # the classification is stated first in README and CHANGELOG
-    for path, text in (("README.md", first_paragraph("README.md")), ("CHANGELOG.md", changelog_first_paragraph("CHANGELOG.md", "1.1.1"))):
-        status_word = "approved" if ab is not None else "pending"
+    for path, text in (("README.md", first_paragraph("README.md")), ("CHANGELOG.md", changelog_first_paragraph("CHANGELOG.md", "1.1.2"))):
+        status_word = "approved"
         if CLASSIFICATION.replace("-", " ") not in text.replace("-", " ") or "not a faithful reference clone" not in text or status_word not in text:
             errs.append(f"{path}: the first paragraph must state 'design-language reconstruction', 'not a faithful reference clone' and that approval is {status_word}")
-    if man.get("repositoryVersion") != "1.1.1":
-        errs.append(f"repositoryVersion is {man.get('repositoryVersion')!r}, expected '1.1.1'")
+    if man.get("repositoryVersion") != "1.1.2":
+        errs.append(f"repositoryVersion is {man.get('repositoryVersion')!r}, expected '1.1.2'")
     # generated-mode / leakage notes remain
     sn = man.get("sourceNotice", "")
     if "Never reproduce the original" not in sn or "Do not publish" not in sn or "generated" not in man.get("modes", []):

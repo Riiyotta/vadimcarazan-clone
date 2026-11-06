@@ -6091,7 +6091,7 @@
  "parity": {
   "status": "geometry-measured-pixel-not-meaningful",
   "classification": "design-language-reconstruction",
-  "summary": "This repo is a design-language reconstruction, not a faithful reference clone. A live-vs-clone comparison that does not depend on the substituted pixels was measured (text-free geometry, computed typography and colour tokens of every rendered element, per semantic section, at 1440x900 and 390x844, in four home states) and is recorded below. Pixel parity was also computed and is recorded, but it is not a fidelity number here: the work images, portrait, name lettering, signature and the copy inside the WebGL field are deliberately different. Whether this classification is accepted is a human decision (manifest cloneClassification.approvedBy is null).",
+  "summary": "This repo is a design-language reconstruction, not a faithful reference clone. A live-vs-clone comparison that does not depend on the substituted pixels was measured (text-free geometry, computed typography and colour tokens of every rendered element, per semantic section, at 1440x900 and 390x844, in four home states) and is recorded below. Pixel parity was also computed and is recorded, but it is not a fidelity number here: the work images, portrait, name lettering, signature and the copy inside the WebGL field are deliberately different. The classification was approved by the repository owner on 2026-11-06 (manifest cloneClassification); the exceptions listed below were reviewed by the owner on the same date and are kept as recorded exceptions.",
   "comparedRoutes": {
    "source": "templates/routes.json (16 routes) against the live site, HTTP status checked on 2026-11-06",
    "withLiveCounterpart": [
@@ -7962,8 +7962,9 @@
     "cloneRows": 0,
     "gated": true,
     "cause": "Real divergence, not a substitution: with a glass-box view open the live site keeps its hand-signature layer visible while the clone fades it to opacity 0 (src/index.css: body.boxed .sig { opacity: 0 }). The signature itself is substituted either way. Recorded as finding SIGNATURE_HIDDEN_WHEN_BOXED; src/ is read-only for this task so it is reported, not fixed.",
-    "status": "pending human approval",
-    "approvedBy": null
+    "status": "recorded exception",
+    "reviewedBy": "Riya Ghosh (repository owner)",
+    "reviewedOn": "2026-11-06"
    },
    {
     "state": "1440-about",
@@ -7977,8 +7978,9 @@
     "cloneRows": 54,
     "gated": true,
     "cause": "Content-driven: the placeholder about copy wraps to fewer lines than the original (the first paragraph is 2 lines in the clone against 3 live, the clients row 4 against 5), so every row below shifts 24 px or 21 px; all 26 shifted rows keep their x and size. The live clients are separate link elements, the clone's are buttons with the same style, so 6 live link rows have no same-class counterpart.",
-    "status": "pending human approval",
-    "approvedBy": null
+    "status": "recorded exception",
+    "reviewedBy": "Riya Ghosh (repository owner)",
+    "reviewedOn": "2026-11-06"
    },
    {
     "state": "1440-contact",
@@ -7993,8 +7995,9 @@
     "cloneRows": 0,
     "gated": true,
     "cause": "Real divergence, not a substitution: with a glass-box view open the live site keeps its hand-signature layer visible while the clone fades it to opacity 0 (src/index.css: body.boxed .sig { opacity: 0 }). The signature itself is substituted either way. Recorded as finding SIGNATURE_HIDDEN_WHEN_BOXED; src/ is read-only for this task so it is reported, not fixed.",
-    "status": "pending human approval",
-    "approvedBy": null
+    "status": "recorded exception",
+    "reviewedBy": "Riya Ghosh (repository owner)",
+    "reviewedOn": "2026-11-06"
    },
    {
     "state": "1440-selected",
@@ -8009,8 +8012,9 @@
     "cloneRows": 0,
     "gated": true,
     "cause": "Real divergence, not a substitution: with a glass-box view open the live site keeps its hand-signature layer visible while the clone fades it to opacity 0 (src/index.css: body.boxed .sig { opacity: 0 }). The signature itself is substituted either way. Recorded as finding SIGNATURE_HIDDEN_WHEN_BOXED; src/ is read-only for this task so it is reported, not fixed.",
-    "status": "pending human approval",
-    "approvedBy": null
+    "status": "recorded exception",
+    "reviewedBy": "Riya Ghosh (repository owner)",
+    "reviewedOn": "2026-11-06"
    },
    {
     "state": "1440-selected",
@@ -8022,8 +8026,9 @@
     "cloneRows": 69,
     "gated": false,
     "cause": "Content-driven: the 24 geometry misses are the shrink-wrapped title and sub-label spans whose width follows the substituted project titles; x, y and height match on every row (position 100 percent).",
-    "status": "pending human approval",
-    "approvedBy": null
+    "status": "recorded exception",
+    "reviewedBy": "Riya Ghosh (repository owner)",
+    "reviewedOn": "2026-11-06"
    },
    {
     "state": "390-closed",
@@ -8038,8 +8043,9 @@
     "cloneRows": 6,
     "gated": true,
     "cause": "Phone layout: the live name is an svg inside the h1 (font-size 0) while the clone's h1 carries the 32 px bold fallback style around its svg, the h1 and svg boxes themselves coincide; the live phone page also has a second 38 px hero-row element (the round Explore button wrapper) that the clone builds as a different element. Pure markup differences, boxes agree.",
-    "status": "pending human approval",
-    "approvedBy": null
+    "status": "recorded exception",
+    "reviewedBy": "Riya Ghosh (repository owner)",
+    "reviewedOn": "2026-11-06"
    },
    {
     "state": "390-about",
@@ -8054,8 +8060,9 @@
     "cloneRows": 0,
     "gated": true,
     "cause": "Real divergence, not a substitution: with a glass-box view open the live site keeps its hand-signature layer visible while the clone fades it to opacity 0 (src/index.css: body.boxed .sig { opacity: 0 }). The signature itself is substituted either way. Recorded as finding SIGNATURE_HIDDEN_WHEN_BOXED; src/ is read-only for this task so it is reported, not fixed.",
-    "status": "pending human approval",
-    "approvedBy": null
+    "status": "recorded exception",
+    "reviewedBy": "Riya Ghosh (repository owner)",
+    "reviewedOn": "2026-11-06"
    },
    {
     "state": "390-about",
@@ -8069,8 +8076,9 @@
     "cloneRows": 54,
     "gated": true,
     "cause": "Content-driven: the placeholder about copy wraps to fewer lines than the original (the first paragraph is 2 lines in the clone against 3 live, the clients row 4 against 5), so every row below shifts 24 px or 21 px; all 26 shifted rows keep their x and size. The live clients are separate link elements, the clone's are buttons with the same style, so 6 live link rows have no same-class counterpart.",
-    "status": "pending human approval",
-    "approvedBy": null
+    "status": "recorded exception",
+    "reviewedBy": "Riya Ghosh (repository owner)",
+    "reviewedOn": "2026-11-06"
    },
    {
     "state": "390-contact",
@@ -8085,8 +8093,9 @@
     "cloneRows": 0,
     "gated": true,
     "cause": "Real divergence, not a substitution: with a glass-box view open the live site keeps its hand-signature layer visible while the clone fades it to opacity 0 (src/index.css: body.boxed .sig { opacity: 0 }). The signature itself is substituted either way. Recorded as finding SIGNATURE_HIDDEN_WHEN_BOXED; src/ is read-only for this task so it is reported, not fixed.",
-    "status": "pending human approval",
-    "approvedBy": null
+    "status": "recorded exception",
+    "reviewedBy": "Riya Ghosh (repository owner)",
+    "reviewedOn": "2026-11-06"
    },
    {
     "state": "390-selected",
@@ -8101,8 +8110,9 @@
     "cloneRows": 0,
     "gated": true,
     "cause": "Real divergence, not a substitution: with a glass-box view open the live site keeps its hand-signature layer visible while the clone fades it to opacity 0 (src/index.css: body.boxed .sig { opacity: 0 }). The signature itself is substituted either way. Recorded as finding SIGNATURE_HIDDEN_WHEN_BOXED; src/ is read-only for this task so it is reported, not fixed.",
-    "status": "pending human approval",
-    "approvedBy": null
+    "status": "recorded exception",
+    "reviewedBy": "Riya Ghosh (repository owner)",
+    "reviewedOn": "2026-11-06"
    },
    {
     "state": "390-selected",
@@ -8114,8 +8124,9 @@
     "cloneRows": 69,
     "gated": false,
     "cause": "Content-driven: the 24 geometry misses are the shrink-wrapped title and sub-label spans whose width follows the substituted project titles; x, y and height match on every row (position 100 percent).",
-    "status": "pending human approval",
-    "approvedBy": null
+    "status": "recorded exception",
+    "reviewedBy": "Riya Ghosh (repository owner)",
+    "reviewedOn": "2026-11-06"
    }
   ],
   "resultFiles": [
@@ -8146,7 +8157,7 @@
    "that any pixel of the work imagery, portrait, lettering, signature or WebGL motion matches: those are substituted and not compared",
    "that the 15 /work/<slug> case-study pages resemble anything on the original site: they have no live counterpart",
    "motion parity (easing, intro choreography): see motionFromOriginal, measured separately and not part of this comparison",
-   "faithful reference cloning: the repo stays classified as a design-language reconstruction pending the owner decision recorded in registry.manifest.json"
+   "faithful reference cloning: the repo stays classified as a design-language reconstruction, as approved by the repository owner and recorded in registry.manifest.json"
   ]
  },
  "findings": [
