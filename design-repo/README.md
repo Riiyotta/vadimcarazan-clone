@@ -1,9 +1,12 @@
 # vadimcarazan portrait-cosmos design-repo
 
-A machine-validated PageSpec system extracted from the clone next to this folder (a rebuild of
-vadimcarazan.com with placeholder content). An AI can compose new pages in the same design language
-(`mode: "generated"`) without inventing colours, copy or structure, and without reusing anything that
-identifies the source. Status: **design-review-pending**, not production-approved. Read
+This repo is a **design-language reconstruction, not a faithful reference clone**, pending the owner's explicit
+approval (`registry.manifest.json -> cloneClassification`: status `pending-human-approval`, `approvedBy: null`).
+It is a machine-validated PageSpec system extracted from the clone next to this folder (a rebuild of
+vadimcarazan.com whose work images, portrait, lettering, signature and copy are substituted, and whose 15
+`/work/<slug>` case-study routes have no counterpart on the live site). An AI can compose new pages in the same
+design language (`mode: "generated"`) without inventing colours, copy or structure, and without reusing anything
+that identifies the source. Status: **design-review-pending**, not production-approved. Read
 `docs/sensitivity-and-licensing.md` first.
 
 ## Layout
@@ -21,7 +24,7 @@ identifies the source. Status: **design-review-pending**, not production-approve
 | `schema/` | `pagespec.schema.json` (derived, Draft-07), `section-contract.schema.json` (derived), `semantic_validate.py`, `protected-content.json`, examples, `tests/adversarial_test.py` |
 | `assets/asset-roles.json` | three-way availability per role, substitutes, licensing |
 | `policy/design-policy.json` | portfolio policy (`portfolio-site-web` 1.0.0), a local extension of the bound common policy |
-| `extraction/` | `policy_hash.py`, `measured-values.json`, `measure_sections.mjs`, `wrapper_gate.py`, `verify_all.py`, `prove_drift.py`, `build_derived.py` |
+| `extraction/` | `policy_hash.py`, `measured-values.json`, `measure_sections.mjs`, `geometry_capture.mjs`, `geometry_parity.py`, `pixel_parity.py`, `evidence/parity-2026-11-06/`, `wrapper_gate.py`, `verify_all.py`, `prove_drift.py`, `build_derived.py` |
 
 ## Templates and routes
 
@@ -71,10 +74,28 @@ are agent-derived from the clone's evidence on the owner's instruction, not huma
 
 ## Parity (R12)
 
-**Not measured.** No live-vs-clone pixel parity harness was run, and no parity percentage is claimed: the
-clone deliberately renders different work, portrait, lettering and copy inside a randomly placed WebGL
-field, and the case-study pages have no counterpart on the original. The available evidence is an
-element-geometry audit (see `extraction/measured-values.json -> cloneVsOriginalElementAudit`).
+**Classification: design-language reconstruction** (not a faithful reference clone), approval pending. A
+live-vs-clone comparison that does not depend on the substituted pixels is recorded in
+`extraction/measured-values.json -> parity` (status `geometry-measured-pixel-not-meaningful`), re-derivable from the
+tracked text-free dumps in `extraction/evidence/parity-2026-11-06/` (`run1`, `run2`):
+
+- Captured with `extraction/geometry_capture.mjs` (live and the built clone, 1440x900 and 390x844, four home states,
+  consent banner hidden on both sides and never clicked), compared with `extraction/geometry_parity.py`
+  (box, typography, colour-token and text-row metrics per semantic section) and `extraction/pixel_parity.py`.
+- Row-weighted headline (mean over the four states): at 1440 position 86.5%, typography 89.4%, tokens 94.3%;
+  at 390 position 74.9%, typography 81.3%, tokens 88.6%. Two full runs agree on every metric. Cells under 80% are
+  listed as exceptions (`status: pending human approval`, `approvedBy: null`) with the measured cause: copy that
+  wraps differently, shrink-wrapped text widths, markup differences, and one real divergence (the clone fades its
+  signature layer when a glass-box view is open, the live site does not).
+- **Pixel parity is not meaningful here and no pixel gate is claimed.** The work imagery, portrait, lettering,
+  signature and copy inside the WebGL field are substituted and the tile field is random per load; the pixel
+  result is recorded only to show that the frame differs where the substitutions are (hidden-canvas diff: glyphs
+  only) and that the WebGL layer is not repeatable.
+- Of the 16 routes only `/` exists on the live site (all 15 `/work/<slug>` return HTTP 404 there); they are
+  not compared.
+- `verify_all.py` (check `PARITY`) pins the result files by sha256, re-derives every recorded number from the dumps
+  and checks the classification record. Live screenshots are not committed. Re-capture needs network access to the
+  live site and a built clone (`npm ci`, `npx vite build --outDir <dir>`, `npx vite preview --outDir <dir> --port 5783`).
 
 ## Counts
 
@@ -98,5 +119,5 @@ element-geometry audit (see `extraction/measured-values.json -> cloneVsOriginalE
 | generatedExamples | 2 |
 | adversarialMutations | 122 |
 | adversarialControls | 5 |
-| driftCases | 46 |
+| driftCases | 66 |
 <!-- counts:end -->

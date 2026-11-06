@@ -1,5 +1,25 @@
 # Changelog
 
+## 1.1.1 (2026-11-06) - design-language reconstruction classification and measured parity
+
+This repo is a design-language reconstruction, not a faithful reference clone; the classification is recorded in
+`registry.manifest.json -> cloneClassification` and is pending the owner's explicit approval (`approvedBy: null`).
+
+- Measured, instead of "not-measured": text-free geometry / typography / token comparison of the live site and the built
+  clone at 1440x900 and 390x844 in four home states, two full runs (`extraction/geometry_capture.mjs`,
+  `geometry_parity.py`, `pixel_parity.py`, tracked dumps and result files under
+  `extraction/evidence/parity-2026-11-06/`, no live screenshots). Row-weighted headline: 1440 position 86.5%,
+  typography 89.4%, tokens 94.3%; 390 position 74.9%, typography 81.3%, tokens 88.6%; runs agree on every metric.
+- Pixel parity is recorded but declared not meaningful (substituted work images, portrait, lettering, signature,
+  copy and a random WebGL tile field); only `/` has a live counterpart, the 15 `/work/<slug>` routes return 404 live.
+- 11 cells under 80% are recorded as exceptions (`pending human approval`, `approvedBy: null`) with causes; one is a real
+  divergence (signature layer hidden when a box view is open, finding `SIGNATURE_HIDDEN_WHEN_BOXED`, not fixed:
+  `src/` is out of scope).
+- `verify_all.py`: new `PARITY` check (result files pinned by sha256, numbers re-derived from the dumps, classification
+  present with `approvedBy` null or a named human, README / CHANGELOG first paragraph, generated-mode notice kept).
+  `prove_drift.py`: 20 new drift cases and a `--scratch <dir>` option.
+- No contract, schema, token or example changed. No IR touched; `pageSpecVersion` and `allowlistVersion` stay 1.0.0.
+
 ## 1.1.0 (2026-11-04) - category and common-policy binding
 
 - `registry.manifest.json`: `category: "portfolio"` and a `designPolicy` block binding
@@ -43,4 +63,4 @@
   (signature start 1.00 s / draw 2.88 s, `?open` 2.5 s, wheel holds the camera with a box open, FOV snap on close).
 - Findings recorded (the clone source is read-only here; `?work=<id>` was later fixed in the clone, see 1.0.1): `?work=<id>` deep links were stripped
   before they are read; three motions lack a reduced-motion branch.
-- Parity: not measured (stated, no number claimed). No IR generated (R13).
+- Parity: not measured at the time (superseded in 1.1.1). No IR generated (R13).

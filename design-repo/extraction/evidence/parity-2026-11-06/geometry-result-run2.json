@@ -1,0 +1,1146 @@
+{
+ "tolerancePx": 1.5,
+ "dumps": "run2",
+ "byState": {
+  "1440-closed": {
+   "liveDoc": "900x1440x1440x900",
+   "cloneDoc": "900x1440x1440x900",
+   "sections": {
+    "topbar": {
+     "liveRows": 18,
+     "cloneRows": 22,
+     "structureRows": 17,
+     "geometryRows": 17,
+     "positionRows": 17,
+     "typographyRows": 17,
+     "familyRows": 17,
+     "tokensRows": 17,
+     "textrowsRows": 16,
+     "missWidthOnly": 0,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 1,
+     "pct": {
+      "structure": 94.4,
+      "geometry": 94.4,
+      "position": 94.4,
+      "typography": 94.4,
+      "family": 94.4,
+      "tokens": 94.4,
+      "textrows": 88.9
+     }
+    },
+    "hero": {
+     "liveRows": 10,
+     "cloneRows": 10,
+     "structureRows": 10,
+     "geometryRows": 10,
+     "positionRows": 10,
+     "typographyRows": 8,
+     "familyRows": 8,
+     "tokensRows": 10,
+     "textrowsRows": 10,
+     "missWidthOnly": 0,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 0,
+     "pct": {
+      "structure": 100.0,
+      "geometry": 100.0,
+      "position": 100.0,
+      "typography": 80.0,
+      "family": 80.0,
+      "tokens": 100.0,
+      "textrows": 100.0
+     }
+    },
+    "signature": {
+     "liveRows": 1,
+     "cloneRows": 1,
+     "structureRows": 1,
+     "geometryRows": 1,
+     "positionRows": 1,
+     "typographyRows": 1,
+     "familyRows": 1,
+     "tokensRows": 1,
+     "textrowsRows": 1,
+     "missWidthOnly": 0,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 0,
+     "pct": {
+      "structure": 100.0,
+      "geometry": 100.0,
+      "position": 100.0,
+      "typography": 100.0,
+      "family": 100.0,
+      "tokens": 100.0,
+      "textrows": 100.0
+     }
+    },
+    "canvas": {
+     "liveRows": 1,
+     "cloneRows": 1,
+     "structureRows": 1,
+     "geometryRows": 1,
+     "positionRows": 1,
+     "typographyRows": 1,
+     "familyRows": 1,
+     "tokensRows": 1,
+     "textrowsRows": 1,
+     "missWidthOnly": 0,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 0,
+     "pct": {
+      "structure": 100.0,
+      "geometry": 100.0,
+      "position": 100.0,
+      "typography": 100.0,
+      "family": 100.0,
+      "tokens": 100.0,
+      "textrows": 100.0
+     }
+    }
+   }
+  },
+  "1440-about": {
+   "liveDoc": "900x1440x1440x900",
+   "cloneDoc": "900x1440x1440x900",
+   "sections": {
+    "topbar": {
+     "liveRows": 18,
+     "cloneRows": 22,
+     "structureRows": 17,
+     "geometryRows": 17,
+     "positionRows": 17,
+     "typographyRows": 17,
+     "familyRows": 17,
+     "tokensRows": 17,
+     "textrowsRows": 16,
+     "missWidthOnly": 0,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 1,
+     "pct": {
+      "structure": 94.4,
+      "geometry": 94.4,
+      "position": 94.4,
+      "typography": 94.4,
+      "family": 94.4,
+      "tokens": 94.4,
+      "textrows": 88.9
+     }
+    },
+    "signature": {
+     "liveRows": 1,
+     "cloneRows": 0,
+     "structureRows": 0,
+     "geometryRows": 0,
+     "positionRows": 0,
+     "typographyRows": 0,
+     "familyRows": 0,
+     "tokensRows": 0,
+     "textrowsRows": 0,
+     "missWidthOnly": 0,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 1,
+     "pct": {
+      "structure": 0.0,
+      "geometry": 0.0,
+      "position": 0.0,
+      "typography": 0.0,
+      "family": 0.0,
+      "tokens": 0.0,
+      "textrows": 0.0
+     }
+    },
+    "canvas": {
+     "liveRows": 1,
+     "cloneRows": 1,
+     "structureRows": 1,
+     "geometryRows": 1,
+     "positionRows": 1,
+     "typographyRows": 1,
+     "familyRows": 1,
+     "tokensRows": 1,
+     "textrowsRows": 1,
+     "missWidthOnly": 0,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 0,
+     "pct": {
+      "structure": 100.0,
+      "geometry": 100.0,
+      "position": 100.0,
+      "typography": 100.0,
+      "family": 100.0,
+      "tokens": 100.0,
+      "textrows": 100.0
+     }
+    },
+    "social": {
+     "liveRows": 6,
+     "cloneRows": 9,
+     "structureRows": 6,
+     "geometryRows": 6,
+     "positionRows": 6,
+     "typographyRows": 6,
+     "familyRows": 6,
+     "tokensRows": 6,
+     "textrowsRows": 5,
+     "missWidthOnly": 0,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 0,
+     "pct": {
+      "structure": 100.0,
+      "geometry": 100.0,
+      "position": 100.0,
+      "typography": 100.0,
+      "family": 100.0,
+      "tokens": 100.0,
+      "textrows": 83.3
+     }
+    },
+    "box": {
+     "liveRows": 48,
+     "cloneRows": 54,
+     "structureRows": 42,
+     "geometryRows": 15,
+     "positionRows": 16,
+     "typographyRows": 38,
+     "familyRows": 40,
+     "tokensRows": 40,
+     "textrowsRows": 38,
+     "missWidthOnly": 0,
+     "missHeightOnly": 1,
+     "missShifted": 26,
+     "missOther": 0,
+     "missUnpaired": 6,
+     "pct": {
+      "structure": 87.5,
+      "geometry": 31.2,
+      "position": 33.3,
+      "typography": 79.2,
+      "family": 83.3,
+      "tokens": 83.3,
+      "textrows": 79.2
+     }
+    }
+   }
+  },
+  "1440-contact": {
+   "liveDoc": "900x1440x1440x900",
+   "cloneDoc": "900x1440x1440x900",
+   "sections": {
+    "topbar": {
+     "liveRows": 18,
+     "cloneRows": 22,
+     "structureRows": 17,
+     "geometryRows": 17,
+     "positionRows": 17,
+     "typographyRows": 17,
+     "familyRows": 17,
+     "tokensRows": 17,
+     "textrowsRows": 16,
+     "missWidthOnly": 0,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 1,
+     "pct": {
+      "structure": 94.4,
+      "geometry": 94.4,
+      "position": 94.4,
+      "typography": 94.4,
+      "family": 94.4,
+      "tokens": 94.4,
+      "textrows": 88.9
+     }
+    },
+    "signature": {
+     "liveRows": 1,
+     "cloneRows": 0,
+     "structureRows": 0,
+     "geometryRows": 0,
+     "positionRows": 0,
+     "typographyRows": 0,
+     "familyRows": 0,
+     "tokensRows": 0,
+     "textrowsRows": 0,
+     "missWidthOnly": 0,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 1,
+     "pct": {
+      "structure": 0.0,
+      "geometry": 0.0,
+      "position": 0.0,
+      "typography": 0.0,
+      "family": 0.0,
+      "tokens": 0.0,
+      "textrows": 0.0
+     }
+    },
+    "canvas": {
+     "liveRows": 1,
+     "cloneRows": 1,
+     "structureRows": 1,
+     "geometryRows": 1,
+     "positionRows": 1,
+     "typographyRows": 1,
+     "familyRows": 1,
+     "tokensRows": 1,
+     "textrowsRows": 1,
+     "missWidthOnly": 0,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 0,
+     "pct": {
+      "structure": 100.0,
+      "geometry": 100.0,
+      "position": 100.0,
+      "typography": 100.0,
+      "family": 100.0,
+      "tokens": 100.0,
+      "textrows": 100.0
+     }
+    },
+    "social": {
+     "liveRows": 6,
+     "cloneRows": 9,
+     "structureRows": 6,
+     "geometryRows": 6,
+     "positionRows": 6,
+     "typographyRows": 6,
+     "familyRows": 6,
+     "tokensRows": 6,
+     "textrowsRows": 5,
+     "missWidthOnly": 0,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 0,
+     "pct": {
+      "structure": 100.0,
+      "geometry": 100.0,
+      "position": 100.0,
+      "typography": 100.0,
+      "family": 100.0,
+      "tokens": 100.0,
+      "textrows": 83.3
+     }
+    },
+    "box": {
+     "liveRows": 53,
+     "cloneRows": 54,
+     "structureRows": 53,
+     "geometryRows": 51,
+     "positionRows": 53,
+     "typographyRows": 52,
+     "familyRows": 52,
+     "tokensRows": 53,
+     "textrowsRows": 52,
+     "missWidthOnly": 2,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 0,
+     "pct": {
+      "structure": 100.0,
+      "geometry": 96.2,
+      "position": 100.0,
+      "typography": 98.1,
+      "family": 98.1,
+      "tokens": 100.0,
+      "textrows": 98.1
+     }
+    }
+   }
+  },
+  "1440-selected": {
+   "liveDoc": "900x1440x1440x900",
+   "cloneDoc": "900x1440x1440x900",
+   "sections": {
+    "topbar": {
+     "liveRows": 18,
+     "cloneRows": 22,
+     "structureRows": 17,
+     "geometryRows": 17,
+     "positionRows": 17,
+     "typographyRows": 17,
+     "familyRows": 17,
+     "tokensRows": 17,
+     "textrowsRows": 16,
+     "missWidthOnly": 0,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 1,
+     "pct": {
+      "structure": 94.4,
+      "geometry": 94.4,
+      "position": 94.4,
+      "typography": 94.4,
+      "family": 94.4,
+      "tokens": 94.4,
+      "textrows": 88.9
+     }
+    },
+    "signature": {
+     "liveRows": 1,
+     "cloneRows": 0,
+     "structureRows": 0,
+     "geometryRows": 0,
+     "positionRows": 0,
+     "typographyRows": 0,
+     "familyRows": 0,
+     "tokensRows": 0,
+     "textrowsRows": 0,
+     "missWidthOnly": 0,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 1,
+     "pct": {
+      "structure": 0.0,
+      "geometry": 0.0,
+      "position": 0.0,
+      "typography": 0.0,
+      "family": 0.0,
+      "tokens": 0.0,
+      "textrows": 0.0
+     }
+    },
+    "canvas": {
+     "liveRows": 1,
+     "cloneRows": 1,
+     "structureRows": 1,
+     "geometryRows": 1,
+     "positionRows": 1,
+     "typographyRows": 1,
+     "familyRows": 1,
+     "tokensRows": 1,
+     "textrowsRows": 1,
+     "missWidthOnly": 0,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 0,
+     "pct": {
+      "structure": 100.0,
+      "geometry": 100.0,
+      "position": 100.0,
+      "typography": 100.0,
+      "family": 100.0,
+      "tokens": 100.0,
+      "textrows": 100.0
+     }
+    },
+    "box": {
+     "liveRows": 68,
+     "cloneRows": 69,
+     "structureRows": 68,
+     "geometryRows": 44,
+     "positionRows": 68,
+     "typographyRows": 59,
+     "familyRows": 59,
+     "tokensRows": 67,
+     "textrowsRows": 67,
+     "missWidthOnly": 24,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 0,
+     "pct": {
+      "structure": 100.0,
+      "geometry": 64.7,
+      "position": 100.0,
+      "typography": 86.8,
+      "family": 86.8,
+      "tokens": 98.5,
+      "textrows": 98.5
+     }
+    }
+   }
+  },
+  "390-closed": {
+   "liveDoc": "844x390x390x844",
+   "cloneDoc": "844x390x390x844",
+   "sections": {
+    "topbar": {
+     "liveRows": 5,
+     "cloneRows": 5,
+     "structureRows": 4,
+     "geometryRows": 4,
+     "positionRows": 4,
+     "typographyRows": 4,
+     "familyRows": 4,
+     "tokensRows": 4,
+     "textrowsRows": 4,
+     "missWidthOnly": 0,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 1,
+     "pct": {
+      "structure": 80.0,
+      "geometry": 80.0,
+      "position": 80.0,
+      "typography": 80.0,
+      "family": 80.0,
+      "tokens": 80.0,
+      "textrows": 80.0
+     }
+    },
+    "hero": {
+     "liveRows": 8,
+     "cloneRows": 6,
+     "structureRows": 6,
+     "geometryRows": 6,
+     "positionRows": 6,
+     "typographyRows": 4,
+     "familyRows": 4,
+     "tokensRows": 6,
+     "textrowsRows": 6,
+     "missWidthOnly": 0,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 2,
+     "pct": {
+      "structure": 75.0,
+      "geometry": 75.0,
+      "position": 75.0,
+      "typography": 50.0,
+      "family": 50.0,
+      "tokens": 75.0,
+      "textrows": 75.0
+     }
+    },
+    "signature": {
+     "liveRows": 1,
+     "cloneRows": 1,
+     "structureRows": 1,
+     "geometryRows": 1,
+     "positionRows": 1,
+     "typographyRows": 1,
+     "familyRows": 1,
+     "tokensRows": 1,
+     "textrowsRows": 1,
+     "missWidthOnly": 0,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 0,
+     "pct": {
+      "structure": 100.0,
+      "geometry": 100.0,
+      "position": 100.0,
+      "typography": 100.0,
+      "family": 100.0,
+      "tokens": 100.0,
+      "textrows": 100.0
+     }
+    },
+    "canvas": {
+     "liveRows": 1,
+     "cloneRows": 1,
+     "structureRows": 1,
+     "geometryRows": 1,
+     "positionRows": 1,
+     "typographyRows": 1,
+     "familyRows": 1,
+     "tokensRows": 1,
+     "textrowsRows": 1,
+     "missWidthOnly": 0,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 0,
+     "pct": {
+      "structure": 100.0,
+      "geometry": 100.0,
+      "position": 100.0,
+      "typography": 100.0,
+      "family": 100.0,
+      "tokens": 100.0,
+      "textrows": 100.0
+     }
+    }
+   }
+  },
+  "390-about": {
+   "liveDoc": "844x390x390x844",
+   "cloneDoc": "844x390x390x844",
+   "sections": {
+    "topbar": {
+     "liveRows": 5,
+     "cloneRows": 5,
+     "structureRows": 4,
+     "geometryRows": 4,
+     "positionRows": 4,
+     "typographyRows": 4,
+     "familyRows": 4,
+     "tokensRows": 4,
+     "textrowsRows": 4,
+     "missWidthOnly": 0,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 1,
+     "pct": {
+      "structure": 80.0,
+      "geometry": 80.0,
+      "position": 80.0,
+      "typography": 80.0,
+      "family": 80.0,
+      "tokens": 80.0,
+      "textrows": 80.0
+     }
+    },
+    "signature": {
+     "liveRows": 1,
+     "cloneRows": 0,
+     "structureRows": 0,
+     "geometryRows": 0,
+     "positionRows": 0,
+     "typographyRows": 0,
+     "familyRows": 0,
+     "tokensRows": 0,
+     "textrowsRows": 0,
+     "missWidthOnly": 0,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 1,
+     "pct": {
+      "structure": 0.0,
+      "geometry": 0.0,
+      "position": 0.0,
+      "typography": 0.0,
+      "family": 0.0,
+      "tokens": 0.0,
+      "textrows": 0.0
+     }
+    },
+    "canvas": {
+     "liveRows": 1,
+     "cloneRows": 1,
+     "structureRows": 1,
+     "geometryRows": 1,
+     "positionRows": 1,
+     "typographyRows": 1,
+     "familyRows": 1,
+     "tokensRows": 1,
+     "textrowsRows": 1,
+     "missWidthOnly": 0,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 0,
+     "pct": {
+      "structure": 100.0,
+      "geometry": 100.0,
+      "position": 100.0,
+      "typography": 100.0,
+      "family": 100.0,
+      "tokens": 100.0,
+      "textrows": 100.0
+     }
+    },
+    "box": {
+     "liveRows": 48,
+     "cloneRows": 54,
+     "structureRows": 42,
+     "geometryRows": 8,
+     "positionRows": 9,
+     "typographyRows": 38,
+     "familyRows": 40,
+     "tokensRows": 40,
+     "textrowsRows": 36,
+     "missWidthOnly": 0,
+     "missHeightOnly": 1,
+     "missShifted": 33,
+     "missOther": 0,
+     "missUnpaired": 6,
+     "pct": {
+      "structure": 87.5,
+      "geometry": 16.7,
+      "position": 18.8,
+      "typography": 79.2,
+      "family": 83.3,
+      "tokens": 83.3,
+      "textrows": 75.0
+     }
+    }
+   }
+  },
+  "390-contact": {
+   "liveDoc": "844x390x390x844",
+   "cloneDoc": "844x390x390x844",
+   "sections": {
+    "topbar": {
+     "liveRows": 5,
+     "cloneRows": 5,
+     "structureRows": 4,
+     "geometryRows": 4,
+     "positionRows": 4,
+     "typographyRows": 4,
+     "familyRows": 4,
+     "tokensRows": 4,
+     "textrowsRows": 4,
+     "missWidthOnly": 0,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 1,
+     "pct": {
+      "structure": 80.0,
+      "geometry": 80.0,
+      "position": 80.0,
+      "typography": 80.0,
+      "family": 80.0,
+      "tokens": 80.0,
+      "textrows": 80.0
+     }
+    },
+    "signature": {
+     "liveRows": 1,
+     "cloneRows": 0,
+     "structureRows": 0,
+     "geometryRows": 0,
+     "positionRows": 0,
+     "typographyRows": 0,
+     "familyRows": 0,
+     "tokensRows": 0,
+     "textrowsRows": 0,
+     "missWidthOnly": 0,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 1,
+     "pct": {
+      "structure": 0.0,
+      "geometry": 0.0,
+      "position": 0.0,
+      "typography": 0.0,
+      "family": 0.0,
+      "tokens": 0.0,
+      "textrows": 0.0
+     }
+    },
+    "canvas": {
+     "liveRows": 1,
+     "cloneRows": 1,
+     "structureRows": 1,
+     "geometryRows": 1,
+     "positionRows": 1,
+     "typographyRows": 1,
+     "familyRows": 1,
+     "tokensRows": 1,
+     "textrowsRows": 1,
+     "missWidthOnly": 0,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 0,
+     "pct": {
+      "structure": 100.0,
+      "geometry": 100.0,
+      "position": 100.0,
+      "typography": 100.0,
+      "family": 100.0,
+      "tokens": 100.0,
+      "textrows": 100.0
+     }
+    },
+    "box": {
+     "liveRows": 53,
+     "cloneRows": 54,
+     "structureRows": 53,
+     "geometryRows": 51,
+     "positionRows": 53,
+     "typographyRows": 52,
+     "familyRows": 52,
+     "tokensRows": 53,
+     "textrowsRows": 52,
+     "missWidthOnly": 2,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 0,
+     "pct": {
+      "structure": 100.0,
+      "geometry": 96.2,
+      "position": 100.0,
+      "typography": 98.1,
+      "family": 98.1,
+      "tokens": 100.0,
+      "textrows": 98.1
+     }
+    }
+   }
+  },
+  "390-selected": {
+   "liveDoc": "844x390x390x844",
+   "cloneDoc": "844x390x390x844",
+   "sections": {
+    "topbar": {
+     "liveRows": 5,
+     "cloneRows": 5,
+     "structureRows": 4,
+     "geometryRows": 4,
+     "positionRows": 4,
+     "typographyRows": 4,
+     "familyRows": 4,
+     "tokensRows": 4,
+     "textrowsRows": 4,
+     "missWidthOnly": 0,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 1,
+     "pct": {
+      "structure": 80.0,
+      "geometry": 80.0,
+      "position": 80.0,
+      "typography": 80.0,
+      "family": 80.0,
+      "tokens": 80.0,
+      "textrows": 80.0
+     }
+    },
+    "signature": {
+     "liveRows": 1,
+     "cloneRows": 0,
+     "structureRows": 0,
+     "geometryRows": 0,
+     "positionRows": 0,
+     "typographyRows": 0,
+     "familyRows": 0,
+     "tokensRows": 0,
+     "textrowsRows": 0,
+     "missWidthOnly": 0,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 1,
+     "pct": {
+      "structure": 0.0,
+      "geometry": 0.0,
+      "position": 0.0,
+      "typography": 0.0,
+      "family": 0.0,
+      "tokens": 0.0,
+      "textrows": 0.0
+     }
+    },
+    "canvas": {
+     "liveRows": 1,
+     "cloneRows": 1,
+     "structureRows": 1,
+     "geometryRows": 1,
+     "positionRows": 1,
+     "typographyRows": 1,
+     "familyRows": 1,
+     "tokensRows": 1,
+     "textrowsRows": 1,
+     "missWidthOnly": 0,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 0,
+     "pct": {
+      "structure": 100.0,
+      "geometry": 100.0,
+      "position": 100.0,
+      "typography": 100.0,
+      "family": 100.0,
+      "tokens": 100.0,
+      "textrows": 100.0
+     }
+    },
+    "box": {
+     "liveRows": 68,
+     "cloneRows": 69,
+     "structureRows": 68,
+     "geometryRows": 44,
+     "positionRows": 68,
+     "typographyRows": 59,
+     "familyRows": 59,
+     "tokensRows": 67,
+     "textrowsRows": 67,
+     "missWidthOnly": 24,
+     "missHeightOnly": 0,
+     "missShifted": 0,
+     "missOther": 0,
+     "missUnpaired": 0,
+     "pct": {
+      "structure": 100.0,
+      "geometry": 64.7,
+      "position": 100.0,
+      "typography": 86.8,
+      "family": 86.8,
+      "tokens": 98.5,
+      "textrows": 98.5
+     }
+    }
+   }
+  }
+ },
+ "summary": {
+  "1440-closed": {
+   "structure": {
+    "sectionMean": 98.6,
+    "rowWeighted": 96.7
+   },
+   "geometry": {
+    "sectionMean": 98.6,
+    "rowWeighted": 96.7
+   },
+   "position": {
+    "sectionMean": 98.6,
+    "rowWeighted": 96.7
+   },
+   "typography": {
+    "sectionMean": 93.6,
+    "rowWeighted": 90.0
+   },
+   "family": {
+    "sectionMean": 93.6,
+    "rowWeighted": 90.0
+   },
+   "tokens": {
+    "sectionMean": 98.6,
+    "rowWeighted": 96.7
+   },
+   "textrows": {
+    "sectionMean": 97.2,
+    "rowWeighted": 93.3
+   }
+  },
+  "1440-about": {
+   "structure": {
+    "sectionMean": 76.4,
+    "rowWeighted": 89.2
+   },
+   "geometry": {
+    "sectionMean": 65.1,
+    "rowWeighted": 52.7
+   },
+   "position": {
+    "sectionMean": 65.5,
+    "rowWeighted": 54.1
+   },
+   "typography": {
+    "sectionMean": 74.7,
+    "rowWeighted": 83.8
+   },
+   "family": {
+    "sectionMean": 75.5,
+    "rowWeighted": 86.5
+   },
+   "tokens": {
+    "sectionMean": 75.5,
+    "rowWeighted": 86.5
+   },
+   "textrows": {
+    "sectionMean": 70.3,
+    "rowWeighted": 81.1
+   }
+  },
+  "1440-contact": {
+   "structure": {
+    "sectionMean": 78.9,
+    "rowWeighted": 97.5
+   },
+   "geometry": {
+    "sectionMean": 78.1,
+    "rowWeighted": 94.9
+   },
+   "position": {
+    "sectionMean": 78.9,
+    "rowWeighted": 97.5
+   },
+   "typography": {
+    "sectionMean": 78.5,
+    "rowWeighted": 96.2
+   },
+   "family": {
+    "sectionMean": 78.5,
+    "rowWeighted": 96.2
+   },
+   "tokens": {
+    "sectionMean": 78.9,
+    "rowWeighted": 97.5
+   },
+   "textrows": {
+    "sectionMean": 74.1,
+    "rowWeighted": 93.7
+   }
+  },
+  "1440-selected": {
+   "structure": {
+    "sectionMean": 73.6,
+    "rowWeighted": 97.7
+   },
+   "geometry": {
+    "sectionMean": 64.8,
+    "rowWeighted": 70.5
+   },
+   "position": {
+    "sectionMean": 73.6,
+    "rowWeighted": 97.7
+   },
+   "typography": {
+    "sectionMean": 70.3,
+    "rowWeighted": 87.5
+   },
+   "family": {
+    "sectionMean": 70.3,
+    "rowWeighted": 87.5
+   },
+   "tokens": {
+    "sectionMean": 73.2,
+    "rowWeighted": 96.6
+   },
+   "textrows": {
+    "sectionMean": 71.8,
+    "rowWeighted": 95.5
+   }
+  },
+  "390-closed": {
+   "structure": {
+    "sectionMean": 88.8,
+    "rowWeighted": 80.0
+   },
+   "geometry": {
+    "sectionMean": 88.8,
+    "rowWeighted": 80.0
+   },
+   "position": {
+    "sectionMean": 88.8,
+    "rowWeighted": 80.0
+   },
+   "typography": {
+    "sectionMean": 82.5,
+    "rowWeighted": 66.7
+   },
+   "family": {
+    "sectionMean": 82.5,
+    "rowWeighted": 66.7
+   },
+   "tokens": {
+    "sectionMean": 88.8,
+    "rowWeighted": 80.0
+   },
+   "textrows": {
+    "sectionMean": 88.8,
+    "rowWeighted": 80.0
+   }
+  },
+  "390-about": {
+   "structure": {
+    "sectionMean": 66.9,
+    "rowWeighted": 85.5
+   },
+   "geometry": {
+    "sectionMean": 49.2,
+    "rowWeighted": 23.6
+   },
+   "position": {
+    "sectionMean": 49.7,
+    "rowWeighted": 25.5
+   },
+   "typography": {
+    "sectionMean": 64.8,
+    "rowWeighted": 78.2
+   },
+   "family": {
+    "sectionMean": 65.8,
+    "rowWeighted": 81.8
+   },
+   "tokens": {
+    "sectionMean": 65.8,
+    "rowWeighted": 81.8
+   },
+   "textrows": {
+    "sectionMean": 63.8,
+    "rowWeighted": 74.5
+   }
+  },
+  "390-contact": {
+   "structure": {
+    "sectionMean": 70.0,
+    "rowWeighted": 96.7
+   },
+   "geometry": {
+    "sectionMean": 69.0,
+    "rowWeighted": 93.3
+   },
+   "position": {
+    "sectionMean": 70.0,
+    "rowWeighted": 96.7
+   },
+   "typography": {
+    "sectionMean": 69.5,
+    "rowWeighted": 95.0
+   },
+   "family": {
+    "sectionMean": 69.5,
+    "rowWeighted": 95.0
+   },
+   "tokens": {
+    "sectionMean": 70.0,
+    "rowWeighted": 96.7
+   },
+   "textrows": {
+    "sectionMean": 69.5,
+    "rowWeighted": 95.0
+   }
+  },
+  "390-selected": {
+   "structure": {
+    "sectionMean": 70.0,
+    "rowWeighted": 97.3
+   },
+   "geometry": {
+    "sectionMean": 61.2,
+    "rowWeighted": 65.3
+   },
+   "position": {
+    "sectionMean": 70.0,
+    "rowWeighted": 97.3
+   },
+   "typography": {
+    "sectionMean": 66.7,
+    "rowWeighted": 85.3
+   },
+   "family": {
+    "sectionMean": 66.7,
+    "rowWeighted": 85.3
+   },
+   "tokens": {
+    "sectionMean": 69.6,
+    "rowWeighted": 96.0
+   },
+   "textrows": {
+    "sectionMean": 69.6,
+    "rowWeighted": 96.0
+   }
+  }
+ }
+}

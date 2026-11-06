@@ -3,7 +3,7 @@
 inject one defect, run verify_all.py there and require exit 1 plus a FAIL line for the expected check.
 The untouched copy must pass (control).
 
-    python3 extraction/prove_drift.py
+    python3 extraction/prove_drift.py [--scratch <empty dir>]
 
 When the source evidence tree (src/, CLONE_SPEC.md, the saved snapshot, content/, index.html, ia/ next to
 design-repo/) is present it is linked read-only into the temp project so the citation / source-tag / slug /
@@ -15,6 +15,9 @@ from pathlib import Path
 sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT.parent
+SCRATCH = None
+if "--scratch" in sys.argv:
+    SCRATCH = Path(sys.argv[sys.argv.index("--scratch") + 1]).resolve()
 SOURCE_ENTRIES = ["src", "CLONE_SPEC.md", "Vadim Carazan, Creative Director.html", "content", "index.html", "ia"]
 HAS_SOURCE = all((SRC / e).exists() for e in SOURCE_ENTRIES)
 
@@ -45,6 +48,14 @@ def both(*fns):
 
 def orphan(repo):
     shutil.copy(repo / "sections/about.studio-bio.json", repo / "sections/about.studio-bio-copy.json")
+
+
+def first_result(repo, name):
+    return str(next((repo / "extraction/evidence").glob("parity-*/" + name)).relative_to(repo))
+
+
+def first_dump(repo):
+    return str(sorted((repo / "extraction/evidence").glob("parity-*/run1/clone/1440-closed.n"))[0].relative_to(repo))
 
 
 CASES = [
@@ -104,11 +115,33 @@ CASES = [
     ("policy file missing", lambda r: os.remove(r / "policy/design-policy.json"), "DESIGN_POLICY", False),
     ("approval claimed as ratified without a recorded decision", jedit("policy/design-policy.json", lambda d: d["approval"].update(policyDecision="ratified")), "DESIGN_POLICY", False),
     ("policy hash script unregistered", jedit("registry.manifest.json", lambda d: d["entryPoints"].pop("policyHash")), "DESIGN_POLICY", False),
+    # R12 parity evidence + clone classification
+    ("parity reverted to not-measured", jedit("extraction/measured-values.json", lambda d: d["parity"].update(status="not-measured")), "PARITY", False),
+    ("recorded geometry number hand-edited", jedit("extraction/measured-values.json", lambda d: d["parity"]["geometry"]["run1"]["summary"]["1440-closed"]["geometry"].update(rowWeighted=99.9)), "PARITY", False),
+    ("recorded per-section number hand-edited", jedit("extraction/measured-values.json", lambda d: d["parity"]["geometry"]["run1"]["bySection"]["1440-closed"]["hero"].update(typography=100.0)), "PARITY", False),
+    ("reproducibility figure hand-edited", jedit("extraction/measured-values.json", lambda d: d["parity"]["reproducibility"].update(maxRowWeightedDiffPct=5.0)), "PARITY", False),
+    ("pinned result file edited", lambda r: edit_text(r, first_result(r, "geometry-result-run1.json"), '"tolerancePx"', '"tolerancePx" '), "PARITY", False),
+    ("pinned pixel result file edited", lambda r: edit_text(r, first_result(r, "pixel-result-run1.json"), '"method"', '"method" '), "PARITY", False),
+    ("pinned result file deleted", lambda r: os.remove(r / first_result(r, "geometry-result-run2.json")), "PARITY", False),
+    ("tracked dump edited so the numbers move", lambda r: edit_text(r, first_dump(r), "\t", "\t9"), "PARITY", False),
+    ("pixel parity claimed meaningful", jedit("extraction/measured-values.json", lambda d: d["parity"]["pixelParity"].update(meaningful=True)), "PARITY", False),
+    ("capture state removed", jedit("extraction/measured-values.json", lambda d: d["parity"].pop("captureState")), "PARITY", False),
+    ("classification record removed", jedit("registry.manifest.json", lambda d: d.pop("cloneClassification")), "PARITY", False),
+    ("classification relabelled a faithful clone", jedit("registry.manifest.json", lambda d: d["cloneClassification"].update(value="faithful-reference-clone")), "PARITY", False),
+    ("agent approves its own classification", jedit("registry.manifest.json", lambda d: d["cloneClassification"].update(approvedBy="Claude", status="approved", approvedOn="2026-11-06")), "PARITY", False),
+    ("approved status without an approver", jedit("registry.manifest.json", lambda d: d["cloneClassification"].update(status="approved")), "PARITY", False),
+    ("approver is a blank string", jedit("registry.manifest.json", lambda d: d["cloneClassification"].update(approvedBy=" ", status="approved", approvedOn="2026-11-06")), "PARITY", False),
+    ("classification evidenceRef broken", jedit("registry.manifest.json", lambda d: d["cloneClassification"].update(evidenceRef="extraction/evidence/missing.json")), "PARITY", False),
+    ("classification rationale drops the substitutions", jedit("registry.manifest.json", lambda d: d["cloneClassification"].update(rationale="n/a", substituted=[])), "PARITY", False),
+    ("README first paragraph loses the classification", tedit("README.md", "not a faithful reference clone", "a reference clone"), "PARITY", False),
+    ("CHANGELOG 1.1.1 first paragraph loses the classification", tedit("CHANGELOG.md", "not a faithful reference clone", "a reference clone"), "PARITY", False),
+    ("generated-mode / leakage notice removed from the manifest", jedit("registry.manifest.json", lambda d: d.update(sourceNotice="placeholder content")), "PARITY", False),
 ]
 
 
+
 def make_copy():
-    tmp = Path(tempfile.mkdtemp(prefix="drift-"))
+    tmp = Path(tempfile.mkdtemp(prefix="drift-", dir=str(SCRATCH) if SCRATCH else None))
     proj = tmp / "project"; proj.mkdir()
     shutil.copytree(ROOT, proj / "design-repo", ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
     if HAS_SOURCE:

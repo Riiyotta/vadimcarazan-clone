@@ -1,0 +1,107 @@
+# clone 1440 contact  doc 900x1440x1440x900
+## topbar
+header.topbar	28.8,28.8,1382.4,41.3	Inter Tight 13px 400 17.55px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+a.mark	28.8,28.8,48,41.3	Inter Tight 13px 400 0px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+svg	28.8,28.8,48,41.3	Inter Tight 13px 400 0px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+g	38.5,34.4,31.6,30.5	Inter Tight 13px 400 0px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+path	38.5,34.6,13.5,30.3	Inter Tight 13px 400 0px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+path	52,34.4,18.1,19.9	Inter Tight 13px 400 0px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+div.col.col-go	357,28.8,147,35.1	Inter Tight 13px 400 17.55px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+span.k	357,28.8,147,17.5	Inter Tight 13px 400 17.55px normal none rgba(242, 242, 242, 0.55) rgba(0, 0, 0, 0) 0px 1	L1:28.8
+span.v	357,46.3,147,17.5	Inter Tight 13px 400 17.55px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	L1:46.3
+a	456.3,46.3,47.7,16	Inter Tight 13px 400 17.55px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	L1:46.3
+div.col.col-place.col-go	784.2,28.8,171.5,35.1	Inter Tight 13px 400 17.55px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+span.k	784.2,28.8,171.5,17.5	Inter Tight 13px 400 17.55px normal none rgba(242, 242, 242, 0.55) rgba(0, 0, 0, 0) 0px 1	L1:28.8
+span.v	784.2,46.3,171.5,17.5	Inter Tight 13px 400 17.55px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	L1:46.3
+time.clock	917.3,46.3,34.3,16	Inter Tight 13px 400 17.55px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	L1:46.3
+div.col.col-nav	1235.9,28.8,175.3,35.1	Inter Tight 13px 400 17.55px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+span.k	1235.9,28.8,175.3,17.5	Inter Tight 13px 400 17.55px normal none rgba(242, 242, 242, 0.55) rgba(0, 0, 0, 0) 0px 1	L1:28.8
+span.v	1235.9,46.3,175.3,17.5	Inter Tight 13px 400 17.55px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+span	1235.9,46.3,55.3,16	Inter Tight 13px 400 17.55px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	L1:46.3
+button.uline	1235.9,46.3,49,17.5	Inter Tight 13px 400 17.55px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	L1:46.3
+span	1291.2,46.3,35.3,16	Inter Tight 13px 400 17.55px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	L1:46.3
+button.uline	1291.2,46.3,29,17.5	Inter Tight 13px 400 17.55px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	L1:46.3
+span	1326.5,46.3,40,16	Inter Tight 13px 400 17.55px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	L1:46.3
+button.uline	1326.5,46.3,33.7,17.5	Inter Tight 13px 400 17.55px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	L1:46.3
+span	1366.5,46.3,44.7,16	Inter Tight 13px 400 17.55px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+button.uline	1366.5,46.3,44.7,17.5	Inter Tight 13px 400 17.55px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	L1:46.3
+## hero
+
+## signature
+
+## canvas
+canvas	0,0,1440,900	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+## flybar
+
+## social
+div.social	1297.7,836.1,113.5,35.1	Inter Tight 13px 400 17.55px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+span.k	1350.7,836.1,60.5,17.5	Inter Tight 13px 400 17.55px normal none rgba(242, 242, 242, 0.55) rgba(0, 0, 0, 0) 0px 1	L1:836.1
+span.v	1297.7,853.7,113.5,17.5	Inter Tight 13px 400 17.55px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+span	1297.7,853.7,14,16	Inter Tight 13px 400 17.55px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	L1:853.7
+a.uline	1297.7,853.7,7.7,16	Inter Tight 13px 400 17.55px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	L1:853.7
+span	1311.7,853.7,53.1,16	Inter Tight 13px 400 17.55px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	L1:853.7
+a.uline	1311.7,853.7,46.8,16	Inter Tight 13px 400 17.55px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	L1:853.7
+span	1364.8,853.7,46.4,16	Inter Tight 13px 400 17.55px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+a.uline	1364.8,853.7,46.4,16	Inter Tight 13px 400 17.55px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	L1:853.7
+## box
+aside.box.open	28.8,99.6,604.8,771.6	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(22, 22, 24, 0.6) 22px 1	-
+section.view.v-contact.on	29.8,100.6,602.8,769.6	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+div.v-head	57.8,128.6,546.8,54.3	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+button.back-link	57.8,128.6,78.8,34.3	Inter Tight 13.5px 400 20.25px normal none rgb(242, 242, 242) rgba(255, 255, 255, 0.06) 999px 1	-
+svg	67.8,137.7,16,16	Inter Tight 13.5px 400 20.25px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+path	73.5,141.7,4,8	Inter Tight 13.5px 400 20.25px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+span	89.8,135.6,32.8,20.3	Inter Tight 13.5px 400 20.25px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	L1:137.6
+p.src	528.8,136.3,75.8,18.8	Inter Tight 12.5px 400 18.75px normal none rgba(242, 242, 242, 0.55) rgba(0, 0, 0, 0) 0px 1	L1:137.3
+div.p-scroll.c-scroll	51.8,182.8,558.8,687.4	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+form.cform	57.8,182.8,546.8,583.5	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+h2	57.8,182.8,546.8,35.8	Instrument Serif 37.152px 400 35.8145px -0.148608px none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	L1:175.8
+p.c-sub	57.8,227.7,385.6,44.9	Inter Tight 14.5px 400 22.475px normal none rgba(242, 242, 242, 0.72) rgba(0, 0, 0, 0) 0px 1	L2:229.7/252.1
+div.c-row	57.8,285.6,546.8,68.5	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+label.field	57.8,285.6,267.4,68.5	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+span	57.8,285.6,267.4,18.8	Inter Tight 12.5px 400 18.75px normal none rgba(242, 242, 242, 0.55) rgba(0, 0, 0, 0) 0px 1	L1:286.6
+input	57.8,310.3,267.4,43.8	Inter Tight 14.5px 400 21.75px normal none rgb(242, 242, 242) rgba(255, 255, 255, 0.08) 12px 1	-
+label.field	337.2,285.6,267.4,68.5	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+span	337.2,285.6,267.4,18.8	Inter Tight 12.5px 400 18.75px normal none rgba(242, 242, 242, 0.55) rgba(0, 0, 0, 0) 0px 1	L1:286.6
+input	337.2,310.3,267.4,43.8	Inter Tight 14.5px 400 21.75px normal none rgb(242, 242, 242) rgba(255, 255, 255, 0.05) 12px 1	-
+label.field	57.8,367.1,546.8,68.5	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+span	57.8,367.1,546.8,18.8	Inter Tight 12.5px 400 18.75px normal none rgba(242, 242, 242, 0.55) rgba(0, 0, 0, 0) 0px 1	L1:368.1
+input	57.8,391.8,546.8,43.8	Inter Tight 14.5px 400 21.75px normal none rgb(242, 242, 242) rgba(255, 255, 255, 0.05) 12px 1	-
+fieldset.field	57.8,448.6,546.8,61.3	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+legend	57.8,448.6,103.8,18.8	Inter Tight 12.5px 400 18.75px normal none rgba(242, 242, 242, 0.55) rgba(0, 0, 0, 0) 0px 1	L1:449.6
+div.chips	57.8,474.3,546.8,35.5	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+label.chip	57.8,474.3,105.2,35.5	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+span	57.8,474.3,105.2,35.5	Inter Tight 13px 400 19.5px normal none rgba(242, 242, 242, 0.8) rgba(255, 255, 255, 0.04) 999px 1	L1:483.3
+label.chip	170,474.3,73,35.5	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+span	170,474.3,73,35.5	Inter Tight 13px 400 19.5px normal none rgba(242, 242, 242, 0.8) rgba(255, 255, 255, 0.04) 999px 1	L1:483.3
+label.chip	250,474.3,112.1,35.5	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+span	250,474.3,112.1,35.5	Inter Tight 13px 400 19.5px normal none rgba(242, 242, 242, 0.8) rgba(255, 255, 255, 0.04) 999px 1	L1:483.3
+label.chip	369.1,474.3,86.4,35.5	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+span	369.1,474.3,86.4,35.5	Inter Tight 13px 400 19.5px normal none rgba(242, 242, 242, 0.8) rgba(255, 255, 255, 0.04) 999px 1	L1:483.3
+label.chip	462.5,474.3,114.2,35.5	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+span	462.5,474.3,114.2,35.5	Inter Tight 13px 400 19.5px normal none rgba(242, 242, 242, 0.8) rgba(255, 255, 255, 0.04) 999px 1	L1:483.3
+fieldset.field	57.8,522.8,546.8,61.3	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+legend	57.8,522.8,38.9,18.8	Inter Tight 12.5px 400 18.75px normal none rgba(242, 242, 242, 0.55) rgba(0, 0, 0, 0) 0px 1	L1:523.8
+div.chips	57.8,548.6,546.8,35.5	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+label.chip	57.8,548.6,92.2,35.5	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+span	57.8,548.6,92.2,35.5	Inter Tight 13px 400 19.5px normal none rgba(242, 242, 242, 0.8) rgba(255, 255, 255, 0.04) 999px 1	L1:557.6
+label.chip	157,548.6,100.9,35.5	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+span	157,548.6,100.9,35.5	Inter Tight 13px 400 19.5px normal none rgba(242, 242, 242, 0.8) rgba(255, 255, 255, 0.04) 999px 1	L1:557.6
+label.chip	264.9,548.6,103.5,35.5	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+span	264.9,548.6,103.5,35.5	Inter Tight 13px 400 19.5px normal none rgba(242, 242, 242, 0.8) rgba(255, 255, 255, 0.04) 999px 1	L1:557.6
+label.chip	375.4,548.6,64.6,35.5	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+span	375.4,548.6,64.6,35.5	Inter Tight 13px 400 19.5px normal none rgba(242, 242, 242, 0.8) rgba(255, 255, 255, 0.04) 999px 1	L1:557.6
+label.chip	447,548.6,96,35.5	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+span	447,548.6,96,35.5	Inter Tight 13px 400 19.5px normal none rgba(242, 242, 242, 0.8) rgba(255, 255, 255, 0.04) 999px 1	L1:557.6
+label.field	57.8,597.1,546.8,112	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+span	57.8,597.1,546.8,18.8	Inter Tight 12.5px 400 18.75px normal none rgba(242, 242, 242, 0.55) rgba(0, 0, 0, 0) 0px 1	L1:598.1
+textarea	57.8,621.8,546.8,87.3	Inter Tight 14.5px 400 21.75px normal none rgb(242, 242, 242) rgba(255, 255, 255, 0.05) 12px 1	-
+div.c-foot	57.8,726.1,546.8,40.3	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+button.p-cta-btn.c-send	57.8,726.1,119.1,40.3	Inter Tight 13.5px 500 20.25px normal none rgb(0, 0, 0) rgb(255, 255, 255) 999px 1	L1:738.1
+p.c-note	194.9,736.5,174,19.5	Inter Tight 13px 400 19.5px normal none rgba(242, 242, 242, 0.55) rgba(0, 0, 0, 0) 0px 1	L1:737.5
+a	256.4,737.5,112.5,16	Inter Tight 13px 400 19.5px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	L1:737.5
+## mnav
+
+## loader
+
+## hud
+

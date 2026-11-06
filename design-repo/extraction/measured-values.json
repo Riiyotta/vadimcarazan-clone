@@ -6089,9 +6089,2065 @@
   }
  },
  "parity": {
-  "status": "not-measured",
-  "perSectionGateRun": false,
-  "reason": "No live-vs-clone pixel parity harness was run for this design-repo. A pixel compare of '/' is not meaningful as a fidelity number: the clone deliberately renders different work images (procedural), a different portrait, different lettering, signature and copy inside a WebGL field whose tile placement is random per load. The /work/<slug> pages have no counterpart on the original (its case studies live on an external studio site). The available evidence is the element-geometry audit above. No parity percentage is claimed anywhere in this repo."
+  "status": "geometry-measured-pixel-not-meaningful",
+  "classification": "design-language-reconstruction",
+  "summary": "This repo is a design-language reconstruction, not a faithful reference clone. A live-vs-clone comparison that does not depend on the substituted pixels was measured (text-free geometry, computed typography and colour tokens of every rendered element, per semantic section, at 1440x900 and 390x844, in four home states) and is recorded below. Pixel parity was also computed and is recorded, but it is not a fidelity number here: the work images, portrait, name lettering, signature and the copy inside the WebGL field are deliberately different. Whether this classification is accepted is a human decision (manifest cloneClassification.approvedBy is null).",
+  "comparedRoutes": {
+   "source": "templates/routes.json (16 routes) against the live site, HTTP status checked on 2026-11-06",
+   "withLiveCounterpart": [
+    "/"
+   ],
+   "withoutLiveCounterpart": {
+    "count": 15,
+    "pattern": "/work/<slug>",
+    "evidence": "every /work/<slug> path of templates/routes.json returned HTTP 404 on the live site (checked for all 15 slugs); CLONE_SPEC.md records that the original is a single route '/' and that its 15 case studies are external links to another studio site. The generated case-study template, its text/image/pair blocks and its 15 pages are a design-language extension of the home page tokens, not a reconstruction of any live page and not compared."
+   },
+   "queryStatesOfHome": [
+    "?open=about",
+    "?open=contact",
+    "?open=selected"
+   ],
+   "note": "'/' is the only original page. The three ?open= views are states of '/' that exist on both sides and are compared. ?work=<id> and ?fly=1 are not captured (they depend on the substituted tile field)."
+  },
+  "method": {
+   "capture": "extraction/geometry_capture.mjs (playwright, Chromium headless, deviceScaleFactor 1)",
+   "compare": "extraction/geometry_parity.py (box, typography, token, text-row metrics over text-free dumps), extraction/pixel_parity.py (ink block-map Dice and raw match over screenshots; screenshots are not committed)",
+   "pairing": "live rows paired to clone rows by tag.class then nearest centre (same tag within 60 px as a fallback); percentages are over live rows, an unpaired live row is a miss in every metric",
+   "tolerancePx": 1.5,
+   "metrics": {
+    "structure": "live row has a clone counterpart",
+    "geometry": "x, y, w, h all within tolerance",
+    "position": "x and y within tolerance (width/height ignored)",
+    "typography": "font-size, weight, line-height, letter-spacing, text-transform equal (family ignored)",
+    "family": "first font-family name equal (the serif is a declared substitution)",
+    "tokens": "colour, background, radius, opacity equal",
+    "textrows": "rendered line count equal and line tops within tolerance relative to the element"
+   }
+  },
+  "captureState": {
+   "viewports": [
+    "1440x900 desktop, deviceScaleFactor 1",
+    "390x844 emulated touch phone, deviceScaleFactor 1"
+   ],
+   "states": [
+    "closed home",
+    "?open=about",
+    "?open=contact",
+    "?open=selected (the delayed view is waited for until body.boxed, then settled)"
+   ],
+   "scrollOffsets": "none: html/body are overflow hidden and every layer is position fixed on both sides (document height equals the viewport), so the only scroll offset is 0",
+   "consentBanner": "#vc-consent hidden with display none on both sides after load; never clicked. The live capture also uses ?internal=1 (the site's own tracking-off switch) so the owner's analytics are not touched.",
+   "fonts": "document.fonts.ready awaited on both sides; the live site serves its own commercial serif, the clone serves Instrument Serif, so the family metric is expected to differ for the serif roles",
+   "images": "every document image complete before capture",
+   "webgl": "The WebGL field is NOT frozen identically: it is a time-driven random tile field, different per load and different content on each side. Geometry dumps only record the canvas rect (identical, full viewport). For the screenshots the canvas is also hidden (dom layer) so the DOM layer can be compared on its own; the 'full' layer keeps it and is reported only as evidence that it differs.",
+   "animations": "after the loader is gone (and body.boxed for the ?open= views) a 24 s settle, then transitions and animations are switched off and the dump is taken; rows faded out (opacity under 0.02 on the element or an ancestor) or hidden are excluded on both sides",
+   "videos": "none on the home page",
+   "machineNote": "captured on a loaded workstation; the page intro runs on its own clock, so waits are conditions (loader gone, body.boxed) plus a long settle, and each state is retried"
+  },
+  "geometry": {
+   "run1": {
+    "resultFile": "extraction/evidence/parity-2026-11-06/geometry-result-run1.json",
+    "summary": {
+     "1440-closed": {
+      "structure": {
+       "sectionMean": 98.6,
+       "rowWeighted": 96.7
+      },
+      "geometry": {
+       "sectionMean": 98.6,
+       "rowWeighted": 96.7
+      },
+      "position": {
+       "sectionMean": 98.6,
+       "rowWeighted": 96.7
+      },
+      "typography": {
+       "sectionMean": 93.6,
+       "rowWeighted": 90.0
+      },
+      "family": {
+       "sectionMean": 93.6,
+       "rowWeighted": 90.0
+      },
+      "tokens": {
+       "sectionMean": 98.6,
+       "rowWeighted": 96.7
+      },
+      "textrows": {
+       "sectionMean": 97.2,
+       "rowWeighted": 93.3
+      }
+     },
+     "1440-about": {
+      "structure": {
+       "sectionMean": 76.4,
+       "rowWeighted": 89.2
+      },
+      "geometry": {
+       "sectionMean": 65.1,
+       "rowWeighted": 52.7
+      },
+      "position": {
+       "sectionMean": 65.5,
+       "rowWeighted": 54.1
+      },
+      "typography": {
+       "sectionMean": 74.7,
+       "rowWeighted": 83.8
+      },
+      "family": {
+       "sectionMean": 75.5,
+       "rowWeighted": 86.5
+      },
+      "tokens": {
+       "sectionMean": 75.5,
+       "rowWeighted": 86.5
+      },
+      "textrows": {
+       "sectionMean": 70.3,
+       "rowWeighted": 81.1
+      }
+     },
+     "1440-contact": {
+      "structure": {
+       "sectionMean": 78.9,
+       "rowWeighted": 97.5
+      },
+      "geometry": {
+       "sectionMean": 78.1,
+       "rowWeighted": 94.9
+      },
+      "position": {
+       "sectionMean": 78.9,
+       "rowWeighted": 97.5
+      },
+      "typography": {
+       "sectionMean": 78.5,
+       "rowWeighted": 96.2
+      },
+      "family": {
+       "sectionMean": 78.5,
+       "rowWeighted": 96.2
+      },
+      "tokens": {
+       "sectionMean": 78.9,
+       "rowWeighted": 97.5
+      },
+      "textrows": {
+       "sectionMean": 74.1,
+       "rowWeighted": 93.7
+      }
+     },
+     "1440-selected": {
+      "structure": {
+       "sectionMean": 73.6,
+       "rowWeighted": 97.7
+      },
+      "geometry": {
+       "sectionMean": 64.8,
+       "rowWeighted": 70.5
+      },
+      "position": {
+       "sectionMean": 73.6,
+       "rowWeighted": 97.7
+      },
+      "typography": {
+       "sectionMean": 70.3,
+       "rowWeighted": 87.5
+      },
+      "family": {
+       "sectionMean": 70.3,
+       "rowWeighted": 87.5
+      },
+      "tokens": {
+       "sectionMean": 73.2,
+       "rowWeighted": 96.6
+      },
+      "textrows": {
+       "sectionMean": 71.8,
+       "rowWeighted": 95.5
+      }
+     },
+     "390-closed": {
+      "structure": {
+       "sectionMean": 88.8,
+       "rowWeighted": 80.0
+      },
+      "geometry": {
+       "sectionMean": 88.8,
+       "rowWeighted": 80.0
+      },
+      "position": {
+       "sectionMean": 88.8,
+       "rowWeighted": 80.0
+      },
+      "typography": {
+       "sectionMean": 82.5,
+       "rowWeighted": 66.7
+      },
+      "family": {
+       "sectionMean": 82.5,
+       "rowWeighted": 66.7
+      },
+      "tokens": {
+       "sectionMean": 88.8,
+       "rowWeighted": 80.0
+      },
+      "textrows": {
+       "sectionMean": 88.8,
+       "rowWeighted": 80.0
+      }
+     },
+     "390-about": {
+      "structure": {
+       "sectionMean": 66.9,
+       "rowWeighted": 85.5
+      },
+      "geometry": {
+       "sectionMean": 49.2,
+       "rowWeighted": 23.6
+      },
+      "position": {
+       "sectionMean": 49.7,
+       "rowWeighted": 25.5
+      },
+      "typography": {
+       "sectionMean": 64.8,
+       "rowWeighted": 78.2
+      },
+      "family": {
+       "sectionMean": 65.8,
+       "rowWeighted": 81.8
+      },
+      "tokens": {
+       "sectionMean": 65.8,
+       "rowWeighted": 81.8
+      },
+      "textrows": {
+       "sectionMean": 63.8,
+       "rowWeighted": 74.5
+      }
+     },
+     "390-contact": {
+      "structure": {
+       "sectionMean": 70.0,
+       "rowWeighted": 96.7
+      },
+      "geometry": {
+       "sectionMean": 69.0,
+       "rowWeighted": 93.3
+      },
+      "position": {
+       "sectionMean": 70.0,
+       "rowWeighted": 96.7
+      },
+      "typography": {
+       "sectionMean": 69.5,
+       "rowWeighted": 95.0
+      },
+      "family": {
+       "sectionMean": 69.5,
+       "rowWeighted": 95.0
+      },
+      "tokens": {
+       "sectionMean": 70.0,
+       "rowWeighted": 96.7
+      },
+      "textrows": {
+       "sectionMean": 69.5,
+       "rowWeighted": 95.0
+      }
+     },
+     "390-selected": {
+      "structure": {
+       "sectionMean": 70.0,
+       "rowWeighted": 97.3
+      },
+      "geometry": {
+       "sectionMean": 61.2,
+       "rowWeighted": 65.3
+      },
+      "position": {
+       "sectionMean": 70.0,
+       "rowWeighted": 97.3
+      },
+      "typography": {
+       "sectionMean": 66.7,
+       "rowWeighted": 85.3
+      },
+      "family": {
+       "sectionMean": 66.7,
+       "rowWeighted": 85.3
+      },
+      "tokens": {
+       "sectionMean": 69.6,
+       "rowWeighted": 96.0
+      },
+      "textrows": {
+       "sectionMean": 69.6,
+       "rowWeighted": 96.0
+      }
+     }
+    },
+    "bySection": {
+     "1440-closed": {
+      "topbar": {
+       "structure": 94.4,
+       "geometry": 94.4,
+       "position": 94.4,
+       "typography": 94.4,
+       "family": 94.4,
+       "tokens": 94.4,
+       "textrows": 88.9
+      },
+      "hero": {
+       "structure": 100.0,
+       "geometry": 100.0,
+       "position": 100.0,
+       "typography": 80.0,
+       "family": 80.0,
+       "tokens": 100.0,
+       "textrows": 100.0
+      },
+      "signature": {
+       "structure": 100.0,
+       "geometry": 100.0,
+       "position": 100.0,
+       "typography": 100.0,
+       "family": 100.0,
+       "tokens": 100.0,
+       "textrows": 100.0
+      },
+      "canvas": {
+       "structure": 100.0,
+       "geometry": 100.0,
+       "position": 100.0,
+       "typography": 100.0,
+       "family": 100.0,
+       "tokens": 100.0,
+       "textrows": 100.0
+      }
+     },
+     "1440-about": {
+      "topbar": {
+       "structure": 94.4,
+       "geometry": 94.4,
+       "position": 94.4,
+       "typography": 94.4,
+       "family": 94.4,
+       "tokens": 94.4,
+       "textrows": 88.9
+      },
+      "signature": {
+       "structure": 0.0,
+       "geometry": 0.0,
+       "position": 0.0,
+       "typography": 0.0,
+       "family": 0.0,
+       "tokens": 0.0,
+       "textrows": 0.0
+      },
+      "canvas": {
+       "structure": 100.0,
+       "geometry": 100.0,
+       "position": 100.0,
+       "typography": 100.0,
+       "family": 100.0,
+       "tokens": 100.0,
+       "textrows": 100.0
+      },
+      "social": {
+       "structure": 100.0,
+       "geometry": 100.0,
+       "position": 100.0,
+       "typography": 100.0,
+       "family": 100.0,
+       "tokens": 100.0,
+       "textrows": 83.3
+      },
+      "box": {
+       "structure": 87.5,
+       "geometry": 31.2,
+       "position": 33.3,
+       "typography": 79.2,
+       "family": 83.3,
+       "tokens": 83.3,
+       "textrows": 79.2
+      }
+     },
+     "1440-contact": {
+      "topbar": {
+       "structure": 94.4,
+       "geometry": 94.4,
+       "position": 94.4,
+       "typography": 94.4,
+       "family": 94.4,
+       "tokens": 94.4,
+       "textrows": 88.9
+      },
+      "signature": {
+       "structure": 0.0,
+       "geometry": 0.0,
+       "position": 0.0,
+       "typography": 0.0,
+       "family": 0.0,
+       "tokens": 0.0,
+       "textrows": 0.0
+      },
+      "canvas": {
+       "structure": 100.0,
+       "geometry": 100.0,
+       "position": 100.0,
+       "typography": 100.0,
+       "family": 100.0,
+       "tokens": 100.0,
+       "textrows": 100.0
+      },
+      "social": {
+       "structure": 100.0,
+       "geometry": 100.0,
+       "position": 100.0,
+       "typography": 100.0,
+       "family": 100.0,
+       "tokens": 100.0,
+       "textrows": 83.3
+      },
+      "box": {
+       "structure": 100.0,
+       "geometry": 96.2,
+       "position": 100.0,
+       "typography": 98.1,
+       "family": 98.1,
+       "tokens": 100.0,
+       "textrows": 98.1
+      }
+     },
+     "1440-selected": {
+      "topbar": {
+       "structure": 94.4,
+       "geometry": 94.4,
+       "position": 94.4,
+       "typography": 94.4,
+       "family": 94.4,
+       "tokens": 94.4,
+       "textrows": 88.9
+      },
+      "signature": {
+       "structure": 0.0,
+       "geometry": 0.0,
+       "position": 0.0,
+       "typography": 0.0,
+       "family": 0.0,
+       "tokens": 0.0,
+       "textrows": 0.0
+      },
+      "canvas": {
+       "structure": 100.0,
+       "geometry": 100.0,
+       "position": 100.0,
+       "typography": 100.0,
+       "family": 100.0,
+       "tokens": 100.0,
+       "textrows": 100.0
+      },
+      "box": {
+       "structure": 100.0,
+       "geometry": 64.7,
+       "position": 100.0,
+       "typography": 86.8,
+       "family": 86.8,
+       "tokens": 98.5,
+       "textrows": 98.5
+      }
+     },
+     "390-closed": {
+      "topbar": {
+       "structure": 80.0,
+       "geometry": 80.0,
+       "position": 80.0,
+       "typography": 80.0,
+       "family": 80.0,
+       "tokens": 80.0,
+       "textrows": 80.0
+      },
+      "hero": {
+       "structure": 75.0,
+       "geometry": 75.0,
+       "position": 75.0,
+       "typography": 50.0,
+       "family": 50.0,
+       "tokens": 75.0,
+       "textrows": 75.0
+      },
+      "signature": {
+       "structure": 100.0,
+       "geometry": 100.0,
+       "position": 100.0,
+       "typography": 100.0,
+       "family": 100.0,
+       "tokens": 100.0,
+       "textrows": 100.0
+      },
+      "canvas": {
+       "structure": 100.0,
+       "geometry": 100.0,
+       "position": 100.0,
+       "typography": 100.0,
+       "family": 100.0,
+       "tokens": 100.0,
+       "textrows": 100.0
+      }
+     },
+     "390-about": {
+      "topbar": {
+       "structure": 80.0,
+       "geometry": 80.0,
+       "position": 80.0,
+       "typography": 80.0,
+       "family": 80.0,
+       "tokens": 80.0,
+       "textrows": 80.0
+      },
+      "signature": {
+       "structure": 0.0,
+       "geometry": 0.0,
+       "position": 0.0,
+       "typography": 0.0,
+       "family": 0.0,
+       "tokens": 0.0,
+       "textrows": 0.0
+      },
+      "canvas": {
+       "structure": 100.0,
+       "geometry": 100.0,
+       "position": 100.0,
+       "typography": 100.0,
+       "family": 100.0,
+       "tokens": 100.0,
+       "textrows": 100.0
+      },
+      "box": {
+       "structure": 87.5,
+       "geometry": 16.7,
+       "position": 18.8,
+       "typography": 79.2,
+       "family": 83.3,
+       "tokens": 83.3,
+       "textrows": 75.0
+      }
+     },
+     "390-contact": {
+      "topbar": {
+       "structure": 80.0,
+       "geometry": 80.0,
+       "position": 80.0,
+       "typography": 80.0,
+       "family": 80.0,
+       "tokens": 80.0,
+       "textrows": 80.0
+      },
+      "signature": {
+       "structure": 0.0,
+       "geometry": 0.0,
+       "position": 0.0,
+       "typography": 0.0,
+       "family": 0.0,
+       "tokens": 0.0,
+       "textrows": 0.0
+      },
+      "canvas": {
+       "structure": 100.0,
+       "geometry": 100.0,
+       "position": 100.0,
+       "typography": 100.0,
+       "family": 100.0,
+       "tokens": 100.0,
+       "textrows": 100.0
+      },
+      "box": {
+       "structure": 100.0,
+       "geometry": 96.2,
+       "position": 100.0,
+       "typography": 98.1,
+       "family": 98.1,
+       "tokens": 100.0,
+       "textrows": 98.1
+      }
+     },
+     "390-selected": {
+      "topbar": {
+       "structure": 80.0,
+       "geometry": 80.0,
+       "position": 80.0,
+       "typography": 80.0,
+       "family": 80.0,
+       "tokens": 80.0,
+       "textrows": 80.0
+      },
+      "signature": {
+       "structure": 0.0,
+       "geometry": 0.0,
+       "position": 0.0,
+       "typography": 0.0,
+       "family": 0.0,
+       "tokens": 0.0,
+       "textrows": 0.0
+      },
+      "canvas": {
+       "structure": 100.0,
+       "geometry": 100.0,
+       "position": 100.0,
+       "typography": 100.0,
+       "family": 100.0,
+       "tokens": 100.0,
+       "textrows": 100.0
+      },
+      "box": {
+       "structure": 100.0,
+       "geometry": 64.7,
+       "position": 100.0,
+       "typography": 86.8,
+       "family": 86.8,
+       "tokens": 98.5,
+       "textrows": 98.5
+      }
+     }
+    }
+   },
+   "run2": {
+    "resultFile": "extraction/evidence/parity-2026-11-06/geometry-result-run2.json",
+    "summary": {
+     "1440-closed": {
+      "structure": {
+       "sectionMean": 98.6,
+       "rowWeighted": 96.7
+      },
+      "geometry": {
+       "sectionMean": 98.6,
+       "rowWeighted": 96.7
+      },
+      "position": {
+       "sectionMean": 98.6,
+       "rowWeighted": 96.7
+      },
+      "typography": {
+       "sectionMean": 93.6,
+       "rowWeighted": 90.0
+      },
+      "family": {
+       "sectionMean": 93.6,
+       "rowWeighted": 90.0
+      },
+      "tokens": {
+       "sectionMean": 98.6,
+       "rowWeighted": 96.7
+      },
+      "textrows": {
+       "sectionMean": 97.2,
+       "rowWeighted": 93.3
+      }
+     },
+     "1440-about": {
+      "structure": {
+       "sectionMean": 76.4,
+       "rowWeighted": 89.2
+      },
+      "geometry": {
+       "sectionMean": 65.1,
+       "rowWeighted": 52.7
+      },
+      "position": {
+       "sectionMean": 65.5,
+       "rowWeighted": 54.1
+      },
+      "typography": {
+       "sectionMean": 74.7,
+       "rowWeighted": 83.8
+      },
+      "family": {
+       "sectionMean": 75.5,
+       "rowWeighted": 86.5
+      },
+      "tokens": {
+       "sectionMean": 75.5,
+       "rowWeighted": 86.5
+      },
+      "textrows": {
+       "sectionMean": 70.3,
+       "rowWeighted": 81.1
+      }
+     },
+     "1440-contact": {
+      "structure": {
+       "sectionMean": 78.9,
+       "rowWeighted": 97.5
+      },
+      "geometry": {
+       "sectionMean": 78.1,
+       "rowWeighted": 94.9
+      },
+      "position": {
+       "sectionMean": 78.9,
+       "rowWeighted": 97.5
+      },
+      "typography": {
+       "sectionMean": 78.5,
+       "rowWeighted": 96.2
+      },
+      "family": {
+       "sectionMean": 78.5,
+       "rowWeighted": 96.2
+      },
+      "tokens": {
+       "sectionMean": 78.9,
+       "rowWeighted": 97.5
+      },
+      "textrows": {
+       "sectionMean": 74.1,
+       "rowWeighted": 93.7
+      }
+     },
+     "1440-selected": {
+      "structure": {
+       "sectionMean": 73.6,
+       "rowWeighted": 97.7
+      },
+      "geometry": {
+       "sectionMean": 64.8,
+       "rowWeighted": 70.5
+      },
+      "position": {
+       "sectionMean": 73.6,
+       "rowWeighted": 97.7
+      },
+      "typography": {
+       "sectionMean": 70.3,
+       "rowWeighted": 87.5
+      },
+      "family": {
+       "sectionMean": 70.3,
+       "rowWeighted": 87.5
+      },
+      "tokens": {
+       "sectionMean": 73.2,
+       "rowWeighted": 96.6
+      },
+      "textrows": {
+       "sectionMean": 71.8,
+       "rowWeighted": 95.5
+      }
+     },
+     "390-closed": {
+      "structure": {
+       "sectionMean": 88.8,
+       "rowWeighted": 80.0
+      },
+      "geometry": {
+       "sectionMean": 88.8,
+       "rowWeighted": 80.0
+      },
+      "position": {
+       "sectionMean": 88.8,
+       "rowWeighted": 80.0
+      },
+      "typography": {
+       "sectionMean": 82.5,
+       "rowWeighted": 66.7
+      },
+      "family": {
+       "sectionMean": 82.5,
+       "rowWeighted": 66.7
+      },
+      "tokens": {
+       "sectionMean": 88.8,
+       "rowWeighted": 80.0
+      },
+      "textrows": {
+       "sectionMean": 88.8,
+       "rowWeighted": 80.0
+      }
+     },
+     "390-about": {
+      "structure": {
+       "sectionMean": 66.9,
+       "rowWeighted": 85.5
+      },
+      "geometry": {
+       "sectionMean": 49.2,
+       "rowWeighted": 23.6
+      },
+      "position": {
+       "sectionMean": 49.7,
+       "rowWeighted": 25.5
+      },
+      "typography": {
+       "sectionMean": 64.8,
+       "rowWeighted": 78.2
+      },
+      "family": {
+       "sectionMean": 65.8,
+       "rowWeighted": 81.8
+      },
+      "tokens": {
+       "sectionMean": 65.8,
+       "rowWeighted": 81.8
+      },
+      "textrows": {
+       "sectionMean": 63.8,
+       "rowWeighted": 74.5
+      }
+     },
+     "390-contact": {
+      "structure": {
+       "sectionMean": 70.0,
+       "rowWeighted": 96.7
+      },
+      "geometry": {
+       "sectionMean": 69.0,
+       "rowWeighted": 93.3
+      },
+      "position": {
+       "sectionMean": 70.0,
+       "rowWeighted": 96.7
+      },
+      "typography": {
+       "sectionMean": 69.5,
+       "rowWeighted": 95.0
+      },
+      "family": {
+       "sectionMean": 69.5,
+       "rowWeighted": 95.0
+      },
+      "tokens": {
+       "sectionMean": 70.0,
+       "rowWeighted": 96.7
+      },
+      "textrows": {
+       "sectionMean": 69.5,
+       "rowWeighted": 95.0
+      }
+     },
+     "390-selected": {
+      "structure": {
+       "sectionMean": 70.0,
+       "rowWeighted": 97.3
+      },
+      "geometry": {
+       "sectionMean": 61.2,
+       "rowWeighted": 65.3
+      },
+      "position": {
+       "sectionMean": 70.0,
+       "rowWeighted": 97.3
+      },
+      "typography": {
+       "sectionMean": 66.7,
+       "rowWeighted": 85.3
+      },
+      "family": {
+       "sectionMean": 66.7,
+       "rowWeighted": 85.3
+      },
+      "tokens": {
+       "sectionMean": 69.6,
+       "rowWeighted": 96.0
+      },
+      "textrows": {
+       "sectionMean": 69.6,
+       "rowWeighted": 96.0
+      }
+     }
+    },
+    "bySection": {
+     "1440-closed": {
+      "topbar": {
+       "structure": 94.4,
+       "geometry": 94.4,
+       "position": 94.4,
+       "typography": 94.4,
+       "family": 94.4,
+       "tokens": 94.4,
+       "textrows": 88.9
+      },
+      "hero": {
+       "structure": 100.0,
+       "geometry": 100.0,
+       "position": 100.0,
+       "typography": 80.0,
+       "family": 80.0,
+       "tokens": 100.0,
+       "textrows": 100.0
+      },
+      "signature": {
+       "structure": 100.0,
+       "geometry": 100.0,
+       "position": 100.0,
+       "typography": 100.0,
+       "family": 100.0,
+       "tokens": 100.0,
+       "textrows": 100.0
+      },
+      "canvas": {
+       "structure": 100.0,
+       "geometry": 100.0,
+       "position": 100.0,
+       "typography": 100.0,
+       "family": 100.0,
+       "tokens": 100.0,
+       "textrows": 100.0
+      }
+     },
+     "1440-about": {
+      "topbar": {
+       "structure": 94.4,
+       "geometry": 94.4,
+       "position": 94.4,
+       "typography": 94.4,
+       "family": 94.4,
+       "tokens": 94.4,
+       "textrows": 88.9
+      },
+      "signature": {
+       "structure": 0.0,
+       "geometry": 0.0,
+       "position": 0.0,
+       "typography": 0.0,
+       "family": 0.0,
+       "tokens": 0.0,
+       "textrows": 0.0
+      },
+      "canvas": {
+       "structure": 100.0,
+       "geometry": 100.0,
+       "position": 100.0,
+       "typography": 100.0,
+       "family": 100.0,
+       "tokens": 100.0,
+       "textrows": 100.0
+      },
+      "social": {
+       "structure": 100.0,
+       "geometry": 100.0,
+       "position": 100.0,
+       "typography": 100.0,
+       "family": 100.0,
+       "tokens": 100.0,
+       "textrows": 83.3
+      },
+      "box": {
+       "structure": 87.5,
+       "geometry": 31.2,
+       "position": 33.3,
+       "typography": 79.2,
+       "family": 83.3,
+       "tokens": 83.3,
+       "textrows": 79.2
+      }
+     },
+     "1440-contact": {
+      "topbar": {
+       "structure": 94.4,
+       "geometry": 94.4,
+       "position": 94.4,
+       "typography": 94.4,
+       "family": 94.4,
+       "tokens": 94.4,
+       "textrows": 88.9
+      },
+      "signature": {
+       "structure": 0.0,
+       "geometry": 0.0,
+       "position": 0.0,
+       "typography": 0.0,
+       "family": 0.0,
+       "tokens": 0.0,
+       "textrows": 0.0
+      },
+      "canvas": {
+       "structure": 100.0,
+       "geometry": 100.0,
+       "position": 100.0,
+       "typography": 100.0,
+       "family": 100.0,
+       "tokens": 100.0,
+       "textrows": 100.0
+      },
+      "social": {
+       "structure": 100.0,
+       "geometry": 100.0,
+       "position": 100.0,
+       "typography": 100.0,
+       "family": 100.0,
+       "tokens": 100.0,
+       "textrows": 83.3
+      },
+      "box": {
+       "structure": 100.0,
+       "geometry": 96.2,
+       "position": 100.0,
+       "typography": 98.1,
+       "family": 98.1,
+       "tokens": 100.0,
+       "textrows": 98.1
+      }
+     },
+     "1440-selected": {
+      "topbar": {
+       "structure": 94.4,
+       "geometry": 94.4,
+       "position": 94.4,
+       "typography": 94.4,
+       "family": 94.4,
+       "tokens": 94.4,
+       "textrows": 88.9
+      },
+      "signature": {
+       "structure": 0.0,
+       "geometry": 0.0,
+       "position": 0.0,
+       "typography": 0.0,
+       "family": 0.0,
+       "tokens": 0.0,
+       "textrows": 0.0
+      },
+      "canvas": {
+       "structure": 100.0,
+       "geometry": 100.0,
+       "position": 100.0,
+       "typography": 100.0,
+       "family": 100.0,
+       "tokens": 100.0,
+       "textrows": 100.0
+      },
+      "box": {
+       "structure": 100.0,
+       "geometry": 64.7,
+       "position": 100.0,
+       "typography": 86.8,
+       "family": 86.8,
+       "tokens": 98.5,
+       "textrows": 98.5
+      }
+     },
+     "390-closed": {
+      "topbar": {
+       "structure": 80.0,
+       "geometry": 80.0,
+       "position": 80.0,
+       "typography": 80.0,
+       "family": 80.0,
+       "tokens": 80.0,
+       "textrows": 80.0
+      },
+      "hero": {
+       "structure": 75.0,
+       "geometry": 75.0,
+       "position": 75.0,
+       "typography": 50.0,
+       "family": 50.0,
+       "tokens": 75.0,
+       "textrows": 75.0
+      },
+      "signature": {
+       "structure": 100.0,
+       "geometry": 100.0,
+       "position": 100.0,
+       "typography": 100.0,
+       "family": 100.0,
+       "tokens": 100.0,
+       "textrows": 100.0
+      },
+      "canvas": {
+       "structure": 100.0,
+       "geometry": 100.0,
+       "position": 100.0,
+       "typography": 100.0,
+       "family": 100.0,
+       "tokens": 100.0,
+       "textrows": 100.0
+      }
+     },
+     "390-about": {
+      "topbar": {
+       "structure": 80.0,
+       "geometry": 80.0,
+       "position": 80.0,
+       "typography": 80.0,
+       "family": 80.0,
+       "tokens": 80.0,
+       "textrows": 80.0
+      },
+      "signature": {
+       "structure": 0.0,
+       "geometry": 0.0,
+       "position": 0.0,
+       "typography": 0.0,
+       "family": 0.0,
+       "tokens": 0.0,
+       "textrows": 0.0
+      },
+      "canvas": {
+       "structure": 100.0,
+       "geometry": 100.0,
+       "position": 100.0,
+       "typography": 100.0,
+       "family": 100.0,
+       "tokens": 100.0,
+       "textrows": 100.0
+      },
+      "box": {
+       "structure": 87.5,
+       "geometry": 16.7,
+       "position": 18.8,
+       "typography": 79.2,
+       "family": 83.3,
+       "tokens": 83.3,
+       "textrows": 75.0
+      }
+     },
+     "390-contact": {
+      "topbar": {
+       "structure": 80.0,
+       "geometry": 80.0,
+       "position": 80.0,
+       "typography": 80.0,
+       "family": 80.0,
+       "tokens": 80.0,
+       "textrows": 80.0
+      },
+      "signature": {
+       "structure": 0.0,
+       "geometry": 0.0,
+       "position": 0.0,
+       "typography": 0.0,
+       "family": 0.0,
+       "tokens": 0.0,
+       "textrows": 0.0
+      },
+      "canvas": {
+       "structure": 100.0,
+       "geometry": 100.0,
+       "position": 100.0,
+       "typography": 100.0,
+       "family": 100.0,
+       "tokens": 100.0,
+       "textrows": 100.0
+      },
+      "box": {
+       "structure": 100.0,
+       "geometry": 96.2,
+       "position": 100.0,
+       "typography": 98.1,
+       "family": 98.1,
+       "tokens": 100.0,
+       "textrows": 98.1
+      }
+     },
+     "390-selected": {
+      "topbar": {
+       "structure": 80.0,
+       "geometry": 80.0,
+       "position": 80.0,
+       "typography": 80.0,
+       "family": 80.0,
+       "tokens": 80.0,
+       "textrows": 80.0
+      },
+      "signature": {
+       "structure": 0.0,
+       "geometry": 0.0,
+       "position": 0.0,
+       "typography": 0.0,
+       "family": 0.0,
+       "tokens": 0.0,
+       "textrows": 0.0
+      },
+      "canvas": {
+       "structure": 100.0,
+       "geometry": 100.0,
+       "position": 100.0,
+       "typography": 100.0,
+       "family": 100.0,
+       "tokens": 100.0,
+       "textrows": 100.0
+      },
+      "box": {
+       "structure": 100.0,
+       "geometry": 64.7,
+       "position": 100.0,
+       "typography": 86.8,
+       "family": 86.8,
+       "tokens": 98.5,
+       "textrows": 98.5
+      }
+     }
+    }
+   }
+  },
+  "headline": {
+   "run1": {
+    "1440": {
+     "structure": 95.3,
+     "geometry": 78.7,
+     "position": 86.5,
+     "typography": 89.4,
+     "family": 90.0,
+     "tokens": 94.3,
+     "textrows": 90.9
+    },
+    "390": {
+     "structure": 89.9,
+     "geometry": 65.5,
+     "position": 74.9,
+     "typography": 81.3,
+     "family": 82.2,
+     "tokens": 88.6,
+     "textrows": 86.4
+    }
+   },
+   "note": "mean over the four states of the row-weighted percentage, per viewport"
+  },
+  "reproducibility": {
+   "runs": 2,
+   "maxRowWeightedDiffPct": 0.0,
+   "note": "run2 repeats the full live and clone capture; every row-weighted metric of every state agrees between the runs. The raw dumps are not byte-identical (the live clock and sub-pixel text positions move), the metrics are."
+  },
+  "pixelParity": {
+   "meaningful": false,
+   "reason": "The clone deliberately renders different work images (procedural), a different portrait, different name lettering, signature and mark, and different copy, inside a WebGL tile field that is random per load. A pixel score therefore measures the substitutions, not the design language. Evidence: with the canvas hidden the frame differs only where substituted copy, lettering and signature sit (diff images were inspected: the glass-box chrome, pills, fields, rules and topbar coincide; only glyphs differ); with the canvas shown the whole portrait region differs; the 'full' layer is not even repeatable between two runs of the same harness (WebGL tile phase), while the 'dom' layer is within about 1 point.",
+   "run1": {
+    "resultFile": "extraction/evidence/parity-2026-11-06/pixel-result-run1.json",
+    "byState": {
+     "1440-closed": {
+      "dom": {
+       "frame": {
+        "inkDice": 67.0,
+        "rawMatch": 87.8
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 95.2,
+         "rawMatch": 95.1
+        },
+        "hero": {
+         "inkDice": 76.3,
+         "rawMatch": 69.0
+        }
+       },
+       "diffPixelPct": 9.79
+      },
+      "full": {
+       "frame": {
+        "inkDice": 67.8,
+        "rawMatch": 80.5
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 94.8,
+         "rawMatch": 94.6
+        },
+        "hero": {
+         "inkDice": 77.5,
+         "rawMatch": 64.5
+        }
+       },
+       "diffPixelPct": 14.9
+      }
+     },
+     "1440-about": {
+      "dom": {
+       "frame": {
+        "inkDice": 74.9,
+        "rawMatch": 95.0
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 97.0,
+         "rawMatch": 96.0
+        },
+        "social": {
+         "inkDice": 100.0,
+         "rawMatch": 100.0
+        },
+        "box": {
+         "inkDice": 75.5,
+         "rawMatch": 88.1
+        }
+       },
+       "diffPixelPct": 3.56
+      },
+      "full": {
+       "frame": {
+        "inkDice": 63.1,
+        "rawMatch": 89.8
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 97.0,
+         "rawMatch": 96.0
+        },
+        "social": {
+         "inkDice": 100.0,
+         "rawMatch": 100.0
+        },
+        "box": {
+         "inkDice": 75.5,
+         "rawMatch": 88.1
+        }
+       },
+       "diffPixelPct": 6.63
+      }
+     },
+     "1440-contact": {
+      "dom": {
+       "frame": {
+        "inkDice": 86.5,
+        "rawMatch": 98.6
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 95.1,
+         "rawMatch": 95.0
+        },
+        "social": {
+         "inkDice": 98.2,
+         "rawMatch": 96.4
+        },
+        "box": {
+         "inkDice": 95.9,
+         "rawMatch": 97.8
+        }
+       },
+       "diffPixelPct": 1.41
+      },
+      "full": {
+       "frame": {
+        "inkDice": 64.1,
+        "rawMatch": 94.3
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 95.1,
+         "rawMatch": 95.0
+        },
+        "social": {
+         "inkDice": 98.2,
+         "rawMatch": 96.4
+        },
+        "box": {
+         "inkDice": 95.9,
+         "rawMatch": 97.8
+        }
+       },
+       "diffPixelPct": 4.85
+      }
+     },
+     "1440-selected": {
+      "dom": {
+       "frame": {
+        "inkDice": 84.2,
+        "rawMatch": 96.4
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 97.2,
+         "rawMatch": 96.0
+        },
+        "box": {
+         "inkDice": 89.8,
+         "rawMatch": 91.7
+        }
+       },
+       "diffPixelPct": 2.99
+      },
+      "full": {
+       "frame": {
+        "inkDice": 68.3,
+        "rawMatch": 90.1
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 97.2,
+         "rawMatch": 96.0
+        },
+        "box": {
+         "inkDice": 89.9,
+         "rawMatch": 91.7
+        }
+       },
+       "diffPixelPct": 7.38
+      }
+     },
+     "390-closed": {
+      "dom": {
+       "frame": {
+        "inkDice": 81.5,
+        "rawMatch": 88.6
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 93.7,
+         "rawMatch": 92.1
+        },
+        "hero": {
+         "inkDice": 86.2,
+         "rawMatch": 50.6
+        }
+       },
+       "diffPixelPct": 8.25
+      },
+      "full": {
+       "frame": {
+        "inkDice": 68.9,
+        "rawMatch": 74.1
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 93.4,
+         "rawMatch": 92.0
+        },
+        "hero": {
+         "inkDice": 86.5,
+         "rawMatch": 50.0
+        }
+       },
+       "diffPixelPct": 19.01
+      }
+     },
+     "390-about": {
+      "dom": {
+       "frame": {
+        "inkDice": 65.2,
+        "rawMatch": 81.5
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 95.1,
+         "rawMatch": 92.6
+        },
+        "box": {
+         "inkDice": 64.6,
+         "rawMatch": 78.0
+        }
+       },
+       "diffPixelPct": 12.01
+      },
+      "full": {
+       "frame": {
+        "inkDice": 65.2,
+        "rawMatch": 81.5
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 95.1,
+         "rawMatch": 92.6
+        },
+        "box": {
+         "inkDice": 64.6,
+         "rawMatch": 78.0
+        }
+       },
+       "diffPixelPct": 12.01
+      }
+     },
+     "390-contact": {
+      "dom": {
+       "frame": {
+        "inkDice": 97.0,
+        "rawMatch": 98.1
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 95.1,
+         "rawMatch": 92.6
+        },
+        "box": {
+         "inkDice": 98.6,
+         "rawMatch": 98.3
+        }
+       },
+       "diffPixelPct": 1.55
+      },
+      "full": {
+       "frame": {
+        "inkDice": 96.9,
+        "rawMatch": 98.1
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 95.1,
+         "rawMatch": 92.4
+        },
+        "box": {
+         "inkDice": 98.5,
+         "rawMatch": 98.3
+        }
+       },
+       "diffPixelPct": 1.55
+      }
+     },
+     "390-selected": {
+      "dom": {
+       "frame": {
+        "inkDice": 89.9,
+        "rawMatch": 91.6
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 95.1,
+         "rawMatch": 92.6
+        },
+        "box": {
+         "inkDice": 90.6,
+         "rawMatch": 90.3
+        }
+       },
+       "diffPixelPct": 6.84
+      },
+      "full": {
+       "frame": {
+        "inkDice": 89.9,
+        "rawMatch": 91.6
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 95.1,
+         "rawMatch": 92.6
+        },
+        "box": {
+         "inkDice": 90.6,
+         "rawMatch": 90.3
+        }
+       },
+       "diffPixelPct": 6.84
+      }
+     }
+    }
+   },
+   "run2": {
+    "resultFile": "extraction/evidence/parity-2026-11-06/pixel-result-run2.json",
+    "byState": {
+     "1440-closed": {
+      "dom": {
+       "frame": {
+        "inkDice": 67.1,
+        "rawMatch": 87.9
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 97.2,
+         "rawMatch": 96.0
+        },
+        "hero": {
+         "inkDice": 76.3,
+         "rawMatch": 69.0
+        }
+       },
+       "diffPixelPct": 9.74
+      },
+      "full": {
+       "frame": {
+        "inkDice": 68.3,
+        "rawMatch": 79.5
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 97.1,
+         "rawMatch": 95.8
+        },
+        "hero": {
+         "inkDice": 78.5,
+         "rawMatch": 63.6
+        }
+       },
+       "diffPixelPct": 15.7
+      }
+     },
+     "1440-about": {
+      "dom": {
+       "frame": {
+        "inkDice": 74.9,
+        "rawMatch": 95.0
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 97.4,
+         "rawMatch": 96.1
+        },
+        "social": {
+         "inkDice": 100.0,
+         "rawMatch": 100.0
+        },
+        "box": {
+         "inkDice": 75.5,
+         "rawMatch": 88.1
+        }
+       },
+       "diffPixelPct": 3.56
+      },
+      "full": {
+       "frame": {
+        "inkDice": 63.6,
+        "rawMatch": 89.5
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 97.4,
+         "rawMatch": 96.1
+        },
+        "social": {
+         "inkDice": 100.0,
+         "rawMatch": 100.0
+        },
+        "box": {
+         "inkDice": 75.5,
+         "rawMatch": 88.1
+        }
+       },
+       "diffPixelPct": 6.94
+      }
+     },
+     "1440-contact": {
+      "dom": {
+       "frame": {
+        "inkDice": 87.2,
+        "rawMatch": 98.7
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 97.1,
+         "rawMatch": 96.0
+        },
+        "social": {
+         "inkDice": 100.0,
+         "rawMatch": 100.0
+        },
+        "box": {
+         "inkDice": 96.3,
+         "rawMatch": 97.9
+        }
+       },
+       "diffPixelPct": 1.3
+      },
+      "full": {
+       "frame": {
+        "inkDice": 68.0,
+        "rawMatch": 92.3
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 97.1,
+         "rawMatch": 96.0
+        },
+        "social": {
+         "inkDice": 99.7,
+         "rawMatch": 100.0
+        },
+        "box": {
+         "inkDice": 96.3,
+         "rawMatch": 97.9
+        }
+       },
+       "diffPixelPct": 5.74
+      }
+     },
+     "1440-selected": {
+      "dom": {
+       "frame": {
+        "inkDice": 84.3,
+        "rawMatch": 96.4
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 97.1,
+         "rawMatch": 96.1
+        },
+        "box": {
+         "inkDice": 89.8,
+         "rawMatch": 91.7
+        }
+       },
+       "diffPixelPct": 2.99
+      },
+      "full": {
+       "frame": {
+        "inkDice": 68.1,
+        "rawMatch": 90.1
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 97.1,
+         "rawMatch": 96.1
+        },
+        "box": {
+         "inkDice": 89.8,
+         "rawMatch": 91.7
+        }
+       },
+       "diffPixelPct": 7.41
+      }
+     },
+     "390-closed": {
+      "dom": {
+       "frame": {
+        "inkDice": 81.5,
+        "rawMatch": 88.6
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 93.7,
+         "rawMatch": 92.1
+        },
+        "hero": {
+         "inkDice": 86.2,
+         "rawMatch": 50.6
+        }
+       },
+       "diffPixelPct": 8.25
+      },
+      "full": {
+       "frame": {
+        "inkDice": 68.5,
+        "rawMatch": 73.2
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 93.7,
+         "rawMatch": 92.1
+        },
+        "hero": {
+         "inkDice": 86.3,
+         "rawMatch": 50.1
+        }
+       },
+       "diffPixelPct": 19.19
+      }
+     },
+     "390-about": {
+      "dom": {
+       "frame": {
+        "inkDice": 65.2,
+        "rawMatch": 81.5
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 95.1,
+         "rawMatch": 92.6
+        },
+        "box": {
+         "inkDice": 64.6,
+         "rawMatch": 78.0
+        }
+       },
+       "diffPixelPct": 12.01
+      },
+      "full": {
+       "frame": {
+        "inkDice": 65.2,
+        "rawMatch": 81.5
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 95.1,
+         "rawMatch": 92.6
+        },
+        "box": {
+         "inkDice": 64.6,
+         "rawMatch": 78.0
+        }
+       },
+       "diffPixelPct": 12.01
+      }
+     },
+     "390-contact": {
+      "dom": {
+       "frame": {
+        "inkDice": 97.0,
+        "rawMatch": 98.1
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 95.1,
+         "rawMatch": 92.6
+        },
+        "box": {
+         "inkDice": 98.6,
+         "rawMatch": 98.3
+        }
+       },
+       "diffPixelPct": 1.55
+      },
+      "full": {
+       "frame": {
+        "inkDice": 96.9,
+        "rawMatch": 98.1
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 95.1,
+         "rawMatch": 92.6
+        },
+        "box": {
+         "inkDice": 98.5,
+         "rawMatch": 98.3
+        }
+       },
+       "diffPixelPct": 1.55
+      }
+     },
+     "390-selected": {
+      "dom": {
+       "frame": {
+        "inkDice": 89.9,
+        "rawMatch": 91.6
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 95.1,
+         "rawMatch": 92.6
+        },
+        "box": {
+         "inkDice": 90.6,
+         "rawMatch": 90.3
+        }
+       },
+       "diffPixelPct": 6.84
+      },
+      "full": {
+       "frame": {
+        "inkDice": 89.9,
+        "rawMatch": 91.6
+       },
+       "sections": {
+        "topbar": {
+         "inkDice": 95.1,
+         "rawMatch": 92.6
+        },
+        "box": {
+         "inkDice": 90.6,
+         "rawMatch": 90.3
+        }
+       },
+       "diffPixelPct": 6.84
+      }
+     }
+    }
+   },
+   "reading": {
+    "dom.frame.inkDice": "layout (ink block-map) agreement of the DOM layer; copy and lettering substitutions lower it",
+    "full.frame.inkDice": "same with the WebGL field; dominated by the substituted tiles",
+    "diffPixelPct": "share of frame pixels differing by more than 40 grey levels"
+   },
+   "noGateClaimed": true
+  },
+  "sectionGate": {
+   "rule": "R12 asks every section >= 80 per metric. Applied here to the geometry-based metrics (position, typography, tokens) over rows of each semantic section in each state; cells below 80 are listed as exceptions with the measured numbers and the cause found by inspecting the paired rows.",
+   "threshold": 80,
+   "pixelGateApplicable": false
+  },
+  "perSection": {
+   "note": "per-section, per-state percentages are in geometry.run1.bySection (metrics in the order structure, geometry, position, typography, family, tokens, textrows); per-state row-weighted summaries in geometry.run1.summary"
+  },
+  "exceptions": [
+   {
+    "state": "1440-about",
+    "section": "signature",
+    "belowGate": {
+     "geometry": 0.0,
+     "position": 0.0,
+     "typography": 0.0,
+     "tokens": 0.0
+    },
+    "liveRows": 1,
+    "cloneRows": 0,
+    "gated": true,
+    "cause": "Real divergence, not a substitution: with a glass-box view open the live site keeps its hand-signature layer visible while the clone fades it to opacity 0 (src/index.css: body.boxed .sig { opacity: 0 }). The signature itself is substituted either way. Recorded as finding SIGNATURE_HIDDEN_WHEN_BOXED; src/ is read-only for this task so it is reported, not fixed.",
+    "status": "pending human approval",
+    "approvedBy": null
+   },
+   {
+    "state": "1440-about",
+    "section": "box",
+    "belowGate": {
+     "geometry": 31.2,
+     "position": 33.3,
+     "typography": 79.2
+    },
+    "liveRows": 48,
+    "cloneRows": 54,
+    "gated": true,
+    "cause": "Content-driven: the placeholder about copy wraps to fewer lines than the original (the first paragraph is 2 lines in the clone against 3 live, the clients row 4 against 5), so every row below shifts 24 px or 21 px; all 26 shifted rows keep their x and size. The live clients are separate link elements, the clone's are buttons with the same style, so 6 live link rows have no same-class counterpart.",
+    "status": "pending human approval",
+    "approvedBy": null
+   },
+   {
+    "state": "1440-contact",
+    "section": "signature",
+    "belowGate": {
+     "geometry": 0.0,
+     "position": 0.0,
+     "typography": 0.0,
+     "tokens": 0.0
+    },
+    "liveRows": 1,
+    "cloneRows": 0,
+    "gated": true,
+    "cause": "Real divergence, not a substitution: with a glass-box view open the live site keeps its hand-signature layer visible while the clone fades it to opacity 0 (src/index.css: body.boxed .sig { opacity: 0 }). The signature itself is substituted either way. Recorded as finding SIGNATURE_HIDDEN_WHEN_BOXED; src/ is read-only for this task so it is reported, not fixed.",
+    "status": "pending human approval",
+    "approvedBy": null
+   },
+   {
+    "state": "1440-selected",
+    "section": "signature",
+    "belowGate": {
+     "geometry": 0.0,
+     "position": 0.0,
+     "typography": 0.0,
+     "tokens": 0.0
+    },
+    "liveRows": 1,
+    "cloneRows": 0,
+    "gated": true,
+    "cause": "Real divergence, not a substitution: with a glass-box view open the live site keeps its hand-signature layer visible while the clone fades it to opacity 0 (src/index.css: body.boxed .sig { opacity: 0 }). The signature itself is substituted either way. Recorded as finding SIGNATURE_HIDDEN_WHEN_BOXED; src/ is read-only for this task so it is reported, not fixed.",
+    "status": "pending human approval",
+    "approvedBy": null
+   },
+   {
+    "state": "1440-selected",
+    "section": "box",
+    "belowGate": {
+     "geometry": 64.7
+    },
+    "liveRows": 68,
+    "cloneRows": 69,
+    "gated": false,
+    "cause": "Content-driven: the 24 geometry misses are the shrink-wrapped title and sub-label spans whose width follows the substituted project titles; x, y and height match on every row (position 100 percent).",
+    "status": "pending human approval",
+    "approvedBy": null
+   },
+   {
+    "state": "390-closed",
+    "section": "hero",
+    "belowGate": {
+     "geometry": 75.0,
+     "position": 75.0,
+     "typography": 50.0,
+     "tokens": 75.0
+    },
+    "liveRows": 8,
+    "cloneRows": 6,
+    "gated": true,
+    "cause": "Phone layout: the live name is an svg inside the h1 (font-size 0) while the clone's h1 carries the 32 px bold fallback style around its svg, the h1 and svg boxes themselves coincide; the live phone page also has a second 38 px hero-row element (the round Explore button wrapper) that the clone builds as a different element. Pure markup differences, boxes agree.",
+    "status": "pending human approval",
+    "approvedBy": null
+   },
+   {
+    "state": "390-about",
+    "section": "signature",
+    "belowGate": {
+     "geometry": 0.0,
+     "position": 0.0,
+     "typography": 0.0,
+     "tokens": 0.0
+    },
+    "liveRows": 1,
+    "cloneRows": 0,
+    "gated": true,
+    "cause": "Real divergence, not a substitution: with a glass-box view open the live site keeps its hand-signature layer visible while the clone fades it to opacity 0 (src/index.css: body.boxed .sig { opacity: 0 }). The signature itself is substituted either way. Recorded as finding SIGNATURE_HIDDEN_WHEN_BOXED; src/ is read-only for this task so it is reported, not fixed.",
+    "status": "pending human approval",
+    "approvedBy": null
+   },
+   {
+    "state": "390-about",
+    "section": "box",
+    "belowGate": {
+     "geometry": 16.7,
+     "position": 18.8,
+     "typography": 79.2
+    },
+    "liveRows": 48,
+    "cloneRows": 54,
+    "gated": true,
+    "cause": "Content-driven: the placeholder about copy wraps to fewer lines than the original (the first paragraph is 2 lines in the clone against 3 live, the clients row 4 against 5), so every row below shifts 24 px or 21 px; all 26 shifted rows keep their x and size. The live clients are separate link elements, the clone's are buttons with the same style, so 6 live link rows have no same-class counterpart.",
+    "status": "pending human approval",
+    "approvedBy": null
+   },
+   {
+    "state": "390-contact",
+    "section": "signature",
+    "belowGate": {
+     "geometry": 0.0,
+     "position": 0.0,
+     "typography": 0.0,
+     "tokens": 0.0
+    },
+    "liveRows": 1,
+    "cloneRows": 0,
+    "gated": true,
+    "cause": "Real divergence, not a substitution: with a glass-box view open the live site keeps its hand-signature layer visible while the clone fades it to opacity 0 (src/index.css: body.boxed .sig { opacity: 0 }). The signature itself is substituted either way. Recorded as finding SIGNATURE_HIDDEN_WHEN_BOXED; src/ is read-only for this task so it is reported, not fixed.",
+    "status": "pending human approval",
+    "approvedBy": null
+   },
+   {
+    "state": "390-selected",
+    "section": "signature",
+    "belowGate": {
+     "geometry": 0.0,
+     "position": 0.0,
+     "typography": 0.0,
+     "tokens": 0.0
+    },
+    "liveRows": 1,
+    "cloneRows": 0,
+    "gated": true,
+    "cause": "Real divergence, not a substitution: with a glass-box view open the live site keeps its hand-signature layer visible while the clone fades it to opacity 0 (src/index.css: body.boxed .sig { opacity: 0 }). The signature itself is substituted either way. Recorded as finding SIGNATURE_HIDDEN_WHEN_BOXED; src/ is read-only for this task so it is reported, not fixed.",
+    "status": "pending human approval",
+    "approvedBy": null
+   },
+   {
+    "state": "390-selected",
+    "section": "box",
+    "belowGate": {
+     "geometry": 64.7
+    },
+    "liveRows": 68,
+    "cloneRows": 69,
+    "gated": false,
+    "cause": "Content-driven: the 24 geometry misses are the shrink-wrapped title and sub-label spans whose width follows the substituted project titles; x, y and height match on every row (position 100 percent).",
+    "status": "pending human approval",
+    "approvedBy": null
+   }
+  ],
+  "resultFiles": [
+   {
+    "path": "extraction/evidence/parity-2026-11-06/geometry-result-run1.json",
+    "sha256": "a5ead55da2670eb9d381d1c7bf722f672b8abd7ed70fff17d80aea9503ac6c15"
+   },
+   {
+    "path": "extraction/evidence/parity-2026-11-06/geometry-result-run2.json",
+    "sha256": "cdbe122211ce638ecdaaa0d2d5ad73f44dfc0436d8722bc8cc33f89cf598ba5e"
+   },
+   {
+    "path": "extraction/evidence/parity-2026-11-06/pixel-result-run1.json",
+    "sha256": "e0ddb16d3fd6e762875c2e77152a34f80ace871c09ee28bdb8d66a5e74a5db80"
+   },
+   {
+    "path": "extraction/evidence/parity-2026-11-06/pixel-result-run2.json",
+    "sha256": "a4c257454bf60256d75673cea8eb20e47810625dcbe441c39ed4929cfb9cf222"
+   }
+  ],
+  "doesProve": [
+   "the chrome geometry of the original is reproduced to within 1.5 px: at 1440 the topbar and hero blocks match 94.4 percent and 100 percent of live rows (box), the contact view 96.2 percent at both viewports, the selected view 100 percent by position; every miss that was inspected is content-driven (copy that wraps to a different line count, shrink-wrapped text widths, element markup) except the signature layer, which is a real divergence recorded as a finding",
+   "the same text roles carry the same font-size, weight, line-height, letter-spacing, transform and colour tokens: row-weighted typography 89.4 percent (1440) and 81.3 percent (390) and colour/radius/opacity tokens 94.3 and 88.6 percent, the remainder being the substituted serif lettering and unpaired wrapper elements",
+   "layout switches agree: at 390 the phone layout (Menu button, stacked hero, box as a sheet, stacked form) lines up with the live phone layout in the same states (contact view geometry 93.3 percent)",
+   "the numbers are reproducible: two full live and clone captures agree on every metric of every state"
+  ],
+  "doesNotProve": [
+   "that any pixel of the work imagery, portrait, lettering, signature or WebGL motion matches: those are substituted and not compared",
+   "that the 15 /work/<slug> case-study pages resemble anything on the original site: they have no live counterpart",
+   "motion parity (easing, intro choreography): see motionFromOriginal, measured separately and not part of this comparison",
+   "faithful reference cloning: the repo stays classified as a design-language reconstruction pending the owner decision recorded in registry.manifest.json"
+  ]
  },
  "findings": [
   {
@@ -6123,6 +8179,17 @@
    "id": "PORTRAIT_CELLS",
    "severity": "info",
    "detail": "The clone builds 12,028 portrait cells from the user-supplied portrait (public/data/portrait.json) vs 7,832 on the original; 200 placeholder images across 100 projects (15 case studies) vs 1,067 / 730."
+  },
+  {
+   "id": "SIGNATURE_HIDDEN_WHEN_BOXED",
+   "severity": "gap",
+   "detail": "Measured by the 2026-11-06 live-vs-clone comparison (parity block): with a glass-box view open (?open=about|contact|selected, 1440 and 390) the live site keeps its signature layer visible (rendered, opacity above 0), the clone fades it to opacity 0. Reported only: src/ was read-only for this change, so the clone was not altered.",
+   "evidence": [
+    {
+     "cite": "src/index.css:68",
+     "needle": "body.boxed .sig"
+    }
+   ]
   }
  ],
  "iaCrossCheck": {

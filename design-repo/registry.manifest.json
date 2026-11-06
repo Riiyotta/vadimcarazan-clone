@@ -1,6 +1,6 @@
 {
  "repositoryId": "vadimcarazan-portrait-cosmos-design-repo",
- "repositoryVersion": "1.1.0",
+ "repositoryVersion": "1.1.1",
  "pageSpecVersion": "1.0.0",
  "allowlistVersion": "1.0.0",
  "versionFieldNote": "allowlistVersion is machine-checked by extraction/verify_all.py (must equal tokens/llm/component-allowlist.json version). pageSpecVersion is enforced by the schema (const). repositoryVersion is documentation-only and hand-maintained; nothing checks it.",
@@ -48,7 +48,11 @@
   "generationGuide": "docs/generation-guide.md",
   "sensitivity": "docs/sensitivity-and-licensing.md",
   "designPolicy": "policy/design-policy.json",
-  "policyHash": "extraction/policy_hash.py"
+  "policyHash": "extraction/policy_hash.py",
+  "geometryCapture": "extraction/geometry_capture.mjs",
+  "geometryParity": "extraction/geometry_parity.py",
+  "pixelParity": "extraction/pixel_parity.py",
+  "parityEvidence": "extraction/evidence/parity-2026-11-06"
  },
  "counts": {
   "tokens": 163,
@@ -68,7 +72,7 @@
   "generatedExamples": 2,
   "adversarialMutations": 122,
   "adversarialControls": 5,
-  "driftCases": 46
+  "driftCases": 66
  },
  "category": "portfolio",
  "designPolicy": {
@@ -97,5 +101,23 @@
    "recordedIn": "policy/design-policy.json approval",
    "note": "Binding and classification are agent-derived on the owner's instruction; not ratified."
   }
+ },
+ "cloneClassification": {
+  "value": "design-language-reconstruction",
+  "status": "pending-human-approval",
+  "approvedBy": null,
+  "rationale": "The reference build is a design-language reconstruction of vadimcarazan.com, not a faithful reference clone. Substituted by design: the work images (procedural placeholders, never the original's), the portrait (user-supplied, not the original photo), the name lettering and the mark (generated), the signature (own path), the copy inside the WebGL field (placeholder name, studio and project titles) and the commercial serif (Instrument Serif in its place). Its 15 generated case-study routes (/work/<slug>) have no live counterpart: the original is a single route and returns HTTP 404 for each of them, its case studies being external links.",
+  "substituted": [
+   "work images (procedural art)",
+   "portrait",
+   "name lettering and mark",
+   "signature",
+   "copy inside the WebGL field and placeholder identity",
+   "display serif font",
+   "15 generated case-study routes (no live counterpart)"
+  ],
+  "evidenceRef": "extraction/measured-values.json#parity",
+  "approvalNeeded": "A human owner decision to accept this repo as a design-language reconstruction instead of a faithful reference clone. An agent does not approve; approvedBy stays null until a named person records it (then status 'approved' and approvedOn).",
+  "recordedBy": "agent-prepared evidence, 2026-11-06"
  }
 }

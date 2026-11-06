@@ -1,0 +1,48 @@
+# live 390 closed  doc 844x390x390x844
+## topbar
+header.topbar	16,16,358,32.7	Inter Tight 12px 400 16.2px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+a.mark	16,16,38,32.7	Inter Tight 12px 400 0px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+img.logo	16,16,38,32.7	Inter Tight 12px 400 0px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+button.menu-btn	337.2,16,36.8,28.3	Inter Tight 15px 400 20.25px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+span	337.2,20,36.8,20.3	Inter Tight 15px 400 20.25px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	L1:20
+## hero
+section.hero	16,649.9,358,194.1	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+div.hero-row	336,665.3,38,38	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+button.start	336,665.3,38,38	Inter Tight 14px 400 21px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 999px 1	-
+span	336,683.8,1,1	Inter Tight 14px 400 21px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	L1:685.8
+i	336,665.3,38,38	Inter Tight 14px 400 21px normal none rgb(242, 242, 242) rgba(10, 10, 11, 0.35) 50% 1	-
+svg	348,677.3,14,14	Inter Tight 14px 400 21px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+path	351.1,679,7.9,9.6	Inter Tight 14px 400 21px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+h1.bigname	16,649.9,358,194.1	Editorial Old Italic 0px 400 0px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+svg	18,649.9,354,179.1	Editorial Old Italic 0px 400 0px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+g	18,649.9,262.5,85	Editorial Old Italic 0px 400 0px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+path	18,652.4,73.3,82.5	Editorial Old Italic 0px 400 0px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+path	62.2,678,54.4,56.6	Editorial Old Italic 0px 400 0px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+path	192,656.1,12.9,12.5	Editorial Old Italic 0px 400 0px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+path	116.6,649.9,163.9,85	Editorial Old Italic 0px 400 0px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+g	18,742.4,353.9,86.7	Editorial Old Italic 0px 400 0px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+path	18,742.4,70,83.6	Editorial Old Italic 0px 400 0px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+path	77.9,769.1,101.7,56.7	Editorial Old Italic 0px 400 0px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+path	169.1,769.1,53.7,56.6	Editorial Old Italic 0px 400 0px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+path	218,769.4,47.3,59.6	Editorial Old Italic 0px 400 0px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+path	262.3,769.1,109.6,56.8	Editorial Old Italic 0px 400 0px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+## signature
+svg	97.5,38,195,85.9	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+g	92.7,24.9,205.4,112	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+path	92.7,25,204.6,111.9	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+g	92.7,25,204.6,111.9	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+path	92.7,25,204.6,111.9	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 0.32	-
+## canvas
+canvas	0,0,390,844	Inter Tight 16px 400 24px normal none rgb(242, 242, 242) rgba(0, 0, 0, 0) 0px 1	-
+## flybar
+
+## social
+
+## box
+
+## mnav
+
+## loader
+
+## hud
+

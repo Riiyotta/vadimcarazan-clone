@@ -1,0 +1,309 @@
+{
+ "method": "ink block-map Dice (grayscale, |px-bg|>30, blur 12, down 4x, thr 25) per live section rect + whole frame; layers: dom = canvas hidden, full = canvas visible",
+ "byState": {
+  "1440-closed": {
+   "dom": {
+    "frame": {
+     "inkDice": 67.0,
+     "rawMatch": 87.8
+    },
+    "sections": {
+     "topbar": {
+      "inkDice": 95.2,
+      "rawMatch": 95.1
+     },
+     "hero": {
+      "inkDice": 76.3,
+      "rawMatch": 69.0
+     }
+    },
+    "diffPixelPct": 9.79
+   },
+   "full": {
+    "frame": {
+     "inkDice": 67.8,
+     "rawMatch": 80.5
+    },
+    "sections": {
+     "topbar": {
+      "inkDice": 94.8,
+      "rawMatch": 94.6
+     },
+     "hero": {
+      "inkDice": 77.5,
+      "rawMatch": 64.5
+     }
+    },
+    "diffPixelPct": 14.9
+   }
+  },
+  "1440-about": {
+   "dom": {
+    "frame": {
+     "inkDice": 74.9,
+     "rawMatch": 95.0
+    },
+    "sections": {
+     "topbar": {
+      "inkDice": 97.0,
+      "rawMatch": 96.0
+     },
+     "social": {
+      "inkDice": 100.0,
+      "rawMatch": 100.0
+     },
+     "box": {
+      "inkDice": 75.5,
+      "rawMatch": 88.1
+     }
+    },
+    "diffPixelPct": 3.56
+   },
+   "full": {
+    "frame": {
+     "inkDice": 63.1,
+     "rawMatch": 89.8
+    },
+    "sections": {
+     "topbar": {
+      "inkDice": 97.0,
+      "rawMatch": 96.0
+     },
+     "social": {
+      "inkDice": 100.0,
+      "rawMatch": 100.0
+     },
+     "box": {
+      "inkDice": 75.5,
+      "rawMatch": 88.1
+     }
+    },
+    "diffPixelPct": 6.63
+   }
+  },
+  "1440-contact": {
+   "dom": {
+    "frame": {
+     "inkDice": 86.5,
+     "rawMatch": 98.6
+    },
+    "sections": {
+     "topbar": {
+      "inkDice": 95.1,
+      "rawMatch": 95.0
+     },
+     "social": {
+      "inkDice": 98.2,
+      "rawMatch": 96.4
+     },
+     "box": {
+      "inkDice": 95.9,
+      "rawMatch": 97.8
+     }
+    },
+    "diffPixelPct": 1.41
+   },
+   "full": {
+    "frame": {
+     "inkDice": 64.1,
+     "rawMatch": 94.3
+    },
+    "sections": {
+     "topbar": {
+      "inkDice": 95.1,
+      "rawMatch": 95.0
+     },
+     "social": {
+      "inkDice": 98.2,
+      "rawMatch": 96.4
+     },
+     "box": {
+      "inkDice": 95.9,
+      "rawMatch": 97.8
+     }
+    },
+    "diffPixelPct": 4.85
+   }
+  },
+  "1440-selected": {
+   "dom": {
+    "frame": {
+     "inkDice": 84.2,
+     "rawMatch": 96.4
+    },
+    "sections": {
+     "topbar": {
+      "inkDice": 97.2,
+      "rawMatch": 96.0
+     },
+     "box": {
+      "inkDice": 89.8,
+      "rawMatch": 91.7
+     }
+    },
+    "diffPixelPct": 2.99
+   },
+   "full": {
+    "frame": {
+     "inkDice": 68.3,
+     "rawMatch": 90.1
+    },
+    "sections": {
+     "topbar": {
+      "inkDice": 97.2,
+      "rawMatch": 96.0
+     },
+     "box": {
+      "inkDice": 89.9,
+      "rawMatch": 91.7
+     }
+    },
+    "diffPixelPct": 7.38
+   }
+  },
+  "390-closed": {
+   "dom": {
+    "frame": {
+     "inkDice": 81.5,
+     "rawMatch": 88.6
+    },
+    "sections": {
+     "topbar": {
+      "inkDice": 93.7,
+      "rawMatch": 92.1
+     },
+     "hero": {
+      "inkDice": 86.2,
+      "rawMatch": 50.6
+     }
+    },
+    "diffPixelPct": 8.25
+   },
+   "full": {
+    "frame": {
+     "inkDice": 68.9,
+     "rawMatch": 74.1
+    },
+    "sections": {
+     "topbar": {
+      "inkDice": 93.4,
+      "rawMatch": 92.0
+     },
+     "hero": {
+      "inkDice": 86.5,
+      "rawMatch": 50.0
+     }
+    },
+    "diffPixelPct": 19.01
+   }
+  },
+  "390-about": {
+   "dom": {
+    "frame": {
+     "inkDice": 65.2,
+     "rawMatch": 81.5
+    },
+    "sections": {
+     "topbar": {
+      "inkDice": 95.1,
+      "rawMatch": 92.6
+     },
+     "box": {
+      "inkDice": 64.6,
+      "rawMatch": 78.0
+     }
+    },
+    "diffPixelPct": 12.01
+   },
+   "full": {
+    "frame": {
+     "inkDice": 65.2,
+     "rawMatch": 81.5
+    },
+    "sections": {
+     "topbar": {
+      "inkDice": 95.1,
+      "rawMatch": 92.6
+     },
+     "box": {
+      "inkDice": 64.6,
+      "rawMatch": 78.0
+     }
+    },
+    "diffPixelPct": 12.01
+   }
+  },
+  "390-contact": {
+   "dom": {
+    "frame": {
+     "inkDice": 97.0,
+     "rawMatch": 98.1
+    },
+    "sections": {
+     "topbar": {
+      "inkDice": 95.1,
+      "rawMatch": 92.6
+     },
+     "box": {
+      "inkDice": 98.6,
+      "rawMatch": 98.3
+     }
+    },
+    "diffPixelPct": 1.55
+   },
+   "full": {
+    "frame": {
+     "inkDice": 96.9,
+     "rawMatch": 98.1
+    },
+    "sections": {
+     "topbar": {
+      "inkDice": 95.1,
+      "rawMatch": 92.4
+     },
+     "box": {
+      "inkDice": 98.5,
+      "rawMatch": 98.3
+     }
+    },
+    "diffPixelPct": 1.55
+   }
+  },
+  "390-selected": {
+   "dom": {
+    "frame": {
+     "inkDice": 89.9,
+     "rawMatch": 91.6
+    },
+    "sections": {
+     "topbar": {
+      "inkDice": 95.1,
+      "rawMatch": 92.6
+     },
+     "box": {
+      "inkDice": 90.6,
+      "rawMatch": 90.3
+     }
+    },
+    "diffPixelPct": 6.84
+   },
+   "full": {
+    "frame": {
+     "inkDice": 89.9,
+     "rawMatch": 91.6
+    },
+    "sections": {
+     "topbar": {
+      "inkDice": 95.1,
+      "rawMatch": 92.6
+     },
+     "box": {
+      "inkDice": 90.6,
+      "rawMatch": 90.3
+     }
+    },
+    "diffPixelPct": 6.84
+   }
+  }
+ }
+}

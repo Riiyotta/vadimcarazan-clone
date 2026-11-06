@@ -36,6 +36,12 @@ Checks (each named in the output):
                   hard-and-soft); policy file and enforcedBy files present and consistent;
                   contentHash recomputed over the enforcing files (extraction/policy_hash.py) matches; approval
                   honestly pending
+  PARITY          R12: measured-values parity has real structure (not 'not-measured'), pixelParity.meaningful false with
+                  reason, captureState; every result file under extraction/evidence is pinned by sha256; the recorded
+                  geometry/typography/token numbers equal what extraction/geometry_parity.py re-derives from the tracked
+                  text-free dumps (run1 and run2, reproducibility figure re-derived); manifest cloneClassification is
+                  design-language-reconstruction with approvedBy null (pending-human-approval) or a named human;
+                  README and CHANGELOG 1.1.1 first paragraph state the classification; generated-mode notice remains
   HYGIENE         no absolute machine paths, no __pycache__/.DS_Store/__MACOSX/Thumbs.db
 Citations, source tags, slugs and the ia cross-check resolve against the project root (the folder containing
 design-repo/); when that source tree is absent they are reported as warnings, never as passes or failures.
@@ -206,6 +212,161 @@ def check_design_policy(man):
     for e in errs:
         fail("DESIGN_POLICY", e)
     PASSES.append("DESIGN_POLICY")
+
+
+CLASSIFICATION = "design-language-reconstruction"
+PARITY_STATUS = "geometry-measured-pixel-not-meaningful"
+HUMAN_BLOCKLIST = re.compile(r"claude|anthropic|\bai\b|agent|bot|assistant|automat|gpt|llm|model", re.I)
+SUBSTITUTED_REQUIRED = ("work images", "portrait", "lettering", "signature", "case-study")
+
+
+def sha256_file(path):
+    import hashlib
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def first_paragraph(path):
+    """First prose paragraph after the title (heading lines skipped), joined and lower-cased."""
+    paras, cur = [], []
+    for line in (ROOT / path).read_text().splitlines():
+        if line.startswith("#"):
+            if cur: break
+            continue
+        if line.strip():
+            cur.append(line.strip())
+        elif cur:
+            break
+    return " ".join(cur).lower()
+
+
+def changelog_first_paragraph(path, version):
+    lines = (ROOT / path).read_text().splitlines()
+    out, on = [], False
+    for line in lines:
+        if line.startswith("## "):
+            if on: break
+            on = line.startswith(f"## {version} ")
+            continue
+        if on:
+            if line.strip(): out.append(line.strip())
+            elif out: break
+    return " ".join(out).lower()
+
+
+def check_parity(man):
+    """R12: parity is measured and honest. The recorded numbers are pinned to tracked result files (sha256) and
+    re-derived from the tracked text-free dumps; the clone classification is recorded and never self-approved."""
+    errs = []
+    mv = j("extraction/measured-values.json")
+    par = mv.get("parity") or {}
+    if par.get("status") == "not-measured" or par.get("status") != PARITY_STATUS:
+        errs.append(f"measured-values parity.status is {par.get('status')!r}, expected {PARITY_STATUS!r} (real structure, not 'not-measured')")
+    px = par.get("pixelParity") or {}
+    if px.get("meaningful") is not False or not px.get("reason"):
+        errs.append("parity.pixelParity must state meaningful:false with the reason (substituted content / WebGL imagery)")
+    for k in ("captureState", "exceptions", "sectionGate", "perSection"):
+        if k not in par:
+            errs.append(f"parity.{k} missing")
+    cs = par.get("captureState") or {}
+    for k in ("viewports", "states", "consentBanner", "webgl", "fonts"):
+        if not cs.get(k):
+            errs.append(f"parity.captureState.{k} missing")
+    # result files pinned by sha256
+    for entry in par.get("resultFiles", []):
+        f = ROOT / entry.get("path", "")
+        if not f.is_file():
+            errs.append(f"parity result file {entry.get('path')} missing")
+        elif sha256_file(f) != entry.get("sha256"):
+            errs.append(f"parity result file {entry.get('path')} sha256 {sha256_file(f)[:12]} != pinned {str(entry.get('sha256'))[:12]}")
+    if not par.get("resultFiles"):
+        errs.append("parity.resultFiles empty: recorded numbers must be pinned to tracked result files")
+    # re-derive geometry from the tracked dumps and compare with the recorded numbers and the result files
+    gp = load_module("geometry_parity", "extraction/geometry_parity.py")
+    ev = ROOT / "extraction/evidence"
+    folders = sorted(ev.glob("parity-*")) if ev.is_dir() else []
+    if not folders:
+        errs.append("extraction/evidence/parity-* dump folder missing")
+    else:
+        base = folders[-1]
+        for run in ("run1", "run2"):
+            d = base / run
+            if not d.is_dir():
+                errs.append(f"{base.name}/{run} dump folder missing"); continue
+            res = gp.run(d); agg = gp.summarise(res)
+            rec = (par.get("geometry") or {}).get(run) or {}
+            if rec.get("summary") != agg:
+                errs.append(f"parity.geometry.{run}.summary differs from the value re-derived from the tracked dumps")
+            if rec.get("bySection") != {k: {s: n["pct"] for s, n in v["sections"].items()} for k, v in res.items()}:
+                errs.append(f"parity.geometry.{run}.bySection differs from the value re-derived from the tracked dumps")
+            rf = ROOT / rec.get("resultFile", "missing")
+            if rf.is_file():
+                doc = json.loads(rf.read_text())
+                if doc.get("byState") != res or doc.get("summary") != agg:
+                    errs.append(f"{rec.get('resultFile')} differs from the value re-derived from the tracked dumps")
+            else:
+                errs.append(f"parity.geometry.{run}.resultFile missing")
+        r1, r2 = (par.get("reproducibility") or {}), None
+        if (base / "run1").is_dir() and (base / "run2").is_dir():
+            a, b = gp.summarise(gp.run(base / "run1")), gp.summarise(gp.run(base / "run2"))
+            worst = 0.0
+            for k in a:
+                for m in gp.METRICS:
+                    x, y = a[k][m]["rowWeighted"], b[k][m]["rowWeighted"]
+                    if x is not None and y is not None: worst = max(worst, abs(x - y))
+            if r1.get("maxRowWeightedDiffPct") != round(worst, 1):
+                errs.append(f"parity.reproducibility.maxRowWeightedDiffPct {r1.get('maxRowWeightedDiffPct')!r} != re-derived {round(worst, 1)!r}")
+    # headline = mean over the four states of the row-weighted percentage, per viewport
+    if folders and (folders[-1] / "run1").is_dir():
+        agg = gp.summarise(gp.run(folders[-1] / "run1"))
+        want = {}
+        for vp in gp.VIEWPORTS:
+            ks = [k for k in agg if k.startswith(vp + "-")]
+            want[vp] = {m: round(sum(agg[k][m]["rowWeighted"] for k in ks) / len(ks), 1) for m in gp.METRICS} if ks else {}
+        if (par.get("headline") or {}).get("run1") != want:
+            errs.append("parity.headline.run1 differs from the value re-derived from the tracked dumps")
+    # pixel numbers equal their pinned result files
+    for run in ("run1", "run2"):
+        rec = (px.get(run) or {})
+        rf = ROOT / rec.get("resultFile", "missing")
+        if not rf.is_file():
+            errs.append(f"parity.pixelParity.{run}.resultFile missing"); continue
+        if json.loads(rf.read_text()).get("byState") != rec.get("byState"):
+            errs.append(f"parity.pixelParity.{run}.byState differs from {rec.get('resultFile')}")
+    # classification record
+    cc = man.get("cloneClassification") or {}
+    if cc.get("value") != CLASSIFICATION:
+        errs.append(f"manifest cloneClassification.value is {cc.get('value')!r}, expected {CLASSIFICATION!r}")
+    ab, st = cc.get("approvedBy"), cc.get("status")
+    if ab is None:
+        if st != "pending-human-approval":
+            errs.append("cloneClassification.approvedBy is null: status must be 'pending-human-approval'")
+    else:
+        if not isinstance(ab, str) or not ab.strip() or HUMAN_BLOCKLIST.search(ab) or st != "approved":
+            errs.append("cloneClassification.approvedBy must be null or a named human approver (status 'approved'); an agent never approves")
+        if not cc.get("approvedOn"):
+            errs.append("cloneClassification approved without approvedOn")
+    rat = json.dumps(cc.get("rationale", "")).lower() + json.dumps(cc.get("substituted", "")).lower()
+    for w in SUBSTITUTED_REQUIRED:
+        if w not in rat:
+            errs.append(f"cloneClassification rationale/substituted does not mention {w!r}")
+    er = cc.get("evidenceRef")
+    if not er or not (ROOT / er.split("#")[0]).exists():
+        errs.append(f"cloneClassification.evidenceRef {er!r} does not resolve to a tracked file")
+    if (man.get("entryPoints") or {}).get("geometryParity") != "extraction/geometry_parity.py":
+        errs.append("geometryParity entry point not registered")
+    # the classification is stated first in README and CHANGELOG
+    for path, text in (("README.md", first_paragraph("README.md")), ("CHANGELOG.md", changelog_first_paragraph("CHANGELOG.md", "1.1.1"))):
+        if CLASSIFICATION.replace("-", " ") not in text.replace("-", " ") or "not a faithful reference clone" not in text or "pending" not in text:
+            errs.append(f"{path}: the first paragraph must state 'design-language reconstruction', 'not a faithful reference clone' and that approval is pending")
+    if man.get("repositoryVersion") != "1.1.1":
+        errs.append(f"repositoryVersion is {man.get('repositoryVersion')!r}, expected '1.1.1'")
+    # generated-mode / leakage notes remain
+    sn = man.get("sourceNotice", "")
+    if "Never reproduce the original" not in sn or "Do not publish" not in sn or "generated" not in man.get("modes", []):
+        errs.append("generated-mode / source-leakage notice missing from the manifest")
+    for e in errs:
+        fail("PARITY", e)
+    PASSES.append("PARITY")
 
 
 def main(write_counts=False):
@@ -459,6 +620,7 @@ def main(write_counts=False):
     for code, msg in w: warn("WRAPPER_GATE", f"{code} {msg}")
     PASSES.append("WRAPPER_GATE")
     check_design_policy(man)
+    check_parity(man)
     # HYGIENE (character classes keep this file free of the literal patterns it searches for)
     absre = re.compile(r"/U[s]ers/[A-Za-z0-9._-]+/|/h[o]me/[A-Za-z0-9._-]+/|/p[r]ivate/(tmp|var)/|C:\\\\U[s]ers\\\\")
     for p in ROOT.rglob("*"):
